@@ -1,0 +1,18 @@
+name: redu-binder
+dependencies:
+- astropy=1.0.4=np19py27_0
+- matplotlib
+- ipython
+- jupyter
+- ipywidgets
+- scipy
+- nose
+- mock
+- funcsigs
+- pillow
+- pip:
+  - ccdproc==0.3.1
+  - jupyter-pip==0.3
+  - msumastro==0.8.5
+  - reducer==0.2.1
+

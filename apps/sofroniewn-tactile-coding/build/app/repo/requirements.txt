@@ -1,0 +1,2 @@
+seaborn
+thunder-python

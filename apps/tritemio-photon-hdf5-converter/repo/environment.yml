@@ -1,0 +1,30 @@
+name: phconvert
+dependencies:
+- freetype
+- future
+- hdf5
+- libpng
+- matplotlib
+- numexpr
+- numpy
+- openssl
+- pip
+- pyparsing
+- pyqt
+- pytables
+- python=3.4
+- python-dateutil
+- pytz
+- qt
+- readline
+- setuptools
+- sip
+- six
+- sqlite
+- tk
+- wheel
+- xz
+- zlib
+- pip:
+  - phconvert
+

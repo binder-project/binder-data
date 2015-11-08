@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+ipython[all]
+jupyter[all]
+git+https://github.com/damianavila/RISE.git
+

@@ -1,0 +1,11 @@
+name: blaze-impala
+channels:
+  - blaze
+dependencies:
+  - blaze
+  - bokeh
+  - impyla
+  - ipython-notebook
+  - pandas
+  - pyhive
+  - python=2.7

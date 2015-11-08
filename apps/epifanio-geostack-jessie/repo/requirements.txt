@@ -1,0 +1,13 @@
+ipywidgets
+pandas
+matplotlib
+scipy
+seaborn
+scikit-learn
+fiona
+rasterio
+xray
+sympy
+shapely
+astropy
+psycopg2
