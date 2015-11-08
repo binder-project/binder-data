@@ -1,0 +1,1 @@
+{"services": [], "repo": "https://www.github.com/ContinuumIO/pydata-apps", "dependencies": ["environment.yml"], "name": "continuumio-pydata-apps"}

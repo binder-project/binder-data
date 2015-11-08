@@ -1,0 +1,100 @@
+2015-10-25 11:10:01,736 INFO: - App: Building service dependencies...
+2015-10-25 11:10:01,741 INFO: - App: Copying files and filling templates...
+2015-10-25 11:10:01,771 INFO: - App: Building app image without Dockerfile...
+2015-10-25 11:10:01,884 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.225 MBSending build context to Docker daemon  7.75 MBSending build context to Docker daemon  8.28 MBSending build context to Docker daemon 8.546 MBSending build context to Docker daemon 8.546 MB
+
+2015-10-25 11:10:01,887 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-25 11:10:01,893 INFO: - App:  ---> 77377240dc83
+
+2015-10-25 11:10:01,896 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-25 11:10:02,138 INFO: - App:  ---> 41b668cc2314
+
+2015-10-25 11:10:02,150 INFO: - App: Removing intermediate container ce2201c3eea9
+
+2015-10-25 11:10:02,152 INFO: - App: Step 2 : USER root
+
+2015-10-25 11:10:02,239 INFO: - App:  ---> Running in 64c328eeaee0
+
+2015-10-25 11:10:02,288 INFO: - App:  ---> 9659715bbcc6
+
+2015-10-25 11:10:02,296 INFO: - App: Removing intermediate container 64c328eeaee0
+
+2015-10-25 11:10:02,298 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-25 11:10:02,388 INFO: - App:  ---> Running in 92a8dc752446
+
+2015-10-25 11:10:02,837 INFO: - App:  ---> 32e954b072af
+
+2015-10-25 11:10:02,846 INFO: - App: Removing intermediate container 92a8dc752446
+
+2015-10-25 11:10:02,848 INFO: - App: Step 4 : USER main
+
+2015-10-25 11:10:02,932 INFO: - App:  ---> Running in d92d6f54a34a
+
+2015-10-25 11:10:02,983 INFO: - App:  ---> 95948fbdc5c9
+
+2015-10-25 11:10:02,991 INFO: - App: Removing intermediate container d92d6f54a34a
+
+2015-10-25 11:10:02,993 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-25 11:10:03,083 INFO: - App:  ---> Running in 810993ecae21
+
+2015-10-25 11:10:03,545 INFO: - App: Signing notebook: /home/main/notebooks/examples/Plotting Dates.ipynb
+
+2015-10-25 11:10:03,796 INFO: - App: Signing notebook: /home/main/notebooks/examples/Scatter.ipynb
+
+2015-10-25 11:10:04,017 INFO: - App: Signing notebook: /home/main/notebooks/examples/Boxplot.ipynb
+
+2015-10-25 11:10:04,256 INFO: - App: Signing notebook: /home/main/notebooks/examples/Advanced Plotting.ipynb
+
+2015-10-25 11:10:04,494 INFO: - App: Signing notebook: /home/main/notebooks/examples/Mark Interactions.ipynb
+
+2015-10-25 11:10:04,719 INFO: - App: Signing notebook: /home/main/notebooks/examples/Hist.ipynb
+
+2015-10-25 11:10:04,940 INFO: - App: Signing notebook: /home/main/notebooks/examples/Basic Plotting.ipynb
+
+2015-10-25 11:10:05,160 INFO: - App: Signing notebook: /home/main/notebooks/examples/Label.ipynb
+
+2015-10-25 11:10:05,387 INFO: - App: Signing notebook: /home/main/notebooks/examples/Candles.ipynb
+
+2015-10-25 11:10:05,612 INFO: - App: Signing notebook: /home/main/notebooks/examples/Market Map.ipynb
+
+2015-10-25 11:10:05,844 INFO: - App: Signing notebook: /home/main/notebooks/examples/Bars.ipynb
+
+2015-10-25 11:10:06,075 INFO: - App: Signing notebook: /home/main/notebooks/examples/Lines.ipynb
+
+2015-10-25 11:10:06,311 INFO: - App: Signing notebook: /home/main/notebooks/examples/Axis Properties.ipynb
+
+2015-10-25 11:10:06,528 INFO: - App: Signing notebook: /home/main/notebooks/examples/FlexLine.ipynb
+
+2015-10-25 11:10:06,752 INFO: - App: Signing notebook: /home/main/notebooks/examples/GridHeatMap.ipynb
+
+2015-10-25 11:10:06,980 INFO: - App: Signing notebook: /home/main/notebooks/examples/Animations.ipynb
+
+2015-10-25 11:10:07,216 INFO: - App: Signing notebook: /home/main/notebooks/examples/Pie.ipynb
+
+2015-10-25 11:10:07,467 INFO: - App: Signing notebook: /home/main/notebooks/examples/Interaction Layer.ipynb
+
+2015-10-25 11:10:07,694 INFO: - App: Signing notebook: /home/main/notebooks/examples/Map.ipynb
+
+2015-10-25 11:10:07,960 INFO: - App: Signing notebook: /home/main/notebooks/examples/Pyplot.ipynb
+
+2015-10-25 11:10:08,247 INFO: - App:  ---> 7a3a4907e355
+
+2015-10-25 11:10:08,258 INFO: - App: Removing intermediate container 810993ecae21
+
+2015-10-25 11:10:08,260 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-25 11:10:08,336 INFO: - App:  ---> Running in 844d07681329
+
+2015-10-25 11:10:08,384 INFO: - App:  ---> 344eaae0c16b
+
+2015-10-25 11:10:08,395 INFO: - App: Removing intermediate container 844d07681329
+
+2015-10-25 11:10:08,399 INFO: - App: Successfully built 344eaae0c16b
+
+2015-10-25 11:10:08,403 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/bloomberg-bqplot to private registry...
+2015-10-25 11:10:17,846 INFO: - App: Preloading app image onto all nodes...
+2015-10-25 11:10:21,852 INFO: - App: Successfully built app bloomberg-bqplot

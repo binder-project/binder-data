@@ -1,0 +1,216 @@
+2015-11-05 05:25:00,497 INFO: - App: Building service dependencies...
+2015-11-05 05:25:00,500 INFO: - App: Copying files and filling templates...
+2015-11-05 05:25:00,534 INFO: - App: Building app image without Dockerfile...
+2015-11-05 05:25:00,608 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 868.9 kBSending build context to Docker daemon 868.9 kB
+
+2015-11-05 05:25:00,613 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 05:25:00,616 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 05:25:00,625 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-05 05:25:00,783 INFO: - App:  ---> 5a902ee12bb7
+
+2015-11-05 05:25:00,792 INFO: - App: Removing intermediate container f7e084d4c759
+
+2015-11-05 05:25:00,809 INFO: - App: Step 2 : USER root
+
+2015-11-05 05:25:00,876 INFO: - App:  ---> Running in 7a228a382712
+
+2015-11-05 05:25:00,928 INFO: - App:  ---> 4e668bc690a2
+
+2015-11-05 05:25:00,938 INFO: - App: Removing intermediate container 7a228a382712
+
+2015-11-05 05:25:00,954 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 05:25:01,064 INFO: - App:  ---> Running in e42ccb28ad3e
+
+2015-11-05 05:25:01,483 INFO: - App:  ---> afb2b650839c
+
+2015-11-05 05:25:01,495 INFO: - App: Removing intermediate container e42ccb28ad3e
+
+2015-11-05 05:25:01,511 INFO: - App: Step 4 : USER main
+
+2015-11-05 05:25:01,581 INFO: - App:  ---> Running in 57ccfcd80a95
+
+2015-11-05 05:25:01,625 INFO: - App:  ---> 437cbf528cdb
+
+2015-11-05 05:25:01,645 INFO: - App: Removing intermediate container 57ccfcd80a95
+
+2015-11-05 05:25:01,664 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 05:25:01,746 INFO: - App:  ---> Running in c401d235c6b5
+
+2015-11-05 05:25:02,225 INFO: - App: Signing notebook: /home/main/notebooks/posts/test.ipynb
+
+2015-11-05 05:25:02,526 INFO: - App:  ---> 6bff03f91c8f
+
+2015-11-05 05:25:02,534 INFO: - App: Removing intermediate container c401d235c6b5
+
+2015-11-05 05:25:02,536 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-05 05:25:02,615 INFO: - App:  ---> Running in fa4ff7456d90
+
+2015-11-05 05:25:02,671 INFO: - App:  ---> 3dde6f6b0bf0
+
+2015-11-05 05:25:02,679 INFO: - App: Removing intermediate container fa4ff7456d90
+
+2015-11-05 05:25:02,685 INFO: - App: Successfully built 3dde6f6b0bf0
+
+2015-11-05 05:25:02,696 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/jluttine-jaakkoluttinen.fi to private registry...
+2015-11-05 05:25:23,115 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 05:25:25,694 INFO: - App: Successfully built app jluttine-jaakkoluttinen.fi
+2015-11-05 05:48:13,454 INFO: - App: Building service dependencies...
+2015-11-05 05:48:13,461 INFO: - App: Copying files and filling templates...
+2015-11-05 05:48:13,466 INFO: - App: Building app image without Dockerfile...
+2015-11-05 05:48:13,516 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 871.9 kBSending build context to Docker daemon 871.9 kB
+
+2015-11-05 05:48:13,518 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 05:48:13,524 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 05:48:13,528 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 05:48:13,732 INFO: - App:  ---> a007130e4408
+
+2015-11-05 05:48:13,741 INFO: - App: Removing intermediate container 9628e7fc959d
+
+2015-11-05 05:48:13,746 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 05:48:13,940 INFO: - App:  ---> 90b047c29cec
+
+2015-11-05 05:48:13,953 INFO: - App: Removing intermediate container 54359d78a2db
+
+2015-11-05 05:48:13,960 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 05:48:14,031 INFO: - App:  ---> Running in f36958eab7b1
+
+2015-11-05 05:48:14,174 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 05:48:15,510 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 05:48:15,514 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 05:48:15,520 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-11-05 05:48:15,523 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-11-05 05:48:15,528 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-11-05 05:48:15,530 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): h5py in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-11-05 05:48:15,533 INFO: - App: Collecting bayespy (from -r requirements.txt (line 5))
+
+2015-11-05 05:48:15,651 INFO: - App:   Downloading bayespy-0.4.1.tar.gz (459kB)
+
+2015-11-05 05:48:16,445 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-05 05:48:16,448 INFO: - App:     Traceback (most recent call last):
+
+2015-11-05 05:48:16,450 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-05 05:48:16,457 INFO: - App:       File "/tmp/pip-build-7672cE/bayespy/setup.py", line 36, in <module>
+
+2015-11-05 05:48:16,462 INFO: - App:         "{0}.".format(python_version))
+
+2015-11-05 05:48:16,465 INFO: - App:     RuntimeError: BayesPy requires Python 3. You are running Python 2.
+
+2015-11-05 05:48:16,467 INFO: - App:     
+
+2015-11-05 05:48:16,469 INFO: - App:     ----------------------------------------
+
+2015-11-05 05:48:16,510 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-7672cE/bayespy
+
+2015-11-05 05:48:16,534 INFO: - App: installation command failed: Command '['pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-05 05:48:16,539 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 05:48:16,830 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 05:48:16,834 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 05:48:16,837 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-11-05 05:48:16,839 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-11-05 05:48:16,848 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-11-05 05:48:16,858 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): h5py in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-11-05 05:48:16,861 INFO: - App: Collecting bayespy (from -r requirements.txt (line 5))
+
+2015-11-05 05:48:16,898 INFO: - App:   Using cached bayespy-0.4.1.tar.gz
+
+2015-11-05 05:48:17,853 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.4 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->-r requirements.txt (line 3))
+
+2015-11-05 05:48:17,855 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->-r requirements.txt (line 3))
+
+2015-11-05 05:48:17,857 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->-r requirements.txt (line 3))
+
+2015-11-05 05:48:17,863 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->-r requirements.txt (line 3))
+
+2015-11-05 05:48:17,865 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->-r requirements.txt (line 3))
+
+2015-11-05 05:48:17,868 INFO: - App: Installing collected packages: bayespy
+
+2015-11-05 05:48:17,871 INFO: - App:   Running setup.py install for bayespy
+
+2015-11-05 05:48:18,708 INFO: - App: Successfully installed bayespy-0.4.1
+
+2015-11-05 05:48:19,038 INFO: - App:  ---> 7ea6ba22ac0e
+
+2015-11-05 05:48:19,054 INFO: - App: Removing intermediate container f36958eab7b1
+
+2015-11-05 05:48:19,057 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 05:48:19,249 INFO: - App:  ---> 526bbe0c4f55
+
+2015-11-05 05:48:19,258 INFO: - App: Removing intermediate container f8635872cc7b
+
+2015-11-05 05:48:19,260 INFO: - App: Step 5 : USER root
+
+2015-11-05 05:48:19,343 INFO: - App:  ---> Running in 1c175b403f76
+
+2015-11-05 05:48:19,402 INFO: - App:  ---> be7ee03a331b
+
+2015-11-05 05:48:19,414 INFO: - App: Removing intermediate container 1c175b403f76
+
+2015-11-05 05:48:19,428 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 05:48:19,489 INFO: - App:  ---> Running in 510d080d6218
+
+2015-11-05 05:48:19,897 INFO: - App:  ---> c0d6e05962a2
+
+2015-11-05 05:48:19,911 INFO: - App: Removing intermediate container 510d080d6218
+
+2015-11-05 05:48:19,924 INFO: - App: Step 7 : USER main
+
+2015-11-05 05:48:19,999 INFO: - App:  ---> Running in 2f3cc11f5183
+
+2015-11-05 05:48:20,075 INFO: - App:  ---> 6ce413e70ffa
+
+2015-11-05 05:48:20,084 INFO: - App: Removing intermediate container 2f3cc11f5183
+
+2015-11-05 05:48:20,089 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 05:48:20,165 INFO: - App:  ---> Running in e834addad659
+
+2015-11-05 05:48:20,626 INFO: - App: Signing notebook: /home/main/notebooks/posts/test.ipynb
+
+2015-11-05 05:48:20,940 INFO: - App:  ---> ef6bade6590c
+
+2015-11-05 05:48:20,964 INFO: - App: Removing intermediate container e834addad659
+
+2015-11-05 05:48:20,967 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 05:48:21,036 INFO: - App:  ---> Running in da123c7caa35
+
+2015-11-05 05:48:21,091 INFO: - App:  ---> 4a919ebe342b
+
+2015-11-05 05:48:21,099 INFO: - App: Removing intermediate container da123c7caa35
+
+2015-11-05 05:48:21,101 INFO: - App: Successfully built 4a919ebe342b
+
+2015-11-05 05:48:21,107 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/jluttine-jaakkoluttinen.fi to private registry...
+2015-11-05 05:48:33,830 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 05:48:40,574 INFO: - App: Successfully built app jluttine-jaakkoluttinen.fi

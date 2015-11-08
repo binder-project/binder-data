@@ -1,0 +1,3480 @@
+2015-11-05 09:10:38,459 INFO: - App: Building service dependencies...
+2015-11-05 09:10:38,465 INFO: - App: Copying files and filling templates...
+2015-11-05 09:10:38,494 INFO: - App: Building the app image with Dockerfile...
+2015-11-05 09:10:38,622 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.448 MBSending build context to Docker daemon 4.981 MBSending build context to Docker daemon 5.538 MBSending build context to Docker daemon 6.062 MBSending build context to Docker daemon 6.619 MBSending build context to Docker daemon 7.176 MBSending build context to Docker daemon 7.733 MBSending build context to Docker daemon  8.29 MBSending build context to Docker daemon 8.847 MBSending build context to Docker daemon 9.404 MBSending build context to Docker daemon 9.765 MBSending build context to Docker daemon 9.765 MB
+
+2015-11-05 09:10:38,623 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 09:10:38,629 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 09:10:38,631 INFO: - App: Step 1 : MAINTAINER Matthias Geier <Matthias.Geier@gmail.com>
+
+2015-11-05 09:10:38,732 INFO: - App:  ---> Running in 3c347b3c2f37
+
+2015-11-05 09:10:38,780 INFO: - App:  ---> 709ff9ee5036
+
+2015-11-05 09:10:38,788 INFO: - App: Removing intermediate container 3c347b3c2f37
+
+2015-11-05 09:10:38,791 INFO: - App: Step 2 : USER root
+
+2015-11-05 09:10:38,851 INFO: - App:  ---> Running in 9538cffe6ffb
+
+2015-11-05 09:10:38,910 INFO: - App:  ---> b1a3b2c44f9b
+
+2015-11-05 09:10:38,920 INFO: - App: Removing intermediate container 9538cffe6ffb
+
+2015-11-05 09:10:38,923 INFO: - App: Step 3 : RUN apt-get update
+
+2015-11-05 09:10:38,997 INFO: - App:  ---> Running in fdcc9caffe72
+
+2015-11-05 09:10:40,496 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-11-05 09:10:40,820 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-11-05 09:10:40,957 INFO: - App: Get:2 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-11-05 09:10:40,997 INFO: - App: Get:3 http://security.debian.org jessie/updates/main amd64 Packages [185 kB]
+
+2015-11-05 09:10:41,252 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-11-05 09:10:41,346 INFO: - App: Get:5 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-11-05 09:10:41,411 INFO: - App: Get:6 http://httpredir.debian.org jessie-updates/main amd64 Packages [3619 B]
+
+2015-11-05 09:10:41,575 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-11-05 09:10:42,796 INFO: - App: Fetched 9572 kB in 3s (2904 kB/s)
+
+2015-11-05 09:10:43,901 INFO: - App: Reading package lists...
+
+2015-11-05 09:10:44,303 INFO: - App:  ---> c9cc583a7ba9
+
+2015-11-05 09:10:44,320 INFO: - App: Removing intermediate container fdcc9caffe72
+
+2015-11-05 09:10:44,322 INFO: - App: Step 4 : RUN apt-get install -y libsndfile1
+
+2015-11-05 09:10:44,387 INFO: - App:  ---> Running in 34cedfb8e315
+
+2015-11-05 09:10:45,680 INFO: - App: Reading package lists...
+
+2015-11-05 09:10:45,841 INFO: - App: Building dependency tree...
+
+2015-11-05 09:10:45,845 INFO: - App: Reading state information...
+
+2015-11-05 09:10:45,909 INFO: - App: The following extra packages will be installed:
+
+2015-11-05 09:10:45,921 INFO: - App:   libflac8
+
+2015-11-05 09:10:45,935 INFO: - App: The following NEW packages will be installed:
+
+2015-11-05 09:10:45,950 INFO: - App:   libflac8 libsndfile1
+
+2015-11-05 09:10:46,454 INFO: - App: 0 upgraded, 2 newly installed, 0 to remove and 29 not upgraded.
+
+2015-11-05 09:10:46,456 INFO: - App: Need to get 304 kB of archives.
+
+2015-11-05 09:10:46,460 INFO: - App: After this operation, 757 kB of additional disk space will be used.
+
+2015-11-05 09:10:46,463 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libflac8 amd64 1.3.0-3 [89.3 kB]
+
+2015-11-05 09:10:46,503 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libsndfile1 amd64 1.0.25-9.1 [214 kB]
+
+2015-11-05 09:10:46,887 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-11-05 09:10:46,895 INFO: - App: Fetched 304 kB in 0s (568 kB/s)
+
+2015-11-05 09:10:47,000 INFO: - App: Selecting previously unselected package libflac8:amd64.
+
+2015-11-05 09:10:47,011 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-11-05 09:10:47,014 INFO: - App: Preparing to unpack .../libflac8_1.3.0-3_amd64.deb ...
+
+2015-11-05 09:10:47,016 INFO: - App: Unpacking libflac8:amd64 (1.3.0-3) ...
+
+2015-11-05 09:10:47,060 INFO: - App: Selecting previously unselected package libsndfile1:amd64.
+
+2015-11-05 09:10:47,063 INFO: - App: Preparing to unpack .../libsndfile1_1.0.25-9.1_amd64.deb ...
+
+2015-11-05 09:10:47,069 INFO: - App: Unpacking libsndfile1:amd64 (1.0.25-9.1) ...
+
+2015-11-05 09:10:47,228 INFO: - App: Setting up libflac8:amd64 (1.3.0-3) ...
+
+2015-11-05 09:10:47,249 INFO: - App: Setting up libsndfile1:amd64 (1.0.25-9.1) ...
+
+2015-11-05 09:10:47,264 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-11-05 09:10:49,420 INFO: - App:  ---> adfa9084c371
+
+2015-11-05 09:10:49,432 INFO: - App: Removing intermediate container 34cedfb8e315
+
+2015-11-05 09:10:49,435 INFO: - App: Step 5 : USER main
+
+2015-11-05 09:10:49,527 INFO: - App:  ---> Running in c3b6faaf81a0
+
+2015-11-05 09:10:49,587 INFO: - App:  ---> a3bd15065633
+
+2015-11-05 09:10:49,598 INFO: - App: Removing intermediate container c3b6faaf81a0
+
+2015-11-05 09:10:49,602 INFO: - App: Step 6 : RUN pip install PySoundFile
+
+2015-11-05 09:10:49,671 INFO: - App:  ---> Running in 9db78ecff380
+
+2015-11-05 09:10:51,113 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 09:10:51,116 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 09:10:51,133 INFO: - App: Collecting PySoundFile
+
+2015-11-05 09:10:51,242 INFO: - App:   Downloading PySoundFile-0.8.1-py2.py3-none-any.whl
+
+2015-11-05 09:10:51,264 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cffi>=0.6 in ./anaconda/lib/python2.7/site-packages (from PySoundFile)
+
+2015-11-05 09:10:51,267 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pycparser in ./anaconda/lib/python2.7/site-packages (from cffi>=0.6->PySoundFile)
+
+2015-11-05 09:10:51,270 INFO: - App: Installing collected packages: PySoundFile
+
+2015-11-05 09:10:51,320 INFO: - App: Successfully installed PySoundFile-0.8.1
+
+2015-11-05 09:10:51,595 INFO: - App:  ---> 1840fb857b51
+
+2015-11-05 09:10:51,601 INFO: - App: Removing intermediate container 9db78ecff380
+
+2015-11-05 09:10:51,621 INFO: - App: Step 7 : RUN /home/main/anaconda/envs/python3/bin/pip install PySoundFile
+
+2015-11-05 09:10:51,686 INFO: - App:  ---> Running in 8204b4fd40d5
+
+2015-11-05 09:10:52,360 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 09:10:52,369 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 09:10:52,376 INFO: - App: Collecting PySoundFile
+
+2015-11-05 09:10:52,420 INFO: - App:   Using cached PySoundFile-0.8.1-py2.py3-none-any.whl
+
+2015-11-05 09:10:52,439 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cffi>=0.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from PySoundFile)
+
+2015-11-05 09:10:52,445 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pycparser in ./anaconda/envs/python3/lib/python3.3/site-packages (from cffi>=0.6->PySoundFile)
+
+2015-11-05 09:10:52,447 INFO: - App: Installing collected packages: PySoundFile
+
+2015-11-05 09:10:52,488 INFO: - App: Successfully installed PySoundFile-0.8.1
+
+2015-11-05 09:10:52,773 INFO: - App:  ---> 8650ddfef8f8
+
+2015-11-05 09:10:52,779 INFO: - App: Removing intermediate container 8204b4fd40d5
+
+2015-11-05 09:10:52,783 INFO: - App: Step 8 : USER main
+
+2015-11-05 09:10:52,847 INFO: - App:  ---> Running in cfa2f62d4eab
+
+2015-11-05 09:10:52,905 INFO: - App:  ---> 8ac17e3f1b49
+
+2015-11-05 09:10:52,911 INFO: - App: Removing intermediate container cfa2f62d4eab
+
+2015-11-05 09:10:52,920 INFO: - App: Step 9 : ADD . $HOME/notebooks
+
+2015-11-05 09:10:53,143 INFO: - App:  ---> 9d7ee8af89b9
+
+2015-11-05 09:10:53,155 INFO: - App: Removing intermediate container f4d64a83b92d
+
+2015-11-05 09:10:53,160 INFO: - App: Step 10 : USER root
+
+2015-11-05 09:10:53,235 INFO: - App:  ---> Running in ac6f54f4f9ec
+
+2015-11-05 09:10:53,286 INFO: - App:  ---> dc313274d22f
+
+2015-11-05 09:10:53,291 INFO: - App: Removing intermediate container ac6f54f4f9ec
+
+2015-11-05 09:10:53,294 INFO: - App: Step 11 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 09:10:53,371 INFO: - App:  ---> Running in cb685d73dc03
+
+2015-11-05 09:10:53,842 INFO: - App:  ---> 39c578d2ab15
+
+2015-11-05 09:10:53,855 INFO: - App: Removing intermediate container cb685d73dc03
+
+2015-11-05 09:10:53,857 INFO: - App: Step 12 : USER main
+
+2015-11-05 09:10:53,919 INFO: - App:  ---> Running in bebcb963c7ec
+
+2015-11-05 09:10:53,967 INFO: - App:  ---> a1280bc8c088
+
+2015-11-05 09:10:53,975 INFO: - App: Removing intermediate container bebcb963c7ec
+
+2015-11-05 09:10:53,977 INFO: - App: Step 13 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 09:10:54,051 INFO: - App:  ---> Running in bc54ce725566
+
+2015-11-05 09:10:54,510 INFO: - App: Signing notebook: /home/main/notebooks/measurements/index.ipynb
+
+2015-11-05 09:10:54,768 INFO: - App: Signing notebook: /home/main/notebooks/intro-jupyter.ipynb
+
+2015-11-05 09:10:54,992 INFO: - App: Signing notebook: /home/main/notebooks/demonstrations/index.ipynb
+
+2015-11-05 09:10:55,266 INFO: - App: Signing notebook: /home/main/notebooks/simple-signals.ipynb
+
+2015-11-05 09:10:55,542 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy_quaternions.ipynb
+
+2015-11-05 09:10:55,910 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy.ipynb
+
+2015-11-05 09:10:56,144 INFO: - App: Signing notebook: /home/main/notebooks/sympy/euler.ipynb
+
+2015-11-05 09:10:56,374 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy_geometric_algebra.ipynb
+
+2015-11-05 09:10:56,627 INFO: - App: Signing notebook: /home/main/notebooks/sympy/beats.ipynb
+
+2015-11-05 09:10:56,853 INFO: - App: Signing notebook: /home/main/notebooks/sympy/index.ipynb
+
+2015-11-05 09:10:57,078 INFO: - App: Signing notebook: /home/main/notebooks/noise.ipynb
+
+2015-11-05 09:10:57,295 INFO: - App: Signing notebook: /home/main/notebooks/hdf5/index.ipynb
+
+2015-11-05 09:10:57,532 INFO: - App: Signing notebook: /home/main/notebooks/optimization/cython.ipynb
+
+2015-11-05 09:10:57,759 INFO: - App: Signing notebook: /home/main/notebooks/optimization/numexpr.ipynb
+
+2015-11-05 09:10:57,988 INFO: - App: Signing notebook: /home/main/notebooks/optimization/numba.ipynb
+
+2015-11-05 09:10:58,210 INFO: - App: Signing notebook: /home/main/notebooks/optimization/index.ipynb
+
+2015-11-05 09:10:58,458 INFO: - App: Signing notebook: /home/main/notebooks/optimization/cffi.ipynb
+
+2015-11-05 09:10:58,716 INFO: - App: Signing notebook: /home/main/notebooks/interpolation/interpolation.ipynb
+
+2015-11-05 09:10:58,940 INFO: - App: Signing notebook: /home/main/notebooks/interpolation/index.ipynb
+
+2015-11-05 09:10:59,192 INFO: - App: Signing notebook: /home/main/notebooks/sofa/reading_sofa.ipynb
+
+2015-11-05 09:10:59,414 INFO: - App: Signing notebook: /home/main/notebooks/auditory-modeling/index.ipynb
+
+2015-11-05 09:10:59,976 INFO: - App: Signing notebook: /home/main/notebooks/intro-python.ipynb
+
+2015-11-05 09:11:00,207 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/lti.ipynb
+
+2015-11-05 09:11:00,435 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/dtmf.ipynb
+
+2015-11-05 09:11:00,663 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/fft.ipynb
+
+2015-11-05 09:11:00,955 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/audiolazy.ipynb
+
+2015-11-05 09:11:01,176 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/spectrum.ipynb
+
+2015-11-05 09:11:01,403 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/index.ipynb
+
+2015-11-05 09:11:01,640 INFO: - App: Signing notebook: /home/main/notebooks/testing/syntax-checkers.ipynb
+
+2015-11-05 09:11:01,864 INFO: - App: Signing notebook: /home/main/notebooks/testing/index.ipynb
+
+2015-11-05 09:11:02,092 INFO: - App: Signing notebook: /home/main/notebooks/acoustics/index.ipynb
+
+2015-11-05 09:11:02,316 INFO: - App: Signing notebook: /home/main/notebooks/acoustics/helmholtz-resonator.ipynb
+
+2015-11-05 09:11:02,595 INFO: - App: Signing notebook: /home/main/notebooks/plotting/mpld3.ipynb
+
+2015-11-05 09:11:02,829 INFO: - App: Signing notebook: /home/main/notebooks/plotting/particle-displacement.ipynb
+
+2015-11-05 09:11:03,126 INFO: - App: Signing notebook: /home/main/notebooks/plotting/matplotlib.ipynb
+
+2015-11-05 09:11:03,356 INFO: - App: Signing notebook: /home/main/notebooks/plotting/latex.ipynb
+
+2015-11-05 09:11:03,586 INFO: - App: Signing notebook: /home/main/notebooks/plotting/waterfall.ipynb
+
+2015-11-05 09:11:03,826 INFO: - App: Signing notebook: /home/main/notebooks/plotting/spectrogram.ipynb
+
+2015-11-05 09:11:04,056 INFO: - App: Signing notebook: /home/main/notebooks/plotting/index.ipynb
+
+2015-11-05 09:11:04,342 INFO: - App: Signing notebook: /home/main/notebooks/statistics/symbolic-statistics.ipynb
+
+2015-11-05 09:11:04,566 INFO: - App: Signing notebook: /home/main/notebooks/statistics/monty_hall.ipynb
+
+2015-11-05 09:11:04,802 INFO: - App: Signing notebook: /home/main/notebooks/statistics/index.ipynb
+
+2015-11-05 09:11:05,021 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 09:11:05,263 INFO: - App: Signing notebook: /home/main/notebooks/playback-recording/index.ipynb
+
+2015-11-05 09:11:05,631 INFO: - App: Signing notebook: /home/main/notebooks/misc/comprehensions-and-generators.ipynb
+
+2015-11-05 09:11:05,862 INFO: - App: Signing notebook: /home/main/notebooks/misc/audiometer.ipynb
+
+2015-11-05 09:11:06,090 INFO: - App: Signing notebook: /home/main/notebooks/misc/abjad.ipynb
+
+2015-11-05 09:11:06,367 INFO: - App: Signing notebook: /home/main/notebooks/misc/arange.ipynb
+
+2015-11-05 09:11:06,596 INFO: - App: Signing notebook: /home/main/notebooks/misc/acute-or-obtuse.ipynb
+
+2015-11-05 09:11:06,827 INFO: - App: Signing notebook: /home/main/notebooks/misc/tikz.ipynb
+
+2015-11-05 09:11:07,056 INFO: - App: Signing notebook: /home/main/notebooks/misc/pythontutor.ipynb
+
+2015-11-05 09:11:07,336 INFO: - App: Signing notebook: /home/main/notebooks/misc/coroutines.ipynb
+
+2015-11-05 09:11:07,563 INFO: - App: Signing notebook: /home/main/notebooks/template.ipynb
+
+2015-11-05 09:11:07,783 INFO: - App: Signing notebook: /home/main/notebooks/intro-numpy.ipynb
+
+2015-11-05 09:11:08,080 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-wave.ipynb
+
+2015-11-05 09:11:08,340 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-ewave.ipynb
+
+2015-11-05 09:11:08,634 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-pysoundfile.ipynb
+
+2015-11-05 09:11:08,884 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-audiolab.ipynb
+
+2015-11-05 09:11:09,158 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-python-wavefile.ipynb
+
+2015-11-05 09:11:09,387 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/index.ipynb
+
+2015-11-05 09:11:09,663 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-scipy-io.ipynb
+
+2015-11-05 09:11:09,910 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-audioread.ipynb
+
+2015-11-05 09:11:10,243 INFO: - App:  ---> e7fea791e5d0
+
+2015-11-05 09:11:10,251 INFO: - App: Removing intermediate container bc54ce725566
+
+2015-11-05 09:11:10,253 INFO: - App: Step 14 : WORKDIR $HOME/notebooks
+
+2015-11-05 09:11:10,331 INFO: - App:  ---> Running in 7cfc9dfd4c23
+
+2015-11-05 09:11:10,383 INFO: - App:  ---> 612ebb034f70
+
+2015-11-05 09:11:10,391 INFO: - App: Removing intermediate container 7cfc9dfd4c23
+
+2015-11-05 09:11:10,396 INFO: - App: Successfully built 612ebb034f70
+
+2015-11-05 09:11:10,404 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/mgeier-python-audio to private registry...
+2015-11-05 09:11:33,456 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 09:11:41,122 INFO: - App: Successfully built app mgeier-python-audio
+2015-11-05 11:48:02,472 INFO: - App: Building service dependencies...
+2015-11-05 11:48:02,474 INFO: - App: Copying files and filling templates...
+2015-11-05 11:48:02,504 INFO: - App: Building the app image with Dockerfile...
+2015-11-05 11:48:02,629 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.562 MBSending build context to Docker daemon 6.095 MBSending build context to Docker daemon  6.62 MBSending build context to Docker daemon 7.165 MBSending build context to Docker daemon   7.7 MBSending build context to Docker daemon 8.258 MBSending build context to Docker daemon 8.815 MBSending build context to Docker daemon 9.372 MBSending build context to Docker daemon 9.929 MBSending build context to Docker daemon 10.19 MBSending build context to Docker daemon 10.19 MB
+
+2015-11-05 11:48:02,632 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 11:48:02,634 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 11:48:02,636 INFO: - App: Step 1 : MAINTAINER Matthias Geier <Matthias.Geier@gmail.com>
+
+2015-11-05 11:48:02,723 INFO: - App:  ---> Running in 280752879b25
+
+2015-11-05 11:48:02,770 INFO: - App:  ---> 1425f1a7e10c
+
+2015-11-05 11:48:02,775 INFO: - App: Removing intermediate container 280752879b25
+
+2015-11-05 11:48:02,777 INFO: - App: Step 2 : USER root
+
+2015-11-05 11:48:02,851 INFO: - App:  ---> Running in 03faa51cee22
+
+2015-11-05 11:48:02,919 INFO: - App:  ---> bbec1b0b5c85
+
+2015-11-05 11:48:02,927 INFO: - App: Removing intermediate container 03faa51cee22
+
+2015-11-05 11:48:02,930 INFO: - App: Step 3 : RUN apt-get update
+
+2015-11-05 11:48:03,032 INFO: - App:  ---> Running in 308d439f5194
+
+2015-11-05 11:48:04,534 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-11-05 11:48:04,971 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-11-05 11:48:04,976 INFO: - App: Get:2 http://security.debian.org jessie/updates/main amd64 Packages [185 kB]
+
+2015-11-05 11:48:05,026 INFO: - App: Get:3 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-11-05 11:48:05,245 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-11-05 11:48:05,521 INFO: - App: Get:5 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-11-05 11:48:05,716 INFO: - App: Get:6 http://httpredir.debian.org jessie-updates/main amd64 Packages [3619 B]
+
+2015-11-05 11:48:05,830 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-11-05 11:48:06,904 INFO: - App: Fetched 9572 kB in 3s (2843 kB/s)
+
+2015-11-05 11:48:07,800 INFO: - App: Reading package lists...
+
+2015-11-05 11:48:08,175 INFO: - App:  ---> 54424a2c38f5
+
+2015-11-05 11:48:08,184 INFO: - App: Removing intermediate container 308d439f5194
+
+2015-11-05 11:48:08,187 INFO: - App: Step 4 : RUN apt-get install -y libsndfile1 sndfile-programs sox libsox-fmt-all
+
+2015-11-05 11:48:08,278 INFO: - App:  ---> Running in 66f2e55ade71
+
+2015-11-05 11:48:09,595 INFO: - App: Reading package lists...
+
+2015-11-05 11:48:09,764 INFO: - App: Building dependency tree...
+
+2015-11-05 11:48:09,766 INFO: - App: Reading state information...
+
+2015-11-05 11:48:09,827 INFO: - App: The following extra packages will be installed:
+
+2015-11-05 11:48:09,830 INFO: - App:   libao-common libao4 libasyncns0 libcairo2 libfftw3-double3 libflac8 libgsm1
+
+2015-11-05 11:48:09,832 INFO: - App:   libid3tag0 libjack-jackd2-0 libjson-c2 libltdl7 libmad0 libmp3lame0
+
+2015-11-05 11:48:09,834 INFO: - App:   libopencore-amrnb0 libopencore-amrwb0 libopus0 libpixman-1-0 libpulse0
+
+2015-11-05 11:48:09,837 INFO: - App:   libsamplerate0 libsox-fmt-alsa libsox-fmt-ao libsox-fmt-base libsox-fmt-mp3
+
+2015-11-05 11:48:09,840 INFO: - App:   libsox-fmt-oss libsox-fmt-pulse libsox2 libtwolame0 libvorbisfile3
+
+2015-11-05 11:48:09,843 INFO: - App:   libwavpack1 libwrap0 libxcb-render0 libxcb-shm0 libxi6 libxtst6
+
+2015-11-05 11:48:09,845 INFO: - App:   sndfile-tools tcpd
+
+2015-11-05 11:48:09,847 INFO: - App: Suggested packages:
+
+2015-11-05 11:48:09,848 INFO: - App:   libesd0 libesd-alsa0 libfftw3-bin libfftw3-dev jackd2 opus-tools pulseaudio
+
+2015-11-05 11:48:09,851 INFO: - App: The following NEW packages will be installed:
+
+2015-11-05 11:48:09,853 INFO: - App:   libao-common libao4 libasyncns0 libcairo2 libfftw3-double3 libflac8 libgsm1
+
+2015-11-05 11:48:09,856 INFO: - App:   libid3tag0 libjack-jackd2-0 libjson-c2 libltdl7 libmad0 libmp3lame0
+
+2015-11-05 11:48:09,858 INFO: - App:   libopencore-amrnb0 libopencore-amrwb0 libopus0 libpixman-1-0 libpulse0
+
+2015-11-05 11:48:09,869 INFO: - App:   libsamplerate0 libsndfile1 libsox-fmt-all libsox-fmt-alsa libsox-fmt-ao
+
+2015-11-05 11:48:09,872 INFO: - App:   libsox-fmt-base libsox-fmt-mp3 libsox-fmt-oss libsox-fmt-pulse libsox2
+
+2015-11-05 11:48:09,874 INFO: - App:   libtwolame0 libvorbisfile3 libwavpack1 libwrap0 libxcb-render0 libxcb-shm0
+
+2015-11-05 11:48:09,877 INFO: - App:   libxi6 libxtst6 sndfile-programs sndfile-tools sox tcpd
+
+2015-11-05 11:48:13,339 INFO: - App: 0 upgraded, 40 newly installed, 0 to remove and 29 not upgraded.
+
+2015-11-05 11:48:13,343 INFO: - App: Need to get 5817 kB of archives.
+
+2015-11-05 11:48:13,345 INFO: - App: After this operation, 13.6 MB of additional disk space will be used.
+
+2015-11-05 11:48:13,349 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libjson-c2 amd64 0.11-4 [24.8 kB]
+
+2015-11-05 11:48:13,439 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libwrap0 amd64 7.6.q-25 [58.5 kB]
+
+2015-11-05 11:48:13,574 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libasyncns0 amd64 0.8-5 [12.5 kB]
+
+2015-11-05 11:48:13,677 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libpixman-1-0 amd64 0.32.6-3 [507 kB]
+
+2015-11-05 11:48:13,792 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libxcb-render0 amd64 1.10-3+b1 [17.5 kB]
+
+2015-11-05 11:48:13,883 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libxcb-shm0 amd64 1.10-3+b1 [11.5 kB]
+
+2015-11-05 11:48:13,926 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libcairo2 amd64 1.14.0-2.1 [742 kB]
+
+2015-11-05 11:48:14,042 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libfftw3-double3 amd64 3.3.4-2 [722 kB]
+
+2015-11-05 11:48:14,210 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libgsm1 amd64 1.0.13-4 [29.7 kB]
+
+2015-11-05 11:48:14,320 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libopus0 amd64 1.1-2 [156 kB]
+
+2015-11-05 11:48:14,517 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libsamplerate0 amd64 0.1.8-8 [949 kB]
+
+2015-11-05 11:48:14,553 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libjack-jackd2-0 amd64 1.9.10+20140719git3eb0ae6a~dfsg-2 [172 kB]
+
+2015-11-05 11:48:14,650 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libflac8 amd64 1.3.0-3 [89.3 kB]
+
+2015-11-05 11:48:14,738 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libltdl7 amd64 2.4.2-1.11 [45.2 kB]
+
+2015-11-05 11:48:14,769 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libmad0 amd64 0.15.1b-8 [78.4 kB]
+
+2015-11-05 11:48:14,877 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libmp3lame0 amd64 3.99.5+repack1-7+deb8u1 [353 kB]
+
+2015-11-05 11:48:14,987 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libopencore-amrnb0 amd64 0.1.3-2.1 [92.4 kB]
+
+2015-11-05 11:48:15,120 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libopencore-amrwb0 amd64 0.1.3-2.1 [46.2 kB]
+
+2015-11-05 11:48:15,220 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main libsndfile1 amd64 1.0.25-9.1 [214 kB]
+
+2015-11-05 11:48:15,344 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libxi6 amd64 2:1.7.4-1+b2 [79.7 kB]
+
+2015-11-05 11:48:15,455 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libxtst6 amd64 2:1.2.2-1+b1 [27.3 kB]
+
+2015-11-05 11:48:15,549 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libpulse0 amd64 5.0-13 [255 kB]
+
+2015-11-05 11:48:15,662 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libsox2 amd64 14.4.1-5 [267 kB]
+
+2015-11-05 11:48:15,775 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libvorbisfile3 amd64 1.3.4-2 [23.7 kB]
+
+2015-11-05 11:48:15,924 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libwavpack1 amd64 4.70.0-1 [81.2 kB]
+
+2015-11-05 11:48:16,002 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main libao-common amd64 1.1.0-3 [11.1 kB]
+
+2015-11-05 11:48:16,120 INFO: - App: Get:27 http://httpredir.debian.org/debian/ jessie/main libao4 amd64 1.1.0-3 [36.7 kB]
+
+2015-11-05 11:48:16,365 INFO: - App: Get:28 http://httpredir.debian.org/debian/ jessie/main libid3tag0 amd64 0.15.1b-11 [35.3 kB]
+
+2015-11-05 11:48:16,478 INFO: - App: Get:29 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-alsa amd64 14.4.1-5 [46.7 kB]
+
+2015-11-05 11:48:16,590 INFO: - App: Get:30 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-ao amd64 14.4.1-5 [43.6 kB]
+
+2015-11-05 11:48:16,734 INFO: - App: Get:31 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-base amd64 14.4.1-5 [68.0 kB]
+
+2015-11-05 11:48:16,859 INFO: - App: Get:32 http://httpredir.debian.org/debian/ jessie/main libtwolame0 amd64 0.3.13-1.1 [51.7 kB]
+
+2015-11-05 11:48:16,923 INFO: - App: Get:33 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-mp3 amd64 14.4.1-5 [51.8 kB]
+
+2015-11-05 11:48:17,046 INFO: - App: Get:34 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-oss amd64 14.4.1-5 [44.2 kB]
+
+2015-11-05 11:48:17,157 INFO: - App: Get:35 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-pulse amd64 14.4.1-5 [43.7 kB]
+
+2015-11-05 11:48:17,261 INFO: - App: Get:36 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-all amd64 14.4.1-5 [41.3 kB]
+
+2015-11-05 11:48:17,366 INFO: - App: Get:37 http://httpredir.debian.org/debian/ jessie/main sndfile-programs amd64 1.0.25-9.1 [109 kB]
+
+2015-11-05 11:48:17,504 INFO: - App: Get:38 http://httpredir.debian.org/debian/ jessie/main sox amd64 14.4.1-5 [137 kB]
+
+2015-11-05 11:48:17,664 INFO: - App: Get:39 http://httpredir.debian.org/debian/ jessie/main tcpd amd64 7.6.q-25 [22.9 kB]
+
+2015-11-05 11:48:17,708 INFO: - App: Get:40 http://httpredir.debian.org/debian/ jessie/main sndfile-tools amd64 1.03-7 [19.9 kB]
+
+2015-11-05 11:48:17,910 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-11-05 11:48:17,918 INFO: - App: Fetched 5817 kB in 4s (1214 kB/s)
+
+2015-11-05 11:48:18,017 INFO: - App: Selecting previously unselected package libjson-c2:amd64.
+
+2015-11-05 11:48:18,039 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-11-05 11:48:18,045 INFO: - App: Preparing to unpack .../libjson-c2_0.11-4_amd64.deb ...
+
+2015-11-05 11:48:18,063 INFO: - App: Unpacking libjson-c2:amd64 (0.11-4) ...
+
+2015-11-05 11:48:18,076 INFO: - App: Selecting previously unselected package libwrap0:amd64.
+
+2015-11-05 11:48:18,086 INFO: - App: Preparing to unpack .../libwrap0_7.6.q-25_amd64.deb ...
+
+2015-11-05 11:48:18,092 INFO: - App: Unpacking libwrap0:amd64 (7.6.q-25) ...
+
+2015-11-05 11:48:18,125 INFO: - App: Selecting previously unselected package libasyncns0:amd64.
+
+2015-11-05 11:48:18,143 INFO: - App: Preparing to unpack .../libasyncns0_0.8-5_amd64.deb ...
+
+2015-11-05 11:48:18,149 INFO: - App: Unpacking libasyncns0:amd64 (0.8-5) ...
+
+2015-11-05 11:48:18,171 INFO: - App: Selecting previously unselected package libpixman-1-0:amd64.
+
+2015-11-05 11:48:18,175 INFO: - App: Preparing to unpack .../libpixman-1-0_0.32.6-3_amd64.deb ...
+
+2015-11-05 11:48:18,184 INFO: - App: Unpacking libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-11-05 11:48:18,243 INFO: - App: Selecting previously unselected package libxcb-render0:amd64.
+
+2015-11-05 11:48:18,247 INFO: - App: Preparing to unpack .../libxcb-render0_1.10-3+b1_amd64.deb ...
+
+2015-11-05 11:48:18,250 INFO: - App: Unpacking libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-11-05 11:48:18,290 INFO: - App: Selecting previously unselected package libxcb-shm0:amd64.
+
+2015-11-05 11:48:18,292 INFO: - App: Preparing to unpack .../libxcb-shm0_1.10-3+b1_amd64.deb ...
+
+2015-11-05 11:48:18,295 INFO: - App: Unpacking libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-11-05 11:48:18,318 INFO: - App: Selecting previously unselected package libcairo2:amd64.
+
+2015-11-05 11:48:18,321 INFO: - App: Preparing to unpack .../libcairo2_1.14.0-2.1_amd64.deb ...
+
+2015-11-05 11:48:18,324 INFO: - App: Unpacking libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-11-05 11:48:18,435 INFO: - App: Selecting previously unselected package libfftw3-double3:amd64.
+
+2015-11-05 11:48:18,438 INFO: - App: Preparing to unpack .../libfftw3-double3_3.3.4-2_amd64.deb ...
+
+2015-11-05 11:48:18,444 INFO: - App: Unpacking libfftw3-double3:amd64 (3.3.4-2) ...
+
+2015-11-05 11:48:18,536 INFO: - App: Selecting previously unselected package libflac8:amd64.
+
+2015-11-05 11:48:18,538 INFO: - App: Preparing to unpack .../libflac8_1.3.0-3_amd64.deb ...
+
+2015-11-05 11:48:18,540 INFO: - App: Unpacking libflac8:amd64 (1.3.0-3) ...
+
+2015-11-05 11:48:18,576 INFO: - App: Selecting previously unselected package libgsm1:amd64.
+
+2015-11-05 11:48:18,578 INFO: - App: Preparing to unpack .../libgsm1_1.0.13-4_amd64.deb ...
+
+2015-11-05 11:48:18,580 INFO: - App: Unpacking libgsm1:amd64 (1.0.13-4) ...
+
+2015-11-05 11:48:18,613 INFO: - App: Selecting previously unselected package libopus0:amd64.
+
+2015-11-05 11:48:18,617 INFO: - App: Preparing to unpack .../libopus0_1.1-2_amd64.deb ...
+
+2015-11-05 11:48:18,621 INFO: - App: Unpacking libopus0:amd64 (1.1-2) ...
+
+2015-11-05 11:48:18,669 INFO: - App: Selecting previously unselected package libsamplerate0:amd64.
+
+2015-11-05 11:48:18,671 INFO: - App: Preparing to unpack .../libsamplerate0_0.1.8-8_amd64.deb ...
+
+2015-11-05 11:48:18,675 INFO: - App: Unpacking libsamplerate0:amd64 (0.1.8-8) ...
+
+2015-11-05 11:48:18,801 INFO: - App: Selecting previously unselected package libjack-jackd2-0:amd64.
+
+2015-11-05 11:48:18,803 INFO: - App: Preparing to unpack .../libjack-jackd2-0_1.9.10+20140719git3eb0ae6a~dfsg-2_amd64.deb ...
+
+2015-11-05 11:48:18,809 INFO: - App: Unpacking libjack-jackd2-0:amd64 (1.9.10+20140719git3eb0ae6a~dfsg-2) ...
+
+2015-11-05 11:48:18,854 INFO: - App: Selecting previously unselected package libltdl7:amd64.
+
+2015-11-05 11:48:18,856 INFO: - App: Preparing to unpack .../libltdl7_2.4.2-1.11_amd64.deb ...
+
+2015-11-05 11:48:18,859 INFO: - App: Unpacking libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-11-05 11:48:18,894 INFO: - App: Selecting previously unselected package libmad0:amd64.
+
+2015-11-05 11:48:18,900 INFO: - App: Preparing to unpack .../libmad0_0.15.1b-8_amd64.deb ...
+
+2015-11-05 11:48:18,904 INFO: - App: Unpacking libmad0:amd64 (0.15.1b-8) ...
+
+2015-11-05 11:48:18,931 INFO: - App: Selecting previously unselected package libmp3lame0:amd64.
+
+2015-11-05 11:48:18,934 INFO: - App: Preparing to unpack .../libmp3lame0_3.99.5+repack1-7+deb8u1_amd64.deb ...
+
+2015-11-05 11:48:18,937 INFO: - App: Unpacking libmp3lame0:amd64 (3.99.5+repack1-7+deb8u1) ...
+
+2015-11-05 11:48:18,990 INFO: - App: Selecting previously unselected package libopencore-amrnb0:amd64.
+
+2015-11-05 11:48:18,996 INFO: - App: Preparing to unpack .../libopencore-amrnb0_0.1.3-2.1_amd64.deb ...
+
+2015-11-05 11:48:19,007 INFO: - App: Unpacking libopencore-amrnb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 11:48:19,039 INFO: - App: Selecting previously unselected package libopencore-amrwb0:amd64.
+
+2015-11-05 11:48:19,065 INFO: - App: Preparing to unpack .../libopencore-amrwb0_0.1.3-2.1_amd64.deb ...
+
+2015-11-05 11:48:19,072 INFO: - App: Unpacking libopencore-amrwb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 11:48:19,081 INFO: - App: Selecting previously unselected package libsndfile1:amd64.
+
+2015-11-05 11:48:19,097 INFO: - App: Preparing to unpack .../libsndfile1_1.0.25-9.1_amd64.deb ...
+
+2015-11-05 11:48:19,112 INFO: - App: Unpacking libsndfile1:amd64 (1.0.25-9.1) ...
+
+2015-11-05 11:48:19,145 INFO: - App: Selecting previously unselected package libxi6:amd64.
+
+2015-11-05 11:48:19,165 INFO: - App: Preparing to unpack .../libxi6_2%3a1.7.4-1+b2_amd64.deb ...
+
+2015-11-05 11:48:19,175 INFO: - App: Unpacking libxi6:amd64 (2:1.7.4-1+b2) ...
+
+2015-11-05 11:48:19,192 INFO: - App: Selecting previously unselected package libxtst6:amd64.
+
+2015-11-05 11:48:19,227 INFO: - App: Preparing to unpack .../libxtst6_2%3a1.2.2-1+b1_amd64.deb ...
+
+2015-11-05 11:48:19,235 INFO: - App: Unpacking libxtst6:amd64 (2:1.2.2-1+b1) ...
+
+2015-11-05 11:48:19,245 INFO: - App: Selecting previously unselected package libpulse0:amd64.
+
+2015-11-05 11:48:19,272 INFO: - App: Preparing to unpack .../libpulse0_5.0-13_amd64.deb ...
+
+2015-11-05 11:48:19,281 INFO: - App: Unpacking libpulse0:amd64 (5.0-13) ...
+
+2015-11-05 11:48:19,291 INFO: - App: Selecting previously unselected package libsox2:amd64.
+
+2015-11-05 11:48:19,293 INFO: - App: Preparing to unpack .../libsox2_14.4.1-5_amd64.deb ...
+
+2015-11-05 11:48:19,296 INFO: - App: Unpacking libsox2:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:19,350 INFO: - App: Selecting previously unselected package libvorbisfile3:amd64.
+
+2015-11-05 11:48:19,352 INFO: - App: Preparing to unpack .../libvorbisfile3_1.3.4-2_amd64.deb ...
+
+2015-11-05 11:48:19,357 INFO: - App: Unpacking libvorbisfile3:amd64 (1.3.4-2) ...
+
+2015-11-05 11:48:19,388 INFO: - App: Selecting previously unselected package libwavpack1:amd64.
+
+2015-11-05 11:48:19,391 INFO: - App: Preparing to unpack .../libwavpack1_4.70.0-1_amd64.deb ...
+
+2015-11-05 11:48:19,396 INFO: - App: Unpacking libwavpack1:amd64 (4.70.0-1) ...
+
+2015-11-05 11:48:19,426 INFO: - App: Selecting previously unselected package libao-common.
+
+2015-11-05 11:48:19,429 INFO: - App: Preparing to unpack .../libao-common_1.1.0-3_amd64.deb ...
+
+2015-11-05 11:48:19,432 INFO: - App: Unpacking libao-common (1.1.0-3) ...
+
+2015-11-05 11:48:19,465 INFO: - App: Selecting previously unselected package libao4.
+
+2015-11-05 11:48:19,467 INFO: - App: Preparing to unpack .../libao4_1.1.0-3_amd64.deb ...
+
+2015-11-05 11:48:19,470 INFO: - App: Unpacking libao4 (1.1.0-3) ...
+
+2015-11-05 11:48:19,508 INFO: - App: Selecting previously unselected package libid3tag0.
+
+2015-11-05 11:48:19,510 INFO: - App: Preparing to unpack .../libid3tag0_0.15.1b-11_amd64.deb ...
+
+2015-11-05 11:48:19,514 INFO: - App: Unpacking libid3tag0 (0.15.1b-11) ...
+
+2015-11-05 11:48:19,542 INFO: - App: Selecting previously unselected package libsox-fmt-alsa:amd64.
+
+2015-11-05 11:48:19,545 INFO: - App: Preparing to unpack .../libsox-fmt-alsa_14.4.1-5_amd64.deb ...
+
+2015-11-05 11:48:19,548 INFO: - App: Unpacking libsox-fmt-alsa:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:19,579 INFO: - App: Selecting previously unselected package libsox-fmt-ao:amd64.
+
+2015-11-05 11:48:19,583 INFO: - App: Preparing to unpack .../libsox-fmt-ao_14.4.1-5_amd64.deb ...
+
+2015-11-05 11:48:19,585 INFO: - App: Unpacking libsox-fmt-ao:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:19,609 INFO: - App: Selecting previously unselected package libsox-fmt-base:amd64.
+
+2015-11-05 11:48:19,612 INFO: - App: Preparing to unpack .../libsox-fmt-base_14.4.1-5_amd64.deb ...
+
+2015-11-05 11:48:19,615 INFO: - App: Unpacking libsox-fmt-base:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:19,652 INFO: - App: Selecting previously unselected package libtwolame0.
+
+2015-11-05 11:48:19,654 INFO: - App: Preparing to unpack .../libtwolame0_0.3.13-1.1_amd64.deb ...
+
+2015-11-05 11:48:19,658 INFO: - App: Unpacking libtwolame0 (0.3.13-1.1) ...
+
+2015-11-05 11:48:19,686 INFO: - App: Selecting previously unselected package libsox-fmt-mp3:amd64.
+
+2015-11-05 11:48:19,688 INFO: - App: Preparing to unpack .../libsox-fmt-mp3_14.4.1-5_amd64.deb ...
+
+2015-11-05 11:48:19,692 INFO: - App: Unpacking libsox-fmt-mp3:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:19,722 INFO: - App: Selecting previously unselected package libsox-fmt-oss:amd64.
+
+2015-11-05 11:48:19,724 INFO: - App: Preparing to unpack .../libsox-fmt-oss_14.4.1-5_amd64.deb ...
+
+2015-11-05 11:48:19,732 INFO: - App: Unpacking libsox-fmt-oss:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:19,755 INFO: - App: Selecting previously unselected package libsox-fmt-pulse:amd64.
+
+2015-11-05 11:48:19,758 INFO: - App: Preparing to unpack .../libsox-fmt-pulse_14.4.1-5_amd64.deb ...
+
+2015-11-05 11:48:19,760 INFO: - App: Unpacking libsox-fmt-pulse:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:19,789 INFO: - App: Selecting previously unselected package libsox-fmt-all:amd64.
+
+2015-11-05 11:48:19,791 INFO: - App: Preparing to unpack .../libsox-fmt-all_14.4.1-5_amd64.deb ...
+
+2015-11-05 11:48:19,794 INFO: - App: Unpacking libsox-fmt-all:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:19,823 INFO: - App: Selecting previously unselected package sndfile-programs.
+
+2015-11-05 11:48:19,827 INFO: - App: Preparing to unpack .../sndfile-programs_1.0.25-9.1_amd64.deb ...
+
+2015-11-05 11:48:19,831 INFO: - App: Unpacking sndfile-programs (1.0.25-9.1) ...
+
+2015-11-05 11:48:19,868 INFO: - App: Selecting previously unselected package sox.
+
+2015-11-05 11:48:19,870 INFO: - App: Preparing to unpack .../sox_14.4.1-5_amd64.deb ...
+
+2015-11-05 11:48:19,872 INFO: - App: Unpacking sox (14.4.1-5) ...
+
+2015-11-05 11:48:19,914 INFO: - App: Selecting previously unselected package tcpd.
+
+2015-11-05 11:48:19,917 INFO: - App: Preparing to unpack .../tcpd_7.6.q-25_amd64.deb ...
+
+2015-11-05 11:48:19,920 INFO: - App: Unpacking tcpd (7.6.q-25) ...
+
+2015-11-05 11:48:19,952 INFO: - App: Selecting previously unselected package sndfile-tools.
+
+2015-11-05 11:48:19,955 INFO: - App: Preparing to unpack .../sndfile-tools_1.03-7_amd64.deb ...
+
+2015-11-05 11:48:19,957 INFO: - App: Unpacking sndfile-tools (1.03-7) ...
+
+2015-11-05 11:48:19,977 INFO: - App: Processing triggers for mime-support (3.58) ...
+
+2015-11-05 11:48:20,092 INFO: - App: Setting up libjson-c2:amd64 (0.11-4) ...
+
+2015-11-05 11:48:20,115 INFO: - App: Setting up libwrap0:amd64 (7.6.q-25) ...
+
+2015-11-05 11:48:20,131 INFO: - App: Setting up libasyncns0:amd64 (0.8-5) ...
+
+2015-11-05 11:48:20,147 INFO: - App: Setting up libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-11-05 11:48:20,162 INFO: - App: Setting up libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-11-05 11:48:20,182 INFO: - App: Setting up libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-11-05 11:48:20,200 INFO: - App: Setting up libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-11-05 11:48:20,231 INFO: - App: Setting up libfftw3-double3:amd64 (3.3.4-2) ...
+
+2015-11-05 11:48:20,247 INFO: - App: Setting up libflac8:amd64 (1.3.0-3) ...
+
+2015-11-05 11:48:20,263 INFO: - App: Setting up libgsm1:amd64 (1.0.13-4) ...
+
+2015-11-05 11:48:20,280 INFO: - App: Setting up libopus0:amd64 (1.1-2) ...
+
+2015-11-05 11:48:20,297 INFO: - App: Setting up libsamplerate0:amd64 (0.1.8-8) ...
+
+2015-11-05 11:48:20,314 INFO: - App: Setting up libjack-jackd2-0:amd64 (1.9.10+20140719git3eb0ae6a~dfsg-2) ...
+
+2015-11-05 11:48:20,329 INFO: - App: Setting up libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-11-05 11:48:20,347 INFO: - App: Setting up libmad0:amd64 (0.15.1b-8) ...
+
+2015-11-05 11:48:20,364 INFO: - App: Setting up libmp3lame0:amd64 (3.99.5+repack1-7+deb8u1) ...
+
+2015-11-05 11:48:20,381 INFO: - App: Setting up libopencore-amrnb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 11:48:20,399 INFO: - App: Setting up libopencore-amrwb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 11:48:20,418 INFO: - App: Setting up libsndfile1:amd64 (1.0.25-9.1) ...
+
+2015-11-05 11:48:20,439 INFO: - App: Setting up libxi6:amd64 (2:1.7.4-1+b2) ...
+
+2015-11-05 11:48:20,454 INFO: - App: Setting up libxtst6:amd64 (2:1.2.2-1+b1) ...
+
+2015-11-05 11:48:20,471 INFO: - App: Setting up libpulse0:amd64 (5.0-13) ...
+
+2015-11-05 11:48:20,491 INFO: - App: Setting up libsox2:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:20,507 INFO: - App: Setting up libvorbisfile3:amd64 (1.3.4-2) ...
+
+2015-11-05 11:48:20,524 INFO: - App: Setting up libwavpack1:amd64 (4.70.0-1) ...
+
+2015-11-05 11:48:20,541 INFO: - App: Setting up libao-common (1.1.0-3) ...
+
+2015-11-05 11:48:20,556 INFO: - App: Setting up libao4 (1.1.0-3) ...
+
+2015-11-05 11:48:20,575 INFO: - App: Setting up libid3tag0 (0.15.1b-11) ...
+
+2015-11-05 11:48:20,593 INFO: - App: Setting up libsox-fmt-alsa:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:20,606 INFO: - App: Setting up libsox-fmt-ao:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:20,624 INFO: - App: Setting up libsox-fmt-base:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:20,632 INFO: - App: Setting up libtwolame0 (0.3.13-1.1) ...
+
+2015-11-05 11:48:20,639 INFO: - App: Setting up libsox-fmt-mp3:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:20,649 INFO: - App: Setting up libsox-fmt-oss:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:20,659 INFO: - App: Setting up libsox-fmt-pulse:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:20,669 INFO: - App: Setting up libsox-fmt-all:amd64 (14.4.1-5) ...
+
+2015-11-05 11:48:20,682 INFO: - App: Setting up sndfile-programs (1.0.25-9.1) ...
+
+2015-11-05 11:48:20,691 INFO: - App: Setting up sox (14.4.1-5) ...
+
+2015-11-05 11:48:20,701 INFO: - App: Setting up tcpd (7.6.q-25) ...
+
+2015-11-05 11:48:20,711 INFO: - App: Setting up sndfile-tools (1.03-7) ...
+
+2015-11-05 11:48:20,721 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-11-05 11:48:22,966 INFO: - App:  ---> 485ae5e2d2b9
+
+2015-11-05 11:48:22,991 INFO: - App: Removing intermediate container 66f2e55ade71
+
+2015-11-05 11:48:22,995 INFO: - App: Step 5 : RUN apt-get install -y vorbis-tools
+
+2015-11-05 11:48:23,081 INFO: - App:  ---> Running in c5c667075ec9
+
+2015-11-05 11:48:24,184 INFO: - App: Reading package lists...
+
+2015-11-05 11:48:24,352 INFO: - App: Building dependency tree...
+
+2015-11-05 11:48:24,354 INFO: - App: Reading state information...
+
+2015-11-05 11:48:24,419 INFO: - App: The following extra packages will be installed:
+
+2015-11-05 11:48:24,422 INFO: - App:   libspeex1
+
+2015-11-05 11:48:24,428 INFO: - App: Suggested packages:
+
+2015-11-05 11:48:24,433 INFO: - App:   speex
+
+2015-11-05 11:48:24,435 INFO: - App: The following NEW packages will be installed:
+
+2015-11-05 11:48:24,438 INFO: - App:   libspeex1 vorbis-tools
+
+2015-11-05 11:48:25,167 INFO: - App: 0 upgraded, 2 newly installed, 0 to remove and 29 not upgraded.
+
+2015-11-05 11:48:25,170 INFO: - App: Need to get 242 kB of archives.
+
+2015-11-05 11:48:25,172 INFO: - App: After this operation, 1123 kB of additional disk space will be used.
+
+2015-11-05 11:48:25,174 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libspeex1 amd64 1.2~rc1.2-1 [54.9 kB]
+
+2015-11-05 11:48:25,259 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main vorbis-tools amd64 1.4.0-6 [187 kB]
+
+2015-11-05 11:48:25,606 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-11-05 11:48:25,615 INFO: - App: Fetched 242 kB in 0s (370 kB/s)
+
+2015-11-05 11:48:25,715 INFO: - App: Selecting previously unselected package libspeex1:amd64.
+
+2015-11-05 11:48:25,733 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26771 files and directories currently installed.)
+
+2015-11-05 11:48:25,738 INFO: - App: Preparing to unpack .../libspeex1_1.2~rc1.2-1_amd64.deb ...
+
+2015-11-05 11:48:25,740 INFO: - App: Unpacking libspeex1:amd64 (1.2~rc1.2-1) ...
+
+2015-11-05 11:48:25,769 INFO: - App: Selecting previously unselected package vorbis-tools.
+
+2015-11-05 11:48:25,771 INFO: - App: Preparing to unpack .../vorbis-tools_1.4.0-6_amd64.deb ...
+
+2015-11-05 11:48:25,775 INFO: - App: Unpacking vorbis-tools (1.4.0-6) ...
+
+2015-11-05 11:48:25,826 INFO: - App: Processing triggers for mime-support (3.58) ...
+
+2015-11-05 11:48:25,923 INFO: - App: Setting up libspeex1:amd64 (1.2~rc1.2-1) ...
+
+2015-11-05 11:48:25,946 INFO: - App: Setting up vorbis-tools (1.4.0-6) ...
+
+2015-11-05 11:48:25,952 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-11-05 11:48:28,079 INFO: - App:  ---> 6a5ca1b989a4
+
+2015-11-05 11:48:28,098 INFO: - App: Removing intermediate container c5c667075ec9
+
+2015-11-05 11:48:28,100 INFO: - App: Step 6 : RUN apt-get install -y python-audioread python3-audioread
+
+2015-11-05 11:48:28,191 INFO: - App:  ---> Running in a8eb501fcbbf
+
+2015-11-05 11:48:29,297 INFO: - App: Reading package lists...
+
+2015-11-05 11:48:29,466 INFO: - App: Building dependency tree...
+
+2015-11-05 11:48:29,472 INFO: - App: Reading state information...
+
+2015-11-05 11:48:29,540 INFO: - App: The following extra packages will be installed:
+
+2015-11-05 11:48:29,543 INFO: - App:   gir1.2-glib-2.0 i965-va-driver libav-tools libavcodec56 libavdevice55
+
+2015-11-05 11:48:29,547 INFO: - App:   libavfilter5 libavformat56 libavresample2 libavutil54 libcaca0 libcdio-cdda1
+
+2015-11-05 11:48:29,560 INFO: - App:   libcdio-paranoia1 libcdio13 libdc1394-22 libdirectfb-1.2-9
+
+2015-11-05 11:48:29,573 INFO: - App:   libgirepository-1.0-1 libgstreamer-plugins-base0.10-0 libgstreamer0.10-0
+
+2015-11-05 11:48:29,594 INFO: - App:   libopencv-core2.4 libopencv-imgproc2.4 libopenjpeg5 libraw1394-11
+
+2015-11-05 11:48:29,597 INFO: - App:   libschroedinger-1.0-0 libsdl1.2debian libswscale3 libtbb2 libusb-1.0-0
+
+2015-11-05 11:48:29,601 INFO: - App:   libva1 libvdpau1 libvpx1 libx264-142 libxvidcore4 python-gi python-gobject
+
+2015-11-05 11:48:29,604 INFO: - App:   python-gobject-2 python-gst0.10 python-libxml2 python-pymad va-driver-all
+
+2015-11-05 11:48:29,620 INFO: - App:   vdpau-va-driver
+
+2015-11-05 11:48:29,631 INFO: - App: Suggested packages:
+
+2015-11-05 11:48:29,633 INFO: - App:   frei0r-plugins gstreamer-codec-install gnome-codec-install
+
+2015-11-05 11:48:29,635 INFO: - App:   gstreamer0.10-tools gstreamer0.10-plugins-base libraw1394-doc
+
+2015-11-05 11:48:29,637 INFO: - App:   nvidia-vdpau-driver vdpau-driver python-gi-cairo python-gobject-2-dbg
+
+2015-11-05 11:48:29,640 INFO: - App:   python-gst0.10-dev python-gst0.10-dbg xvba-va-driver
+
+2015-11-05 11:48:29,642 INFO: - App: The following NEW packages will be installed:
+
+2015-11-05 11:48:29,644 INFO: - App:   gir1.2-glib-2.0 i965-va-driver libav-tools libavcodec56 libavdevice55
+
+2015-11-05 11:48:29,647 INFO: - App:   libavfilter5 libavformat56 libavresample2 libavutil54 libcaca0 libcdio-cdda1
+
+2015-11-05 11:48:29,665 INFO: - App:   libcdio-paranoia1 libcdio13 libdc1394-22 libdirectfb-1.2-9
+
+2015-11-05 11:48:29,680 INFO: - App:   libgirepository-1.0-1 libgstreamer-plugins-base0.10-0 libgstreamer0.10-0
+
+2015-11-05 11:48:29,696 INFO: - App:   libopencv-core2.4 libopencv-imgproc2.4 libopenjpeg5 libraw1394-11
+
+2015-11-05 11:48:29,699 INFO: - App:   libschroedinger-1.0-0 libsdl1.2debian libswscale3 libtbb2 libusb-1.0-0
+
+2015-11-05 11:48:29,741 INFO: - App:   libva1 libvdpau1 libvpx1 libx264-142 libxvidcore4 python-audioread python-gi
+
+2015-11-05 11:48:29,803 INFO: - App:   python-gobject python-gobject-2 python-gst0.10 python-libxml2 python-pymad
+
+2015-11-05 11:48:29,840 INFO: - App:   python3-audioread va-driver-all vdpau-va-driver
+
+2015-11-05 11:48:32,549 INFO: - App: 0 upgraded, 42 newly installed, 0 to remove and 29 not upgraded.
+
+2015-11-05 11:48:32,555 INFO: - App: Need to get 15.3 MB of archives.
+
+2015-11-05 11:48:32,559 INFO: - App: After this operation, 44.6 MB of additional disk space will be used.
+
+2015-11-05 11:48:32,586 INFO: - App: Get:1 http://security.debian.org/ jessie/updates/main libvdpau1 amd64 0.8-3+deb8u2 [33.7 kB]
+
+2015-11-05 11:48:32,882 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libva1 amd64 1.4.1-1 [43.8 kB]
+
+2015-11-05 11:48:33,108 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libavutil54 amd64 6:11.4-1~deb8u1 [125 kB]
+
+2015-11-05 11:48:33,110 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main i965-va-driver amd64 1.4.1-2 [220 kB]
+
+2015-11-05 11:48:33,184 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libopenjpeg5 amd64 1:1.5.2-3 [111 kB]
+
+2015-11-05 11:48:33,212 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libavresample2 amd64 6:11.4-1~deb8u1 [97.4 kB]
+
+2015-11-05 11:48:33,410 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libvpx1 amd64 1.3.0-3 [599 kB]
+
+2015-11-05 11:48:33,441 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libschroedinger-1.0-0 amd64 1.0.11-2.1 [295 kB]
+
+2015-11-05 11:48:33,690 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libxvidcore4 amd64 2:1.3.3-1 [282 kB]
+
+2015-11-05 11:48:33,828 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libx264-142 amd64 2:0.142.2431+gita5831aa-1+b2 [587 kB]
+
+2015-11-05 11:48:33,860 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libavformat56 amd64 6:11.4-1~deb8u1 [580 kB]
+
+2015-11-05 11:48:34,015 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libcdio13 amd64 0.83-4.2 [168 kB]
+
+2015-11-05 11:48:34,084 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libcdio-cdda1 amd64 0.83-4.2 [132 kB]
+
+2015-11-05 11:48:34,221 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libavcodec56 amd64 6:11.4-1~deb8u1 [3098 kB]
+
+2015-11-05 11:48:34,421 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libusb-1.0-0 amd64 2:1.0.19-1 [48.1 kB]
+
+2015-11-05 11:48:34,566 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libdc1394-22 amd64 2.2.3-1 [104 kB]
+
+2015-11-05 11:48:34,652 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libavdevice55 amd64 6:11.4-1~deb8u1 [85.0 kB]
+
+2015-11-05 11:48:34,764 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libtbb2 amd64 4.2~20140122-5 [121 kB]
+
+2015-11-05 11:48:34,889 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main libopencv-core2.4 amd64 2.4.9.1+dfsg-1+deb8u1 [719 kB]
+
+2015-11-05 11:48:35,076 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libcdio-paranoia1 amd64 0.83-4.2 [132 kB]
+
+2015-11-05 11:48:35,081 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libopencv-imgproc2.4 amd64 2.4.9.1+dfsg-1+deb8u1 [652 kB]
+
+2015-11-05 11:48:35,119 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libraw1394-11 amd64 2.1.0-3 [46.1 kB]
+
+2015-11-05 11:48:35,163 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libswscale3 amd64 6:11.4-1~deb8u1 [138 kB]
+
+2015-11-05 11:48:35,216 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libavfilter5 amd64 6:11.4-1~deb8u1 [165 kB]
+
+2015-11-05 11:48:35,328 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libcaca0 amd64 0.99.beta19-2 [346 kB]
+
+2015-11-05 11:48:35,448 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main libdirectfb-1.2-9 amd64 1.2.10.0-5.1 [1040 kB]
+
+2015-11-05 11:48:35,682 INFO: - App: Get:27 http://httpredir.debian.org/debian/ jessie/main libsdl1.2debian amd64 1.2.15-10+b1 [189 kB]
+
+2015-11-05 11:48:35,818 INFO: - App: Get:28 http://httpredir.debian.org/debian/ jessie/main libav-tools amd64 6:11.4-1~deb8u1 [466 kB]
+
+2015-11-05 11:48:35,938 INFO: - App: Get:29 http://httpredir.debian.org/debian/ jessie/main libgstreamer0.10-0 amd64 0.10.36-1.5 [1400 kB]
+
+2015-11-05 11:48:36,100 INFO: - App: Get:30 http://httpredir.debian.org/debian/ jessie/main libgstreamer-plugins-base0.10-0 amd64 0.10.36-2 [1030 kB]
+
+2015-11-05 11:48:36,278 INFO: - App: Get:31 http://httpredir.debian.org/debian/ jessie/main libgirepository-1.0-1 amd64 1.42.0-2.2 [95.7 kB]
+
+2015-11-05 11:48:36,391 INFO: - App: Get:32 http://httpredir.debian.org/debian/ jessie/main gir1.2-glib-2.0 amd64 1.42.0-2.2 [141 kB]
+
+2015-11-05 11:48:36,466 INFO: - App: Get:33 http://httpredir.debian.org/debian/ jessie/main vdpau-va-driver amd64 0.7.4-3 [43.2 kB]
+
+2015-11-05 11:48:36,504 INFO: - App: Get:34 http://httpredir.debian.org/debian/ jessie/main python-audioread all 1.0.3-1 [16.8 kB]
+
+2015-11-05 11:48:36,621 INFO: - App: Get:35 http://httpredir.debian.org/debian/ jessie/main python-gi amd64 3.14.0-1 [494 kB]
+
+2015-11-05 11:48:36,731 INFO: - App: Get:36 http://httpredir.debian.org/debian/ jessie/main python-gobject-2 amd64 2.28.6-12+b1 [348 kB]
+
+2015-11-05 11:48:36,847 INFO: - App: Get:37 http://httpredir.debian.org/debian/ jessie/main python-gobject all 3.14.0-1 [307 kB]
+
+2015-11-05 11:48:36,955 INFO: - App: Get:38 http://httpredir.debian.org/debian/ jessie/main python-libxml2 amd64 2.9.1+dfsg1-5 [193 kB]
+
+2015-11-05 11:48:37,062 INFO: - App: Get:39 http://httpredir.debian.org/debian/ jessie/main python-gst0.10 amd64 0.10.22-3 [606 kB]
+
+2015-11-05 11:48:37,279 INFO: - App: Get:40 http://httpredir.debian.org/debian/ jessie/main python-pymad amd64 0.7-1 [14.9 kB]
+
+2015-11-05 11:48:37,323 INFO: - App: Get:41 http://httpredir.debian.org/debian/ jessie/main python3-audioread all 1.0.3-1 [16.5 kB]
+
+2015-11-05 11:48:37,406 INFO: - App: Get:42 http://httpredir.debian.org/debian/ jessie/main va-driver-all amd64 1.4.1-1 [9128 B]
+
+2015-11-05 11:48:37,618 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-11-05 11:48:37,626 INFO: - App: Fetched 15.3 MB in 4s (3106 kB/s)
+
+2015-11-05 11:48:37,726 INFO: - App: Selecting previously unselected package libva1:amd64.
+
+2015-11-05 11:48:37,751 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26816 files and directories currently installed.)
+
+2015-11-05 11:48:37,777 INFO: - App: Preparing to unpack .../libva1_1.4.1-1_amd64.deb ...
+
+2015-11-05 11:48:37,791 INFO: - App: Unpacking libva1:amd64 (1.4.1-1) ...
+
+2015-11-05 11:48:37,814 INFO: - App: Selecting previously unselected package i965-va-driver:amd64.
+
+2015-11-05 11:48:37,818 INFO: - App: Preparing to unpack .../i965-va-driver_1.4.1-2_amd64.deb ...
+
+2015-11-05 11:48:37,821 INFO: - App: Unpacking i965-va-driver:amd64 (1.4.1-2) ...
+
+2015-11-05 11:48:37,862 INFO: - App: Selecting previously unselected package libavutil54:amd64.
+
+2015-11-05 11:48:37,865 INFO: - App: Preparing to unpack .../libavutil54_6%3a11.4-1~deb8u1_amd64.deb ...
+
+2015-11-05 11:48:37,880 INFO: - App: Unpacking libavutil54:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:37,911 INFO: - App: Selecting previously unselected package libavresample2:amd64.
+
+2015-11-05 11:48:37,915 INFO: - App: Preparing to unpack .../libavresample2_6%3a11.4-1~deb8u1_amd64.deb ...
+
+2015-11-05 11:48:37,920 INFO: - App: Unpacking libavresample2:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:37,956 INFO: - App: Selecting previously unselected package libopenjpeg5:amd64.
+
+2015-11-05 11:48:37,959 INFO: - App: Preparing to unpack .../libopenjpeg5_1%3a1.5.2-3_amd64.deb ...
+
+2015-11-05 11:48:37,962 INFO: - App: Unpacking libopenjpeg5:amd64 (1:1.5.2-3) ...
+
+2015-11-05 11:48:38,006 INFO: - App: Selecting previously unselected package libschroedinger-1.0-0:amd64.
+
+2015-11-05 11:48:38,007 INFO: - App: Preparing to unpack .../libschroedinger-1.0-0_1.0.11-2.1_amd64.deb ...
+
+2015-11-05 11:48:38,009 INFO: - App: Unpacking libschroedinger-1.0-0:amd64 (1.0.11-2.1) ...
+
+2015-11-05 11:48:38,077 INFO: - App: Selecting previously unselected package libvpx1:amd64.
+
+2015-11-05 11:48:38,084 INFO: - App: Preparing to unpack .../libvpx1_1.3.0-3_amd64.deb ...
+
+2015-11-05 11:48:38,088 INFO: - App: Unpacking libvpx1:amd64 (1.3.0-3) ...
+
+2015-11-05 11:48:38,169 INFO: - App: Selecting previously unselected package libx264-142:amd64.
+
+2015-11-05 11:48:38,171 INFO: - App: Preparing to unpack .../libx264-142_2%3a0.142.2431+gita5831aa-1+b2_amd64.deb ...
+
+2015-11-05 11:48:38,175 INFO: - App: Unpacking libx264-142:amd64 (2:0.142.2431+gita5831aa-1+b2) ...
+
+2015-11-05 11:48:38,275 INFO: - App: Selecting previously unselected package libxvidcore4:amd64.
+
+2015-11-05 11:48:38,278 INFO: - App: Preparing to unpack .../libxvidcore4_2%3a1.3.3-1_amd64.deb ...
+
+2015-11-05 11:48:38,281 INFO: - App: Unpacking libxvidcore4:amd64 (2:1.3.3-1) ...
+
+2015-11-05 11:48:38,340 INFO: - App: Selecting previously unselected package libavcodec56:amd64.
+
+2015-11-05 11:48:38,343 INFO: - App: Preparing to unpack .../libavcodec56_6%3a11.4-1~deb8u1_amd64.deb ...
+
+2015-11-05 11:48:38,346 INFO: - App: Unpacking libavcodec56:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:38,648 INFO: - App: Selecting previously unselected package libavformat56:amd64.
+
+2015-11-05 11:48:38,650 INFO: - App: Preparing to unpack .../libavformat56_6%3a11.4-1~deb8u1_amd64.deb ...
+
+2015-11-05 11:48:38,657 INFO: - App: Unpacking libavformat56:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:38,740 INFO: - App: Selecting previously unselected package libcdio13.
+
+2015-11-05 11:48:38,744 INFO: - App: Preparing to unpack .../libcdio13_0.83-4.2_amd64.deb ...
+
+2015-11-05 11:48:38,747 INFO: - App: Unpacking libcdio13 (0.83-4.2) ...
+
+2015-11-05 11:48:38,791 INFO: - App: Selecting previously unselected package libcdio-cdda1.
+
+2015-11-05 11:48:38,794 INFO: - App: Preparing to unpack .../libcdio-cdda1_0.83-4.2_amd64.deb ...
+
+2015-11-05 11:48:38,804 INFO: - App: Unpacking libcdio-cdda1 (0.83-4.2) ...
+
+2015-11-05 11:48:38,843 INFO: - App: Selecting previously unselected package libcdio-paranoia1.
+
+2015-11-05 11:48:38,845 INFO: - App: Preparing to unpack .../libcdio-paranoia1_0.83-4.2_amd64.deb ...
+
+2015-11-05 11:48:38,847 INFO: - App: Unpacking libcdio-paranoia1 (0.83-4.2) ...
+
+2015-11-05 11:48:38,887 INFO: - App: Selecting previously unselected package libraw1394-11:amd64.
+
+2015-11-05 11:48:38,894 INFO: - App: Preparing to unpack .../libraw1394-11_2.1.0-3_amd64.deb ...
+
+2015-11-05 11:48:38,903 INFO: - App: Unpacking libraw1394-11:amd64 (2.1.0-3) ...
+
+2015-11-05 11:48:38,938 INFO: - App: Selecting previously unselected package libusb-1.0-0:amd64.
+
+2015-11-05 11:48:38,941 INFO: - App: Preparing to unpack .../libusb-1.0-0_2%3a1.0.19-1_amd64.deb ...
+
+2015-11-05 11:48:38,944 INFO: - App: Unpacking libusb-1.0-0:amd64 (2:1.0.19-1) ...
+
+2015-11-05 11:48:38,978 INFO: - App: Selecting previously unselected package libdc1394-22:amd64.
+
+2015-11-05 11:48:38,982 INFO: - App: Preparing to unpack .../libdc1394-22_2.2.3-1_amd64.deb ...
+
+2015-11-05 11:48:38,989 INFO: - App: Unpacking libdc1394-22:amd64 (2.2.3-1) ...
+
+2015-11-05 11:48:39,027 INFO: - App: Selecting previously unselected package libavdevice55:amd64.
+
+2015-11-05 11:48:39,032 INFO: - App: Preparing to unpack .../libavdevice55_6%3a11.4-1~deb8u1_amd64.deb ...
+
+2015-11-05 11:48:39,034 INFO: - App: Unpacking libavdevice55:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:39,060 INFO: - App: Selecting previously unselected package libtbb2.
+
+2015-11-05 11:48:39,068 INFO: - App: Preparing to unpack .../libtbb2_4.2~20140122-5_amd64.deb ...
+
+2015-11-05 11:48:39,071 INFO: - App: Unpacking libtbb2 (4.2~20140122-5) ...
+
+2015-11-05 11:48:39,109 INFO: - App: Selecting previously unselected package libopencv-core2.4:amd64.
+
+2015-11-05 11:48:39,146 INFO: - App: Preparing to unpack .../libopencv-core2.4_2.4.9.1+dfsg-1+deb8u1_amd64.deb ...
+
+2015-11-05 11:48:39,158 INFO: - App: Unpacking libopencv-core2.4:amd64 (2.4.9.1+dfsg-1+deb8u1) ...
+
+2015-11-05 11:48:39,221 INFO: - App: Selecting previously unselected package libopencv-imgproc2.4:amd64.
+
+2015-11-05 11:48:39,226 INFO: - App: Preparing to unpack .../libopencv-imgproc2.4_2.4.9.1+dfsg-1+deb8u1_amd64.deb ...
+
+2015-11-05 11:48:39,237 INFO: - App: Unpacking libopencv-imgproc2.4:amd64 (2.4.9.1+dfsg-1+deb8u1) ...
+
+2015-11-05 11:48:39,317 INFO: - App: Selecting previously unselected package libswscale3:amd64.
+
+2015-11-05 11:48:39,319 INFO: - App: Preparing to unpack .../libswscale3_6%3a11.4-1~deb8u1_amd64.deb ...
+
+2015-11-05 11:48:39,323 INFO: - App: Unpacking libswscale3:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:39,365 INFO: - App: Selecting previously unselected package libavfilter5:amd64.
+
+2015-11-05 11:48:39,368 INFO: - App: Preparing to unpack .../libavfilter5_6%3a11.4-1~deb8u1_amd64.deb ...
+
+2015-11-05 11:48:39,371 INFO: - App: Unpacking libavfilter5:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:39,415 INFO: - App: Selecting previously unselected package libcaca0:amd64.
+
+2015-11-05 11:48:39,418 INFO: - App: Preparing to unpack .../libcaca0_0.99.beta19-2_amd64.deb ...
+
+2015-11-05 11:48:39,420 INFO: - App: Unpacking libcaca0:amd64 (0.99.beta19-2) ...
+
+2015-11-05 11:48:39,478 INFO: - App: Selecting previously unselected package libdirectfb-1.2-9:amd64.
+
+2015-11-05 11:48:39,481 INFO: - App: Preparing to unpack .../libdirectfb-1.2-9_1.2.10.0-5.1_amd64.deb ...
+
+2015-11-05 11:48:39,484 INFO: - App: Unpacking libdirectfb-1.2-9:amd64 (1.2.10.0-5.1) ...
+
+2015-11-05 11:48:39,578 INFO: - App: Selecting previously unselected package libsdl1.2debian:amd64.
+
+2015-11-05 11:48:39,581 INFO: - App: Preparing to unpack .../libsdl1.2debian_1.2.15-10+b1_amd64.deb ...
+
+2015-11-05 11:48:39,585 INFO: - App: Unpacking libsdl1.2debian:amd64 (1.2.15-10+b1) ...
+
+2015-11-05 11:48:39,637 INFO: - App: Selecting previously unselected package libvdpau1:amd64.
+
+2015-11-05 11:48:39,642 INFO: - App: Preparing to unpack .../libvdpau1_0.8-3+deb8u2_amd64.deb ...
+
+2015-11-05 11:48:39,645 INFO: - App: Unpacking libvdpau1:amd64 (0.8-3+deb8u2) ...
+
+2015-11-05 11:48:39,679 INFO: - App: Selecting previously unselected package libav-tools.
+
+2015-11-05 11:48:39,682 INFO: - App: Preparing to unpack .../libav-tools_6%3a11.4-1~deb8u1_amd64.deb ...
+
+2015-11-05 11:48:39,687 INFO: - App: Unpacking libav-tools (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:39,771 INFO: - App: Selecting previously unselected package libgstreamer0.10-0:amd64.
+
+2015-11-05 11:48:39,788 INFO: - App: Preparing to unpack .../libgstreamer0.10-0_0.10.36-1.5_amd64.deb ...
+
+2015-11-05 11:48:39,794 INFO: - App: Unpacking libgstreamer0.10-0:amd64 (0.10.36-1.5) ...
+
+2015-11-05 11:48:39,899 INFO: - App: Selecting previously unselected package libgstreamer-plugins-base0.10-0:amd64.
+
+2015-11-05 11:48:39,902 INFO: - App: Preparing to unpack .../libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb ...
+
+2015-11-05 11:48:39,908 INFO: - App: Unpacking libgstreamer-plugins-base0.10-0:amd64 (0.10.36-2) ...
+
+2015-11-05 11:48:39,995 INFO: - App: Selecting previously unselected package vdpau-va-driver:amd64.
+
+2015-11-05 11:48:40,001 INFO: - App: Preparing to unpack .../vdpau-va-driver_0.7.4-3_amd64.deb ...
+
+2015-11-05 11:48:40,009 INFO: - App: Unpacking vdpau-va-driver:amd64 (0.7.4-3) ...
+
+2015-11-05 11:48:40,042 INFO: - App: Selecting previously unselected package libgirepository-1.0-1:amd64.
+
+2015-11-05 11:48:40,044 INFO: - App: Preparing to unpack .../libgirepository-1.0-1_1.42.0-2.2_amd64.deb ...
+
+2015-11-05 11:48:40,046 INFO: - App: Unpacking libgirepository-1.0-1:amd64 (1.42.0-2.2) ...
+
+2015-11-05 11:48:40,084 INFO: - App: Selecting previously unselected package gir1.2-glib-2.0:amd64.
+
+2015-11-05 11:48:40,087 INFO: - App: Preparing to unpack .../gir1.2-glib-2.0_1.42.0-2.2_amd64.deb ...
+
+2015-11-05 11:48:40,091 INFO: - App: Unpacking gir1.2-glib-2.0:amd64 (1.42.0-2.2) ...
+
+2015-11-05 11:48:40,130 INFO: - App: Selecting previously unselected package python-audioread.
+
+2015-11-05 11:48:40,133 INFO: - App: Preparing to unpack .../python-audioread_1.0.3-1_all.deb ...
+
+2015-11-05 11:48:40,135 INFO: - App: Unpacking python-audioread (1.0.3-1) ...
+
+2015-11-05 11:48:40,172 INFO: - App: Selecting previously unselected package python-gi.
+
+2015-11-05 11:48:40,175 INFO: - App: Preparing to unpack .../python-gi_3.14.0-1_amd64.deb ...
+
+2015-11-05 11:48:40,180 INFO: - App: Unpacking python-gi (3.14.0-1) ...
+
+2015-11-05 11:48:40,233 INFO: - App: Selecting previously unselected package python-gobject-2.
+
+2015-11-05 11:48:40,236 INFO: - App: Preparing to unpack .../python-gobject-2_2.28.6-12+b1_amd64.deb ...
+
+2015-11-05 11:48:40,239 INFO: - App: Unpacking python-gobject-2 (2.28.6-12+b1) ...
+
+2015-11-05 11:48:40,277 INFO: - App: Selecting previously unselected package python-gobject.
+
+2015-11-05 11:48:40,279 INFO: - App: Preparing to unpack .../python-gobject_3.14.0-1_all.deb ...
+
+2015-11-05 11:48:40,283 INFO: - App: Unpacking python-gobject (3.14.0-1) ...
+
+2015-11-05 11:48:40,317 INFO: - App: Selecting previously unselected package python-libxml2.
+
+2015-11-05 11:48:40,319 INFO: - App: Preparing to unpack .../python-libxml2_2.9.1+dfsg1-5_amd64.deb ...
+
+2015-11-05 11:48:40,322 INFO: - App: Unpacking python-libxml2 (2.9.1+dfsg1-5) ...
+
+2015-11-05 11:48:40,376 INFO: - App: Selecting previously unselected package python-gst0.10.
+
+2015-11-05 11:48:40,379 INFO: - App: Preparing to unpack .../python-gst0.10_0.10.22-3_amd64.deb ...
+
+2015-11-05 11:48:40,383 INFO: - App: Unpacking python-gst0.10 (0.10.22-3) ...
+
+2015-11-05 11:48:40,437 INFO: - App: Selecting previously unselected package python-pymad.
+
+2015-11-05 11:48:40,439 INFO: - App: Preparing to unpack .../python-pymad_0.7-1_amd64.deb ...
+
+2015-11-05 11:48:40,445 INFO: - App: Unpacking python-pymad (0.7-1) ...
+
+2015-11-05 11:48:40,477 INFO: - App: Selecting previously unselected package python3-audioread.
+
+2015-11-05 11:48:40,482 INFO: - App: Preparing to unpack .../python3-audioread_1.0.3-1_all.deb ...
+
+2015-11-05 11:48:40,485 INFO: - App: Unpacking python3-audioread (1.0.3-1) ...
+
+2015-11-05 11:48:40,511 INFO: - App: Selecting previously unselected package va-driver-all:amd64.
+
+2015-11-05 11:48:40,515 INFO: - App: Preparing to unpack .../va-driver-all_1.4.1-1_amd64.deb ...
+
+2015-11-05 11:48:40,518 INFO: - App: Unpacking va-driver-all:amd64 (1.4.1-1) ...
+
+2015-11-05 11:48:40,634 INFO: - App: Setting up libva1:amd64 (1.4.1-1) ...
+
+2015-11-05 11:48:40,653 INFO: - App: Setting up i965-va-driver:amd64 (1.4.1-2) ...
+
+2015-11-05 11:48:40,663 INFO: - App: Setting up libavutil54:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:40,681 INFO: - App: Setting up libavresample2:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:40,695 INFO: - App: Setting up libopenjpeg5:amd64 (1:1.5.2-3) ...
+
+2015-11-05 11:48:40,710 INFO: - App: Setting up libschroedinger-1.0-0:amd64 (1.0.11-2.1) ...
+
+2015-11-05 11:48:40,728 INFO: - App: Setting up libvpx1:amd64 (1.3.0-3) ...
+
+2015-11-05 11:48:40,746 INFO: - App: Setting up libx264-142:amd64 (2:0.142.2431+gita5831aa-1+b2) ...
+
+2015-11-05 11:48:40,763 INFO: - App: Setting up libxvidcore4:amd64 (2:1.3.3-1) ...
+
+2015-11-05 11:48:40,781 INFO: - App: Setting up libavcodec56:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:40,802 INFO: - App: Setting up libavformat56:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:40,817 INFO: - App: Setting up libcdio13 (0.83-4.2) ...
+
+2015-11-05 11:48:40,834 INFO: - App: Setting up libcdio-cdda1 (0.83-4.2) ...
+
+2015-11-05 11:48:40,849 INFO: - App: Setting up libcdio-paranoia1 (0.83-4.2) ...
+
+2015-11-05 11:48:40,866 INFO: - App: Setting up libraw1394-11:amd64 (2.1.0-3) ...
+
+2015-11-05 11:48:40,881 INFO: - App: Setting up libusb-1.0-0:amd64 (2:1.0.19-1) ...
+
+2015-11-05 11:48:40,899 INFO: - App: Setting up libdc1394-22:amd64 (2.2.3-1) ...
+
+2015-11-05 11:48:40,915 INFO: - App: Setting up libavdevice55:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:40,930 INFO: - App: Setting up libtbb2 (4.2~20140122-5) ...
+
+2015-11-05 11:48:40,947 INFO: - App: Setting up libopencv-core2.4:amd64 (2.4.9.1+dfsg-1+deb8u1) ...
+
+2015-11-05 11:48:40,963 INFO: - App: Setting up libopencv-imgproc2.4:amd64 (2.4.9.1+dfsg-1+deb8u1) ...
+
+2015-11-05 11:48:40,980 INFO: - App: Setting up libswscale3:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:40,996 INFO: - App: Setting up libavfilter5:amd64 (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:41,019 INFO: - App: Setting up libcaca0:amd64 (0.99.beta19-2) ...
+
+2015-11-05 11:48:41,036 INFO: - App: Setting up libdirectfb-1.2-9:amd64 (1.2.10.0-5.1) ...
+
+2015-11-05 11:48:41,053 INFO: - App: Setting up libsdl1.2debian:amd64 (1.2.15-10+b1) ...
+
+2015-11-05 11:48:41,071 INFO: - App: Setting up libvdpau1:amd64 (0.8-3+deb8u2) ...
+
+2015-11-05 11:48:41,089 INFO: - App: Setting up libav-tools (6:11.4-1~deb8u1) ...
+
+2015-11-05 11:48:41,103 INFO: - App: Setting up libgstreamer0.10-0:amd64 (0.10.36-1.5) ...
+
+2015-11-05 11:48:41,118 INFO: - App: Setting up libgstreamer-plugins-base0.10-0:amd64 (0.10.36-2) ...
+
+2015-11-05 11:48:41,144 INFO: - App: Setting up vdpau-va-driver:amd64 (0.7.4-3) ...
+
+2015-11-05 11:48:41,147 INFO: - App: Setting up libgirepository-1.0-1:amd64 (1.42.0-2.2) ...
+
+2015-11-05 11:48:41,159 INFO: - App: Setting up gir1.2-glib-2.0:amd64 (1.42.0-2.2) ...
+
+2015-11-05 11:48:41,168 INFO: - App: Setting up python-audioread (1.0.3-1) ...
+
+2015-11-05 11:48:41,279 INFO: - App: Setting up python-gi (3.14.0-1) ...
+
+2015-11-05 11:48:41,414 INFO: - App: Setting up python-gobject-2 (2.28.6-12+b1) ...
+
+2015-11-05 11:48:41,522 INFO: - App: Setting up python-gobject (3.14.0-1) ...
+
+2015-11-05 11:48:41,531 INFO: - App: Setting up python-libxml2 (2.9.1+dfsg1-5) ...
+
+2015-11-05 11:48:41,669 INFO: - App: Setting up python-gst0.10 (0.10.22-3) ...
+
+2015-11-05 11:48:41,771 INFO: - App: Setting up python-pymad (0.7-1) ...
+
+2015-11-05 11:48:41,781 INFO: - App: Setting up python3-audioread (1.0.3-1) ...
+
+2015-11-05 11:48:41,939 INFO: - App: Setting up va-driver-all:amd64 (1.4.1-1) ...
+
+2015-11-05 11:48:41,950 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-11-05 11:48:44,438 INFO: - App:  ---> 7efe9006e904
+
+2015-11-05 11:48:44,502 INFO: - App: Removing intermediate container a8eb501fcbbf
+
+2015-11-05 11:48:44,506 INFO: - App: Step 7 : USER main
+
+2015-11-05 11:48:44,567 INFO: - App:  ---> Running in c6c84eefef10
+
+2015-11-05 11:48:44,615 INFO: - App:  ---> 08e50d3754d2
+
+2015-11-05 11:48:44,624 INFO: - App: Removing intermediate container c6c84eefef10
+
+2015-11-05 11:48:44,627 INFO: - App: Step 8 : RUN pip install soundfile
+
+2015-11-05 11:48:44,710 INFO: - App:  ---> Running in 822e0c20ee16
+
+2015-11-05 11:48:46,164 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 11:48:46,167 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 11:48:46,179 INFO: - App: Collecting soundfile
+
+2015-11-05 11:48:46,378 INFO: - App:   Downloading SoundFile-0.8.1-py2.py3-none-any.whl
+
+2015-11-05 11:48:46,401 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cffi>=0.6 in ./anaconda/lib/python2.7/site-packages (from soundfile)
+
+2015-11-05 11:48:46,404 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pycparser in ./anaconda/lib/python2.7/site-packages (from cffi>=0.6->soundfile)
+
+2015-11-05 11:48:46,407 INFO: - App: Installing collected packages: soundfile
+
+2015-11-05 11:48:46,442 INFO: - App: Successfully installed soundfile-0.8.1
+
+2015-11-05 11:48:46,731 INFO: - App:  ---> d0695e576897
+
+2015-11-05 11:48:46,742 INFO: - App: Removing intermediate container 822e0c20ee16
+
+2015-11-05 11:48:46,744 INFO: - App: Step 9 : RUN /home/main/anaconda/envs/python3/bin/pip install soundfile
+
+2015-11-05 11:48:46,819 INFO: - App:  ---> Running in 9e45fc7e871c
+
+2015-11-05 11:48:47,545 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 11:48:47,562 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 11:48:47,575 INFO: - App: Collecting soundfile
+
+2015-11-05 11:48:47,598 INFO: - App:   Using cached SoundFile-0.8.1-py2.py3-none-any.whl
+
+2015-11-05 11:48:47,629 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cffi>=0.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from soundfile)
+
+2015-11-05 11:48:47,632 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pycparser in ./anaconda/envs/python3/lib/python3.3/site-packages (from cffi>=0.6->soundfile)
+
+2015-11-05 11:48:47,635 INFO: - App: Installing collected packages: soundfile
+
+2015-11-05 11:48:47,668 INFO: - App: Successfully installed soundfile-0.8.1
+
+2015-11-05 11:48:47,963 INFO: - App:  ---> 2f14f714a271
+
+2015-11-05 11:48:47,974 INFO: - App: Removing intermediate container 9e45fc7e871c
+
+2015-11-05 11:48:47,980 INFO: - App: Step 10 : USER main
+
+2015-11-05 11:48:48,068 INFO: - App:  ---> Running in 04878e7e8456
+
+2015-11-05 11:48:48,127 INFO: - App:  ---> 13c292d5abfc
+
+2015-11-05 11:48:48,137 INFO: - App: Removing intermediate container 04878e7e8456
+
+2015-11-05 11:48:48,145 INFO: - App: Step 11 : ADD . $HOME/notebooks
+
+2015-11-05 11:48:48,444 INFO: - App:  ---> 1248ed34cdaf
+
+2015-11-05 11:48:48,458 INFO: - App: Removing intermediate container 85ce01b57e35
+
+2015-11-05 11:48:48,461 INFO: - App: Step 12 : USER root
+
+2015-11-05 11:48:48,527 INFO: - App:  ---> Running in 3db85caa793f
+
+2015-11-05 11:48:48,575 INFO: - App:  ---> f9c4dc28b256
+
+2015-11-05 11:48:48,579 INFO: - App: Removing intermediate container 3db85caa793f
+
+2015-11-05 11:48:48,581 INFO: - App: Step 13 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 11:48:48,648 INFO: - App:  ---> Running in e36c851ad81b
+
+2015-11-05 11:48:49,143 INFO: - App:  ---> 401d3569f20f
+
+2015-11-05 11:48:49,162 INFO: - App: Removing intermediate container e36c851ad81b
+
+2015-11-05 11:48:49,173 INFO: - App: Step 14 : USER main
+
+2015-11-05 11:48:49,232 INFO: - App:  ---> Running in 4911b25edce7
+
+2015-11-05 11:48:49,288 INFO: - App:  ---> b031755f3515
+
+2015-11-05 11:48:49,300 INFO: - App: Removing intermediate container 4911b25edce7
+
+2015-11-05 11:48:49,302 INFO: - App: Step 15 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 11:48:49,371 INFO: - App:  ---> Running in 311cc98a1b47
+
+2015-11-05 11:48:49,799 INFO: - App: Signing notebook: /home/main/notebooks/measurements/index.ipynb
+
+2015-11-05 11:48:50,054 INFO: - App: Signing notebook: /home/main/notebooks/intro-jupyter.ipynb
+
+2015-11-05 11:48:50,287 INFO: - App: Signing notebook: /home/main/notebooks/demonstrations/index.ipynb
+
+2015-11-05 11:48:50,566 INFO: - App: Signing notebook: /home/main/notebooks/simple-signals.ipynb
+
+2015-11-05 11:48:50,847 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy_quaternions.ipynb
+
+2015-11-05 11:48:51,236 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy.ipynb
+
+2015-11-05 11:48:51,475 INFO: - App: Signing notebook: /home/main/notebooks/sympy/euler.ipynb
+
+2015-11-05 11:48:51,708 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy_geometric_algebra.ipynb
+
+2015-11-05 11:48:51,955 INFO: - App: Signing notebook: /home/main/notebooks/sympy/beats.ipynb
+
+2015-11-05 11:48:52,184 INFO: - App: Signing notebook: /home/main/notebooks/sympy/index.ipynb
+
+2015-11-05 11:48:52,412 INFO: - App: Signing notebook: /home/main/notebooks/noise.ipynb
+
+2015-11-05 11:48:52,639 INFO: - App: Signing notebook: /home/main/notebooks/hdf5/index.ipynb
+
+2015-11-05 11:48:52,870 INFO: - App: Signing notebook: /home/main/notebooks/optimization/cython.ipynb
+
+2015-11-05 11:48:53,095 INFO: - App: Signing notebook: /home/main/notebooks/optimization/numexpr.ipynb
+
+2015-11-05 11:48:53,332 INFO: - App: Signing notebook: /home/main/notebooks/optimization/numba.ipynb
+
+2015-11-05 11:48:53,561 INFO: - App: Signing notebook: /home/main/notebooks/optimization/index.ipynb
+
+2015-11-05 11:48:53,807 INFO: - App: Signing notebook: /home/main/notebooks/optimization/cffi.ipynb
+
+2015-11-05 11:48:54,075 INFO: - App: Signing notebook: /home/main/notebooks/interpolation/interpolation.ipynb
+
+2015-11-05 11:48:54,311 INFO: - App: Signing notebook: /home/main/notebooks/interpolation/index.ipynb
+
+2015-11-05 11:48:54,564 INFO: - App: Signing notebook: /home/main/notebooks/sofa/reading_sofa.ipynb
+
+2015-11-05 11:48:54,788 INFO: - App: Signing notebook: /home/main/notebooks/auditory-modeling/index.ipynb
+
+2015-11-05 11:48:55,359 INFO: - App: Signing notebook: /home/main/notebooks/intro-python.ipynb
+
+2015-11-05 11:48:55,601 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/lti.ipynb
+
+2015-11-05 11:48:55,843 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/dtmf.ipynb
+
+2015-11-05 11:48:56,058 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/fft.ipynb
+
+2015-11-05 11:48:56,359 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/audiolazy.ipynb
+
+2015-11-05 11:48:56,589 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/spectrum.ipynb
+
+2015-11-05 11:48:56,824 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/index.ipynb
+
+2015-11-05 11:48:57,063 INFO: - App: Signing notebook: /home/main/notebooks/testing/syntax-checkers.ipynb
+
+2015-11-05 11:48:57,288 INFO: - App: Signing notebook: /home/main/notebooks/testing/index.ipynb
+
+2015-11-05 11:48:57,515 INFO: - App: Signing notebook: /home/main/notebooks/acoustics/index.ipynb
+
+2015-11-05 11:48:57,744 INFO: - App: Signing notebook: /home/main/notebooks/acoustics/helmholtz-resonator.ipynb
+
+2015-11-05 11:48:58,035 INFO: - App: Signing notebook: /home/main/notebooks/plotting/mpld3.ipynb
+
+2015-11-05 11:48:58,279 INFO: - App: Signing notebook: /home/main/notebooks/plotting/particle-displacement.ipynb
+
+2015-11-05 11:48:58,591 INFO: - App: Signing notebook: /home/main/notebooks/plotting/matplotlib.ipynb
+
+2015-11-05 11:48:58,819 INFO: - App: Signing notebook: /home/main/notebooks/plotting/latex.ipynb
+
+2015-11-05 11:48:59,043 INFO: - App: Signing notebook: /home/main/notebooks/plotting/waterfall.ipynb
+
+2015-11-05 11:48:59,272 INFO: - App: Signing notebook: /home/main/notebooks/plotting/spectrogram.ipynb
+
+2015-11-05 11:48:59,514 INFO: - App: Signing notebook: /home/main/notebooks/plotting/index.ipynb
+
+2015-11-05 11:48:59,795 INFO: - App: Signing notebook: /home/main/notebooks/statistics/symbolic-statistics.ipynb
+
+2015-11-05 11:49:00,028 INFO: - App: Signing notebook: /home/main/notebooks/statistics/monty_hall.ipynb
+
+2015-11-05 11:49:00,254 INFO: - App: Signing notebook: /home/main/notebooks/statistics/index.ipynb
+
+2015-11-05 11:49:00,488 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 11:49:00,732 INFO: - App: Signing notebook: /home/main/notebooks/playback-recording/index.ipynb
+
+2015-11-05 11:49:01,117 INFO: - App: Signing notebook: /home/main/notebooks/misc/comprehensions-and-generators.ipynb
+
+2015-11-05 11:49:01,351 INFO: - App: Signing notebook: /home/main/notebooks/misc/audiometer.ipynb
+
+2015-11-05 11:49:01,591 INFO: - App: Signing notebook: /home/main/notebooks/misc/abjad.ipynb
+
+2015-11-05 11:49:01,881 INFO: - App: Signing notebook: /home/main/notebooks/misc/arange.ipynb
+
+2015-11-05 11:49:02,113 INFO: - App: Signing notebook: /home/main/notebooks/misc/acute-or-obtuse.ipynb
+
+2015-11-05 11:49:02,365 INFO: - App: Signing notebook: /home/main/notebooks/misc/tikz.ipynb
+
+2015-11-05 11:49:02,591 INFO: - App: Signing notebook: /home/main/notebooks/misc/pythontutor.ipynb
+
+2015-11-05 11:49:02,876 INFO: - App: Signing notebook: /home/main/notebooks/misc/coroutines.ipynb
+
+2015-11-05 11:49:03,096 INFO: - App: Signing notebook: /home/main/notebooks/template.ipynb
+
+2015-11-05 11:49:03,320 INFO: - App: Signing notebook: /home/main/notebooks/intro-numpy.ipynb
+
+2015-11-05 11:49:03,612 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-wave.ipynb
+
+2015-11-05 11:49:03,868 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-ewave.ipynb
+
+2015-11-05 11:49:04,160 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-pysoundfile.ipynb
+
+2015-11-05 11:49:04,403 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-audiolab.ipynb
+
+2015-11-05 11:49:04,689 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-python-wavefile.ipynb
+
+2015-11-05 11:49:04,927 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/index.ipynb
+
+2015-11-05 11:49:05,191 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-scipy-io.ipynb
+
+2015-11-05 11:49:05,424 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-audioread.ipynb
+
+2015-11-05 11:49:05,731 INFO: - App:  ---> bd29f8b1c067
+
+2015-11-05 11:49:05,740 INFO: - App: Removing intermediate container 311cc98a1b47
+
+2015-11-05 11:49:05,756 INFO: - App: Step 16 : WORKDIR $HOME/notebooks
+
+2015-11-05 11:49:05,828 INFO: - App:  ---> Running in 7ef11b3ca737
+
+2015-11-05 11:49:05,891 INFO: - App:  ---> 68de78c88fed
+
+2015-11-05 11:49:05,913 INFO: - App: Removing intermediate container 7ef11b3ca737
+
+2015-11-05 11:49:05,927 INFO: - App: Successfully built 68de78c88fed
+
+2015-11-05 11:49:05,947 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/mgeier-python-audio to private registry...
+2015-11-05 11:49:38,926 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 11:49:46,339 INFO: - App: Successfully built app mgeier-python-audio
+2015-11-05 14:12:42,699 INFO: - App: Building service dependencies...
+2015-11-05 14:12:42,702 INFO: - App: Copying files and filling templates...
+2015-11-05 14:12:42,736 INFO: - App: Building the app image with Dockerfile...
+2015-11-05 14:12:42,868 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.562 MBSending build context to Docker daemon 6.095 MBSending build context to Docker daemon  6.62 MBSending build context to Docker daemon 7.166 MBSending build context to Docker daemon   7.7 MBSending build context to Docker daemon 8.258 MBSending build context to Docker daemon 8.815 MBSending build context to Docker daemon 9.372 MBSending build context to Docker daemon 9.929 MBSending build context to Docker daemon 10.19 MBSending build context to Docker daemon 10.19 MB
+
+2015-11-05 14:12:42,877 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 14:12:42,879 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 14:12:42,882 INFO: - App: Step 1 : MAINTAINER Matthias Geier <Matthias.Geier@gmail.com>
+
+2015-11-05 14:12:42,947 INFO: - App:  ---> Running in 2dd9ff5c00ff
+
+2015-11-05 14:12:42,998 INFO: - App:  ---> 7ba7c22ffaf5
+
+2015-11-05 14:12:43,006 INFO: - App: Removing intermediate container 2dd9ff5c00ff
+
+2015-11-05 14:12:43,018 INFO: - App: Step 2 : USER root
+
+2015-11-05 14:12:43,079 INFO: - App:  ---> Running in 6b69931fa751
+
+2015-11-05 14:12:43,148 INFO: - App:  ---> 33a8e8439106
+
+2015-11-05 14:12:43,156 INFO: - App: Removing intermediate container 6b69931fa751
+
+2015-11-05 14:12:43,161 INFO: - App: Step 3 : RUN apt-get update
+
+2015-11-05 14:12:43,263 INFO: - App:  ---> Running in d899894e6693
+
+2015-11-05 14:12:43,787 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-11-05 14:12:44,116 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-11-05 14:12:44,218 INFO: - App: Get:2 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-11-05 14:12:44,248 INFO: - App: Get:3 http://security.debian.org jessie/updates/main amd64 Packages [185 kB]
+
+2015-11-05 14:12:44,565 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-11-05 14:12:44,812 INFO: - App: Get:5 http://httpredir.debian.org jessie-updates/main amd64 Packages [3619 B]
+
+2015-11-05 14:12:44,931 INFO: - App: Get:6 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-11-05 14:12:45,363 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-11-05 14:12:47,426 INFO: - App: Fetched 9572 kB in 3s (2623 kB/s)
+
+2015-11-05 14:12:48,542 INFO: - App: Reading package lists...
+
+2015-11-05 14:12:48,943 INFO: - App:  ---> a231bad83016
+
+2015-11-05 14:12:48,949 INFO: - App: Removing intermediate container d899894e6693
+
+2015-11-05 14:12:48,951 INFO: - App: Step 4 : RUN apt-get install -y libsndfile1 sndfile-programs sox libsox-fmt-all
+
+2015-11-05 14:12:49,035 INFO: - App:  ---> Running in 8fb8b2ec420e
+
+2015-11-05 14:12:50,331 INFO: - App: Reading package lists...
+
+2015-11-05 14:12:50,512 INFO: - App: Building dependency tree...
+
+2015-11-05 14:12:50,517 INFO: - App: Reading state information...
+
+2015-11-05 14:12:50,579 INFO: - App: The following extra packages will be installed:
+
+2015-11-05 14:12:50,604 INFO: - App:   libao-common libao4 libasyncns0 libcairo2 libfftw3-double3 libflac8 libgsm1
+
+2015-11-05 14:12:50,614 INFO: - App:   libid3tag0 libjack-jackd2-0 libjson-c2 libltdl7 libmad0 libmp3lame0
+
+2015-11-05 14:12:50,620 INFO: - App:   libopencore-amrnb0 libopencore-amrwb0 libopus0 libpixman-1-0 libpulse0
+
+2015-11-05 14:12:50,629 INFO: - App:   libsamplerate0 libsox-fmt-alsa libsox-fmt-ao libsox-fmt-base libsox-fmt-mp3
+
+2015-11-05 14:12:50,631 INFO: - App:   libsox-fmt-oss libsox-fmt-pulse libsox2 libtwolame0 libvorbisfile3
+
+2015-11-05 14:12:50,635 INFO: - App:   libwavpack1 libwrap0 libxcb-render0 libxcb-shm0 libxi6 libxtst6
+
+2015-11-05 14:12:50,638 INFO: - App:   sndfile-tools tcpd
+
+2015-11-05 14:12:50,642 INFO: - App: Suggested packages:
+
+2015-11-05 14:12:50,648 INFO: - App:   libesd0 libesd-alsa0 libfftw3-bin libfftw3-dev jackd2 opus-tools pulseaudio
+
+2015-11-05 14:12:50,651 INFO: - App: The following NEW packages will be installed:
+
+2015-11-05 14:12:50,658 INFO: - App:   libao-common libao4 libasyncns0 libcairo2 libfftw3-double3 libflac8 libgsm1
+
+2015-11-05 14:12:50,660 INFO: - App:   libid3tag0 libjack-jackd2-0 libjson-c2 libltdl7 libmad0 libmp3lame0
+
+2015-11-05 14:12:50,662 INFO: - App:   libopencore-amrnb0 libopencore-amrwb0 libopus0 libpixman-1-0 libpulse0
+
+2015-11-05 14:12:50,664 INFO: - App:   libsamplerate0 libsndfile1 libsox-fmt-all libsox-fmt-alsa libsox-fmt-ao
+
+2015-11-05 14:12:50,667 INFO: - App:   libsox-fmt-base libsox-fmt-mp3 libsox-fmt-oss libsox-fmt-pulse libsox2
+
+2015-11-05 14:12:50,689 INFO: - App:   libtwolame0 libvorbisfile3 libwavpack1 libwrap0 libxcb-render0 libxcb-shm0
+
+2015-11-05 14:12:50,696 INFO: - App:   libxi6 libxtst6 sndfile-programs sndfile-tools sox tcpd
+
+2015-11-05 14:12:53,909 INFO: - App: 0 upgraded, 40 newly installed, 0 to remove and 29 not upgraded.
+
+2015-11-05 14:12:53,912 INFO: - App: Need to get 5817 kB of archives.
+
+2015-11-05 14:12:53,915 INFO: - App: After this operation, 13.6 MB of additional disk space will be used.
+
+2015-11-05 14:12:53,919 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libjson-c2 amd64 0.11-4 [24.8 kB]
+
+2015-11-05 14:12:53,940 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libwrap0 amd64 7.6.q-25 [58.5 kB]
+
+2015-11-05 14:12:54,184 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libxcb-render0 amd64 1.10-3+b1 [17.5 kB]
+
+2015-11-05 14:12:54,213 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libasyncns0 amd64 0.8-5 [12.5 kB]
+
+2015-11-05 14:12:54,225 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libxcb-shm0 amd64 1.10-3+b1 [11.5 kB]
+
+2015-11-05 14:12:54,263 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libpixman-1-0 amd64 0.32.6-3 [507 kB]
+
+2015-11-05 14:12:54,282 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libcairo2 amd64 1.14.0-2.1 [742 kB]
+
+2015-11-05 14:12:54,464 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libopus0 amd64 1.1-2 [156 kB]
+
+2015-11-05 14:12:54,494 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libfftw3-double3 amd64 3.3.4-2 [722 kB]
+
+2015-11-05 14:12:54,511 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libsamplerate0 amd64 0.1.8-8 [949 kB]
+
+2015-11-05 14:12:54,626 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libflac8 amd64 1.3.0-3 [89.3 kB]
+
+2015-11-05 14:12:54,653 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libjack-jackd2-0 amd64 1.9.10+20140719git3eb0ae6a~dfsg-2 [172 kB]
+
+2015-11-05 14:12:54,674 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libgsm1 amd64 1.0.13-4 [29.7 kB]
+
+2015-11-05 14:12:54,677 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libltdl7 amd64 2.4.2-1.11 [45.2 kB]
+
+2015-11-05 14:12:54,750 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libopencore-amrwb0 amd64 0.1.3-2.1 [46.2 kB]
+
+2015-11-05 14:12:54,790 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libmp3lame0 amd64 3.99.5+repack1-7+deb8u1 [353 kB]
+
+2015-11-05 14:12:54,793 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libmad0 amd64 0.15.1b-8 [78.4 kB]
+
+2015-11-05 14:12:54,800 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libsndfile1 amd64 1.0.25-9.1 [214 kB]
+
+2015-11-05 14:12:54,835 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main libxi6 amd64 2:1.7.4-1+b2 [79.7 kB]
+
+2015-11-05 14:12:54,883 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libxtst6 amd64 2:1.2.2-1+b1 [27.3 kB]
+
+2015-11-05 14:12:54,968 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libsox2 amd64 14.4.1-5 [267 kB]
+
+2015-11-05 14:12:55,016 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libvorbisfile3 amd64 1.3.4-2 [23.7 kB]
+
+2015-11-05 14:12:55,066 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libwavpack1 amd64 4.70.0-1 [81.2 kB]
+
+2015-11-05 14:12:55,117 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libopencore-amrnb0 amd64 0.1.3-2.1 [92.4 kB]
+
+2015-11-05 14:12:55,186 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libpulse0 amd64 5.0-13 [255 kB]
+
+2015-11-05 14:12:55,288 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main libid3tag0 amd64 0.15.1b-11 [35.3 kB]
+
+2015-11-05 14:12:55,331 INFO: - App: Get:27 http://httpredir.debian.org/debian/ jessie/main libao-common amd64 1.1.0-3 [11.1 kB]
+
+2015-11-05 14:12:55,371 INFO: - App: Get:28 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-ao amd64 14.4.1-5 [43.6 kB]
+
+2015-11-05 14:12:55,410 INFO: - App: Get:29 http://httpredir.debian.org/debian/ jessie/main libao4 amd64 1.1.0-3 [36.7 kB]
+
+2015-11-05 14:12:55,425 INFO: - App: Get:30 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-base amd64 14.4.1-5 [68.0 kB]
+
+2015-11-05 14:12:55,454 INFO: - App: Get:31 http://httpredir.debian.org/debian/ jessie/main libtwolame0 amd64 0.3.13-1.1 [51.7 kB]
+
+2015-11-05 14:12:55,493 INFO: - App: Get:32 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-alsa amd64 14.4.1-5 [46.7 kB]
+
+2015-11-05 14:12:55,508 INFO: - App: Get:33 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-mp3 amd64 14.4.1-5 [51.8 kB]
+
+2015-11-05 14:12:55,551 INFO: - App: Get:34 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-oss amd64 14.4.1-5 [44.2 kB]
+
+2015-11-05 14:12:55,602 INFO: - App: Get:35 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-pulse amd64 14.4.1-5 [43.7 kB]
+
+2015-11-05 14:12:55,636 INFO: - App: Get:36 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-all amd64 14.4.1-5 [41.3 kB]
+
+2015-11-05 14:12:55,711 INFO: - App: Get:37 http://httpredir.debian.org/debian/ jessie/main sndfile-programs amd64 1.0.25-9.1 [109 kB]
+
+2015-11-05 14:12:55,767 INFO: - App: Get:38 http://httpredir.debian.org/debian/ jessie/main sox amd64 14.4.1-5 [137 kB]
+
+2015-11-05 14:12:55,803 INFO: - App: Get:39 http://httpredir.debian.org/debian/ jessie/main tcpd amd64 7.6.q-25 [22.9 kB]
+
+2015-11-05 14:12:55,823 INFO: - App: Get:40 http://httpredir.debian.org/debian/ jessie/main sndfile-tools amd64 1.03-7 [19.9 kB]
+
+2015-11-05 14:12:56,006 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-11-05 14:12:56,015 INFO: - App: Fetched 5817 kB in 2s (2621 kB/s)
+
+2015-11-05 14:12:56,119 INFO: - App: Selecting previously unselected package libjson-c2:amd64.
+
+2015-11-05 14:12:56,136 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-11-05 14:12:56,139 INFO: - App: Preparing to unpack .../libjson-c2_0.11-4_amd64.deb ...
+
+2015-11-05 14:12:56,140 INFO: - App: Unpacking libjson-c2:amd64 (0.11-4) ...
+
+2015-11-05 14:12:56,180 INFO: - App: Selecting previously unselected package libwrap0:amd64.
+
+2015-11-05 14:12:56,183 INFO: - App: Preparing to unpack .../libwrap0_7.6.q-25_amd64.deb ...
+
+2015-11-05 14:12:56,187 INFO: - App: Unpacking libwrap0:amd64 (7.6.q-25) ...
+
+2015-11-05 14:12:56,222 INFO: - App: Selecting previously unselected package libasyncns0:amd64.
+
+2015-11-05 14:12:56,224 INFO: - App: Preparing to unpack .../libasyncns0_0.8-5_amd64.deb ...
+
+2015-11-05 14:12:56,226 INFO: - App: Unpacking libasyncns0:amd64 (0.8-5) ...
+
+2015-11-05 14:12:56,257 INFO: - App: Selecting previously unselected package libpixman-1-0:amd64.
+
+2015-11-05 14:12:56,260 INFO: - App: Preparing to unpack .../libpixman-1-0_0.32.6-3_amd64.deb ...
+
+2015-11-05 14:12:56,262 INFO: - App: Unpacking libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-11-05 14:12:56,324 INFO: - App: Selecting previously unselected package libxcb-render0:amd64.
+
+2015-11-05 14:12:56,327 INFO: - App: Preparing to unpack .../libxcb-render0_1.10-3+b1_amd64.deb ...
+
+2015-11-05 14:12:56,330 INFO: - App: Unpacking libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-11-05 14:12:56,361 INFO: - App: Selecting previously unselected package libxcb-shm0:amd64.
+
+2015-11-05 14:12:56,364 INFO: - App: Preparing to unpack .../libxcb-shm0_1.10-3+b1_amd64.deb ...
+
+2015-11-05 14:12:56,367 INFO: - App: Unpacking libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-11-05 14:12:56,400 INFO: - App: Selecting previously unselected package libcairo2:amd64.
+
+2015-11-05 14:12:56,402 INFO: - App: Preparing to unpack .../libcairo2_1.14.0-2.1_amd64.deb ...
+
+2015-11-05 14:12:56,405 INFO: - App: Unpacking libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-11-05 14:12:56,484 INFO: - App: Selecting previously unselected package libfftw3-double3:amd64.
+
+2015-11-05 14:12:56,486 INFO: - App: Preparing to unpack .../libfftw3-double3_3.3.4-2_amd64.deb ...
+
+2015-11-05 14:12:56,489 INFO: - App: Unpacking libfftw3-double3:amd64 (3.3.4-2) ...
+
+2015-11-05 14:12:56,588 INFO: - App: Selecting previously unselected package libflac8:amd64.
+
+2015-11-05 14:12:56,590 INFO: - App: Preparing to unpack .../libflac8_1.3.0-3_amd64.deb ...
+
+2015-11-05 14:12:56,593 INFO: - App: Unpacking libflac8:amd64 (1.3.0-3) ...
+
+2015-11-05 14:12:56,630 INFO: - App: Selecting previously unselected package libgsm1:amd64.
+
+2015-11-05 14:12:56,632 INFO: - App: Preparing to unpack .../libgsm1_1.0.13-4_amd64.deb ...
+
+2015-11-05 14:12:56,635 INFO: - App: Unpacking libgsm1:amd64 (1.0.13-4) ...
+
+2015-11-05 14:12:56,668 INFO: - App: Selecting previously unselected package libopus0:amd64.
+
+2015-11-05 14:12:56,670 INFO: - App: Preparing to unpack .../libopus0_1.1-2_amd64.deb ...
+
+2015-11-05 14:12:56,672 INFO: - App: Unpacking libopus0:amd64 (1.1-2) ...
+
+2015-11-05 14:12:56,718 INFO: - App: Selecting previously unselected package libsamplerate0:amd64.
+
+2015-11-05 14:12:56,720 INFO: - App: Preparing to unpack .../libsamplerate0_0.1.8-8_amd64.deb ...
+
+2015-11-05 14:12:56,722 INFO: - App: Unpacking libsamplerate0:amd64 (0.1.8-8) ...
+
+2015-11-05 14:12:56,860 INFO: - App: Selecting previously unselected package libjack-jackd2-0:amd64.
+
+2015-11-05 14:12:56,876 INFO: - App: Preparing to unpack .../libjack-jackd2-0_1.9.10+20140719git3eb0ae6a~dfsg-2_amd64.deb ...
+
+2015-11-05 14:12:56,878 INFO: - App: Unpacking libjack-jackd2-0:amd64 (1.9.10+20140719git3eb0ae6a~dfsg-2) ...
+
+2015-11-05 14:12:56,912 INFO: - App: Selecting previously unselected package libltdl7:amd64.
+
+2015-11-05 14:12:56,927 INFO: - App: Preparing to unpack .../libltdl7_2.4.2-1.11_amd64.deb ...
+
+2015-11-05 14:12:56,934 INFO: - App: Unpacking libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-11-05 14:12:56,954 INFO: - App: Selecting previously unselected package libmad0:amd64.
+
+2015-11-05 14:12:56,962 INFO: - App: Preparing to unpack .../libmad0_0.15.1b-8_amd64.deb ...
+
+2015-11-05 14:12:56,974 INFO: - App: Unpacking libmad0:amd64 (0.15.1b-8) ...
+
+2015-11-05 14:12:56,992 INFO: - App: Selecting previously unselected package libmp3lame0:amd64.
+
+2015-11-05 14:12:57,016 INFO: - App: Preparing to unpack .../libmp3lame0_3.99.5+repack1-7+deb8u1_amd64.deb ...
+
+2015-11-05 14:12:57,033 INFO: - App: Unpacking libmp3lame0:amd64 (3.99.5+repack1-7+deb8u1) ...
+
+2015-11-05 14:12:57,047 INFO: - App: Selecting previously unselected package libopencore-amrnb0:amd64.
+
+2015-11-05 14:12:57,054 INFO: - App: Preparing to unpack .../libopencore-amrnb0_0.1.3-2.1_amd64.deb ...
+
+2015-11-05 14:12:57,078 INFO: - App: Unpacking libopencore-amrnb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 14:12:57,093 INFO: - App: Selecting previously unselected package libopencore-amrwb0:amd64.
+
+2015-11-05 14:12:57,124 INFO: - App: Preparing to unpack .../libopencore-amrwb0_0.1.3-2.1_amd64.deb ...
+
+2015-11-05 14:12:57,139 INFO: - App: Unpacking libopencore-amrwb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 14:12:57,147 INFO: - App: Selecting previously unselected package libsndfile1:amd64.
+
+2015-11-05 14:12:57,152 INFO: - App: Preparing to unpack .../libsndfile1_1.0.25-9.1_amd64.deb ...
+
+2015-11-05 14:12:57,155 INFO: - App: Unpacking libsndfile1:amd64 (1.0.25-9.1) ...
+
+2015-11-05 14:12:57,201 INFO: - App: Selecting previously unselected package libxi6:amd64.
+
+2015-11-05 14:12:57,212 INFO: - App: Preparing to unpack .../libxi6_2%3a1.7.4-1+b2_amd64.deb ...
+
+2015-11-05 14:12:57,247 INFO: - App: Unpacking libxi6:amd64 (2:1.7.4-1+b2) ...
+
+2015-11-05 14:12:57,254 INFO: - App: Selecting previously unselected package libxtst6:amd64.
+
+2015-11-05 14:12:57,279 INFO: - App: Preparing to unpack .../libxtst6_2%3a1.2.2-1+b1_amd64.deb ...
+
+2015-11-05 14:12:57,310 INFO: - App: Unpacking libxtst6:amd64 (2:1.2.2-1+b1) ...
+
+2015-11-05 14:12:57,346 INFO: - App: Selecting previously unselected package libpulse0:amd64.
+
+2015-11-05 14:12:57,351 INFO: - App: Preparing to unpack .../libpulse0_5.0-13_amd64.deb ...
+
+2015-11-05 14:12:57,362 INFO: - App: Unpacking libpulse0:amd64 (5.0-13) ...
+
+2015-11-05 14:12:57,379 INFO: - App: Selecting previously unselected package libsox2:amd64.
+
+2015-11-05 14:12:57,416 INFO: - App: Preparing to unpack .../libsox2_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:12:57,448 INFO: - App: Unpacking libsox2:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:57,456 INFO: - App: Selecting previously unselected package libvorbisfile3:amd64.
+
+2015-11-05 14:12:57,468 INFO: - App: Preparing to unpack .../libvorbisfile3_1.3.4-2_amd64.deb ...
+
+2015-11-05 14:12:57,477 INFO: - App: Unpacking libvorbisfile3:amd64 (1.3.4-2) ...
+
+2015-11-05 14:12:57,511 INFO: - App: Selecting previously unselected package libwavpack1:amd64.
+
+2015-11-05 14:12:57,514 INFO: - App: Preparing to unpack .../libwavpack1_4.70.0-1_amd64.deb ...
+
+2015-11-05 14:12:57,516 INFO: - App: Unpacking libwavpack1:amd64 (4.70.0-1) ...
+
+2015-11-05 14:12:57,520 INFO: - App: Selecting previously unselected package libao-common.
+
+2015-11-05 14:12:57,525 INFO: - App: Preparing to unpack .../libao-common_1.1.0-3_amd64.deb ...
+
+2015-11-05 14:12:57,530 INFO: - App: Unpacking libao-common (1.1.0-3) ...
+
+2015-11-05 14:12:57,533 INFO: - App: Selecting previously unselected package libao4.
+
+2015-11-05 14:12:57,535 INFO: - App: Preparing to unpack .../libao4_1.1.0-3_amd64.deb ...
+
+2015-11-05 14:12:57,541 INFO: - App: Unpacking libao4 (1.1.0-3) ...
+
+2015-11-05 14:12:57,563 INFO: - App: Selecting previously unselected package libid3tag0.
+
+2015-11-05 14:12:57,573 INFO: - App: Preparing to unpack .../libid3tag0_0.15.1b-11_amd64.deb ...
+
+2015-11-05 14:12:57,577 INFO: - App: Unpacking libid3tag0 (0.15.1b-11) ...
+
+2015-11-05 14:12:57,599 INFO: - App: Selecting previously unselected package libsox-fmt-alsa:amd64.
+
+2015-11-05 14:12:57,607 INFO: - App: Preparing to unpack .../libsox-fmt-alsa_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:12:57,613 INFO: - App: Unpacking libsox-fmt-alsa:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:57,632 INFO: - App: Selecting previously unselected package libsox-fmt-ao:amd64.
+
+2015-11-05 14:12:57,634 INFO: - App: Preparing to unpack .../libsox-fmt-ao_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:12:57,637 INFO: - App: Unpacking libsox-fmt-ao:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:57,667 INFO: - App: Selecting previously unselected package libsox-fmt-base:amd64.
+
+2015-11-05 14:12:57,672 INFO: - App: Preparing to unpack .../libsox-fmt-base_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:12:57,675 INFO: - App: Unpacking libsox-fmt-base:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:57,710 INFO: - App: Selecting previously unselected package libtwolame0.
+
+2015-11-05 14:12:57,711 INFO: - App: Preparing to unpack .../libtwolame0_0.3.13-1.1_amd64.deb ...
+
+2015-11-05 14:12:57,714 INFO: - App: Unpacking libtwolame0 (0.3.13-1.1) ...
+
+2015-11-05 14:12:57,743 INFO: - App: Selecting previously unselected package libsox-fmt-mp3:amd64.
+
+2015-11-05 14:12:57,746 INFO: - App: Preparing to unpack .../libsox-fmt-mp3_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:12:57,753 INFO: - App: Unpacking libsox-fmt-mp3:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:57,777 INFO: - App: Selecting previously unselected package libsox-fmt-oss:amd64.
+
+2015-11-05 14:12:57,779 INFO: - App: Preparing to unpack .../libsox-fmt-oss_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:12:57,782 INFO: - App: Unpacking libsox-fmt-oss:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:57,813 INFO: - App: Selecting previously unselected package libsox-fmt-pulse:amd64.
+
+2015-11-05 14:12:57,818 INFO: - App: Preparing to unpack .../libsox-fmt-pulse_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:12:57,819 INFO: - App: Unpacking libsox-fmt-pulse:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:57,843 INFO: - App: Selecting previously unselected package libsox-fmt-all:amd64.
+
+2015-11-05 14:12:57,845 INFO: - App: Preparing to unpack .../libsox-fmt-all_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:12:57,850 INFO: - App: Unpacking libsox-fmt-all:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:57,878 INFO: - App: Selecting previously unselected package sndfile-programs.
+
+2015-11-05 14:12:57,883 INFO: - App: Preparing to unpack .../sndfile-programs_1.0.25-9.1_amd64.deb ...
+
+2015-11-05 14:12:57,888 INFO: - App: Unpacking sndfile-programs (1.0.25-9.1) ...
+
+2015-11-05 14:12:57,928 INFO: - App: Selecting previously unselected package sox.
+
+2015-11-05 14:12:57,931 INFO: - App: Preparing to unpack .../sox_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:12:57,938 INFO: - App: Unpacking sox (14.4.1-5) ...
+
+2015-11-05 14:12:57,969 INFO: - App: Selecting previously unselected package tcpd.
+
+2015-11-05 14:12:57,971 INFO: - App: Preparing to unpack .../tcpd_7.6.q-25_amd64.deb ...
+
+2015-11-05 14:12:57,988 INFO: - App: Unpacking tcpd (7.6.q-25) ...
+
+2015-11-05 14:12:58,002 INFO: - App: Selecting previously unselected package sndfile-tools.
+
+2015-11-05 14:12:58,004 INFO: - App: Preparing to unpack .../sndfile-tools_1.03-7_amd64.deb ...
+
+2015-11-05 14:12:58,007 INFO: - App: Unpacking sndfile-tools (1.03-7) ...
+
+2015-11-05 14:12:58,034 INFO: - App: Processing triggers for mime-support (3.58) ...
+
+2015-11-05 14:12:58,137 INFO: - App: Setting up libjson-c2:amd64 (0.11-4) ...
+
+2015-11-05 14:12:58,155 INFO: - App: Setting up libwrap0:amd64 (7.6.q-25) ...
+
+2015-11-05 14:12:58,174 INFO: - App: Setting up libasyncns0:amd64 (0.8-5) ...
+
+2015-11-05 14:12:58,189 INFO: - App: Setting up libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-11-05 14:12:58,205 INFO: - App: Setting up libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-11-05 14:12:58,223 INFO: - App: Setting up libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-11-05 14:12:58,251 INFO: - App: Setting up libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-11-05 14:12:58,267 INFO: - App: Setting up libfftw3-double3:amd64 (3.3.4-2) ...
+
+2015-11-05 14:12:58,283 INFO: - App: Setting up libflac8:amd64 (1.3.0-3) ...
+
+2015-11-05 14:12:58,298 INFO: - App: Setting up libgsm1:amd64 (1.0.13-4) ...
+
+2015-11-05 14:12:58,314 INFO: - App: Setting up libopus0:amd64 (1.1-2) ...
+
+2015-11-05 14:12:58,333 INFO: - App: Setting up libsamplerate0:amd64 (0.1.8-8) ...
+
+2015-11-05 14:12:58,351 INFO: - App: Setting up libjack-jackd2-0:amd64 (1.9.10+20140719git3eb0ae6a~dfsg-2) ...
+
+2015-11-05 14:12:58,379 INFO: - App: Setting up libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-11-05 14:12:58,400 INFO: - App: Setting up libmad0:amd64 (0.15.1b-8) ...
+
+2015-11-05 14:12:58,410 INFO: - App: Setting up libmp3lame0:amd64 (3.99.5+repack1-7+deb8u1) ...
+
+2015-11-05 14:12:58,428 INFO: - App: Setting up libopencore-amrnb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 14:12:58,446 INFO: - App: Setting up libopencore-amrwb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 14:12:58,465 INFO: - App: Setting up libsndfile1:amd64 (1.0.25-9.1) ...
+
+2015-11-05 14:12:58,487 INFO: - App: Setting up libxi6:amd64 (2:1.7.4-1+b2) ...
+
+2015-11-05 14:12:58,499 INFO: - App: Setting up libxtst6:amd64 (2:1.2.2-1+b1) ...
+
+2015-11-05 14:12:58,518 INFO: - App: Setting up libpulse0:amd64 (5.0-13) ...
+
+2015-11-05 14:12:58,537 INFO: - App: Setting up libsox2:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:58,554 INFO: - App: Setting up libvorbisfile3:amd64 (1.3.4-2) ...
+
+2015-11-05 14:12:58,568 INFO: - App: Setting up libwavpack1:amd64 (4.70.0-1) ...
+
+2015-11-05 14:12:58,585 INFO: - App: Setting up libao-common (1.1.0-3) ...
+
+2015-11-05 14:12:58,598 INFO: - App: Setting up libao4 (1.1.0-3) ...
+
+2015-11-05 14:12:58,615 INFO: - App: Setting up libid3tag0 (0.15.1b-11) ...
+
+2015-11-05 14:12:58,632 INFO: - App: Setting up libsox-fmt-alsa:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:58,639 INFO: - App: Setting up libsox-fmt-ao:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:58,649 INFO: - App: Setting up libsox-fmt-base:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:58,660 INFO: - App: Setting up libtwolame0 (0.3.13-1.1) ...
+
+2015-11-05 14:12:58,675 INFO: - App: Setting up libsox-fmt-mp3:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:58,684 INFO: - App: Setting up libsox-fmt-oss:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:58,695 INFO: - App: Setting up libsox-fmt-pulse:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:58,705 INFO: - App: Setting up libsox-fmt-all:amd64 (14.4.1-5) ...
+
+2015-11-05 14:12:58,716 INFO: - App: Setting up sndfile-programs (1.0.25-9.1) ...
+
+2015-11-05 14:12:58,726 INFO: - App: Setting up sox (14.4.1-5) ...
+
+2015-11-05 14:12:58,739 INFO: - App: Setting up tcpd (7.6.q-25) ...
+
+2015-11-05 14:12:58,748 INFO: - App: Setting up sndfile-tools (1.03-7) ...
+
+2015-11-05 14:12:58,758 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-11-05 14:13:00,988 INFO: - App:  ---> 7968f343a9fc
+
+2015-11-05 14:13:01,015 INFO: - App: Removing intermediate container 8fb8b2ec420e
+
+2015-11-05 14:13:01,018 INFO: - App: Step 5 : RUN apt-get install -y vorbis-tools
+
+2015-11-05 14:13:01,082 INFO: - App:  ---> Running in d5ce17a974dc
+
+2015-11-05 14:13:02,187 INFO: - App: Reading package lists...
+
+2015-11-05 14:13:02,360 INFO: - App: Building dependency tree...
+
+2015-11-05 14:13:02,368 INFO: - App: Reading state information...
+
+2015-11-05 14:13:02,432 INFO: - App: The following extra packages will be installed:
+
+2015-11-05 14:13:02,434 INFO: - App:   libspeex1
+
+2015-11-05 14:13:02,436 INFO: - App: Suggested packages:
+
+2015-11-05 14:13:02,438 INFO: - App:   speex
+
+2015-11-05 14:13:02,440 INFO: - App: The following NEW packages will be installed:
+
+2015-11-05 14:13:02,441 INFO: - App:   libspeex1 vorbis-tools
+
+2015-11-05 14:13:03,020 INFO: - App: 0 upgraded, 2 newly installed, 0 to remove and 29 not upgraded.
+
+2015-11-05 14:13:03,029 INFO: - App: Need to get 242 kB of archives.
+
+2015-11-05 14:13:03,050 INFO: - App: After this operation, 1123 kB of additional disk space will be used.
+
+2015-11-05 14:13:03,060 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libspeex1 amd64 1.2~rc1.2-1 [54.9 kB]
+
+2015-11-05 14:13:04,082 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main vorbis-tools amd64 1.4.0-6 [187 kB]
+
+2015-11-05 14:13:04,418 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-11-05 14:13:04,427 INFO: - App: Fetched 242 kB in 1s (165 kB/s)
+
+2015-11-05 14:13:04,524 INFO: - App: Selecting previously unselected package libspeex1:amd64.
+
+2015-11-05 14:13:04,544 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26771 files and directories currently installed.)
+
+2015-11-05 14:13:04,546 INFO: - App: Preparing to unpack .../libspeex1_1.2~rc1.2-1_amd64.deb ...
+
+2015-11-05 14:13:04,549 INFO: - App: Unpacking libspeex1:amd64 (1.2~rc1.2-1) ...
+
+2015-11-05 14:13:04,588 INFO: - App: Selecting previously unselected package vorbis-tools.
+
+2015-11-05 14:13:04,589 INFO: - App: Preparing to unpack .../vorbis-tools_1.4.0-6_amd64.deb ...
+
+2015-11-05 14:13:04,592 INFO: - App: Unpacking vorbis-tools (1.4.0-6) ...
+
+2015-11-05 14:13:04,625 INFO: - App: Processing triggers for mime-support (3.58) ...
+
+2015-11-05 14:13:04,746 INFO: - App: Setting up libspeex1:amd64 (1.2~rc1.2-1) ...
+
+2015-11-05 14:13:04,751 INFO: - App: Setting up vorbis-tools (1.4.0-6) ...
+
+2015-11-05 14:13:04,764 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-11-05 14:13:06,828 INFO: - App:  ---> f60027229536
+
+2015-11-05 14:13:06,845 INFO: - App: Removing intermediate container d5ce17a974dc
+
+2015-11-05 14:13:06,847 INFO: - App: Step 6 : USER main
+
+2015-11-05 14:13:06,923 INFO: - App:  ---> Running in c0e666864af8
+
+2015-11-05 14:13:06,979 INFO: - App:  ---> 519ae8521b15
+
+2015-11-05 14:13:06,987 INFO: - App: Removing intermediate container c0e666864af8
+
+2015-11-05 14:13:06,989 INFO: - App: Step 7 : RUN pip install soundfile
+
+2015-11-05 14:13:07,067 INFO: - App:  ---> Running in f26f92a44aa5
+
+2015-11-05 14:13:07,511 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:13:07,514 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:13:07,532 INFO: - App: Collecting soundfile
+
+2015-11-05 14:13:07,657 INFO: - App:   Downloading SoundFile-0.8.1-py2.py3-none-any.whl
+
+2015-11-05 14:13:07,680 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cffi>=0.6 in ./anaconda/lib/python2.7/site-packages (from soundfile)
+
+2015-11-05 14:13:07,682 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pycparser in ./anaconda/lib/python2.7/site-packages (from cffi>=0.6->soundfile)
+
+2015-11-05 14:13:07,685 INFO: - App: Installing collected packages: soundfile
+
+2015-11-05 14:13:07,721 INFO: - App: Successfully installed soundfile-0.8.1
+
+2015-11-05 14:13:08,037 INFO: - App:  ---> ffb32e389585
+
+2015-11-05 14:13:08,057 INFO: - App: Removing intermediate container f26f92a44aa5
+
+2015-11-05 14:13:08,059 INFO: - App: Step 8 : RUN /home/main/anaconda/envs/python3/bin/pip install soundfile
+
+2015-11-05 14:13:08,143 INFO: - App:  ---> Running in 41e19888d5a4
+
+2015-11-05 14:13:08,778 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:13:08,808 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:13:08,821 INFO: - App: Collecting soundfile
+
+2015-11-05 14:13:08,836 INFO: - App:   Using cached SoundFile-0.8.1-py2.py3-none-any.whl
+
+2015-11-05 14:13:08,854 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cffi>=0.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from soundfile)
+
+2015-11-05 14:13:08,865 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pycparser in ./anaconda/envs/python3/lib/python3.3/site-packages (from cffi>=0.6->soundfile)
+
+2015-11-05 14:13:08,871 INFO: - App: Installing collected packages: soundfile
+
+2015-11-05 14:13:08,897 INFO: - App: Successfully installed soundfile-0.8.1
+
+2015-11-05 14:13:09,204 INFO: - App:  ---> 56e777108e0c
+
+2015-11-05 14:13:09,219 INFO: - App: Removing intermediate container 41e19888d5a4
+
+2015-11-05 14:13:09,227 INFO: - App: Step 9 : RUN pip install audioread
+
+2015-11-05 14:13:09,299 INFO: - App:  ---> Running in cdd4afe45f06
+
+2015-11-05 14:13:09,880 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:13:09,883 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:13:09,899 INFO: - App: Collecting audioread
+
+2015-11-05 14:13:10,013 INFO: - App:   Downloading audioread-2.0.0.tar.gz
+
+2015-11-05 14:13:10,291 INFO: - App: Installing collected packages: audioread
+
+2015-11-05 14:13:10,296 INFO: - App:   Running setup.py install for audioread
+
+2015-11-05 14:13:10,550 INFO: - App: Successfully installed audioread-2.0.0
+
+2015-11-05 14:13:10,833 INFO: - App:  ---> 5d1bcdcc6416
+
+2015-11-05 14:13:10,836 INFO: - App: Removing intermediate container cdd4afe45f06
+
+2015-11-05 14:13:10,840 INFO: - App: Step 10 : RUN /home/main/anaconda/envs/python3/bin/pip install audioread
+
+2015-11-05 14:13:10,919 INFO: - App:  ---> Running in 8145276744af
+
+2015-11-05 14:13:11,603 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:13:11,606 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:13:11,622 INFO: - App: Collecting audioread
+
+2015-11-05 14:13:11,667 INFO: - App:   Using cached audioread-2.0.0.tar.gz
+
+2015-11-05 14:13:11,998 INFO: - App: Installing collected packages: audioread
+
+2015-11-05 14:13:12,004 INFO: - App:   Running setup.py install for audioread
+
+2015-11-05 14:13:12,357 INFO: - App: Successfully installed audioread-2.0.0
+
+2015-11-05 14:13:12,648 INFO: - App:  ---> a2ba38e34cdd
+
+2015-11-05 14:13:12,658 INFO: - App: Removing intermediate container 8145276744af
+
+2015-11-05 14:13:12,660 INFO: - App: Step 11 : USER main
+
+2015-11-05 14:13:12,740 INFO: - App:  ---> Running in 00c04a6c60a2
+
+2015-11-05 14:13:12,816 INFO: - App:  ---> 03fb7151c5da
+
+2015-11-05 14:13:12,824 INFO: - App: Removing intermediate container 00c04a6c60a2
+
+2015-11-05 14:13:12,827 INFO: - App: Step 12 : ADD . $HOME/notebooks
+
+2015-11-05 14:13:13,065 INFO: - App:  ---> b25686de7cda
+
+2015-11-05 14:13:13,080 INFO: - App: Removing intermediate container 335a14192f5a
+
+2015-11-05 14:13:13,083 INFO: - App: Step 13 : USER root
+
+2015-11-05 14:13:13,174 INFO: - App:  ---> Running in 4d296e43f9bb
+
+2015-11-05 14:13:13,223 INFO: - App:  ---> 3bd4c7ca712c
+
+2015-11-05 14:13:13,231 INFO: - App: Removing intermediate container 4d296e43f9bb
+
+2015-11-05 14:13:13,236 INFO: - App: Step 14 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 14:13:13,303 INFO: - App:  ---> Running in 9120bf7a5a93
+
+2015-11-05 14:13:13,782 INFO: - App:  ---> d5b5d366efb9
+
+2015-11-05 14:13:13,796 INFO: - App: Removing intermediate container 9120bf7a5a93
+
+2015-11-05 14:13:13,799 INFO: - App: Step 15 : USER main
+
+2015-11-05 14:13:13,874 INFO: - App:  ---> Running in a7f08a7043f3
+
+2015-11-05 14:13:13,919 INFO: - App:  ---> 1b8ac2fa748f
+
+2015-11-05 14:13:13,928 INFO: - App: Removing intermediate container a7f08a7043f3
+
+2015-11-05 14:13:13,931 INFO: - App: Step 16 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 14:13:14,015 INFO: - App:  ---> Running in 12cff39b06ad
+
+2015-11-05 14:13:14,427 INFO: - App: Signing notebook: /home/main/notebooks/measurements/index.ipynb
+
+2015-11-05 14:13:14,674 INFO: - App: Signing notebook: /home/main/notebooks/intro-jupyter.ipynb
+
+2015-11-05 14:13:14,903 INFO: - App: Signing notebook: /home/main/notebooks/demonstrations/index.ipynb
+
+2015-11-05 14:13:15,175 INFO: - App: Signing notebook: /home/main/notebooks/simple-signals.ipynb
+
+2015-11-05 14:13:15,458 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy_quaternions.ipynb
+
+2015-11-05 14:13:15,831 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy.ipynb
+
+2015-11-05 14:13:16,071 INFO: - App: Signing notebook: /home/main/notebooks/sympy/euler.ipynb
+
+2015-11-05 14:13:16,368 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy_geometric_algebra.ipynb
+
+2015-11-05 14:13:16,626 INFO: - App: Signing notebook: /home/main/notebooks/sympy/beats.ipynb
+
+2015-11-05 14:13:16,856 INFO: - App: Signing notebook: /home/main/notebooks/sympy/index.ipynb
+
+2015-11-05 14:13:17,086 INFO: - App: Signing notebook: /home/main/notebooks/noise.ipynb
+
+2015-11-05 14:13:17,314 INFO: - App: Signing notebook: /home/main/notebooks/hdf5/index.ipynb
+
+2015-11-05 14:13:17,548 INFO: - App: Signing notebook: /home/main/notebooks/optimization/cython.ipynb
+
+2015-11-05 14:13:17,776 INFO: - App: Signing notebook: /home/main/notebooks/optimization/numexpr.ipynb
+
+2015-11-05 14:13:18,000 INFO: - App: Signing notebook: /home/main/notebooks/optimization/numba.ipynb
+
+2015-11-05 14:13:18,218 INFO: - App: Signing notebook: /home/main/notebooks/optimization/index.ipynb
+
+2015-11-05 14:13:18,458 INFO: - App: Signing notebook: /home/main/notebooks/optimization/cffi.ipynb
+
+2015-11-05 14:13:18,711 INFO: - App: Signing notebook: /home/main/notebooks/interpolation/interpolation.ipynb
+
+2015-11-05 14:13:18,943 INFO: - App: Signing notebook: /home/main/notebooks/interpolation/index.ipynb
+
+2015-11-05 14:13:19,203 INFO: - App: Signing notebook: /home/main/notebooks/sofa/reading_sofa.ipynb
+
+2015-11-05 14:13:19,432 INFO: - App: Signing notebook: /home/main/notebooks/auditory-modeling/index.ipynb
+
+2015-11-05 14:13:19,984 INFO: - App: Signing notebook: /home/main/notebooks/intro-python.ipynb
+
+2015-11-05 14:13:20,230 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/lti.ipynb
+
+2015-11-05 14:13:20,456 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/dtmf.ipynb
+
+2015-11-05 14:13:20,687 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/fft.ipynb
+
+2015-11-05 14:13:21,004 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/audiolazy.ipynb
+
+2015-11-05 14:13:21,234 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/spectrum.ipynb
+
+2015-11-05 14:13:21,477 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/index.ipynb
+
+2015-11-05 14:13:21,713 INFO: - App: Signing notebook: /home/main/notebooks/testing/syntax-checkers.ipynb
+
+2015-11-05 14:13:21,948 INFO: - App: Signing notebook: /home/main/notebooks/testing/index.ipynb
+
+2015-11-05 14:13:22,180 INFO: - App: Signing notebook: /home/main/notebooks/acoustics/index.ipynb
+
+2015-11-05 14:13:22,404 INFO: - App: Signing notebook: /home/main/notebooks/acoustics/helmholtz-resonator.ipynb
+
+2015-11-05 14:13:22,684 INFO: - App: Signing notebook: /home/main/notebooks/plotting/mpld3.ipynb
+
+2015-11-05 14:13:22,917 INFO: - App: Signing notebook: /home/main/notebooks/plotting/particle-displacement.ipynb
+
+2015-11-05 14:13:23,224 INFO: - App: Signing notebook: /home/main/notebooks/plotting/matplotlib.ipynb
+
+2015-11-05 14:13:23,450 INFO: - App: Signing notebook: /home/main/notebooks/plotting/latex.ipynb
+
+2015-11-05 14:13:23,668 INFO: - App: Signing notebook: /home/main/notebooks/plotting/waterfall.ipynb
+
+2015-11-05 14:13:23,891 INFO: - App: Signing notebook: /home/main/notebooks/plotting/spectrogram.ipynb
+
+2015-11-05 14:13:24,124 INFO: - App: Signing notebook: /home/main/notebooks/plotting/index.ipynb
+
+2015-11-05 14:13:24,411 INFO: - App: Signing notebook: /home/main/notebooks/statistics/symbolic-statistics.ipynb
+
+2015-11-05 14:13:24,631 INFO: - App: Signing notebook: /home/main/notebooks/statistics/monty_hall.ipynb
+
+2015-11-05 14:13:24,856 INFO: - App: Signing notebook: /home/main/notebooks/statistics/index.ipynb
+
+2015-11-05 14:13:25,086 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 14:13:25,323 INFO: - App: Signing notebook: /home/main/notebooks/playback-recording/index.ipynb
+
+2015-11-05 14:13:25,695 INFO: - App: Signing notebook: /home/main/notebooks/misc/comprehensions-and-generators.ipynb
+
+2015-11-05 14:13:25,933 INFO: - App: Signing notebook: /home/main/notebooks/misc/audiometer.ipynb
+
+2015-11-05 14:13:26,163 INFO: - App: Signing notebook: /home/main/notebooks/misc/abjad.ipynb
+
+2015-11-05 14:13:26,454 INFO: - App: Signing notebook: /home/main/notebooks/misc/arange.ipynb
+
+2015-11-05 14:13:26,679 INFO: - App: Signing notebook: /home/main/notebooks/misc/acute-or-obtuse.ipynb
+
+2015-11-05 14:13:26,919 INFO: - App: Signing notebook: /home/main/notebooks/misc/tikz.ipynb
+
+2015-11-05 14:13:27,158 INFO: - App: Signing notebook: /home/main/notebooks/misc/pythontutor.ipynb
+
+2015-11-05 14:13:27,442 INFO: - App: Signing notebook: /home/main/notebooks/misc/coroutines.ipynb
+
+2015-11-05 14:13:27,663 INFO: - App: Signing notebook: /home/main/notebooks/template.ipynb
+
+2015-11-05 14:13:27,895 INFO: - App: Signing notebook: /home/main/notebooks/intro-numpy.ipynb
+
+2015-11-05 14:13:28,204 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-wave.ipynb
+
+2015-11-05 14:13:28,464 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-ewave.ipynb
+
+2015-11-05 14:13:28,759 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-pysoundfile.ipynb
+
+2015-11-05 14:13:29,004 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-audiolab.ipynb
+
+2015-11-05 14:13:29,283 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-python-wavefile.ipynb
+
+2015-11-05 14:13:29,507 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/index.ipynb
+
+2015-11-05 14:13:29,772 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-scipy-io.ipynb
+
+2015-11-05 14:13:30,002 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-audioread.ipynb
+
+2015-11-05 14:13:30,266 INFO: - App:  ---> 500b319df810
+
+2015-11-05 14:13:30,276 INFO: - App: Removing intermediate container 12cff39b06ad
+
+2015-11-05 14:13:30,279 INFO: - App: Step 17 : WORKDIR $HOME/notebooks
+
+2015-11-05 14:13:30,347 INFO: - App:  ---> Running in 5cac83217ff8
+
+2015-11-05 14:13:30,398 INFO: - App:  ---> 832b2177f706
+
+2015-11-05 14:13:30,407 INFO: - App: Removing intermediate container 5cac83217ff8
+
+2015-11-05 14:13:30,420 INFO: - App: Successfully built 832b2177f706
+
+2015-11-05 14:13:30,426 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/mgeier-python-audio to private registry...
+2015-11-05 14:13:56,984 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 14:14:01,463 INFO: - App: Successfully built app mgeier-python-audio
+2015-11-05 14:40:07,395 INFO: - App: Building service dependencies...
+2015-11-05 14:40:07,401 INFO: - App: Copying files and filling templates...
+2015-11-05 14:40:07,426 INFO: - App: Building the app image with Dockerfile...
+2015-11-05 14:40:07,597 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.562 MBSending build context to Docker daemon 6.095 MBSending build context to Docker daemon  6.62 MBSending build context to Docker daemon 7.166 MBSending build context to Docker daemon   7.7 MBSending build context to Docker daemon 8.258 MBSending build context to Docker daemon 8.815 MBSending build context to Docker daemon 9.372 MBSending build context to Docker daemon 9.929 MBSending build context to Docker daemon 10.19 MBSending build context to Docker daemon 10.19 MB
+
+2015-11-05 14:40:07,601 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 14:40:07,607 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 14:40:07,616 INFO: - App: Step 1 : MAINTAINER Matthias Geier <Matthias.Geier@gmail.com>
+
+2015-11-05 14:40:07,699 INFO: - App:  ---> Running in 422098d84f27
+
+2015-11-05 14:40:07,763 INFO: - App:  ---> 87ea90253abc
+
+2015-11-05 14:40:07,771 INFO: - App: Removing intermediate container 422098d84f27
+
+2015-11-05 14:40:07,789 INFO: - App: Step 2 : USER root
+
+2015-11-05 14:40:07,843 INFO: - App:  ---> Running in 5b1d3ced27b4
+
+2015-11-05 14:40:07,891 INFO: - App:  ---> a12ac58e2fc4
+
+2015-11-05 14:40:07,904 INFO: - App: Removing intermediate container 5b1d3ced27b4
+
+2015-11-05 14:40:07,908 INFO: - App: Step 3 : RUN apt-get update
+
+2015-11-05 14:40:07,972 INFO: - App:  ---> Running in c8b1f73d1ebe
+
+2015-11-05 14:40:09,475 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-11-05 14:40:09,910 INFO: - App: Get:2 http://security.debian.org jessie/updates/main amd64 Packages [185 kB]
+
+2015-11-05 14:40:09,925 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-11-05 14:40:09,961 INFO: - App: Get:3 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-11-05 14:40:10,175 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-11-05 14:40:10,517 INFO: - App: Get:5 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-11-05 14:40:10,522 INFO: - App: Get:6 http://httpredir.debian.org jessie-updates/main amd64 Packages [3619 B]
+
+2015-11-05 14:40:11,076 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-11-05 14:40:12,664 INFO: - App: Fetched 9572 kB in 4s (2285 kB/s)
+
+2015-11-05 14:40:13,573 INFO: - App: Reading package lists...
+
+2015-11-05 14:40:13,936 INFO: - App:  ---> c533b2e3e759
+
+2015-11-05 14:40:13,947 INFO: - App: Removing intermediate container c8b1f73d1ebe
+
+2015-11-05 14:40:13,963 INFO: - App: Step 4 : RUN apt-get install -y libsndfile1 sndfile-programs sox libsox-fmt-all
+
+2015-11-05 14:40:14,036 INFO: - App:  ---> Running in d38abdac7e2c
+
+2015-11-05 14:40:15,362 INFO: - App: Reading package lists...
+
+2015-11-05 14:40:15,658 INFO: - App: Building dependency tree...
+
+2015-11-05 14:40:15,660 INFO: - App: Reading state information...
+
+2015-11-05 14:40:15,730 INFO: - App: The following extra packages will be installed:
+
+2015-11-05 14:40:15,733 INFO: - App:   libao-common libao4 libasyncns0 libcairo2 libfftw3-double3 libflac8 libgsm1
+
+2015-11-05 14:40:15,736 INFO: - App:   libid3tag0 libjack-jackd2-0 libjson-c2 libltdl7 libmad0 libmp3lame0
+
+2015-11-05 14:40:15,744 INFO: - App:   libopencore-amrnb0 libopencore-amrwb0 libopus0 libpixman-1-0 libpulse0
+
+2015-11-05 14:40:15,750 INFO: - App:   libsamplerate0 libsox-fmt-alsa libsox-fmt-ao libsox-fmt-base libsox-fmt-mp3
+
+2015-11-05 14:40:15,753 INFO: - App:   libsox-fmt-oss libsox-fmt-pulse libsox2 libtwolame0 libvorbisfile3
+
+2015-11-05 14:40:15,756 INFO: - App:   libwavpack1 libwrap0 libxcb-render0 libxcb-shm0 libxi6 libxtst6
+
+2015-11-05 14:40:15,760 INFO: - App:   sndfile-tools tcpd
+
+2015-11-05 14:40:15,763 INFO: - App: Suggested packages:
+
+2015-11-05 14:40:15,766 INFO: - App:   libesd0 libesd-alsa0 libfftw3-bin libfftw3-dev jackd2 opus-tools pulseaudio
+
+2015-11-05 14:40:15,772 INFO: - App: The following NEW packages will be installed:
+
+2015-11-05 14:40:15,774 INFO: - App:   libao-common libao4 libasyncns0 libcairo2 libfftw3-double3 libflac8 libgsm1
+
+2015-11-05 14:40:15,779 INFO: - App:   libid3tag0 libjack-jackd2-0 libjson-c2 libltdl7 libmad0 libmp3lame0
+
+2015-11-05 14:40:15,782 INFO: - App:   libopencore-amrnb0 libopencore-amrwb0 libopus0 libpixman-1-0 libpulse0
+
+2015-11-05 14:40:15,784 INFO: - App:   libsamplerate0 libsndfile1 libsox-fmt-all libsox-fmt-alsa libsox-fmt-ao
+
+2015-11-05 14:40:15,787 INFO: - App:   libsox-fmt-base libsox-fmt-mp3 libsox-fmt-oss libsox-fmt-pulse libsox2
+
+2015-11-05 14:40:15,790 INFO: - App:   libtwolame0 libvorbisfile3 libwavpack1 libwrap0 libxcb-render0 libxcb-shm0
+
+2015-11-05 14:40:15,793 INFO: - App:   libxi6 libxtst6 sndfile-programs sndfile-tools sox tcpd
+
+2015-11-05 14:40:19,336 INFO: - App: 0 upgraded, 40 newly installed, 0 to remove and 29 not upgraded.
+
+2015-11-05 14:40:19,344 INFO: - App: Need to get 5817 kB of archives.
+
+2015-11-05 14:40:19,346 INFO: - App: After this operation, 13.6 MB of additional disk space will be used.
+
+2015-11-05 14:40:19,355 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libjson-c2 amd64 0.11-4 [24.8 kB]
+
+2015-11-05 14:40:19,442 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libasyncns0 amd64 0.8-5 [12.5 kB]
+
+2015-11-05 14:40:19,445 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libwrap0 amd64 7.6.q-25 [58.5 kB]
+
+2015-11-05 14:40:19,544 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libpixman-1-0 amd64 0.32.6-3 [507 kB]
+
+2015-11-05 14:40:19,705 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libxcb-shm0 amd64 1.10-3+b1 [11.5 kB]
+
+2015-11-05 14:40:19,748 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libcairo2 amd64 1.14.0-2.1 [742 kB]
+
+2015-11-05 14:40:19,808 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libxcb-render0 amd64 1.10-3+b1 [17.5 kB]
+
+2015-11-05 14:40:19,854 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libfftw3-double3 amd64 3.3.4-2 [722 kB]
+
+2015-11-05 14:40:19,992 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libflac8 amd64 1.3.0-3 [89.3 kB]
+
+2015-11-05 14:40:20,091 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libgsm1 amd64 1.0.13-4 [29.7 kB]
+
+2015-11-05 14:40:20,313 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libsamplerate0 amd64 0.1.8-8 [949 kB]
+
+2015-11-05 14:40:20,381 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libopus0 amd64 1.1-2 [156 kB]
+
+2015-11-05 14:40:20,529 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libltdl7 amd64 2.4.2-1.11 [45.2 kB]
+
+2015-11-05 14:40:20,650 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libmad0 amd64 0.15.1b-8 [78.4 kB]
+
+2015-11-05 14:40:20,748 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libmp3lame0 amd64 3.99.5+repack1-7+deb8u1 [353 kB]
+
+2015-11-05 14:40:20,863 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libopencore-amrnb0 amd64 0.1.3-2.1 [92.4 kB]
+
+2015-11-05 14:40:20,984 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libopencore-amrwb0 amd64 0.1.3-2.1 [46.2 kB]
+
+2015-11-05 14:40:21,201 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libxi6 amd64 2:1.7.4-1+b2 [79.7 kB]
+
+2015-11-05 14:40:21,312 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main libxtst6 amd64 2:1.2.2-1+b1 [27.3 kB]
+
+2015-11-05 14:40:21,386 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libjack-jackd2-0 amd64 1.9.10+20140719git3eb0ae6a~dfsg-2 [172 kB]
+
+2015-11-05 14:40:21,428 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libpulse0 amd64 5.0-13 [255 kB]
+
+2015-11-05 14:40:21,535 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libsox2 amd64 14.4.1-5 [267 kB]
+
+2015-11-05 14:40:21,651 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libvorbisfile3 amd64 1.3.4-2 [23.7 kB]
+
+2015-11-05 14:40:21,879 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libao-common amd64 1.1.0-3 [11.1 kB]
+
+2015-11-05 14:40:21,983 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libao4 amd64 1.1.0-3 [36.7 kB]
+
+2015-11-05 14:40:22,250 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main libid3tag0 amd64 0.15.1b-11 [35.3 kB]
+
+2015-11-05 14:40:22,413 INFO: - App: Get:27 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-alsa amd64 14.4.1-5 [46.7 kB]
+
+2015-11-05 14:40:22,469 INFO: - App: Get:28 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-ao amd64 14.4.1-5 [43.6 kB]
+
+2015-11-05 14:40:22,588 INFO: - App: Get:29 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-base amd64 14.4.1-5 [68.0 kB]
+
+2015-11-05 14:40:22,683 INFO: - App: Get:30 http://httpredir.debian.org/debian/ jessie/main libsndfile1 amd64 1.0.25-9.1 [214 kB]
+
+2015-11-05 14:40:22,705 INFO: - App: Get:31 http://httpredir.debian.org/debian/ jessie/main libtwolame0 amd64 0.3.13-1.1 [51.7 kB]
+
+2015-11-05 14:40:22,816 INFO: - App: Get:32 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-mp3 amd64 14.4.1-5 [51.8 kB]
+
+2015-11-05 14:40:23,034 INFO: - App: Get:33 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-pulse amd64 14.4.1-5 [43.7 kB]
+
+2015-11-05 14:40:23,363 INFO: - App: Get:34 http://httpredir.debian.org/debian/ jessie/main sox amd64 14.4.1-5 [137 kB]
+
+2015-11-05 14:40:23,592 INFO: - App: Get:35 http://httpredir.debian.org/debian/ jessie/main tcpd amd64 7.6.q-25 [22.9 kB]
+
+2015-11-05 14:40:23,596 INFO: - App: Get:36 http://httpredir.debian.org/debian/ jessie/main sndfile-tools amd64 1.03-7 [19.9 kB]
+
+2015-11-05 14:40:25,302 INFO: - App: Get:37 http://httpredir.debian.org/debian/ jessie/main libwavpack1 amd64 4.70.0-1 [81.2 kB]
+
+2015-11-05 14:40:26,016 INFO: - App: Get:38 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-oss amd64 14.4.1-5 [44.2 kB]
+
+2015-11-05 14:40:26,377 INFO: - App: Get:39 http://httpredir.debian.org/debian/ jessie/main libsox-fmt-all amd64 14.4.1-5 [41.3 kB]
+
+2015-11-05 14:40:26,721 INFO: - App: Get:40 http://httpredir.debian.org/debian/ jessie/main sndfile-programs amd64 1.0.25-9.1 [109 kB]
+
+2015-11-05 14:40:27,581 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-11-05 14:40:27,590 INFO: - App: Fetched 5817 kB in 8s (680 kB/s)
+
+2015-11-05 14:40:27,688 INFO: - App: Selecting previously unselected package libjson-c2:amd64.
+
+2015-11-05 14:40:27,707 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-11-05 14:40:27,712 INFO: - App: Preparing to unpack .../libjson-c2_0.11-4_amd64.deb ...
+
+2015-11-05 14:40:27,715 INFO: - App: Unpacking libjson-c2:amd64 (0.11-4) ...
+
+2015-11-05 14:40:27,743 INFO: - App: Selecting previously unselected package libwrap0:amd64.
+
+2015-11-05 14:40:27,746 INFO: - App: Preparing to unpack .../libwrap0_7.6.q-25_amd64.deb ...
+
+2015-11-05 14:40:27,749 INFO: - App: Unpacking libwrap0:amd64 (7.6.q-25) ...
+
+2015-11-05 14:40:27,785 INFO: - App: Selecting previously unselected package libasyncns0:amd64.
+
+2015-11-05 14:40:27,787 INFO: - App: Preparing to unpack .../libasyncns0_0.8-5_amd64.deb ...
+
+2015-11-05 14:40:27,791 INFO: - App: Unpacking libasyncns0:amd64 (0.8-5) ...
+
+2015-11-05 14:40:27,822 INFO: - App: Selecting previously unselected package libpixman-1-0:amd64.
+
+2015-11-05 14:40:27,824 INFO: - App: Preparing to unpack .../libpixman-1-0_0.32.6-3_amd64.deb ...
+
+2015-11-05 14:40:27,827 INFO: - App: Unpacking libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-11-05 14:40:27,909 INFO: - App: Selecting previously unselected package libxcb-render0:amd64.
+
+2015-11-05 14:40:27,915 INFO: - App: Preparing to unpack .../libxcb-render0_1.10-3+b1_amd64.deb ...
+
+2015-11-05 14:40:27,918 INFO: - App: Unpacking libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-11-05 14:40:27,948 INFO: - App: Selecting previously unselected package libxcb-shm0:amd64.
+
+2015-11-05 14:40:27,951 INFO: - App: Preparing to unpack .../libxcb-shm0_1.10-3+b1_amd64.deb ...
+
+2015-11-05 14:40:27,956 INFO: - App: Unpacking libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-11-05 14:40:27,986 INFO: - App: Selecting previously unselected package libcairo2:amd64.
+
+2015-11-05 14:40:27,990 INFO: - App: Preparing to unpack .../libcairo2_1.14.0-2.1_amd64.deb ...
+
+2015-11-05 14:40:27,998 INFO: - App: Unpacking libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-11-05 14:40:28,084 INFO: - App: Selecting previously unselected package libfftw3-double3:amd64.
+
+2015-11-05 14:40:28,087 INFO: - App: Preparing to unpack .../libfftw3-double3_3.3.4-2_amd64.deb ...
+
+2015-11-05 14:40:28,090 INFO: - App: Unpacking libfftw3-double3:amd64 (3.3.4-2) ...
+
+2015-11-05 14:40:28,175 INFO: - App: Selecting previously unselected package libflac8:amd64.
+
+2015-11-05 14:40:28,178 INFO: - App: Preparing to unpack .../libflac8_1.3.0-3_amd64.deb ...
+
+2015-11-05 14:40:28,181 INFO: - App: Unpacking libflac8:amd64 (1.3.0-3) ...
+
+2015-11-05 14:40:28,225 INFO: - App: Selecting previously unselected package libgsm1:amd64.
+
+2015-11-05 14:40:28,229 INFO: - App: Preparing to unpack .../libgsm1_1.0.13-4_amd64.deb ...
+
+2015-11-05 14:40:28,232 INFO: - App: Unpacking libgsm1:amd64 (1.0.13-4) ...
+
+2015-11-05 14:40:28,265 INFO: - App: Selecting previously unselected package libopus0:amd64.
+
+2015-11-05 14:40:28,269 INFO: - App: Preparing to unpack .../libopus0_1.1-2_amd64.deb ...
+
+2015-11-05 14:40:28,285 INFO: - App: Unpacking libopus0:amd64 (1.1-2) ...
+
+2015-11-05 14:40:28,315 INFO: - App: Selecting previously unselected package libsamplerate0:amd64.
+
+2015-11-05 14:40:28,317 INFO: - App: Preparing to unpack .../libsamplerate0_0.1.8-8_amd64.deb ...
+
+2015-11-05 14:40:28,320 INFO: - App: Unpacking libsamplerate0:amd64 (0.1.8-8) ...
+
+2015-11-05 14:40:28,448 INFO: - App: Selecting previously unselected package libjack-jackd2-0:amd64.
+
+2015-11-05 14:40:28,450 INFO: - App: Preparing to unpack .../libjack-jackd2-0_1.9.10+20140719git3eb0ae6a~dfsg-2_amd64.deb ...
+
+2015-11-05 14:40:28,454 INFO: - App: Unpacking libjack-jackd2-0:amd64 (1.9.10+20140719git3eb0ae6a~dfsg-2) ...
+
+2015-11-05 14:40:28,502 INFO: - App: Selecting previously unselected package libltdl7:amd64.
+
+2015-11-05 14:40:28,515 INFO: - App: Preparing to unpack .../libltdl7_2.4.2-1.11_amd64.deb ...
+
+2015-11-05 14:40:28,526 INFO: - App: Unpacking libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-11-05 14:40:28,547 INFO: - App: Selecting previously unselected package libmad0:amd64.
+
+2015-11-05 14:40:28,570 INFO: - App: Preparing to unpack .../libmad0_0.15.1b-8_amd64.deb ...
+
+2015-11-05 14:40:28,586 INFO: - App: Unpacking libmad0:amd64 (0.15.1b-8) ...
+
+2015-11-05 14:40:28,599 INFO: - App: Selecting previously unselected package libmp3lame0:amd64.
+
+2015-11-05 14:40:28,607 INFO: - App: Preparing to unpack .../libmp3lame0_3.99.5+repack1-7+deb8u1_amd64.deb ...
+
+2015-11-05 14:40:28,616 INFO: - App: Unpacking libmp3lame0:amd64 (3.99.5+repack1-7+deb8u1) ...
+
+2015-11-05 14:40:28,644 INFO: - App: Selecting previously unselected package libopencore-amrnb0:amd64.
+
+2015-11-05 14:40:28,656 INFO: - App: Preparing to unpack .../libopencore-amrnb0_0.1.3-2.1_amd64.deb ...
+
+2015-11-05 14:40:28,664 INFO: - App: Unpacking libopencore-amrnb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 14:40:28,686 INFO: - App: Selecting previously unselected package libopencore-amrwb0:amd64.
+
+2015-11-05 14:40:28,696 INFO: - App: Preparing to unpack .../libopencore-amrwb0_0.1.3-2.1_amd64.deb ...
+
+2015-11-05 14:40:28,707 INFO: - App: Unpacking libopencore-amrwb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 14:40:28,728 INFO: - App: Selecting previously unselected package libsndfile1:amd64.
+
+2015-11-05 14:40:28,732 INFO: - App: Preparing to unpack .../libsndfile1_1.0.25-9.1_amd64.deb ...
+
+2015-11-05 14:40:28,750 INFO: - App: Unpacking libsndfile1:amd64 (1.0.25-9.1) ...
+
+2015-11-05 14:40:28,783 INFO: - App: Selecting previously unselected package libxi6:amd64.
+
+2015-11-05 14:40:28,796 INFO: - App: Preparing to unpack .../libxi6_2%3a1.7.4-1+b2_amd64.deb ...
+
+2015-11-05 14:40:28,810 INFO: - App: Unpacking libxi6:amd64 (2:1.7.4-1+b2) ...
+
+2015-11-05 14:40:28,826 INFO: - App: Selecting previously unselected package libxtst6:amd64.
+
+2015-11-05 14:40:28,831 INFO: - App: Preparing to unpack .../libxtst6_2%3a1.2.2-1+b1_amd64.deb ...
+
+2015-11-05 14:40:28,834 INFO: - App: Unpacking libxtst6:amd64 (2:1.2.2-1+b1) ...
+
+2015-11-05 14:40:28,866 INFO: - App: Selecting previously unselected package libpulse0:amd64.
+
+2015-11-05 14:40:28,868 INFO: - App: Preparing to unpack .../libpulse0_5.0-13_amd64.deb ...
+
+2015-11-05 14:40:28,870 INFO: - App: Unpacking libpulse0:amd64 (5.0-13) ...
+
+2015-11-05 14:40:28,928 INFO: - App: Selecting previously unselected package libsox2:amd64.
+
+2015-11-05 14:40:28,931 INFO: - App: Preparing to unpack .../libsox2_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:40:28,936 INFO: - App: Unpacking libsox2:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:28,991 INFO: - App: Selecting previously unselected package libvorbisfile3:amd64.
+
+2015-11-05 14:40:28,995 INFO: - App: Preparing to unpack .../libvorbisfile3_1.3.4-2_amd64.deb ...
+
+2015-11-05 14:40:28,997 INFO: - App: Unpacking libvorbisfile3:amd64 (1.3.4-2) ...
+
+2015-11-05 14:40:29,032 INFO: - App: Selecting previously unselected package libwavpack1:amd64.
+
+2015-11-05 14:40:29,038 INFO: - App: Preparing to unpack .../libwavpack1_4.70.0-1_amd64.deb ...
+
+2015-11-05 14:40:29,042 INFO: - App: Unpacking libwavpack1:amd64 (4.70.0-1) ...
+
+2015-11-05 14:40:29,071 INFO: - App: Selecting previously unselected package libao-common.
+
+2015-11-05 14:40:29,075 INFO: - App: Preparing to unpack .../libao-common_1.1.0-3_amd64.deb ...
+
+2015-11-05 14:40:29,079 INFO: - App: Unpacking libao-common (1.1.0-3) ...
+
+2015-11-05 14:40:29,114 INFO: - App: Selecting previously unselected package libao4.
+
+2015-11-05 14:40:29,117 INFO: - App: Preparing to unpack .../libao4_1.1.0-3_amd64.deb ...
+
+2015-11-05 14:40:29,124 INFO: - App: Unpacking libao4 (1.1.0-3) ...
+
+2015-11-05 14:40:29,155 INFO: - App: Selecting previously unselected package libid3tag0.
+
+2015-11-05 14:40:29,164 INFO: - App: Preparing to unpack .../libid3tag0_0.15.1b-11_amd64.deb ...
+
+2015-11-05 14:40:29,169 INFO: - App: Unpacking libid3tag0 (0.15.1b-11) ...
+
+2015-11-05 14:40:29,189 INFO: - App: Selecting previously unselected package libsox-fmt-alsa:amd64.
+
+2015-11-05 14:40:29,200 INFO: - App: Preparing to unpack .../libsox-fmt-alsa_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:40:29,213 INFO: - App: Unpacking libsox-fmt-alsa:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:29,228 INFO: - App: Selecting previously unselected package libsox-fmt-ao:amd64.
+
+2015-11-05 14:40:29,233 INFO: - App: Preparing to unpack .../libsox-fmt-ao_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:40:29,239 INFO: - App: Unpacking libsox-fmt-ao:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:29,258 INFO: - App: Selecting previously unselected package libsox-fmt-base:amd64.
+
+2015-11-05 14:40:29,269 INFO: - App: Preparing to unpack .../libsox-fmt-base_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:40:29,277 INFO: - App: Unpacking libsox-fmt-base:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:29,299 INFO: - App: Selecting previously unselected package libtwolame0.
+
+2015-11-05 14:40:29,306 INFO: - App: Preparing to unpack .../libtwolame0_0.3.13-1.1_amd64.deb ...
+
+2015-11-05 14:40:29,312 INFO: - App: Unpacking libtwolame0 (0.3.13-1.1) ...
+
+2015-11-05 14:40:29,334 INFO: - App: Selecting previously unselected package libsox-fmt-mp3:amd64.
+
+2015-11-05 14:40:29,342 INFO: - App: Preparing to unpack .../libsox-fmt-mp3_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:40:29,346 INFO: - App: Unpacking libsox-fmt-mp3:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:29,374 INFO: - App: Selecting previously unselected package libsox-fmt-oss:amd64.
+
+2015-11-05 14:40:29,377 INFO: - App: Preparing to unpack .../libsox-fmt-oss_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:40:29,379 INFO: - App: Unpacking libsox-fmt-oss:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:29,408 INFO: - App: Selecting previously unselected package libsox-fmt-pulse:amd64.
+
+2015-11-05 14:40:29,412 INFO: - App: Preparing to unpack .../libsox-fmt-pulse_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:40:29,419 INFO: - App: Unpacking libsox-fmt-pulse:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:29,442 INFO: - App: Selecting previously unselected package libsox-fmt-all:amd64.
+
+2015-11-05 14:40:29,444 INFO: - App: Preparing to unpack .../libsox-fmt-all_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:40:29,450 INFO: - App: Unpacking libsox-fmt-all:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:29,475 INFO: - App: Selecting previously unselected package sndfile-programs.
+
+2015-11-05 14:40:29,479 INFO: - App: Preparing to unpack .../sndfile-programs_1.0.25-9.1_amd64.deb ...
+
+2015-11-05 14:40:29,481 INFO: - App: Unpacking sndfile-programs (1.0.25-9.1) ...
+
+2015-11-05 14:40:29,513 INFO: - App: Selecting previously unselected package sox.
+
+2015-11-05 14:40:29,515 INFO: - App: Preparing to unpack .../sox_14.4.1-5_amd64.deb ...
+
+2015-11-05 14:40:29,518 INFO: - App: Unpacking sox (14.4.1-5) ...
+
+2015-11-05 14:40:29,560 INFO: - App: Selecting previously unselected package tcpd.
+
+2015-11-05 14:40:29,562 INFO: - App: Preparing to unpack .../tcpd_7.6.q-25_amd64.deb ...
+
+2015-11-05 14:40:29,567 INFO: - App: Unpacking tcpd (7.6.q-25) ...
+
+2015-11-05 14:40:29,592 INFO: - App: Selecting previously unselected package sndfile-tools.
+
+2015-11-05 14:40:29,594 INFO: - App: Preparing to unpack .../sndfile-tools_1.03-7_amd64.deb ...
+
+2015-11-05 14:40:29,597 INFO: - App: Unpacking sndfile-tools (1.03-7) ...
+
+2015-11-05 14:40:29,619 INFO: - App: Processing triggers for mime-support (3.58) ...
+
+2015-11-05 14:40:29,726 INFO: - App: Setting up libjson-c2:amd64 (0.11-4) ...
+
+2015-11-05 14:40:29,748 INFO: - App: Setting up libwrap0:amd64 (7.6.q-25) ...
+
+2015-11-05 14:40:29,762 INFO: - App: Setting up libasyncns0:amd64 (0.8-5) ...
+
+2015-11-05 14:40:29,784 INFO: - App: Setting up libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-11-05 14:40:29,800 INFO: - App: Setting up libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-11-05 14:40:29,811 INFO: - App: Setting up libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-11-05 14:40:29,828 INFO: - App: Setting up libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-11-05 14:40:29,841 INFO: - App: Setting up libfftw3-double3:amd64 (3.3.4-2) ...
+
+2015-11-05 14:40:29,857 INFO: - App: Setting up libflac8:amd64 (1.3.0-3) ...
+
+2015-11-05 14:40:29,874 INFO: - App: Setting up libgsm1:amd64 (1.0.13-4) ...
+
+2015-11-05 14:40:29,888 INFO: - App: Setting up libopus0:amd64 (1.1-2) ...
+
+2015-11-05 14:40:29,906 INFO: - App: Setting up libsamplerate0:amd64 (0.1.8-8) ...
+
+2015-11-05 14:40:29,921 INFO: - App: Setting up libjack-jackd2-0:amd64 (1.9.10+20140719git3eb0ae6a~dfsg-2) ...
+
+2015-11-05 14:40:29,937 INFO: - App: Setting up libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-11-05 14:40:29,953 INFO: - App: Setting up libmad0:amd64 (0.15.1b-8) ...
+
+2015-11-05 14:40:29,969 INFO: - App: Setting up libmp3lame0:amd64 (3.99.5+repack1-7+deb8u1) ...
+
+2015-11-05 14:40:29,986 INFO: - App: Setting up libopencore-amrnb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 14:40:30,002 INFO: - App: Setting up libopencore-amrwb0:amd64 (0.1.3-2.1) ...
+
+2015-11-05 14:40:30,022 INFO: - App: Setting up libsndfile1:amd64 (1.0.25-9.1) ...
+
+2015-11-05 14:40:30,044 INFO: - App: Setting up libxi6:amd64 (2:1.7.4-1+b2) ...
+
+2015-11-05 14:40:30,056 INFO: - App: Setting up libxtst6:amd64 (2:1.2.2-1+b1) ...
+
+2015-11-05 14:40:30,073 INFO: - App: Setting up libpulse0:amd64 (5.0-13) ...
+
+2015-11-05 14:40:30,093 INFO: - App: Setting up libsox2:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:30,111 INFO: - App: Setting up libvorbisfile3:amd64 (1.3.4-2) ...
+
+2015-11-05 14:40:30,126 INFO: - App: Setting up libwavpack1:amd64 (4.70.0-1) ...
+
+2015-11-05 14:40:30,144 INFO: - App: Setting up libao-common (1.1.0-3) ...
+
+2015-11-05 14:40:30,155 INFO: - App: Setting up libao4 (1.1.0-3) ...
+
+2015-11-05 14:40:30,176 INFO: - App: Setting up libid3tag0 (0.15.1b-11) ...
+
+2015-11-05 14:40:30,189 INFO: - App: Setting up libsox-fmt-alsa:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:30,203 INFO: - App: Setting up libsox-fmt-ao:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:30,212 INFO: - App: Setting up libsox-fmt-base:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:30,223 INFO: - App: Setting up libtwolame0 (0.3.13-1.1) ...
+
+2015-11-05 14:40:30,240 INFO: - App: Setting up libsox-fmt-mp3:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:30,252 INFO: - App: Setting up libsox-fmt-oss:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:30,260 INFO: - App: Setting up libsox-fmt-pulse:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:30,272 INFO: - App: Setting up libsox-fmt-all:amd64 (14.4.1-5) ...
+
+2015-11-05 14:40:30,281 INFO: - App: Setting up sndfile-programs (1.0.25-9.1) ...
+
+2015-11-05 14:40:30,291 INFO: - App: Setting up sox (14.4.1-5) ...
+
+2015-11-05 14:40:30,303 INFO: - App: Setting up tcpd (7.6.q-25) ...
+
+2015-11-05 14:40:30,312 INFO: - App: Setting up sndfile-tools (1.03-7) ...
+
+2015-11-05 14:40:30,323 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-11-05 14:40:32,544 INFO: - App:  ---> a02d6225fda0
+
+2015-11-05 14:40:32,568 INFO: - App: Removing intermediate container d38abdac7e2c
+
+2015-11-05 14:40:32,571 INFO: - App: Step 5 : RUN apt-get install -y vorbis-tools
+
+2015-11-05 14:40:32,635 INFO: - App:  ---> Running in 04d6b8828e31
+
+2015-11-05 14:40:33,732 INFO: - App: Reading package lists...
+
+2015-11-05 14:40:33,900 INFO: - App: Building dependency tree...
+
+2015-11-05 14:40:33,903 INFO: - App: Reading state information...
+
+2015-11-05 14:40:33,966 INFO: - App: The following extra packages will be installed:
+
+2015-11-05 14:40:33,969 INFO: - App:   libspeex1
+
+2015-11-05 14:40:33,971 INFO: - App: Suggested packages:
+
+2015-11-05 14:40:33,973 INFO: - App:   speex
+
+2015-11-05 14:40:33,976 INFO: - App: The following NEW packages will be installed:
+
+2015-11-05 14:40:33,978 INFO: - App:   libspeex1 vorbis-tools
+
+2015-11-05 14:40:34,849 INFO: - App: 0 upgraded, 2 newly installed, 0 to remove and 29 not upgraded.
+
+2015-11-05 14:40:34,868 INFO: - App: Need to get 242 kB of archives.
+
+2015-11-05 14:40:34,875 INFO: - App: After this operation, 1123 kB of additional disk space will be used.
+
+2015-11-05 14:40:34,878 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libspeex1 amd64 1.2~rc1.2-1 [54.9 kB]
+
+2015-11-05 14:40:34,959 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main vorbis-tools amd64 1.4.0-6 [187 kB]
+
+2015-11-05 14:40:35,421 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-11-05 14:40:35,432 INFO: - App: Fetched 242 kB in 0s (257 kB/s)
+
+2015-11-05 14:40:35,528 INFO: - App: Selecting previously unselected package libspeex1:amd64.
+
+2015-11-05 14:40:35,547 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26771 files and directories currently installed.)
+
+2015-11-05 14:40:35,556 INFO: - App: Preparing to unpack .../libspeex1_1.2~rc1.2-1_amd64.deb ...
+
+2015-11-05 14:40:35,568 INFO: - App: Unpacking libspeex1:amd64 (1.2~rc1.2-1) ...
+
+2015-11-05 14:40:35,584 INFO: - App: Selecting previously unselected package vorbis-tools.
+
+2015-11-05 14:40:35,597 INFO: - App: Preparing to unpack .../vorbis-tools_1.4.0-6_amd64.deb ...
+
+2015-11-05 14:40:35,613 INFO: - App: Unpacking vorbis-tools (1.4.0-6) ...
+
+2015-11-05 14:40:35,646 INFO: - App: Processing triggers for mime-support (3.58) ...
+
+2015-11-05 14:40:35,735 INFO: - App: Setting up libspeex1:amd64 (1.2~rc1.2-1) ...
+
+2015-11-05 14:40:35,754 INFO: - App: Setting up vorbis-tools (1.4.0-6) ...
+
+2015-11-05 14:40:35,764 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-11-05 14:40:37,854 INFO: - App:  ---> 6fe55dad7c3d
+
+2015-11-05 14:40:37,872 INFO: - App: Removing intermediate container 04d6b8828e31
+
+2015-11-05 14:40:37,874 INFO: - App: Step 6 : RUN apt-get install -y fonts-humor-sans
+
+2015-11-05 14:40:37,955 INFO: - App:  ---> Running in e16d6b372149
+
+2015-11-05 14:40:39,075 INFO: - App: Reading package lists...
+
+2015-11-05 14:40:39,248 INFO: - App: Building dependency tree...
+
+2015-11-05 14:40:39,251 INFO: - App: Reading state information...
+
+2015-11-05 14:40:39,323 INFO: - App: The following NEW packages will be installed:
+
+2015-11-05 14:40:39,325 INFO: - App:   fonts-humor-sans
+
+2015-11-05 14:40:39,916 INFO: - App: 0 upgraded, 1 newly installed, 0 to remove and 29 not upgraded.
+
+2015-11-05 14:40:39,919 INFO: - App: Need to get 13.5 kB of archives.
+
+2015-11-05 14:40:39,926 INFO: - App: After this operation, 68.6 kB of additional disk space will be used.
+
+2015-11-05 14:40:39,929 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main fonts-humor-sans all 1.0-1 [13.5 kB]
+
+2015-11-05 14:40:40,121 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-11-05 14:40:40,125 INFO: - App: Fetched 13.5 kB in 0s (33.9 kB/s)
+
+2015-11-05 14:40:40,222 INFO: - App: Selecting previously unselected package fonts-humor-sans.
+
+2015-11-05 14:40:40,244 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26816 files and directories currently installed.)
+
+2015-11-05 14:40:40,249 INFO: - App: Preparing to unpack .../fonts-humor-sans_1.0-1_all.deb ...
+
+2015-11-05 14:40:40,252 INFO: - App: Unpacking fonts-humor-sans (1.0-1) ...
+
+2015-11-05 14:40:40,269 INFO: - App: Processing triggers for fontconfig (2.11.0-6.3) ...
+
+2015-11-05 14:40:40,430 INFO: - App: Setting up fonts-humor-sans (1.0-1) ...
+
+2015-11-05 14:40:42,483 INFO: - App:  ---> 0dc3e82e5db9
+
+2015-11-05 14:40:42,495 INFO: - App: Removing intermediate container e16d6b372149
+
+2015-11-05 14:40:42,497 INFO: - App: Step 7 : USER main
+
+2015-11-05 14:40:42,626 INFO: - App:  ---> Running in 4d039666d577
+
+2015-11-05 14:40:42,694 INFO: - App:  ---> 6fd2cb949c8e
+
+2015-11-05 14:40:42,708 INFO: - App: Removing intermediate container 4d039666d577
+
+2015-11-05 14:40:42,726 INFO: - App: Step 8 : RUN pip install soundfile
+
+2015-11-05 14:40:42,776 INFO: - App:  ---> Running in 452bd89f4737
+
+2015-11-05 14:40:44,228 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:40:44,236 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:40:44,259 INFO: - App: Collecting soundfile
+
+2015-11-05 14:40:44,359 INFO: - App:   Downloading SoundFile-0.8.1-py2.py3-none-any.whl
+
+2015-11-05 14:40:44,384 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cffi>=0.6 in ./anaconda/lib/python2.7/site-packages (from soundfile)
+
+2015-11-05 14:40:44,400 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pycparser in ./anaconda/lib/python2.7/site-packages (from cffi>=0.6->soundfile)
+
+2015-11-05 14:40:44,407 INFO: - App: Installing collected packages: soundfile
+
+2015-11-05 14:40:44,431 INFO: - App: Successfully installed soundfile-0.8.1
+
+2015-11-05 14:40:44,717 INFO: - App:  ---> 4af0f1a210bc
+
+2015-11-05 14:40:44,737 INFO: - App: Removing intermediate container 452bd89f4737
+
+2015-11-05 14:40:44,739 INFO: - App: Step 9 : RUN /home/main/anaconda/envs/python3/bin/pip install soundfile
+
+2015-11-05 14:40:44,807 INFO: - App:  ---> Running in 3d01d39db2e5
+
+2015-11-05 14:40:45,498 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:40:45,500 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:40:45,513 INFO: - App: Collecting soundfile
+
+2015-11-05 14:40:45,551 INFO: - App:   Using cached SoundFile-0.8.1-py2.py3-none-any.whl
+
+2015-11-05 14:40:45,569 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cffi>=0.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from soundfile)
+
+2015-11-05 14:40:45,572 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pycparser in ./anaconda/envs/python3/lib/python3.3/site-packages (from cffi>=0.6->soundfile)
+
+2015-11-05 14:40:45,574 INFO: - App: Installing collected packages: soundfile
+
+2015-11-05 14:40:45,618 INFO: - App: Successfully installed soundfile-0.8.1
+
+2015-11-05 14:40:45,894 INFO: - App:  ---> 0159b570fb1e
+
+2015-11-05 14:40:45,904 INFO: - App: Removing intermediate container 3d01d39db2e5
+
+2015-11-05 14:40:45,906 INFO: - App: Step 10 : RUN pip install audioread
+
+2015-11-05 14:40:45,983 INFO: - App:  ---> Running in 4de62813a13a
+
+2015-11-05 14:40:46,584 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:40:46,587 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:40:46,604 INFO: - App: Collecting audioread
+
+2015-11-05 14:40:46,719 INFO: - App:   Downloading audioread-2.0.0.tar.gz
+
+2015-11-05 14:40:47,001 INFO: - App: Installing collected packages: audioread
+
+2015-11-05 14:40:47,005 INFO: - App:   Running setup.py install for audioread
+
+2015-11-05 14:40:47,278 INFO: - App: Successfully installed audioread-2.0.0
+
+2015-11-05 14:40:47,560 INFO: - App:  ---> b40828dc812d
+
+2015-11-05 14:40:47,570 INFO: - App: Removing intermediate container 4de62813a13a
+
+2015-11-05 14:40:47,573 INFO: - App: Step 11 : RUN /home/main/anaconda/envs/python3/bin/pip install audioread
+
+2015-11-05 14:40:47,643 INFO: - App:  ---> Running in 85ae6d25ca97
+
+2015-11-05 14:40:48,336 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:40:48,351 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:40:48,365 INFO: - App: Collecting audioread
+
+2015-11-05 14:40:48,397 INFO: - App:   Using cached audioread-2.0.0.tar.gz
+
+2015-11-05 14:40:48,736 INFO: - App: Installing collected packages: audioread
+
+2015-11-05 14:40:48,739 INFO: - App:   Running setup.py install for audioread
+
+2015-11-05 14:40:49,091 INFO: - App: Successfully installed audioread-2.0.0
+
+2015-11-05 14:40:49,387 INFO: - App:  ---> fb6267187341
+
+2015-11-05 14:40:49,400 INFO: - App: Removing intermediate container 85ae6d25ca97
+
+2015-11-05 14:40:49,405 INFO: - App: Step 12 : RUN pip install mpld3
+
+2015-11-05 14:40:49,471 INFO: - App:  ---> Running in e0748b52c5e4
+
+2015-11-05 14:40:50,109 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:40:50,113 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:40:50,130 INFO: - App: Collecting mpld3
+
+2015-11-05 14:40:50,247 INFO: - App:   Downloading mpld3-0.2.tar.gz (1.1MB)
+
+2015-11-05 14:40:50,751 INFO: - App: Installing collected packages: mpld3
+
+2015-11-05 14:40:50,754 INFO: - App:   Running setup.py install for mpld3
+
+2015-11-05 14:40:51,062 INFO: - App: Successfully installed mpld3-0.2
+
+2015-11-05 14:40:51,356 INFO: - App:  ---> a43e9c9126f4
+
+2015-11-05 14:40:51,368 INFO: - App: Removing intermediate container e0748b52c5e4
+
+2015-11-05 14:40:51,370 INFO: - App: Step 13 : RUN /home/main/anaconda/envs/python3/bin/pip install mpld3
+
+2015-11-05 14:40:51,443 INFO: - App:  ---> Running in d7f9d0befb55
+
+2015-11-05 14:40:52,090 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 14:40:52,093 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 14:40:52,106 INFO: - App: Collecting mpld3
+
+2015-11-05 14:40:52,162 INFO: - App:   Using cached mpld3-0.2.tar.gz
+
+2015-11-05 14:40:52,579 INFO: - App: Installing collected packages: mpld3
+
+2015-11-05 14:40:52,582 INFO: - App:   Running setup.py install for mpld3
+
+2015-11-05 14:40:52,987 INFO: - App: Successfully installed mpld3-0.2
+
+2015-11-05 14:40:53,321 INFO: - App:  ---> 83fe50afde98
+
+2015-11-05 14:40:53,331 INFO: - App: Removing intermediate container d7f9d0befb55
+
+2015-11-05 14:40:53,342 INFO: - App: Step 14 : USER main
+
+2015-11-05 14:40:53,414 INFO: - App:  ---> Running in b6b1151823ce
+
+2015-11-05 14:40:53,467 INFO: - App:  ---> cc76fbe40068
+
+2015-11-05 14:40:53,475 INFO: - App: Removing intermediate container b6b1151823ce
+
+2015-11-05 14:40:53,489 INFO: - App: Step 15 : ADD . $HOME/notebooks
+
+2015-11-05 14:40:53,704 INFO: - App:  ---> 1da1075c2040
+
+2015-11-05 14:40:53,715 INFO: - App: Removing intermediate container 41bacc39b498
+
+2015-11-05 14:40:53,721 INFO: - App: Step 16 : USER root
+
+2015-11-05 14:40:53,800 INFO: - App:  ---> Running in 204b0b363f9d
+
+2015-11-05 14:40:53,851 INFO: - App:  ---> 460a21447ab2
+
+2015-11-05 14:40:53,859 INFO: - App: Removing intermediate container 204b0b363f9d
+
+2015-11-05 14:40:53,861 INFO: - App: Step 17 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 14:40:53,931 INFO: - App:  ---> Running in 8958a3b0df04
+
+2015-11-05 14:40:54,414 INFO: - App:  ---> 1eb972b2efac
+
+2015-11-05 14:40:54,427 INFO: - App: Removing intermediate container 8958a3b0df04
+
+2015-11-05 14:40:54,430 INFO: - App: Step 18 : USER main
+
+2015-11-05 14:40:54,507 INFO: - App:  ---> Running in f93d6f07b1b8
+
+2015-11-05 14:40:54,561 INFO: - App:  ---> 4667f58e820e
+
+2015-11-05 14:40:54,572 INFO: - App: Removing intermediate container f93d6f07b1b8
+
+2015-11-05 14:40:54,575 INFO: - App: Step 19 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 14:40:54,655 INFO: - App:  ---> Running in f9a1eeed9ee2
+
+2015-11-05 14:40:55,111 INFO: - App: Signing notebook: /home/main/notebooks/measurements/index.ipynb
+
+2015-11-05 14:40:55,365 INFO: - App: Signing notebook: /home/main/notebooks/intro-jupyter.ipynb
+
+2015-11-05 14:40:55,593 INFO: - App: Signing notebook: /home/main/notebooks/demonstrations/index.ipynb
+
+2015-11-05 14:40:55,874 INFO: - App: Signing notebook: /home/main/notebooks/simple-signals.ipynb
+
+2015-11-05 14:40:56,165 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy_quaternions.ipynb
+
+2015-11-05 14:40:56,543 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy.ipynb
+
+2015-11-05 14:40:56,785 INFO: - App: Signing notebook: /home/main/notebooks/sympy/euler.ipynb
+
+2015-11-05 14:40:57,035 INFO: - App: Signing notebook: /home/main/notebooks/sympy/sympy_geometric_algebra.ipynb
+
+2015-11-05 14:40:57,306 INFO: - App: Signing notebook: /home/main/notebooks/sympy/beats.ipynb
+
+2015-11-05 14:40:57,550 INFO: - App: Signing notebook: /home/main/notebooks/sympy/index.ipynb
+
+2015-11-05 14:40:57,779 INFO: - App: Signing notebook: /home/main/notebooks/noise.ipynb
+
+2015-11-05 14:40:58,010 INFO: - App: Signing notebook: /home/main/notebooks/hdf5/index.ipynb
+
+2015-11-05 14:40:58,264 INFO: - App: Signing notebook: /home/main/notebooks/optimization/cython.ipynb
+
+2015-11-05 14:40:58,524 INFO: - App: Signing notebook: /home/main/notebooks/optimization/numexpr.ipynb
+
+2015-11-05 14:40:58,747 INFO: - App: Signing notebook: /home/main/notebooks/optimization/numba.ipynb
+
+2015-11-05 14:40:58,985 INFO: - App: Signing notebook: /home/main/notebooks/optimization/index.ipynb
+
+2015-11-05 14:40:59,247 INFO: - App: Signing notebook: /home/main/notebooks/optimization/cffi.ipynb
+
+2015-11-05 14:40:59,512 INFO: - App: Signing notebook: /home/main/notebooks/interpolation/interpolation.ipynb
+
+2015-11-05 14:40:59,760 INFO: - App: Signing notebook: /home/main/notebooks/interpolation/index.ipynb
+
+2015-11-05 14:41:00,030 INFO: - App: Signing notebook: /home/main/notebooks/sofa/reading_sofa.ipynb
+
+2015-11-05 14:41:00,267 INFO: - App: Signing notebook: /home/main/notebooks/auditory-modeling/index.ipynb
+
+2015-11-05 14:41:00,856 INFO: - App: Signing notebook: /home/main/notebooks/intro-python.ipynb
+
+2015-11-05 14:41:01,111 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/lti.ipynb
+
+2015-11-05 14:41:01,347 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/dtmf.ipynb
+
+2015-11-05 14:41:01,584 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/fft.ipynb
+
+2015-11-05 14:41:01,898 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/audiolazy.ipynb
+
+2015-11-05 14:41:02,156 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/spectrum.ipynb
+
+2015-11-05 14:41:02,391 INFO: - App: Signing notebook: /home/main/notebooks/signal-processing/index.ipynb
+
+2015-11-05 14:41:02,634 INFO: - App: Signing notebook: /home/main/notebooks/testing/syntax-checkers.ipynb
+
+2015-11-05 14:41:02,876 INFO: - App: Signing notebook: /home/main/notebooks/testing/index.ipynb
+
+2015-11-05 14:41:03,112 INFO: - App: Signing notebook: /home/main/notebooks/acoustics/index.ipynb
+
+2015-11-05 14:41:03,352 INFO: - App: Signing notebook: /home/main/notebooks/acoustics/helmholtz-resonator.ipynb
+
+2015-11-05 14:41:03,660 INFO: - App: Signing notebook: /home/main/notebooks/plotting/mpld3.ipynb
+
+2015-11-05 14:41:03,915 INFO: - App: Signing notebook: /home/main/notebooks/plotting/particle-displacement.ipynb
+
+2015-11-05 14:41:04,232 INFO: - App: Signing notebook: /home/main/notebooks/plotting/matplotlib.ipynb
+
+2015-11-05 14:41:04,467 INFO: - App: Signing notebook: /home/main/notebooks/plotting/latex.ipynb
+
+2015-11-05 14:41:04,695 INFO: - App: Signing notebook: /home/main/notebooks/plotting/waterfall.ipynb
+
+2015-11-05 14:41:04,951 INFO: - App: Signing notebook: /home/main/notebooks/plotting/spectrogram.ipynb
+
+2015-11-05 14:41:05,162 INFO: - App: Signing notebook: /home/main/notebooks/plotting/index.ipynb
+
+2015-11-05 14:41:05,472 INFO: - App: Signing notebook: /home/main/notebooks/statistics/symbolic-statistics.ipynb
+
+2015-11-05 14:41:05,704 INFO: - App: Signing notebook: /home/main/notebooks/statistics/monty_hall.ipynb
+
+2015-11-05 14:41:05,934 INFO: - App: Signing notebook: /home/main/notebooks/statistics/index.ipynb
+
+2015-11-05 14:41:06,168 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 14:41:06,416 INFO: - App: Signing notebook: /home/main/notebooks/playback-recording/index.ipynb
+
+2015-11-05 14:41:06,788 INFO: - App: Signing notebook: /home/main/notebooks/misc/comprehensions-and-generators.ipynb
+
+2015-11-05 14:41:07,022 INFO: - App: Signing notebook: /home/main/notebooks/misc/audiometer.ipynb
+
+2015-11-05 14:41:07,263 INFO: - App: Signing notebook: /home/main/notebooks/misc/abjad.ipynb
+
+2015-11-05 14:41:07,555 INFO: - App: Signing notebook: /home/main/notebooks/misc/arange.ipynb
+
+2015-11-05 14:41:07,781 INFO: - App: Signing notebook: /home/main/notebooks/misc/acute-or-obtuse.ipynb
+
+2015-11-05 14:41:08,044 INFO: - App: Signing notebook: /home/main/notebooks/misc/tikz.ipynb
+
+2015-11-05 14:41:08,271 INFO: - App: Signing notebook: /home/main/notebooks/misc/pythontutor.ipynb
+
+2015-11-05 14:41:08,559 INFO: - App: Signing notebook: /home/main/notebooks/misc/coroutines.ipynb
+
+2015-11-05 14:41:08,787 INFO: - App: Signing notebook: /home/main/notebooks/template.ipynb
+
+2015-11-05 14:41:09,016 INFO: - App: Signing notebook: /home/main/notebooks/intro-numpy.ipynb
+
+2015-11-05 14:41:09,320 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-wave.ipynb
+
+2015-11-05 14:41:09,580 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-ewave.ipynb
+
+2015-11-05 14:41:09,871 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-pysoundfile.ipynb
+
+2015-11-05 14:41:10,126 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-audiolab.ipynb
+
+2015-11-05 14:41:10,414 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-python-wavefile.ipynb
+
+2015-11-05 14:41:10,646 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/index.ipynb
+
+2015-11-05 14:41:10,908 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-scipy-io.ipynb
+
+2015-11-05 14:41:11,154 INFO: - App: Signing notebook: /home/main/notebooks/audio-files/audio-files-with-audioread.ipynb
+
+2015-11-05 14:41:11,475 INFO: - App:  ---> 9120b8550470
+
+2015-11-05 14:41:11,484 INFO: - App: Removing intermediate container f9a1eeed9ee2
+
+2015-11-05 14:41:11,486 INFO: - App: Step 20 : WORKDIR $HOME/notebooks
+
+2015-11-05 14:41:11,563 INFO: - App:  ---> Running in ba826f906236
+
+2015-11-05 14:41:11,624 INFO: - App:  ---> 07733cf9e09c
+
+2015-11-05 14:41:11,632 INFO: - App: Removing intermediate container ba826f906236
+
+2015-11-05 14:41:11,634 INFO: - App: Successfully built 07733cf9e09c
+
+2015-11-05 14:41:11,643 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/mgeier-python-audio to private registry...
+2015-11-05 14:41:40,444 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 14:41:44,881 INFO: - App: Successfully built app mgeier-python-audio

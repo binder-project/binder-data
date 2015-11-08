@@ -1,0 +1,662 @@
+2015-10-26 09:16:57,591 INFO: - App: Building service dependencies...
+2015-10-26 09:16:57,593 INFO: - App: Copying files and filling templates...
+2015-10-26 09:16:57,596 INFO: - App: Building app image without Dockerfile...
+2015-10-26 09:16:57,627 INFO: - App: Sending build context to Docker daemon 56.83 kBSending build context to Docker daemon 56.83 kB
+
+2015-10-26 09:16:57,665 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 09:16:57,685 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 09:16:57,699 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-26 09:16:57,815 INFO: - App:  ---> d8e63836fa4f
+
+2015-10-26 09:16:57,860 INFO: - App: Removing intermediate container cc6913cbad44
+
+2015-10-26 09:16:57,867 INFO: - App: Step 2 : USER root
+
+2015-10-26 09:16:57,929 INFO: - App:  ---> Running in 2d7b8cf7dafc
+
+2015-10-26 09:16:57,973 INFO: - App:  ---> 70a4e44cef0a
+
+2015-10-26 09:16:58,002 INFO: - App: Removing intermediate container 2d7b8cf7dafc
+
+2015-10-26 09:16:58,026 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 09:16:58,074 INFO: - App:  ---> Running in 4eb68bc07262
+
+2015-10-26 09:16:58,481 INFO: - App:  ---> 6903540d80e9
+
+2015-10-26 09:16:58,485 INFO: - App: Removing intermediate container 4eb68bc07262
+
+2015-10-26 09:16:58,487 INFO: - App: Step 4 : USER main
+
+2015-10-26 09:16:58,555 INFO: - App:  ---> Running in ce91078f92a1
+
+2015-10-26 09:16:58,616 INFO: - App:  ---> 49048111f59e
+
+2015-10-26 09:16:58,620 INFO: - App: Removing intermediate container ce91078f92a1
+
+2015-10-26 09:16:58,621 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 09:16:58,707 INFO: - App:  ---> Running in 69d10401e484
+
+2015-10-26 09:16:59,240 INFO: - App:  ---> f4884deaa939
+
+2015-10-26 09:16:59,252 INFO: - App: Removing intermediate container 69d10401e484
+
+2015-10-26 09:16:59,256 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-26 09:16:59,328 INFO: - App:  ---> Running in d75f9c174d17
+
+2015-10-26 09:16:59,375 INFO: - App:  ---> 8d9a593deddf
+
+2015-10-26 09:16:59,383 INFO: - App: Removing intermediate container d75f9c174d17
+
+2015-10-26 09:16:59,385 INFO: - App: Successfully built 8d9a593deddf
+
+2015-10-26 09:16:59,389 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/julienroussel-test-binder to private registry...
+2015-10-26 09:17:06,235 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 09:17:10,159 INFO: - App: Successfully built app julienroussel-test-binder
+2015-10-26 09:24:20,644 INFO: - App: Building service dependencies...
+2015-10-26 09:24:20,646 INFO: - App: Copying files and filling templates...
+2015-10-26 09:24:20,657 INFO: - App: Building app image without Dockerfile...
+2015-10-26 09:24:20,688 INFO: - App: Sending build context to Docker daemon 69.12 kBSending build context to Docker daemon 69.12 kB
+
+2015-10-26 09:24:20,709 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 09:24:20,710 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 09:24:20,712 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-26 09:24:20,892 INFO: - App:  ---> 51085881f19f
+
+2015-10-26 09:24:20,901 INFO: - App: Removing intermediate container 520ceef9e7e3
+
+2015-10-26 09:24:20,903 INFO: - App: Step 2 : USER root
+
+2015-10-26 09:24:20,971 INFO: - App:  ---> Running in 7038b965cc81
+
+2015-10-26 09:24:21,024 INFO: - App:  ---> 7646bec3ea6f
+
+2015-10-26 09:24:21,040 INFO: - App: Removing intermediate container 7038b965cc81
+
+2015-10-26 09:24:21,057 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 09:24:21,111 INFO: - App:  ---> Running in 5b7dd358f781
+
+2015-10-26 09:24:21,514 INFO: - App:  ---> 2ae049b64945
+
+2015-10-26 09:24:21,524 INFO: - App: Removing intermediate container 5b7dd358f781
+
+2015-10-26 09:24:21,526 INFO: - App: Step 4 : USER main
+
+2015-10-26 09:24:21,609 INFO: - App:  ---> Running in f390ff1c1abe
+
+2015-10-26 09:24:21,657 INFO: - App:  ---> 237d4a9a361f
+
+2015-10-26 09:24:21,664 INFO: - App: Removing intermediate container f390ff1c1abe
+
+2015-10-26 09:24:21,666 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 09:24:21,735 INFO: - App:  ---> Running in 71a1e27cbbc6
+
+2015-10-26 09:24:22,252 INFO: - App: Signing notebook: /home/main/notebooks/Test.ipynb
+
+2015-10-26 09:24:22,528 INFO: - App:  ---> bb0416da7d2e
+
+2015-10-26 09:24:22,538 INFO: - App: Removing intermediate container 71a1e27cbbc6
+
+2015-10-26 09:24:22,540 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-26 09:24:22,596 INFO: - App:  ---> Running in c626a8358541
+
+2015-10-26 09:24:22,644 INFO: - App:  ---> 66b5cf63045b
+
+2015-10-26 09:24:22,654 INFO: - App: Removing intermediate container c626a8358541
+
+2015-10-26 09:24:22,657 INFO: - App: Successfully built 66b5cf63045b
+
+2015-10-26 09:24:22,662 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/julienroussel-test-binder to private registry...
+2015-10-26 09:24:29,819 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 09:24:33,087 INFO: - App: Successfully built app julienroussel-test-binder
+2015-10-26 09:26:17,724 INFO: - App: Building service dependencies...
+2015-10-26 09:26:17,729 INFO: - App: Copying files and filling templates...
+2015-10-26 09:26:17,737 INFO: - App: Building app image without Dockerfile...
+2015-10-26 09:26:17,768 INFO: - App: Sending build context to Docker daemon 72.19 kBSending build context to Docker daemon 72.19 kB
+
+2015-10-26 09:26:17,786 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 09:26:17,790 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 09:26:17,792 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-26 09:26:17,958 INFO: - App:  ---> 3c7f3bffe65c
+
+2015-10-26 09:26:17,968 INFO: - App: Removing intermediate container 4bddc1d8ae85
+
+2015-10-26 09:26:17,970 INFO: - App: Step 2 : USER root
+
+2015-10-26 09:26:18,027 INFO: - App:  ---> Running in 67f7a4809a8c
+
+2015-10-26 09:26:18,091 INFO: - App:  ---> b817c07970a1
+
+2015-10-26 09:26:18,099 INFO: - App: Removing intermediate container 67f7a4809a8c
+
+2015-10-26 09:26:18,101 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 09:26:18,180 INFO: - App:  ---> Running in e3a6c6369e19
+
+2015-10-26 09:26:18,570 INFO: - App:  ---> 66f270328c61
+
+2015-10-26 09:26:18,581 INFO: - App: Removing intermediate container e3a6c6369e19
+
+2015-10-26 09:26:18,585 INFO: - App: Step 4 : USER main
+
+2015-10-26 09:26:18,669 INFO: - App:  ---> Running in 776c8f6695b7
+
+2015-10-26 09:26:18,723 INFO: - App:  ---> be05817d7f7e
+
+2015-10-26 09:26:18,735 INFO: - App: Removing intermediate container 776c8f6695b7
+
+2015-10-26 09:26:18,739 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 09:26:18,799 INFO: - App:  ---> Running in 49f26b6cba0b
+
+2015-10-26 09:26:19,157 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-26 09:26:19,439 INFO: - App:  ---> 61a07c78986a
+
+2015-10-26 09:26:19,448 INFO: - App: Removing intermediate container 49f26b6cba0b
+
+2015-10-26 09:26:19,453 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-26 09:26:19,528 INFO: - App:  ---> Running in f63a956339b5
+
+2015-10-26 09:26:19,588 INFO: - App:  ---> 77f981059317
+
+2015-10-26 09:26:19,597 INFO: - App: Removing intermediate container f63a956339b5
+
+2015-10-26 09:26:19,599 INFO: - App: Successfully built 77f981059317
+
+2015-10-26 09:26:19,605 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/julienroussel-test-binder to private registry...
+2015-10-26 09:26:25,601 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 09:26:29,066 INFO: - App: Successfully built app julienroussel-test-binder
+2015-10-26 12:39:47,875 INFO: - App: Building service dependencies...
+2015-10-26 12:39:47,877 INFO: - App: Copying files and filling templates...
+2015-10-26 12:39:47,884 INFO: - App: Building the app image with Dockerfile...
+2015-10-26 12:39:47,911 INFO: - App: Sending build context to Docker daemon 79.36 kBSending build context to Docker daemon 79.36 kB
+
+2015-10-26 12:39:47,932 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 12:39:47,934 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 12:39:47,936 INFO: - App: Step 1 : MAINTAINER Julien Roussel <julien.roussel@gmail.com>
+
+2015-10-26 12:39:48,023 INFO: - App:  ---> Running in c350ea7fa304
+
+2015-10-26 12:39:48,072 INFO: - App:  ---> 824c99c0605b
+
+2015-10-26 12:39:48,083 INFO: - App: Removing intermediate container c350ea7fa304
+
+2015-10-26 12:39:48,086 INFO: - App: Step 2 : USER root
+
+2015-10-26 12:39:48,171 INFO: - App:  ---> Running in c6a2ac06ea07
+
+2015-10-26 12:39:48,227 INFO: - App:  ---> 6de99b4b739a
+
+2015-10-26 12:39:48,238 INFO: - App: Removing intermediate container c6a2ac06ea07
+
+2015-10-26 12:39:48,241 INFO: - App: Step 3 : RUN apt-get update
+
+2015-10-26 12:39:48,307 INFO: - App:  ---> Running in 0ed1794bf050
+
+2015-10-26 12:39:49,802 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-10-26 12:39:50,222 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-10-26 12:39:50,251 INFO: - App: Get:2 http://security.debian.org jessie/updates/main amd64 Packages [182 kB]
+
+2015-10-26 12:39:50,455 INFO: - App: Get:3 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-10-26 12:39:50,500 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-10-26 12:39:50,779 INFO: - App: Get:5 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-10-26 12:39:50,959 INFO: - App: Get:6 http://httpredir.debian.org jessie-updates/main amd64 Packages [3619 B]
+
+2015-10-26 12:39:51,110 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-10-26 12:39:54,744 INFO: - App: Fetched 9570 kB in 5s (1607 kB/s)
+
+2015-10-26 12:39:55,623 INFO: - App: Reading package lists...
+
+2015-10-26 12:39:56,011 INFO: - App:  ---> ce914fb630ef
+
+2015-10-26 12:39:56,024 INFO: - App: Removing intermediate container 0ed1794bf050
+
+2015-10-26 12:39:56,029 INFO: - App: Step 4 : RUN apt-get install -y graphviz
+
+2015-10-26 12:39:56,103 INFO: - App:  ---> Running in ac95841694ad
+
+2015-10-26 12:39:57,381 INFO: - App: Reading package lists...
+
+2015-10-26 12:39:57,534 INFO: - App: Building dependency tree...
+
+2015-10-26 12:39:57,537 INFO: - App: Reading state information...
+
+2015-10-26 12:39:57,604 INFO: - App: The following extra packages will be installed:
+
+2015-10-26 12:39:57,608 INFO: - App:   fonts-liberation libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-26 12:39:57,610 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-26 12:39:57,613 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-26 12:39:57,614 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-26 12:39:57,616 INFO: - App:   libxmu6 libxpm4
+
+2015-10-26 12:39:57,618 INFO: - App: Suggested packages:
+
+2015-10-26 12:39:57,619 INFO: - App:   gsfonts graphviz-doc libgd-tools
+
+2015-10-26 12:39:57,621 INFO: - App: The following NEW packages will be installed:
+
+2015-10-26 12:39:57,622 INFO: - App:   fonts-liberation graphviz libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-26 12:39:57,624 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-26 12:39:57,626 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-26 12:39:57,627 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-26 12:39:57,629 INFO: - App:   libxmu6 libxpm4
+
+2015-10-26 12:39:59,682 INFO: - App: 0 upgraded, 26 newly installed, 0 to remove and 29 not upgraded.
+
+2015-10-26 12:39:59,685 INFO: - App: Need to get 6533 kB of archives.
+
+2015-10-26 12:39:59,686 INFO: - App: After this operation, 23.2 MB of additional disk space will be used.
+
+2015-10-26 12:39:59,688 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libpixman-1-0 amd64 0.32.6-3 [507 kB]
+
+2015-10-26 12:40:00,012 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libcairo2 amd64 1.14.0-2.1 [742 kB]
+
+2015-10-26 12:40:00,029 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libxcb-render0 amd64 1.10-3+b1 [17.5 kB]
+
+2015-10-26 12:40:00,141 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libxcb-shm0 amd64 1.10-3+b1 [11.5 kB]
+
+2015-10-26 12:40:00,231 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libvpx1 amd64 1.3.0-3 [599 kB]
+
+2015-10-26 12:40:00,291 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libdatrie1 amd64 0.2.8-1 [32.6 kB]
+
+2015-10-26 12:40:00,448 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libgraphite2-3 amd64 1.2.4-3 [57.4 kB]
+
+2015-10-26 12:40:00,582 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libharfbuzz0b amd64 0.9.35-2 [485 kB]
+
+2015-10-26 12:40:00,682 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libltdl7 amd64 2.4.2-1.11 [45.2 kB]
+
+2015-10-26 12:40:00,904 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libthai0 amd64 0.1.21-1 [46.1 kB]
+
+2015-10-26 12:40:00,940 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libxpm4 amd64 1:3.5.11-1+b1 [48.1 kB]
+
+2015-10-26 12:40:00,983 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libgd3 amd64 2.1.0-5 [147 kB]
+
+2015-10-26 12:40:01,111 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libthai-data all 0.1.21-1 [159 kB]
+
+2015-10-26 12:40:01,132 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libpangoft2-1.0-0 amd64 1.36.8-3 [213 kB]
+
+2015-10-26 12:40:01,241 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libpango-1.0-0 amd64 1.36.8-3 [291 kB]
+
+2015-10-26 12:40:01,347 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libxmu6 amd64 2:1.1.2-1 [58.6 kB]
+
+2015-10-26 12:40:01,415 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libpangocairo-1.0-0 amd64 1.36.8-3 [200 kB]
+
+2015-10-26 12:40:01,548 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libxaw7 amd64 2:1.0.12-2+b1 [199 kB]
+
+2015-10-26 12:40:01,573 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main fonts-liberation all 1.07.4-1 [835 kB]
+
+2015-10-26 12:40:01,946 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libpathplan4 amd64 2.38.0-7 [66.0 kB]
+
+2015-10-26 12:40:02,045 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libxdot4 amd64 2.38.0-7 [58.7 kB]
+
+2015-10-26 12:40:02,160 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libgvc6 amd64 2.38.0-7 [637 kB]
+
+2015-10-26 12:40:02,392 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libcdt5 amd64 2.38.0-7 [62.7 kB]
+
+2015-10-26 12:40:02,456 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libcgraph6 amd64 2.38.0-7 [85.2 kB]
+
+2015-10-26 12:40:02,590 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libgvpr2 amd64 2.38.0-7 [212 kB]
+
+2015-10-26 12:40:02,724 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main graphviz amd64 2.38.0-7 [717 kB]
+
+2015-10-26 12:40:03,183 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-10-26 12:40:03,190 INFO: - App: Fetched 6533 kB in 3s (1763 kB/s)
+
+2015-10-26 12:40:03,285 INFO: - App: Selecting previously unselected package libpixman-1-0:amd64.
+
+2015-10-26 12:40:03,304 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-10-26 12:40:03,305 INFO: - App: Preparing to unpack .../libpixman-1-0_0.32.6-3_amd64.deb ...
+
+2015-10-26 12:40:03,308 INFO: - App: Unpacking libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-26 12:40:03,373 INFO: - App: Selecting previously unselected package libxcb-render0:amd64.
+
+2015-10-26 12:40:03,374 INFO: - App: Preparing to unpack .../libxcb-render0_1.10-3+b1_amd64.deb ...
+
+2015-10-26 12:40:03,376 INFO: - App: Unpacking libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-26 12:40:03,412 INFO: - App: Selecting previously unselected package libxcb-shm0:amd64.
+
+2015-10-26 12:40:03,438 INFO: - App: Preparing to unpack .../libxcb-shm0_1.10-3+b1_amd64.deb ...
+
+2015-10-26 12:40:03,451 INFO: - App: Unpacking libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-26 12:40:03,468 INFO: - App: Selecting previously unselected package libcairo2:amd64.
+
+2015-10-26 12:40:03,472 INFO: - App: Preparing to unpack .../libcairo2_1.14.0-2.1_amd64.deb ...
+
+2015-10-26 12:40:03,475 INFO: - App: Unpacking libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-26 12:40:03,529 INFO: - App: Selecting previously unselected package libdatrie1:amd64.
+
+2015-10-26 12:40:03,530 INFO: - App: Preparing to unpack .../libdatrie1_0.2.8-1_amd64.deb ...
+
+2015-10-26 12:40:03,535 INFO: - App: Unpacking libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-26 12:40:03,568 INFO: - App: Selecting previously unselected package libvpx1:amd64.
+
+2015-10-26 12:40:03,570 INFO: - App: Preparing to unpack .../libvpx1_1.3.0-3_amd64.deb ...
+
+2015-10-26 12:40:03,574 INFO: - App: Unpacking libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-26 12:40:03,660 INFO: - App: Selecting previously unselected package libxpm4:amd64.
+
+2015-10-26 12:40:03,663 INFO: - App: Preparing to unpack .../libxpm4_1%3a3.5.11-1+b1_amd64.deb ...
+
+2015-10-26 12:40:03,665 INFO: - App: Unpacking libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-26 12:40:03,699 INFO: - App: Selecting previously unselected package libgd3:amd64.
+
+2015-10-26 12:40:03,701 INFO: - App: Preparing to unpack .../libgd3_2.1.0-5_amd64.deb ...
+
+2015-10-26 12:40:03,703 INFO: - App: Unpacking libgd3:amd64 (2.1.0-5) ...
+
+2015-10-26 12:40:03,746 INFO: - App: Selecting previously unselected package libgraphite2-3:amd64.
+
+2015-10-26 12:40:03,748 INFO: - App: Preparing to unpack .../libgraphite2-3_1.2.4-3_amd64.deb ...
+
+2015-10-26 12:40:03,752 INFO: - App: Unpacking libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-26 12:40:03,792 INFO: - App: Selecting previously unselected package libharfbuzz0b:amd64.
+
+2015-10-26 12:40:03,808 INFO: - App: Preparing to unpack .../libharfbuzz0b_0.9.35-2_amd64.deb ...
+
+2015-10-26 12:40:03,814 INFO: - App: Unpacking libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-26 12:40:03,850 INFO: - App: Selecting previously unselected package libltdl7:amd64.
+
+2015-10-26 12:40:03,854 INFO: - App: Preparing to unpack .../libltdl7_2.4.2-1.11_amd64.deb ...
+
+2015-10-26 12:40:03,865 INFO: - App: Unpacking libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-26 12:40:03,882 INFO: - App: Selecting previously unselected package libthai-data.
+
+2015-10-26 12:40:03,904 INFO: - App: Preparing to unpack .../libthai-data_0.1.21-1_all.deb ...
+
+2015-10-26 12:40:03,919 INFO: - App: Unpacking libthai-data (0.1.21-1) ...
+
+2015-10-26 12:40:03,950 INFO: - App: Selecting previously unselected package libthai0:amd64.
+
+2015-10-26 12:40:03,965 INFO: - App: Preparing to unpack .../libthai0_0.1.21-1_amd64.deb ...
+
+2015-10-26 12:40:03,979 INFO: - App: Unpacking libthai0:amd64 (0.1.21-1) ...
+
+2015-10-26 12:40:04,004 INFO: - App: Selecting previously unselected package libpango-1.0-0:amd64.
+
+2015-10-26 12:40:04,008 INFO: - App: Preparing to unpack .../libpango-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-26 12:40:04,013 INFO: - App: Unpacking libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-26 12:40:04,050 INFO: - App: Selecting previously unselected package libpangoft2-1.0-0:amd64.
+
+2015-10-26 12:40:04,066 INFO: - App: Preparing to unpack .../libpangoft2-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-26 12:40:04,072 INFO: - App: Unpacking libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-26 12:40:04,105 INFO: - App: Selecting previously unselected package libpangocairo-1.0-0:amd64.
+
+2015-10-26 12:40:04,112 INFO: - App: Preparing to unpack .../libpangocairo-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-26 12:40:04,122 INFO: - App: Unpacking libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-26 12:40:04,150 INFO: - App: Selecting previously unselected package libxmu6:amd64.
+
+2015-10-26 12:40:04,164 INFO: - App: Preparing to unpack .../libxmu6_2%3a1.1.2-1_amd64.deb ...
+
+2015-10-26 12:40:04,199 INFO: - App: Unpacking libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-26 12:40:04,222 INFO: - App: Selecting previously unselected package libxaw7:amd64.
+
+2015-10-26 12:40:04,235 INFO: - App: Preparing to unpack .../libxaw7_2%3a1.0.12-2+b1_amd64.deb ...
+
+2015-10-26 12:40:04,252 INFO: - App: Unpacking libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-26 12:40:04,277 INFO: - App: Selecting previously unselected package fonts-liberation.
+
+2015-10-26 12:40:04,293 INFO: - App: Preparing to unpack .../fonts-liberation_1.07.4-1_all.deb ...
+
+2015-10-26 12:40:04,300 INFO: - App: Unpacking fonts-liberation (1.07.4-1) ...
+
+2015-10-26 12:40:04,341 INFO: - App: Selecting previously unselected package libcdt5.
+
+2015-10-26 12:40:04,351 INFO: - App: Preparing to unpack .../libcdt5_2.38.0-7_amd64.deb ...
+
+2015-10-26 12:40:04,360 INFO: - App: Unpacking libcdt5 (2.38.0-7) ...
+
+2015-10-26 12:40:04,392 INFO: - App: Selecting previously unselected package libcgraph6.
+
+2015-10-26 12:40:04,408 INFO: - App: Preparing to unpack .../libcgraph6_2.38.0-7_amd64.deb ...
+
+2015-10-26 12:40:04,416 INFO: - App: Unpacking libcgraph6 (2.38.0-7) ...
+
+2015-10-26 12:40:04,442 INFO: - App: Selecting previously unselected package libpathplan4.
+
+2015-10-26 12:40:04,454 INFO: - App: Preparing to unpack .../libpathplan4_2.38.0-7_amd64.deb ...
+
+2015-10-26 12:40:04,467 INFO: - App: Unpacking libpathplan4 (2.38.0-7) ...
+
+2015-10-26 12:40:04,477 INFO: - App: Selecting previously unselected package libxdot4.
+
+2015-10-26 12:40:04,502 INFO: - App: Preparing to unpack .../libxdot4_2.38.0-7_amd64.deb ...
+
+2015-10-26 12:40:04,515 INFO: - App: Unpacking libxdot4 (2.38.0-7) ...
+
+2015-10-26 12:40:04,531 INFO: - App: Selecting previously unselected package libgvc6.
+
+2015-10-26 12:40:04,549 INFO: - App: Preparing to unpack .../libgvc6_2.38.0-7_amd64.deb ...
+
+2015-10-26 12:40:04,559 INFO: - App: Unpacking libgvc6 (2.38.0-7) ...
+
+2015-10-26 12:40:04,595 INFO: - App: Selecting previously unselected package libgvpr2.
+
+2015-10-26 12:40:04,607 INFO: - App: Preparing to unpack .../libgvpr2_2.38.0-7_amd64.deb ...
+
+2015-10-26 12:40:04,618 INFO: - App: Unpacking libgvpr2 (2.38.0-7) ...
+
+2015-10-26 12:40:04,652 INFO: - App: Selecting previously unselected package graphviz.
+
+2015-10-26 12:40:04,667 INFO: - App: Preparing to unpack .../graphviz_2.38.0-7_amd64.deb ...
+
+2015-10-26 12:40:04,702 INFO: - App: Unpacking graphviz (2.38.0-7) ...
+
+2015-10-26 12:40:04,808 INFO: - App: Processing triggers for fontconfig (2.11.0-6.3) ...
+
+2015-10-26 12:40:04,978 INFO: - App: Setting up libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-26 12:40:04,998 INFO: - App: Setting up libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-26 12:40:05,014 INFO: - App: Setting up libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-26 12:40:05,031 INFO: - App: Setting up libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-26 12:40:05,047 INFO: - App: Setting up libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-26 12:40:05,066 INFO: - App: Setting up libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-26 12:40:05,081 INFO: - App: Setting up libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-26 12:40:05,099 INFO: - App: Setting up libgd3:amd64 (2.1.0-5) ...
+
+2015-10-26 12:40:05,113 INFO: - App: Setting up libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-26 12:40:05,130 INFO: - App: Setting up libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-26 12:40:05,145 INFO: - App: Setting up libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-26 12:40:05,161 INFO: - App: Setting up libthai-data (0.1.21-1) ...
+
+2015-10-26 12:40:05,171 INFO: - App: Setting up libthai0:amd64 (0.1.21-1) ...
+
+2015-10-26 12:40:05,186 INFO: - App: Setting up libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-26 12:40:05,203 INFO: - App: Setting up libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-26 12:40:05,219 INFO: - App: Setting up libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-26 12:40:05,235 INFO: - App: Setting up libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-26 12:40:05,250 INFO: - App: Setting up libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-26 12:40:05,265 INFO: - App: Setting up fonts-liberation (1.07.4-1) ...
+
+2015-10-26 12:40:05,275 INFO: - App: Setting up libcdt5 (2.38.0-7) ...
+
+2015-10-26 12:40:05,291 INFO: - App: Setting up libcgraph6 (2.38.0-7) ...
+
+2015-10-26 12:40:05,318 INFO: - App: Setting up libpathplan4 (2.38.0-7) ...
+
+2015-10-26 12:40:05,353 INFO: - App: Setting up libxdot4 (2.38.0-7) ...
+
+2015-10-26 12:40:05,362 INFO: - App: Setting up libgvc6 (2.38.0-7) ...
+
+2015-10-26 12:40:05,385 INFO: - App: Setting up libgvpr2 (2.38.0-7) ...
+
+2015-10-26 12:40:05,403 INFO: - App: Setting up graphviz (2.38.0-7) ...
+
+2015-10-26 12:40:05,405 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-10-26 12:40:07,741 INFO: - App:  ---> 3397f6daf5cb
+
+2015-10-26 12:40:07,783 INFO: - App: Removing intermediate container ac95841694ad
+
+2015-10-26 12:40:07,788 INFO: - App: Step 5 : USER main
+
+2015-10-26 12:40:07,863 INFO: - App:  ---> Running in ea85d5886d33
+
+2015-10-26 12:40:07,908 INFO: - App:  ---> 73a539663706
+
+2015-10-26 12:40:07,912 INFO: - App: Removing intermediate container ea85d5886d33
+
+2015-10-26 12:40:07,920 INFO: - App: Step 6 : ADD requirements.txt requirements.txt
+
+2015-10-26 12:40:08,077 INFO: - App:  ---> 5c3c592403d7
+
+2015-10-26 12:40:08,084 INFO: - App: Removing intermediate container c745764dbd7d
+
+2015-10-26 12:40:08,092 INFO: - App: Step 7 : RUN pip install -r requirements.txt
+
+2015-10-26 12:40:08,155 INFO: - App:  ---> Running in 51cba80fdcc5
+
+2015-10-26 12:40:09,592 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 12:40:09,597 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 12:40:09,614 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-26 12:40:09,719 INFO: - App:   Downloading graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-26 12:40:09,742 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-10-26 12:40:09,744 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-10-26 12:40:09,746 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-26 12:40:09,747 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-26 12:40:09,749 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7.0 in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-26 12:40:09,751 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/lib/python2.7/site-packages (from python-dateutil->pandas->-r requirements.txt (line 2))
+
+2015-10-26 12:40:09,753 INFO: - App: Installing collected packages: graphviz
+
+2015-10-26 12:40:09,783 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-26 12:40:10,076 INFO: - App:  ---> 7ecbe3ee1f96
+
+2015-10-26 12:40:10,087 INFO: - App: Removing intermediate container 51cba80fdcc5
+
+2015-10-26 12:40:10,089 INFO: - App: Step 8 : USER main
+
+2015-10-26 12:40:10,163 INFO: - App:  ---> Running in e78d1d34a576
+
+2015-10-26 12:40:10,207 INFO: - App:  ---> 047a760ca845
+
+2015-10-26 12:40:10,219 INFO: - App: Removing intermediate container e78d1d34a576
+
+2015-10-26 12:40:10,220 INFO: - App: Step 9 : ADD . $HOME/notebooks
+
+2015-10-26 12:40:10,388 INFO: - App:  ---> ca4c35331b2d
+
+2015-10-26 12:40:10,403 INFO: - App: Removing intermediate container 2fbc698d0a2b
+
+2015-10-26 12:40:10,408 INFO: - App: Step 10 : USER root
+
+2015-10-26 12:40:10,489 INFO: - App:  ---> Running in d6c44afb470a
+
+2015-10-26 12:40:10,531 INFO: - App:  ---> 9951c30550e5
+
+2015-10-26 12:40:10,545 INFO: - App: Removing intermediate container d6c44afb470a
+
+2015-10-26 12:40:10,549 INFO: - App: Step 11 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 12:40:10,612 INFO: - App:  ---> Running in c5ab38c120e5
+
+2015-10-26 12:40:11,018 INFO: - App:  ---> 93ee594f6ea3
+
+2015-10-26 12:40:11,032 INFO: - App: Removing intermediate container c5ab38c120e5
+
+2015-10-26 12:40:11,036 INFO: - App: Step 12 : USER main
+
+2015-10-26 12:40:11,107 INFO: - App:  ---> Running in fe4b7656eddd
+
+2015-10-26 12:40:11,160 INFO: - App:  ---> a287b32a1e29
+
+2015-10-26 12:40:11,169 INFO: - App: Removing intermediate container fe4b7656eddd
+
+2015-10-26 12:40:11,171 INFO: - App: Step 13 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 12:40:11,247 INFO: - App:  ---> Running in 07069d1a2a86
+
+2015-10-26 12:40:11,752 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-26 12:40:12,017 INFO: - App:  ---> 25ccc91ecfc4
+
+2015-10-26 12:40:12,020 INFO: - App: Removing intermediate container 07069d1a2a86
+
+2015-10-26 12:40:12,023 INFO: - App: Step 14 : WORKDIR $HOME/notebooks
+
+2015-10-26 12:40:12,103 INFO: - App:  ---> Running in 78d7b4d3995b
+
+2015-10-26 12:40:12,155 INFO: - App:  ---> f53b08a38968
+
+2015-10-26 12:40:12,159 INFO: - App: Removing intermediate container 78d7b4d3995b
+
+2015-10-26 12:40:12,161 INFO: - App: Successfully built f53b08a38968
+
+2015-10-26 12:40:12,203 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/julienroussel-test-binder to private registry...
+2015-10-26 12:40:29,182 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 12:40:36,573 INFO: - App: Successfully built app julienroussel-test-binder

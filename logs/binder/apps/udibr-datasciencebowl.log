@@ -1,0 +1,64 @@
+2015-10-24 20:31:10,457 INFO: - App: Building service dependencies...
+2015-10-24 20:31:10,459 INFO: - App: Copying files and filling templates...
+2015-10-24 20:31:10,473 INFO: - App: Building app image without Dockerfile...
+2015-10-24 20:31:10,528 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 711.2 kBSending build context to Docker daemon 711.2 kB
+
+2015-10-24 20:31:10,533 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-24 20:31:10,534 INFO: - App:  ---> 77377240dc83
+
+2015-10-24 20:31:10,536 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-24 20:31:10,730 INFO: - App:  ---> 75b6cf29f3ea
+
+2015-10-24 20:31:10,739 INFO: - App: Removing intermediate container 3a1e63b5f632
+
+2015-10-24 20:31:10,743 INFO: - App: Step 2 : USER root
+
+2015-10-24 20:31:10,812 INFO: - App:  ---> Running in fb2661d55cdd
+
+2015-10-24 20:31:10,867 INFO: - App:  ---> a9ad1fff7e2d
+
+2015-10-24 20:31:10,876 INFO: - App: Removing intermediate container fb2661d55cdd
+
+2015-10-24 20:31:10,877 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-24 20:31:10,967 INFO: - App:  ---> Running in 465b69a5bfdf
+
+2015-10-24 20:31:11,392 INFO: - App:  ---> 52166f74b96b
+
+2015-10-24 20:31:11,400 INFO: - App: Removing intermediate container 465b69a5bfdf
+
+2015-10-24 20:31:11,402 INFO: - App: Step 4 : USER main
+
+2015-10-24 20:31:11,475 INFO: - App:  ---> Running in 0ed8ccb131b3
+
+2015-10-24 20:31:11,523 INFO: - App:  ---> 3a6253aa11ff
+
+2015-10-24 20:31:11,532 INFO: - App: Removing intermediate container 0ed8ccb131b3
+
+2015-10-24 20:31:11,533 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-24 20:31:11,608 INFO: - App:  ---> Running in 3098e7c2337e
+
+2015-10-24 20:31:12,164 INFO: - App: Signing notebook: /home/main/notebooks/141215-tutorial.ipynb
+
+2015-10-24 20:31:12,438 INFO: - App: Signing notebook: /home/main/notebooks/141215-tutorial-submission.ipynb
+
+2015-10-24 20:31:12,724 INFO: - App:  ---> 6dc7a3425e95
+
+2015-10-24 20:31:12,731 INFO: - App: Removing intermediate container 3098e7c2337e
+
+2015-10-24 20:31:12,733 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-24 20:31:12,836 INFO: - App:  ---> Running in a0c2c3a532de
+
+2015-10-24 20:31:12,915 INFO: - App:  ---> 0d9e05746af8
+
+2015-10-24 20:31:12,924 INFO: - App: Removing intermediate container a0c2c3a532de
+
+2015-10-24 20:31:12,926 INFO: - App: Successfully built 0d9e05746af8
+
+2015-10-24 20:31:12,932 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/udibr-datasciencebowl to private registry...
+2015-10-24 20:31:18,000 INFO: - App: Preloading app image onto all nodes...
+2015-10-24 20:31:20,836 INFO: - App: Successfully built app udibr-datasciencebowl

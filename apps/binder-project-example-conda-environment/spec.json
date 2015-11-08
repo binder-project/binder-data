@@ -1,0 +1,1 @@
+{"services": [], "repo": "https://www.github.com/binder-project/example-conda-environment", "dependencies": ["environment.yml"], "name": "binder-project-example-conda-environment"}

@@ -1,0 +1,2420 @@
+2015-10-24 18:27:33,711 INFO: - App: Building service dependencies...
+2015-10-24 18:27:33,714 INFO: - App: Copying files and filling templates...
+2015-10-24 18:27:33,733 INFO: - App: Building the app image with Dockerfile...
+2015-10-24 18:27:33,780 INFO: - App: Sending build context to Docker daemon   107 kBSending build context to Docker daemon   107 kB
+
+2015-10-24 18:27:33,807 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-24 18:27:33,816 INFO: - App:  ---> 77377240dc83
+
+2015-10-24 18:27:33,828 INFO: - App: Step 1 : MAINTAINER Jeremy Freeman <freeman.jeremy@gmail.com>
+
+2015-10-24 18:27:33,896 INFO: - App:  ---> Running in a878aa182ece
+
+2015-10-24 18:27:33,976 INFO: - App:  ---> 394a3a70513c
+
+2015-10-24 18:27:33,985 INFO: - App: Removing intermediate container a878aa182ece
+
+2015-10-24 18:27:33,987 INFO: - App: Step 2 : USER root
+
+2015-10-24 18:27:34,072 INFO: - App:  ---> Running in 896ad1548911
+
+2015-10-24 18:27:34,140 INFO: - App:  ---> 3bf33272308e
+
+2015-10-24 18:27:34,154 INFO: - App: Removing intermediate container 896ad1548911
+
+2015-10-24 18:27:34,157 INFO: - App: Step 3 : RUN apt-get update
+
+2015-10-24 18:27:34,246 INFO: - App:  ---> Running in b6698a782c20
+
+2015-10-24 18:27:35,209 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-10-24 18:27:35,610 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-10-24 18:27:35,646 INFO: - App: Get:2 http://security.debian.org jessie/updates/main amd64 Packages [182 kB]
+
+2015-10-24 18:27:35,704 INFO: - App: Get:3 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-10-24 18:27:35,991 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-10-24 18:27:36,178 INFO: - App: Get:5 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-10-24 18:27:36,400 INFO: - App: Get:6 http://httpredir.debian.org jessie-updates/main amd64 Packages [3653 B]
+
+2015-10-24 18:27:36,472 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-10-24 18:27:37,786 INFO: - App: Fetched 9569 kB in 2s (3778 kB/s)
+
+2015-10-24 18:27:38,828 INFO: - App: Reading package lists...
+
+2015-10-24 18:27:39,401 INFO: - App:  ---> 82b28316e4dc
+
+2015-10-24 18:27:39,413 INFO: - App: Removing intermediate container b6698a782c20
+
+2015-10-24 18:27:39,418 INFO: - App: Step 4 : RUN apt-get install -y graphviz
+
+2015-10-24 18:27:39,521 INFO: - App:  ---> Running in 236f7e019364
+
+2015-10-24 18:27:40,872 INFO: - App: Reading package lists...
+
+2015-10-24 18:27:41,081 INFO: - App: Building dependency tree...
+
+2015-10-24 18:27:41,096 INFO: - App: Reading state information...
+
+2015-10-24 18:27:41,170 INFO: - App: The following extra packages will be installed:
+
+2015-10-24 18:27:41,172 INFO: - App:   fonts-liberation libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-24 18:27:41,175 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-24 18:27:41,177 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-24 18:27:41,179 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-24 18:27:41,183 INFO: - App:   libxmu6 libxpm4
+
+2015-10-24 18:27:41,188 INFO: - App: Suggested packages:
+
+2015-10-24 18:27:41,190 INFO: - App:   gsfonts graphviz-doc libgd-tools
+
+2015-10-24 18:27:41,194 INFO: - App: The following NEW packages will be installed:
+
+2015-10-24 18:27:41,201 INFO: - App:   fonts-liberation graphviz libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-24 18:27:41,215 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-24 18:27:41,219 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-24 18:27:41,240 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-24 18:27:41,249 INFO: - App:   libxmu6 libxpm4
+
+2015-10-24 18:27:43,406 INFO: - App: 0 upgraded, 26 newly installed, 0 to remove and 29 not upgraded.
+
+2015-10-24 18:27:43,410 INFO: - App: Need to get 6533 kB of archives.
+
+2015-10-24 18:27:43,416 INFO: - App: After this operation, 23.2 MB of additional disk space will be used.
+
+2015-10-24 18:27:43,418 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libpixman-1-0 amd64 0.32.6-3 [507 kB]
+
+2015-10-24 18:27:43,558 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libxcb-render0 amd64 1.10-3+b1 [17.5 kB]
+
+2015-10-24 18:27:43,594 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libxcb-shm0 amd64 1.10-3+b1 [11.5 kB]
+
+2015-10-24 18:27:43,645 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libcairo2 amd64 1.14.0-2.1 [742 kB]
+
+2015-10-24 18:27:44,021 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libvpx1 amd64 1.3.0-3 [599 kB]
+
+2015-10-24 18:27:44,063 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libdatrie1 amd64 0.2.8-1 [32.6 kB]
+
+2015-10-24 18:27:44,093 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libxpm4 amd64 1:3.5.11-1+b1 [48.1 kB]
+
+2015-10-24 18:27:44,163 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libgraphite2-3 amd64 1.2.4-3 [57.4 kB]
+
+2015-10-24 18:27:44,227 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libgd3 amd64 2.1.0-5 [147 kB]
+
+2015-10-24 18:27:44,333 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libharfbuzz0b amd64 0.9.35-2 [485 kB]
+
+2015-10-24 18:27:44,428 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libltdl7 amd64 2.4.2-1.11 [45.2 kB]
+
+2015-10-24 18:27:44,511 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libthai-data all 0.1.21-1 [159 kB]
+
+2015-10-24 18:27:44,616 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libthai0 amd64 0.1.21-1 [46.1 kB]
+
+2015-10-24 18:27:44,736 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libpango-1.0-0 amd64 1.36.8-3 [291 kB]
+
+2015-10-24 18:27:44,845 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libpangoft2-1.0-0 amd64 1.36.8-3 [213 kB]
+
+2015-10-24 18:27:44,963 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libpangocairo-1.0-0 amd64 1.36.8-3 [200 kB]
+
+2015-10-24 18:27:45,103 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libxmu6 amd64 2:1.1.2-1 [58.6 kB]
+
+2015-10-24 18:27:45,217 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libxaw7 amd64 2:1.0.12-2+b1 [199 kB]
+
+2015-10-24 18:27:45,304 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main fonts-liberation all 1.07.4-1 [835 kB]
+
+2015-10-24 18:27:45,441 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libcdt5 amd64 2.38.0-7 [62.7 kB]
+
+2015-10-24 18:27:45,524 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libcgraph6 amd64 2.38.0-7 [85.2 kB]
+
+2015-10-24 18:27:45,652 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libpathplan4 amd64 2.38.0-7 [66.0 kB]
+
+2015-10-24 18:27:45,754 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libxdot4 amd64 2.38.0-7 [58.7 kB]
+
+2015-10-24 18:27:45,879 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libgvc6 amd64 2.38.0-7 [637 kB]
+
+2015-10-24 18:27:45,985 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libgvpr2 amd64 2.38.0-7 [212 kB]
+
+2015-10-24 18:27:46,094 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main graphviz amd64 2.38.0-7 [717 kB]
+
+2015-10-24 18:27:47,269 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-10-24 18:27:47,296 INFO: - App: Fetched 6533 kB in 3s (1656 kB/s)
+
+2015-10-24 18:27:47,437 INFO: - App: Selecting previously unselected package libpixman-1-0:amd64.
+
+2015-10-24 18:27:47,485 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-10-24 18:27:47,493 INFO: - App: Preparing to unpack .../libpixman-1-0_0.32.6-3_amd64.deb ...
+
+2015-10-24 18:27:47,501 INFO: - App: Unpacking libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-24 18:27:47,588 INFO: - App: Selecting previously unselected package libxcb-render0:amd64.
+
+2015-10-24 18:27:47,600 INFO: - App: Preparing to unpack .../libxcb-render0_1.10-3+b1_amd64.deb ...
+
+2015-10-24 18:27:47,611 INFO: - App: Unpacking libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:27:47,653 INFO: - App: Selecting previously unselected package libxcb-shm0:amd64.
+
+2015-10-24 18:27:47,663 INFO: - App: Preparing to unpack .../libxcb-shm0_1.10-3+b1_amd64.deb ...
+
+2015-10-24 18:27:47,675 INFO: - App: Unpacking libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:27:47,697 INFO: - App: Selecting previously unselected package libcairo2:amd64.
+
+2015-10-24 18:27:47,709 INFO: - App: Preparing to unpack .../libcairo2_1.14.0-2.1_amd64.deb ...
+
+2015-10-24 18:27:47,716 INFO: - App: Unpacking libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-24 18:27:47,820 INFO: - App: Selecting previously unselected package libdatrie1:amd64.
+
+2015-10-24 18:27:47,835 INFO: - App: Preparing to unpack .../libdatrie1_0.2.8-1_amd64.deb ...
+
+2015-10-24 18:27:47,843 INFO: - App: Unpacking libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-24 18:27:47,864 INFO: - App: Selecting previously unselected package libvpx1:amd64.
+
+2015-10-24 18:27:47,868 INFO: - App: Preparing to unpack .../libvpx1_1.3.0-3_amd64.deb ...
+
+2015-10-24 18:27:47,879 INFO: - App: Unpacking libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-24 18:27:48,022 INFO: - App: Selecting previously unselected package libxpm4:amd64.
+
+2015-10-24 18:27:48,026 INFO: - App: Preparing to unpack .../libxpm4_1%3a3.5.11-1+b1_amd64.deb ...
+
+2015-10-24 18:27:48,030 INFO: - App: Unpacking libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-24 18:27:48,070 INFO: - App: Selecting previously unselected package libgd3:amd64.
+
+2015-10-24 18:27:48,074 INFO: - App: Preparing to unpack .../libgd3_2.1.0-5_amd64.deb ...
+
+2015-10-24 18:27:48,078 INFO: - App: Unpacking libgd3:amd64 (2.1.0-5) ...
+
+2015-10-24 18:27:48,139 INFO: - App: Selecting previously unselected package libgraphite2-3:amd64.
+
+2015-10-24 18:27:48,144 INFO: - App: Preparing to unpack .../libgraphite2-3_1.2.4-3_amd64.deb ...
+
+2015-10-24 18:27:48,150 INFO: - App: Unpacking libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-24 18:27:48,200 INFO: - App: Selecting previously unselected package libharfbuzz0b:amd64.
+
+2015-10-24 18:27:48,207 INFO: - App: Preparing to unpack .../libharfbuzz0b_0.9.35-2_amd64.deb ...
+
+2015-10-24 18:27:48,219 INFO: - App: Unpacking libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-24 18:27:48,286 INFO: - App: Selecting previously unselected package libltdl7:amd64.
+
+2015-10-24 18:27:48,290 INFO: - App: Preparing to unpack .../libltdl7_2.4.2-1.11_amd64.deb ...
+
+2015-10-24 18:27:48,298 INFO: - App: Unpacking libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-24 18:27:48,326 INFO: - App: Selecting previously unselected package libthai-data.
+
+2015-10-24 18:27:48,332 INFO: - App: Preparing to unpack .../libthai-data_0.1.21-1_all.deb ...
+
+2015-10-24 18:27:48,337 INFO: - App: Unpacking libthai-data (0.1.21-1) ...
+
+2015-10-24 18:27:48,403 INFO: - App: Selecting previously unselected package libthai0:amd64.
+
+2015-10-24 18:27:48,408 INFO: - App: Preparing to unpack .../libthai0_0.1.21-1_amd64.deb ...
+
+2015-10-24 18:27:48,412 INFO: - App: Unpacking libthai0:amd64 (0.1.21-1) ...
+
+2015-10-24 18:27:48,458 INFO: - App: Selecting previously unselected package libpango-1.0-0:amd64.
+
+2015-10-24 18:27:48,464 INFO: - App: Preparing to unpack .../libpango-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 18:27:48,469 INFO: - App: Unpacking libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:27:48,544 INFO: - App: Selecting previously unselected package libpangoft2-1.0-0:amd64.
+
+2015-10-24 18:27:48,548 INFO: - App: Preparing to unpack .../libpangoft2-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 18:27:48,552 INFO: - App: Unpacking libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:27:48,620 INFO: - App: Selecting previously unselected package libpangocairo-1.0-0:amd64.
+
+2015-10-24 18:27:48,624 INFO: - App: Preparing to unpack .../libpangocairo-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 18:27:48,629 INFO: - App: Unpacking libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:27:48,672 INFO: - App: Selecting previously unselected package libxmu6:amd64.
+
+2015-10-24 18:27:48,675 INFO: - App: Preparing to unpack .../libxmu6_2%3a1.1.2-1_amd64.deb ...
+
+2015-10-24 18:27:48,680 INFO: - App: Unpacking libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-24 18:27:48,723 INFO: - App: Selecting previously unselected package libxaw7:amd64.
+
+2015-10-24 18:27:48,726 INFO: - App: Preparing to unpack .../libxaw7_2%3a1.0.12-2+b1_amd64.deb ...
+
+2015-10-24 18:27:48,730 INFO: - App: Unpacking libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-24 18:27:48,794 INFO: - App: Selecting previously unselected package fonts-liberation.
+
+2015-10-24 18:27:48,798 INFO: - App: Preparing to unpack .../fonts-liberation_1.07.4-1_all.deb ...
+
+2015-10-24 18:27:48,803 INFO: - App: Unpacking fonts-liberation (1.07.4-1) ...
+
+2015-10-24 18:27:48,955 INFO: - App: Selecting previously unselected package libcdt5.
+
+2015-10-24 18:27:48,959 INFO: - App: Preparing to unpack .../libcdt5_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:27:48,972 INFO: - App: Unpacking libcdt5 (2.38.0-7) ...
+
+2015-10-24 18:27:49,008 INFO: - App: Selecting previously unselected package libcgraph6.
+
+2015-10-24 18:27:49,014 INFO: - App: Preparing to unpack .../libcgraph6_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:27:49,017 INFO: - App: Unpacking libcgraph6 (2.38.0-7) ...
+
+2015-10-24 18:27:49,063 INFO: - App: Selecting previously unselected package libpathplan4.
+
+2015-10-24 18:27:49,067 INFO: - App: Preparing to unpack .../libpathplan4_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:27:49,070 INFO: - App: Unpacking libpathplan4 (2.38.0-7) ...
+
+2015-10-24 18:27:49,121 INFO: - App: Selecting previously unselected package libxdot4.
+
+2015-10-24 18:27:49,129 INFO: - App: Preparing to unpack .../libxdot4_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:27:49,135 INFO: - App: Unpacking libxdot4 (2.38.0-7) ...
+
+2015-10-24 18:27:49,167 INFO: - App: Selecting previously unselected package libgvc6.
+
+2015-10-24 18:27:49,169 INFO: - App: Preparing to unpack .../libgvc6_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:27:49,179 INFO: - App: Unpacking libgvc6 (2.38.0-7) ...
+
+2015-10-24 18:27:49,277 INFO: - App: Selecting previously unselected package libgvpr2.
+
+2015-10-24 18:27:49,286 INFO: - App: Preparing to unpack .../libgvpr2_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:27:49,295 INFO: - App: Unpacking libgvpr2 (2.38.0-7) ...
+
+2015-10-24 18:27:49,439 INFO: - App: Selecting previously unselected package graphviz.
+
+2015-10-24 18:27:49,456 INFO: - App: Preparing to unpack .../graphviz_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:27:49,491 INFO: - App: Unpacking graphviz (2.38.0-7) ...
+
+2015-10-24 18:27:49,627 INFO: - App: Processing triggers for fontconfig (2.11.0-6.3) ...
+
+2015-10-24 18:27:49,816 INFO: - App: Setting up libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-24 18:27:49,840 INFO: - App: Setting up libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:27:49,854 INFO: - App: Setting up libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:27:49,870 INFO: - App: Setting up libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-24 18:27:49,886 INFO: - App: Setting up libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-24 18:27:49,903 INFO: - App: Setting up libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-24 18:27:49,919 INFO: - App: Setting up libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-24 18:27:49,935 INFO: - App: Setting up libgd3:amd64 (2.1.0-5) ...
+
+2015-10-24 18:27:49,952 INFO: - App: Setting up libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-24 18:27:49,972 INFO: - App: Setting up libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-24 18:27:49,986 INFO: - App: Setting up libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-24 18:27:50,002 INFO: - App: Setting up libthai-data (0.1.21-1) ...
+
+2015-10-24 18:27:50,011 INFO: - App: Setting up libthai0:amd64 (0.1.21-1) ...
+
+2015-10-24 18:27:50,035 INFO: - App: Setting up libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:27:50,045 INFO: - App: Setting up libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:27:50,065 INFO: - App: Setting up libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:27:50,085 INFO: - App: Setting up libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-24 18:27:50,103 INFO: - App: Setting up libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-24 18:27:50,119 INFO: - App: Setting up fonts-liberation (1.07.4-1) ...
+
+2015-10-24 18:27:50,129 INFO: - App: Setting up libcdt5 (2.38.0-7) ...
+
+2015-10-24 18:27:50,146 INFO: - App: Setting up libcgraph6 (2.38.0-7) ...
+
+2015-10-24 18:27:50,163 INFO: - App: Setting up libpathplan4 (2.38.0-7) ...
+
+2015-10-24 18:27:50,189 INFO: - App: Setting up libxdot4 (2.38.0-7) ...
+
+2015-10-24 18:27:50,201 INFO: - App: Setting up libgvc6 (2.38.0-7) ...
+
+2015-10-24 18:27:50,229 INFO: - App: Setting up libgvpr2 (2.38.0-7) ...
+
+2015-10-24 18:27:50,252 INFO: - App: Setting up graphviz (2.38.0-7) ...
+
+2015-10-24 18:27:50,262 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-10-24 18:27:52,796 INFO: - App:  ---> 18e2ac7f23a8
+
+2015-10-24 18:27:52,828 INFO: - App: Removing intermediate container 236f7e019364
+
+2015-10-24 18:27:52,833 INFO: - App: Step 5 : USER main
+
+2015-10-24 18:27:52,912 INFO: - App:  ---> Running in ec49910f0f6f
+
+2015-10-24 18:27:52,976 INFO: - App:  ---> e73e038f1a58
+
+2015-10-24 18:27:52,988 INFO: - App: Removing intermediate container ec49910f0f6f
+
+2015-10-24 18:27:52,992 INFO: - App: Step 6 : ADD requirements.txt requirements.txt
+
+2015-10-24 18:27:53,136 INFO: - App:  ---> e1e8833636ca
+
+2015-10-24 18:27:53,145 INFO: - App: Removing intermediate container 1108f2046014
+
+2015-10-24 18:27:53,149 INFO: - App: Step 7 : RUN pip install -r requirements.txt
+
+2015-10-24 18:27:53,236 INFO: - App:  ---> Running in 7050f200e84b
+
+2015-10-24 18:27:54,780 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-24 18:27:54,786 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-24 18:27:54,797 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-24 18:27:54,964 INFO: - App:   Downloading graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-24 18:27:54,987 INFO: - App: Installing collected packages: graphviz
+
+2015-10-24 18:27:55,031 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-24 18:27:55,336 INFO: - App:  ---> 2356afd87c9a
+
+2015-10-24 18:27:55,350 INFO: - App: Removing intermediate container 7050f200e84b
+
+2015-10-24 18:27:55,353 INFO: - App: Step 8 : RUN /home/main/anaconda/envs/python3/bin/pip install -r requirements.txt
+
+2015-10-24 18:27:55,436 INFO: - App:  ---> Running in 8385e98d27bb
+
+2015-10-24 18:27:56,138 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-24 18:27:56,142 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-24 18:27:56,161 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-24 18:27:56,200 INFO: - App:   Using cached graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-24 18:27:56,220 INFO: - App: Installing collected packages: graphviz
+
+2015-10-24 18:27:56,267 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-24 18:27:56,565 INFO: - App:  ---> 083ad7cc1e47
+
+2015-10-24 18:27:56,575 INFO: - App: Removing intermediate container 8385e98d27bb
+
+2015-10-24 18:27:56,578 INFO: - App: Step 9 : USER main
+
+2015-10-24 18:27:56,656 INFO: - App:  ---> Running in f7472a650afd
+
+2015-10-24 18:27:56,712 INFO: - App:  ---> 938c2b6c1709
+
+2015-10-24 18:27:56,723 INFO: - App: Removing intermediate container f7472a650afd
+
+2015-10-24 18:27:56,730 INFO: - App: Step 10 : ADD . $HOME/notebooks
+
+2015-10-24 18:27:56,925 INFO: - App:  ---> 129606f39fda
+
+2015-10-24 18:27:56,952 INFO: - App: Removing intermediate container d77d96858314
+
+2015-10-24 18:27:56,958 INFO: - App: Step 11 : USER root
+
+2015-10-24 18:27:57,039 INFO: - App:  ---> Running in 7908cd983fd4
+
+2015-10-24 18:27:57,100 INFO: - App:  ---> 770fcdcbf34c
+
+2015-10-24 18:27:57,110 INFO: - App: Removing intermediate container 7908cd983fd4
+
+2015-10-24 18:27:57,113 INFO: - App: Step 12 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-24 18:27:57,212 INFO: - App:  ---> Running in 1f95a9daf0cf
+
+2015-10-24 18:27:57,620 INFO: - App:  ---> ac9917c31eac
+
+2015-10-24 18:27:57,631 INFO: - App: Removing intermediate container 1f95a9daf0cf
+
+2015-10-24 18:27:57,635 INFO: - App: Step 13 : USER main
+
+2015-10-24 18:27:57,713 INFO: - App:  ---> Running in 6cef19938a6f
+
+2015-10-24 18:27:57,764 INFO: - App:  ---> bacf4314aca2
+
+2015-10-24 18:27:57,774 INFO: - App: Removing intermediate container 6cef19938a6f
+
+2015-10-24 18:27:57,776 INFO: - App: Step 14 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-24 18:27:57,845 INFO: - App:  ---> Running in a4b74cd70ae5
+
+2015-10-24 18:27:58,387 INFO: - App:  ---> e5a4229c0028
+
+2015-10-24 18:27:58,395 INFO: - App: Removing intermediate container a4b74cd70ae5
+
+2015-10-24 18:27:58,404 INFO: - App: Step 15 : WORKDIR $HOME/notebooks
+
+2015-10-24 18:27:58,486 INFO: - App:  ---> Running in e8f3c0a0cd7b
+
+2015-10-24 18:27:58,584 INFO: - App:  ---> 1999c350d6dd
+
+2015-10-24 18:27:58,608 INFO: - App: Removing intermediate container e8f3c0a0cd7b
+
+2015-10-24 18:27:58,624 INFO: - App: Successfully built 1999c350d6dd
+
+2015-10-24 18:27:58,639 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/binder-project-example-dockerfile-two to private registry...
+2015-10-24 18:28:13,574 INFO: - App: Preloading app image onto all nodes...
+2015-10-24 18:28:21,366 INFO: - App: Successfully built app binder-project-example-dockerfile-two
+2015-10-24 18:38:13,080 INFO: - App: Building service dependencies...
+2015-10-24 18:38:13,083 INFO: - App: Copying files and filling templates...
+2015-10-24 18:38:13,105 INFO: - App: Building the app image with Dockerfile...
+2015-10-24 18:38:13,168 INFO: - App: Sending build context to Docker daemon   107 kBSending build context to Docker daemon   107 kB
+
+2015-10-24 18:38:13,193 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-24 18:38:13,215 INFO: - App:  ---> 77377240dc83
+
+2015-10-24 18:38:13,233 INFO: - App: Step 1 : MAINTAINER Jeremy Freeman <freeman.jeremy@gmail.com>
+
+2015-10-24 18:38:13,629 INFO: - App:  ---> Running in e77ecbce3f0d
+
+2015-10-24 18:38:13,763 INFO: - App:  ---> 485a27182ad8
+
+2015-10-24 18:38:13,811 INFO: - App: Removing intermediate container e77ecbce3f0d
+
+2015-10-24 18:38:13,843 INFO: - App: Step 2 : USER root
+
+2015-10-24 18:38:13,968 INFO: - App:  ---> Running in 1e514927c36d
+
+2015-10-24 18:38:14,104 INFO: - App:  ---> f5c34b6c642a
+
+2015-10-24 18:38:14,158 INFO: - App: Removing intermediate container 1e514927c36d
+
+2015-10-24 18:38:14,186 INFO: - App: Step 3 : RUN apt-get update
+
+2015-10-24 18:38:14,316 INFO: - App:  ---> Running in d98f914a85ad
+
+2015-10-24 18:38:15,126 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-10-24 18:38:15,544 INFO: - App: Get:2 http://security.debian.org jessie/updates/main amd64 Packages [182 kB]
+
+2015-10-24 18:38:15,596 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-10-24 18:38:15,646 INFO: - App: Get:3 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-10-24 18:38:15,898 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-10-24 18:38:16,275 INFO: - App: Get:5 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-10-24 18:38:16,576 INFO: - App: Get:6 http://httpredir.debian.org jessie-updates/main amd64 Packages [3653 B]
+
+2015-10-24 18:38:16,833 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-10-24 18:38:18,243 INFO: - App: Fetched 9569 kB in 3s (3041 kB/s)
+
+2015-10-24 18:38:19,389 INFO: - App: Reading package lists...
+
+2015-10-24 18:38:19,980 INFO: - App:  ---> e733505bd019
+
+2015-10-24 18:38:19,998 INFO: - App: Removing intermediate container d98f914a85ad
+
+2015-10-24 18:38:20,012 INFO: - App: Step 4 : RUN apt-get install -y graphviz
+
+2015-10-24 18:38:20,097 INFO: - App:  ---> Running in f009514925b5
+
+2015-10-24 18:38:21,643 INFO: - App: Reading package lists...
+
+2015-10-24 18:38:21,839 INFO: - App: Building dependency tree...
+
+2015-10-24 18:38:21,843 INFO: - App: Reading state information...
+
+2015-10-24 18:38:21,922 INFO: - App: The following extra packages will be installed:
+
+2015-10-24 18:38:21,929 INFO: - App:   fonts-liberation libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-24 18:38:21,934 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-24 18:38:21,940 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-24 18:38:21,943 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-24 18:38:21,959 INFO: - App:   libxmu6 libxpm4
+
+2015-10-24 18:38:21,971 INFO: - App: Suggested packages:
+
+2015-10-24 18:38:21,976 INFO: - App:   gsfonts graphviz-doc libgd-tools
+
+2015-10-24 18:38:21,984 INFO: - App: The following NEW packages will be installed:
+
+2015-10-24 18:38:21,989 INFO: - App:   fonts-liberation graphviz libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-24 18:38:21,994 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-24 18:38:21,999 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-24 18:38:22,003 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-24 18:38:22,007 INFO: - App:   libxmu6 libxpm4
+
+2015-10-24 18:38:24,319 INFO: - App: 0 upgraded, 26 newly installed, 0 to remove and 29 not upgraded.
+
+2015-10-24 18:38:24,338 INFO: - App: Need to get 6533 kB of archives.
+
+2015-10-24 18:38:24,380 INFO: - App: After this operation, 23.2 MB of additional disk space will be used.
+
+2015-10-24 18:38:24,405 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libpixman-1-0 amd64 0.32.6-3 [507 kB]
+
+2015-10-24 18:38:24,415 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libxcb-render0 amd64 1.10-3+b1 [17.5 kB]
+
+2015-10-24 18:38:24,554 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libxcb-shm0 amd64 1.10-3+b1 [11.5 kB]
+
+2015-10-24 18:38:24,663 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libcairo2 amd64 1.14.0-2.1 [742 kB]
+
+2015-10-24 18:38:24,766 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libdatrie1 amd64 0.2.8-1 [32.6 kB]
+
+2015-10-24 18:38:24,906 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libxpm4 amd64 1:3.5.11-1+b1 [48.1 kB]
+
+2015-10-24 18:38:24,962 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libgd3 amd64 2.1.0-5 [147 kB]
+
+2015-10-24 18:38:25,047 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libvpx1 amd64 1.3.0-3 [599 kB]
+
+2015-10-24 18:38:25,075 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libgraphite2-3 amd64 1.2.4-3 [57.4 kB]
+
+2015-10-24 18:38:25,200 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libharfbuzz0b amd64 0.9.35-2 [485 kB]
+
+2015-10-24 18:38:25,408 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libthai-data all 0.1.21-1 [159 kB]
+
+2015-10-24 18:38:25,528 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libthai0 amd64 0.1.21-1 [46.1 kB]
+
+2015-10-24 18:38:25,633 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libpango-1.0-0 amd64 1.36.8-3 [291 kB]
+
+2015-10-24 18:38:25,692 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libltdl7 amd64 2.4.2-1.11 [45.2 kB]
+
+2015-10-24 18:38:25,751 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libpangoft2-1.0-0 amd64 1.36.8-3 [213 kB]
+
+2015-10-24 18:38:25,855 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libpangocairo-1.0-0 amd64 1.36.8-3 [200 kB]
+
+2015-10-24 18:38:26,004 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libxmu6 amd64 2:1.1.2-1 [58.6 kB]
+
+2015-10-24 18:38:26,090 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libxaw7 amd64 2:1.0.12-2+b1 [199 kB]
+
+2015-10-24 18:38:26,187 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main fonts-liberation all 1.07.4-1 [835 kB]
+
+2015-10-24 18:38:26,318 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libcdt5 amd64 2.38.0-7 [62.7 kB]
+
+2015-10-24 18:38:26,430 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libcgraph6 amd64 2.38.0-7 [85.2 kB]
+
+2015-10-24 18:38:26,560 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libpathplan4 amd64 2.38.0-7 [66.0 kB]
+
+2015-10-24 18:38:26,635 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libxdot4 amd64 2.38.0-7 [58.7 kB]
+
+2015-10-24 18:38:26,752 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libgvc6 amd64 2.38.0-7 [637 kB]
+
+2015-10-24 18:38:26,881 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libgvpr2 amd64 2.38.0-7 [212 kB]
+
+2015-10-24 18:38:26,972 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main graphviz amd64 2.38.0-7 [717 kB]
+
+2015-10-24 18:38:27,269 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-10-24 18:38:27,284 INFO: - App: Fetched 6533 kB in 3s (2081 kB/s)
+
+2015-10-24 18:38:27,408 INFO: - App: Selecting previously unselected package libpixman-1-0:amd64.
+
+2015-10-24 18:38:27,427 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-10-24 18:38:27,435 INFO: - App: Preparing to unpack .../libpixman-1-0_0.32.6-3_amd64.deb ...
+
+2015-10-24 18:38:27,453 INFO: - App: Unpacking libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-24 18:38:27,541 INFO: - App: Selecting previously unselected package libxcb-render0:amd64.
+
+2015-10-24 18:38:27,555 INFO: - App: Preparing to unpack .../libxcb-render0_1.10-3+b1_amd64.deb ...
+
+2015-10-24 18:38:27,562 INFO: - App: Unpacking libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:38:27,571 INFO: - App: Selecting previously unselected package libxcb-shm0:amd64.
+
+2015-10-24 18:38:27,583 INFO: - App: Preparing to unpack .../libxcb-shm0_1.10-3+b1_amd64.deb ...
+
+2015-10-24 18:38:27,620 INFO: - App: Unpacking libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:38:27,647 INFO: - App: Selecting previously unselected package libcairo2:amd64.
+
+2015-10-24 18:38:27,698 INFO: - App: Preparing to unpack .../libcairo2_1.14.0-2.1_amd64.deb ...
+
+2015-10-24 18:38:27,702 INFO: - App: Unpacking libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-24 18:38:27,742 INFO: - App: Selecting previously unselected package libdatrie1:amd64.
+
+2015-10-24 18:38:27,745 INFO: - App: Preparing to unpack .../libdatrie1_0.2.8-1_amd64.deb ...
+
+2015-10-24 18:38:27,748 INFO: - App: Unpacking libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-24 18:38:27,783 INFO: - App: Selecting previously unselected package libvpx1:amd64.
+
+2015-10-24 18:38:27,795 INFO: - App: Preparing to unpack .../libvpx1_1.3.0-3_amd64.deb ...
+
+2015-10-24 18:38:27,810 INFO: - App: Unpacking libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-24 18:38:27,892 INFO: - App: Selecting previously unselected package libxpm4:amd64.
+
+2015-10-24 18:38:27,904 INFO: - App: Preparing to unpack .../libxpm4_1%3a3.5.11-1+b1_amd64.deb ...
+
+2015-10-24 18:38:27,916 INFO: - App: Unpacking libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-24 18:38:27,949 INFO: - App: Selecting previously unselected package libgd3:amd64.
+
+2015-10-24 18:38:27,961 INFO: - App: Preparing to unpack .../libgd3_2.1.0-5_amd64.deb ...
+
+2015-10-24 18:38:27,973 INFO: - App: Unpacking libgd3:amd64 (2.1.0-5) ...
+
+2015-10-24 18:38:28,020 INFO: - App: Selecting previously unselected package libgraphite2-3:amd64.
+
+2015-10-24 18:38:28,046 INFO: - App: Preparing to unpack .../libgraphite2-3_1.2.4-3_amd64.deb ...
+
+2015-10-24 18:38:28,051 INFO: - App: Unpacking libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-24 18:38:28,069 INFO: - App: Selecting previously unselected package libharfbuzz0b:amd64.
+
+2015-10-24 18:38:28,088 INFO: - App: Preparing to unpack .../libharfbuzz0b_0.9.35-2_amd64.deb ...
+
+2015-10-24 18:38:28,099 INFO: - App: Unpacking libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-24 18:38:28,127 INFO: - App: Selecting previously unselected package libltdl7:amd64.
+
+2015-10-24 18:38:28,139 INFO: - App: Preparing to unpack .../libltdl7_2.4.2-1.11_amd64.deb ...
+
+2015-10-24 18:38:28,155 INFO: - App: Unpacking libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-24 18:38:28,168 INFO: - App: Selecting previously unselected package libthai-data.
+
+2015-10-24 18:38:28,176 INFO: - App: Preparing to unpack .../libthai-data_0.1.21-1_all.deb ...
+
+2015-10-24 18:38:28,185 INFO: - App: Unpacking libthai-data (0.1.21-1) ...
+
+2015-10-24 18:38:28,248 INFO: - App: Selecting previously unselected package libthai0:amd64.
+
+2015-10-24 18:38:28,276 INFO: - App: Preparing to unpack .../libthai0_0.1.21-1_amd64.deb ...
+
+2015-10-24 18:38:28,291 INFO: - App: Unpacking libthai0:amd64 (0.1.21-1) ...
+
+2015-10-24 18:38:28,296 INFO: - App: Selecting previously unselected package libpango-1.0-0:amd64.
+
+2015-10-24 18:38:28,300 INFO: - App: Preparing to unpack .../libpango-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 18:38:28,308 INFO: - App: Unpacking libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:38:28,333 INFO: - App: Selecting previously unselected package libpangoft2-1.0-0:amd64.
+
+2015-10-24 18:38:28,342 INFO: - App: Preparing to unpack .../libpangoft2-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 18:38:28,353 INFO: - App: Unpacking libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:38:28,398 INFO: - App: Selecting previously unselected package libpangocairo-1.0-0:amd64.
+
+2015-10-24 18:38:28,440 INFO: - App: Preparing to unpack .../libpangocairo-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 18:38:28,450 INFO: - App: Unpacking libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:38:28,457 INFO: - App: Selecting previously unselected package libxmu6:amd64.
+
+2015-10-24 18:38:28,461 INFO: - App: Preparing to unpack .../libxmu6_2%3a1.1.2-1_amd64.deb ...
+
+2015-10-24 18:38:28,467 INFO: - App: Unpacking libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-24 18:38:28,489 INFO: - App: Selecting previously unselected package libxaw7:amd64.
+
+2015-10-24 18:38:28,495 INFO: - App: Preparing to unpack .../libxaw7_2%3a1.0.12-2+b1_amd64.deb ...
+
+2015-10-24 18:38:28,500 INFO: - App: Unpacking libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-24 18:38:28,565 INFO: - App: Selecting previously unselected package fonts-liberation.
+
+2015-10-24 18:38:28,574 INFO: - App: Preparing to unpack .../fonts-liberation_1.07.4-1_all.deb ...
+
+2015-10-24 18:38:28,577 INFO: - App: Unpacking fonts-liberation (1.07.4-1) ...
+
+2015-10-24 18:38:28,694 INFO: - App: Selecting previously unselected package libcdt5.
+
+2015-10-24 18:38:28,701 INFO: - App: Preparing to unpack .../libcdt5_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:38:28,708 INFO: - App: Unpacking libcdt5 (2.38.0-7) ...
+
+2015-10-24 18:38:28,742 INFO: - App: Selecting previously unselected package libcgraph6.
+
+2015-10-24 18:38:28,760 INFO: - App: Preparing to unpack .../libcgraph6_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:38:28,770 INFO: - App: Unpacking libcgraph6 (2.38.0-7) ...
+
+2015-10-24 18:38:28,790 INFO: - App: Selecting previously unselected package libpathplan4.
+
+2015-10-24 18:38:28,812 INFO: - App: Preparing to unpack .../libpathplan4_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:38:28,830 INFO: - App: Unpacking libpathplan4 (2.38.0-7) ...
+
+2015-10-24 18:38:28,849 INFO: - App: Selecting previously unselected package libxdot4.
+
+2015-10-24 18:38:28,853 INFO: - App: Preparing to unpack .../libxdot4_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:38:28,862 INFO: - App: Unpacking libxdot4 (2.38.0-7) ...
+
+2015-10-24 18:38:28,889 INFO: - App: Selecting previously unselected package libgvc6.
+
+2015-10-24 18:38:28,895 INFO: - App: Preparing to unpack .../libgvc6_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:38:28,900 INFO: - App: Unpacking libgvc6 (2.38.0-7) ...
+
+2015-10-24 18:38:29,000 INFO: - App: Selecting previously unselected package libgvpr2.
+
+2015-10-24 18:38:29,028 INFO: - App: Preparing to unpack .../libgvpr2_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:38:29,054 INFO: - App: Unpacking libgvpr2 (2.38.0-7) ...
+
+2015-10-24 18:38:29,068 INFO: - App: Selecting previously unselected package graphviz.
+
+2015-10-24 18:38:29,093 INFO: - App: Preparing to unpack .../graphviz_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:38:29,110 INFO: - App: Unpacking graphviz (2.38.0-7) ...
+
+2015-10-24 18:38:29,248 INFO: - App: Processing triggers for fontconfig (2.11.0-6.3) ...
+
+2015-10-24 18:38:29,445 INFO: - App: Setting up libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-24 18:38:29,469 INFO: - App: Setting up libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:38:29,490 INFO: - App: Setting up libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:38:29,515 INFO: - App: Setting up libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-24 18:38:29,529 INFO: - App: Setting up libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-24 18:38:29,560 INFO: - App: Setting up libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-24 18:38:29,581 INFO: - App: Setting up libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-24 18:38:29,589 INFO: - App: Setting up libgd3:amd64 (2.1.0-5) ...
+
+2015-10-24 18:38:29,611 INFO: - App: Setting up libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-24 18:38:29,630 INFO: - App: Setting up libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-24 18:38:29,652 INFO: - App: Setting up libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-24 18:38:29,671 INFO: - App: Setting up libthai-data (0.1.21-1) ...
+
+2015-10-24 18:38:29,693 INFO: - App: Setting up libthai0:amd64 (0.1.21-1) ...
+
+2015-10-24 18:38:29,716 INFO: - App: Setting up libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:38:29,732 INFO: - App: Setting up libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:38:29,757 INFO: - App: Setting up libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:38:29,769 INFO: - App: Setting up libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-24 18:38:29,812 INFO: - App: Setting up libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-24 18:38:29,830 INFO: - App: Setting up fonts-liberation (1.07.4-1) ...
+
+2015-10-24 18:38:29,836 INFO: - App: Setting up libcdt5 (2.38.0-7) ...
+
+2015-10-24 18:38:29,839 INFO: - App: Setting up libcgraph6 (2.38.0-7) ...
+
+2015-10-24 18:38:29,845 INFO: - App: Setting up libpathplan4 (2.38.0-7) ...
+
+2015-10-24 18:38:29,849 INFO: - App: Setting up libxdot4 (2.38.0-7) ...
+
+2015-10-24 18:38:29,855 INFO: - App: Setting up libgvc6 (2.38.0-7) ...
+
+2015-10-24 18:38:29,864 INFO: - App: Setting up libgvpr2 (2.38.0-7) ...
+
+2015-10-24 18:38:29,901 INFO: - App: Setting up graphviz (2.38.0-7) ...
+
+2015-10-24 18:38:29,911 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-10-24 18:38:32,478 INFO: - App:  ---> 39379f47d12c
+
+2015-10-24 18:38:32,513 INFO: - App: Removing intermediate container f009514925b5
+
+2015-10-24 18:38:32,518 INFO: - App: Step 5 : USER main
+
+2015-10-24 18:38:32,681 INFO: - App:  ---> Running in 6649de469f63
+
+2015-10-24 18:38:32,751 INFO: - App:  ---> 35fae160872c
+
+2015-10-24 18:38:32,757 INFO: - App: Removing intermediate container 6649de469f63
+
+2015-10-24 18:38:32,764 INFO: - App: Step 6 : ADD requirements.txt requirements.txt
+
+2015-10-24 18:38:32,965 INFO: - App:  ---> a1e353476c82
+
+2015-10-24 18:38:32,978 INFO: - App: Removing intermediate container f86b77ae5b43
+
+2015-10-24 18:38:32,982 INFO: - App: Step 7 : RUN pip install -r requirements.txt
+
+2015-10-24 18:38:33,049 INFO: - App:  ---> Running in 1cdcf5c6cd84
+
+2015-10-24 18:38:34,564 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-24 18:38:34,567 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-24 18:38:34,593 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-24 18:38:34,717 INFO: - App:   Downloading graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-24 18:38:34,745 INFO: - App: Installing collected packages: graphviz
+
+2015-10-24 18:38:34,792 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-24 18:38:35,121 INFO: - App:  ---> 329cc9490dec
+
+2015-10-24 18:38:35,133 INFO: - App: Removing intermediate container 1cdcf5c6cd84
+
+2015-10-24 18:38:35,140 INFO: - App: Step 8 : RUN /home/main/anaconda/envs/python3/bin/pip install -r requirements.txt
+
+2015-10-24 18:38:35,232 INFO: - App:  ---> Running in 26be3c289093
+
+2015-10-24 18:38:35,975 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-24 18:38:35,982 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-24 18:38:35,995 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-24 18:38:36,040 INFO: - App:   Using cached graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-24 18:38:36,059 INFO: - App: Installing collected packages: graphviz
+
+2015-10-24 18:38:36,111 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-24 18:38:36,404 INFO: - App:  ---> fc3f1497f0eb
+
+2015-10-24 18:38:36,420 INFO: - App: Removing intermediate container 26be3c289093
+
+2015-10-24 18:38:36,424 INFO: - App: Step 9 : USER main
+
+2015-10-24 18:38:36,498 INFO: - App:  ---> Running in 1fb2a3cbaf62
+
+2015-10-24 18:38:36,567 INFO: - App:  ---> 42c5af3203d4
+
+2015-10-24 18:38:36,573 INFO: - App: Removing intermediate container 1fb2a3cbaf62
+
+2015-10-24 18:38:36,575 INFO: - App: Step 10 : ADD . $HOME/notebooks
+
+2015-10-24 18:38:36,781 INFO: - App:  ---> f673a5a49888
+
+2015-10-24 18:38:36,788 INFO: - App: Removing intermediate container d118cf9f0216
+
+2015-10-24 18:38:36,791 INFO: - App: Step 11 : USER root
+
+2015-10-24 18:38:36,877 INFO: - App:  ---> Running in b715b410e371
+
+2015-10-24 18:38:36,923 INFO: - App:  ---> 471d9fb2a9b4
+
+2015-10-24 18:38:36,934 INFO: - App: Removing intermediate container b715b410e371
+
+2015-10-24 18:38:36,937 INFO: - App: Step 12 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-24 18:38:37,019 INFO: - App:  ---> Running in acd229ec63f3
+
+2015-10-24 18:38:37,462 INFO: - App:  ---> a8540a38cfc8
+
+2015-10-24 18:38:37,474 INFO: - App: Removing intermediate container acd229ec63f3
+
+2015-10-24 18:38:37,478 INFO: - App: Step 13 : USER main
+
+2015-10-24 18:38:37,555 INFO: - App:  ---> Running in 4120fd8ea295
+
+2015-10-24 18:38:37,608 INFO: - App:  ---> 178a0e765534
+
+2015-10-24 18:38:37,620 INFO: - App: Removing intermediate container 4120fd8ea295
+
+2015-10-24 18:38:37,624 INFO: - App: Step 14 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-24 18:38:37,703 INFO: - App:  ---> Running in b6c4169e7ab9
+
+2015-10-24 18:38:38,081 INFO: - App:  ---> 2c7b0b5420bb
+
+2015-10-24 18:38:38,098 INFO: - App: Removing intermediate container b6c4169e7ab9
+
+2015-10-24 18:38:38,113 INFO: - App: Step 15 : WORKDIR $HOME/notebooks
+
+2015-10-24 18:38:38,178 INFO: - App:  ---> Running in 803fa4b44345
+
+2015-10-24 18:38:38,223 INFO: - App:  ---> e7cf8ee52c1c
+
+2015-10-24 18:38:38,234 INFO: - App: Removing intermediate container 803fa4b44345
+
+2015-10-24 18:38:38,242 INFO: - App: Successfully built e7cf8ee52c1c
+
+2015-10-24 18:38:38,259 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/binder-project-example-dockerfile-two to private registry...
+2015-10-24 18:38:54,621 INFO: - App: Preloading app image onto all nodes...
+2015-10-24 18:39:01,641 INFO: - App: Successfully built app binder-project-example-dockerfile-two
+2015-10-24 18:47:47,602 INFO: - App: Building service dependencies...
+2015-10-24 18:47:47,604 INFO: - App: Copying files and filling templates...
+2015-10-24 18:47:47,621 INFO: - App: Building the app image with Dockerfile...
+2015-10-24 18:47:47,654 INFO: - App: Sending build context to Docker daemon   107 kBSending build context to Docker daemon   107 kB
+
+2015-10-24 18:47:47,679 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-24 18:47:47,682 INFO: - App:  ---> 77377240dc83
+
+2015-10-24 18:47:47,686 INFO: - App: Step 1 : MAINTAINER Jeremy Freeman <freeman.jeremy@gmail.com>
+
+2015-10-24 18:47:47,784 INFO: - App:  ---> Running in a61a56cc0058
+
+2015-10-24 18:47:47,853 INFO: - App:  ---> 1d9ab3862ed0
+
+2015-10-24 18:47:47,862 INFO: - App: Removing intermediate container a61a56cc0058
+
+2015-10-24 18:47:47,868 INFO: - App: Step 2 : USER root
+
+2015-10-24 18:47:47,943 INFO: - App:  ---> Running in 3ff39a4c788a
+
+2015-10-24 18:47:47,995 INFO: - App:  ---> 282afadc22b8
+
+2015-10-24 18:47:48,005 INFO: - App: Removing intermediate container 3ff39a4c788a
+
+2015-10-24 18:47:48,006 INFO: - App: Step 3 : RUN apt-get update
+
+2015-10-24 18:47:48,109 INFO: - App:  ---> Running in 69fb46b58aed
+
+2015-10-24 18:47:49,728 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-10-24 18:47:50,189 INFO: - App: Get:2 http://security.debian.org jessie/updates/main amd64 Packages [182 kB]
+
+2015-10-24 18:47:50,245 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-10-24 18:47:50,421 INFO: - App: Get:3 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-10-24 18:47:50,581 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-10-24 18:47:50,752 INFO: - App: Get:5 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-10-24 18:47:50,895 INFO: - App: Get:6 http://httpredir.debian.org jessie-updates/main amd64 Packages [3653 B]
+
+2015-10-24 18:47:51,020 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-10-24 18:47:52,787 INFO: - App: Fetched 9569 kB in 4s (2361 kB/s)
+
+2015-10-24 18:47:53,827 INFO: - App: Reading package lists...
+
+2015-10-24 18:47:54,455 INFO: - App:  ---> 365e5337aed2
+
+2015-10-24 18:47:54,467 INFO: - App: Removing intermediate container 69fb46b58aed
+
+2015-10-24 18:47:54,469 INFO: - App: Step 4 : RUN apt-get install -y graphviz
+
+2015-10-24 18:47:54,554 INFO: - App:  ---> Running in 9211bf80ab34
+
+2015-10-24 18:47:56,006 INFO: - App: Reading package lists...
+
+2015-10-24 18:47:56,219 INFO: - App: Building dependency tree...
+
+2015-10-24 18:47:56,227 INFO: - App: Reading state information...
+
+2015-10-24 18:47:56,300 INFO: - App: The following extra packages will be installed:
+
+2015-10-24 18:47:56,302 INFO: - App:   fonts-liberation libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-24 18:47:56,306 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-24 18:47:56,310 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-24 18:47:56,313 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-24 18:47:56,316 INFO: - App:   libxmu6 libxpm4
+
+2015-10-24 18:47:56,324 INFO: - App: Suggested packages:
+
+2015-10-24 18:47:56,332 INFO: - App:   gsfonts graphviz-doc libgd-tools
+
+2015-10-24 18:47:56,337 INFO: - App: The following NEW packages will be installed:
+
+2015-10-24 18:47:56,340 INFO: - App:   fonts-liberation graphviz libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-24 18:47:56,342 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-24 18:47:56,373 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-24 18:47:56,397 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-24 18:47:56,420 INFO: - App:   libxmu6 libxpm4
+
+2015-10-24 18:47:58,580 INFO: - App: 0 upgraded, 26 newly installed, 0 to remove and 29 not upgraded.
+
+2015-10-24 18:47:58,582 INFO: - App: Need to get 6533 kB of archives.
+
+2015-10-24 18:47:58,584 INFO: - App: After this operation, 23.2 MB of additional disk space will be used.
+
+2015-10-24 18:47:58,588 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libpixman-1-0 amd64 0.32.6-3 [507 kB]
+
+2015-10-24 18:47:58,703 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libxcb-render0 amd64 1.10-3+b1 [17.5 kB]
+
+2015-10-24 18:47:58,811 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libcairo2 amd64 1.14.0-2.1 [742 kB]
+
+2015-10-24 18:47:59,078 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libxcb-shm0 amd64 1.10-3+b1 [11.5 kB]
+
+2015-10-24 18:47:59,133 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libxpm4 amd64 1:3.5.11-1+b1 [48.1 kB]
+
+2015-10-24 18:47:59,250 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libgd3 amd64 2.1.0-5 [147 kB]
+
+2015-10-24 18:47:59,252 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libdatrie1 amd64 0.2.8-1 [32.6 kB]
+
+2015-10-24 18:47:59,317 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libvpx1 amd64 1.3.0-3 [599 kB]
+
+2015-10-24 18:47:59,482 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libgraphite2-3 amd64 1.2.4-3 [57.4 kB]
+
+2015-10-24 18:47:59,732 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libthai-data all 0.1.21-1 [159 kB]
+
+2015-10-24 18:47:59,748 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libharfbuzz0b amd64 0.9.35-2 [485 kB]
+
+2015-10-24 18:47:59,953 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libpango-1.0-0 amd64 1.36.8-3 [291 kB]
+
+2015-10-24 18:48:00,065 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libltdl7 amd64 2.4.2-1.11 [45.2 kB]
+
+2015-10-24 18:48:00,125 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libthai0 amd64 0.1.21-1 [46.1 kB]
+
+2015-10-24 18:48:00,191 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libpangocairo-1.0-0 amd64 1.36.8-3 [200 kB]
+
+2015-10-24 18:48:00,278 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libpangoft2-1.0-0 amd64 1.36.8-3 [213 kB]
+
+2015-10-24 18:48:00,324 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libxmu6 amd64 2:1.1.2-1 [58.6 kB]
+
+2015-10-24 18:48:00,472 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libxaw7 amd64 2:1.0.12-2+b1 [199 kB]
+
+2015-10-24 18:48:00,566 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main fonts-liberation all 1.07.4-1 [835 kB]
+
+2015-10-24 18:48:00,799 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libcdt5 amd64 2.38.0-7 [62.7 kB]
+
+2015-10-24 18:48:00,874 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libcgraph6 amd64 2.38.0-7 [85.2 kB]
+
+2015-10-24 18:48:00,897 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libpathplan4 amd64 2.38.0-7 [66.0 kB]
+
+2015-10-24 18:48:01,018 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libxdot4 amd64 2.38.0-7 [58.7 kB]
+
+2015-10-24 18:48:01,130 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libgvc6 amd64 2.38.0-7 [637 kB]
+
+2015-10-24 18:48:01,246 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libgvpr2 amd64 2.38.0-7 [212 kB]
+
+2015-10-24 18:48:01,368 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main graphviz amd64 2.38.0-7 [717 kB]
+
+2015-10-24 18:48:01,713 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-10-24 18:48:01,717 INFO: - App: Fetched 6533 kB in 3s (1961 kB/s)
+
+2015-10-24 18:48:01,824 INFO: - App: Selecting previously unselected package libpixman-1-0:amd64.
+
+2015-10-24 18:48:01,846 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-10-24 18:48:01,848 INFO: - App: Preparing to unpack .../libpixman-1-0_0.32.6-3_amd64.deb ...
+
+2015-10-24 18:48:01,854 INFO: - App: Unpacking libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-24 18:48:01,933 INFO: - App: Selecting previously unselected package libxcb-render0:amd64.
+
+2015-10-24 18:48:01,938 INFO: - App: Preparing to unpack .../libxcb-render0_1.10-3+b1_amd64.deb ...
+
+2015-10-24 18:48:01,943 INFO: - App: Unpacking libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:48:01,978 INFO: - App: Selecting previously unselected package libxcb-shm0:amd64.
+
+2015-10-24 18:48:01,982 INFO: - App: Preparing to unpack .../libxcb-shm0_1.10-3+b1_amd64.deb ...
+
+2015-10-24 18:48:01,990 INFO: - App: Unpacking libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:48:02,042 INFO: - App: Selecting previously unselected package libcairo2:amd64.
+
+2015-10-24 18:48:02,045 INFO: - App: Preparing to unpack .../libcairo2_1.14.0-2.1_amd64.deb ...
+
+2015-10-24 18:48:02,048 INFO: - App: Unpacking libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-24 18:48:02,134 INFO: - App: Selecting previously unselected package libdatrie1:amd64.
+
+2015-10-24 18:48:02,138 INFO: - App: Preparing to unpack .../libdatrie1_0.2.8-1_amd64.deb ...
+
+2015-10-24 18:48:02,142 INFO: - App: Unpacking libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-24 18:48:02,177 INFO: - App: Selecting previously unselected package libvpx1:amd64.
+
+2015-10-24 18:48:02,180 INFO: - App: Preparing to unpack .../libvpx1_1.3.0-3_amd64.deb ...
+
+2015-10-24 18:48:02,185 INFO: - App: Unpacking libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-24 18:48:02,311 INFO: - App: Selecting previously unselected package libxpm4:amd64.
+
+2015-10-24 18:48:02,329 INFO: - App: Preparing to unpack .../libxpm4_1%3a3.5.11-1+b1_amd64.deb ...
+
+2015-10-24 18:48:02,368 INFO: - App: Unpacking libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-24 18:48:02,375 INFO: - App: Selecting previously unselected package libgd3:amd64.
+
+2015-10-24 18:48:02,387 INFO: - App: Preparing to unpack .../libgd3_2.1.0-5_amd64.deb ...
+
+2015-10-24 18:48:02,400 INFO: - App: Unpacking libgd3:amd64 (2.1.0-5) ...
+
+2015-10-24 18:48:02,407 INFO: - App: Selecting previously unselected package libgraphite2-3:amd64.
+
+2015-10-24 18:48:02,422 INFO: - App: Preparing to unpack .../libgraphite2-3_1.2.4-3_amd64.deb ...
+
+2015-10-24 18:48:02,429 INFO: - App: Unpacking libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-24 18:48:02,459 INFO: - App: Selecting previously unselected package libharfbuzz0b:amd64.
+
+2015-10-24 18:48:02,464 INFO: - App: Preparing to unpack .../libharfbuzz0b_0.9.35-2_amd64.deb ...
+
+2015-10-24 18:48:02,469 INFO: - App: Unpacking libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-24 18:48:02,534 INFO: - App: Selecting previously unselected package libltdl7:amd64.
+
+2015-10-24 18:48:02,540 INFO: - App: Preparing to unpack .../libltdl7_2.4.2-1.11_amd64.deb ...
+
+2015-10-24 18:48:02,554 INFO: - App: Unpacking libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-24 18:48:02,578 INFO: - App: Selecting previously unselected package libthai-data.
+
+2015-10-24 18:48:02,581 INFO: - App: Preparing to unpack .../libthai-data_0.1.21-1_all.deb ...
+
+2015-10-24 18:48:02,583 INFO: - App: Unpacking libthai-data (0.1.21-1) ...
+
+2015-10-24 18:48:02,642 INFO: - App: Selecting previously unselected package libthai0:amd64.
+
+2015-10-24 18:48:02,659 INFO: - App: Preparing to unpack .../libthai0_0.1.21-1_amd64.deb ...
+
+2015-10-24 18:48:02,666 INFO: - App: Unpacking libthai0:amd64 (0.1.21-1) ...
+
+2015-10-24 18:48:02,692 INFO: - App: Selecting previously unselected package libpango-1.0-0:amd64.
+
+2015-10-24 18:48:02,695 INFO: - App: Preparing to unpack .../libpango-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 18:48:02,698 INFO: - App: Unpacking libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:48:02,766 INFO: - App: Selecting previously unselected package libpangoft2-1.0-0:amd64.
+
+2015-10-24 18:48:02,772 INFO: - App: Preparing to unpack .../libpangoft2-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 18:48:02,781 INFO: - App: Unpacking libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:48:02,825 INFO: - App: Selecting previously unselected package libpangocairo-1.0-0:amd64.
+
+2015-10-24 18:48:02,830 INFO: - App: Preparing to unpack .../libpangocairo-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 18:48:02,837 INFO: - App: Unpacking libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:48:02,876 INFO: - App: Selecting previously unselected package libxmu6:amd64.
+
+2015-10-24 18:48:02,879 INFO: - App: Preparing to unpack .../libxmu6_2%3a1.1.2-1_amd64.deb ...
+
+2015-10-24 18:48:02,884 INFO: - App: Unpacking libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-24 18:48:02,932 INFO: - App: Selecting previously unselected package libxaw7:amd64.
+
+2015-10-24 18:48:02,947 INFO: - App: Preparing to unpack .../libxaw7_2%3a1.0.12-2+b1_amd64.deb ...
+
+2015-10-24 18:48:02,956 INFO: - App: Unpacking libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-24 18:48:02,991 INFO: - App: Selecting previously unselected package fonts-liberation.
+
+2015-10-24 18:48:02,996 INFO: - App: Preparing to unpack .../fonts-liberation_1.07.4-1_all.deb ...
+
+2015-10-24 18:48:02,998 INFO: - App: Unpacking fonts-liberation (1.07.4-1) ...
+
+2015-10-24 18:48:03,125 INFO: - App: Selecting previously unselected package libcdt5.
+
+2015-10-24 18:48:03,133 INFO: - App: Preparing to unpack .../libcdt5_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:48:03,136 INFO: - App: Unpacking libcdt5 (2.38.0-7) ...
+
+2015-10-24 18:48:03,176 INFO: - App: Selecting previously unselected package libcgraph6.
+
+2015-10-24 18:48:03,188 INFO: - App: Preparing to unpack .../libcgraph6_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:48:03,199 INFO: - App: Unpacking libcgraph6 (2.38.0-7) ...
+
+2015-10-24 18:48:03,220 INFO: - App: Selecting previously unselected package libpathplan4.
+
+2015-10-24 18:48:03,222 INFO: - App: Preparing to unpack .../libpathplan4_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:48:03,233 INFO: - App: Unpacking libpathplan4 (2.38.0-7) ...
+
+2015-10-24 18:48:03,267 INFO: - App: Selecting previously unselected package libxdot4.
+
+2015-10-24 18:48:03,274 INFO: - App: Preparing to unpack .../libxdot4_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:48:03,279 INFO: - App: Unpacking libxdot4 (2.38.0-7) ...
+
+2015-10-24 18:48:03,311 INFO: - App: Selecting previously unselected package libgvc6.
+
+2015-10-24 18:48:03,330 INFO: - App: Preparing to unpack .../libgvc6_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:48:03,377 INFO: - App: Unpacking libgvc6 (2.38.0-7) ...
+
+2015-10-24 18:48:03,429 INFO: - App: Selecting previously unselected package libgvpr2.
+
+2015-10-24 18:48:03,433 INFO: - App: Preparing to unpack .../libgvpr2_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:48:03,436 INFO: - App: Unpacking libgvpr2 (2.38.0-7) ...
+
+2015-10-24 18:48:03,502 INFO: - App: Selecting previously unselected package graphviz.
+
+2015-10-24 18:48:03,510 INFO: - App: Preparing to unpack .../graphviz_2.38.0-7_amd64.deb ...
+
+2015-10-24 18:48:03,538 INFO: - App: Unpacking graphviz (2.38.0-7) ...
+
+2015-10-24 18:48:03,754 INFO: - App: Processing triggers for fontconfig (2.11.0-6.3) ...
+
+2015-10-24 18:48:04,001 INFO: - App: Setting up libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-24 18:48:04,046 INFO: - App: Setting up libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:48:04,073 INFO: - App: Setting up libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-24 18:48:04,102 INFO: - App: Setting up libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-24 18:48:04,111 INFO: - App: Setting up libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-24 18:48:04,131 INFO: - App: Setting up libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-24 18:48:04,150 INFO: - App: Setting up libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-24 18:48:04,169 INFO: - App: Setting up libgd3:amd64 (2.1.0-5) ...
+
+2015-10-24 18:48:04,192 INFO: - App: Setting up libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-24 18:48:04,214 INFO: - App: Setting up libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-24 18:48:04,242 INFO: - App: Setting up libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-24 18:48:04,276 INFO: - App: Setting up libthai-data (0.1.21-1) ...
+
+2015-10-24 18:48:04,287 INFO: - App: Setting up libthai0:amd64 (0.1.21-1) ...
+
+2015-10-24 18:48:04,307 INFO: - App: Setting up libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:48:04,327 INFO: - App: Setting up libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:48:04,347 INFO: - App: Setting up libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 18:48:04,372 INFO: - App: Setting up libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-24 18:48:04,391 INFO: - App: Setting up libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-24 18:48:04,416 INFO: - App: Setting up fonts-liberation (1.07.4-1) ...
+
+2015-10-24 18:48:04,435 INFO: - App: Setting up libcdt5 (2.38.0-7) ...
+
+2015-10-24 18:48:04,457 INFO: - App: Setting up libcgraph6 (2.38.0-7) ...
+
+2015-10-24 18:48:04,484 INFO: - App: Setting up libpathplan4 (2.38.0-7) ...
+
+2015-10-24 18:48:04,496 INFO: - App: Setting up libxdot4 (2.38.0-7) ...
+
+2015-10-24 18:48:04,524 INFO: - App: Setting up libgvc6 (2.38.0-7) ...
+
+2015-10-24 18:48:04,574 INFO: - App: Setting up libgvpr2 (2.38.0-7) ...
+
+2015-10-24 18:48:04,594 INFO: - App: Setting up graphviz (2.38.0-7) ...
+
+2015-10-24 18:48:04,615 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-10-24 18:48:07,323 INFO: - App:  ---> b3b5d96acb4e
+
+2015-10-24 18:48:07,372 INFO: - App: Removing intermediate container 9211bf80ab34
+
+2015-10-24 18:48:07,382 INFO: - App: Step 5 : USER main
+
+2015-10-24 18:48:07,512 INFO: - App:  ---> Running in 8ac85b89f04e
+
+2015-10-24 18:48:07,591 INFO: - App:  ---> e72d60874c9c
+
+2015-10-24 18:48:07,614 INFO: - App: Removing intermediate container 8ac85b89f04e
+
+2015-10-24 18:48:07,623 INFO: - App: Step 6 : ADD requirements.txt requirements.txt
+
+2015-10-24 18:48:07,931 INFO: - App:  ---> 2403d5d339fc
+
+2015-10-24 18:48:07,943 INFO: - App: Removing intermediate container aa0731992034
+
+2015-10-24 18:48:07,946 INFO: - App: Step 7 : RUN pip install -r requirements.txt
+
+2015-10-24 18:48:08,074 INFO: - App:  ---> Running in 68a62dd7d297
+
+2015-10-24 18:48:09,717 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-24 18:48:09,724 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-24 18:48:09,745 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-24 18:48:09,870 INFO: - App:   Downloading graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-24 18:48:09,893 INFO: - App: Installing collected packages: graphviz
+
+2015-10-24 18:48:09,943 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-24 18:48:10,265 INFO: - App:  ---> f1af06f671f0
+
+2015-10-24 18:48:10,272 INFO: - App: Removing intermediate container 68a62dd7d297
+
+2015-10-24 18:48:10,282 INFO: - App: Step 8 : RUN /home/main/anaconda/envs/python3/bin/pip install -r requirements.txt
+
+2015-10-24 18:48:10,802 INFO: - App:  ---> Running in 55acac34662b
+
+2015-10-24 18:48:11,337 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-24 18:48:11,345 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-24 18:48:11,355 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-24 18:48:11,402 INFO: - App:   Using cached graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-24 18:48:11,422 INFO: - App: Installing collected packages: graphviz
+
+2015-10-24 18:48:11,481 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-24 18:48:11,820 INFO: - App:  ---> 07511e60c4c8
+
+2015-10-24 18:48:11,834 INFO: - App: Removing intermediate container 55acac34662b
+
+2015-10-24 18:48:11,840 INFO: - App: Step 9 : USER main
+
+2015-10-24 18:48:11,905 INFO: - App:  ---> Running in 4c85cfee11d6
+
+2015-10-24 18:48:11,958 INFO: - App:  ---> 69653c04a8bc
+
+2015-10-24 18:48:11,975 INFO: - App: Removing intermediate container 4c85cfee11d6
+
+2015-10-24 18:48:11,988 INFO: - App: Step 10 : ADD . $HOME/notebooks
+
+2015-10-24 18:48:12,173 INFO: - App:  ---> ef44d4f20692
+
+2015-10-24 18:48:12,186 INFO: - App: Removing intermediate container 875cf841c5a8
+
+2015-10-24 18:48:12,188 INFO: - App: Step 11 : USER root
+
+2015-10-24 18:48:12,292 INFO: - App:  ---> Running in cfcefb42f0d0
+
+2015-10-24 18:48:12,369 INFO: - App:  ---> 1e6b0589e334
+
+2015-10-24 18:48:12,382 INFO: - App: Removing intermediate container cfcefb42f0d0
+
+2015-10-24 18:48:12,386 INFO: - App: Step 12 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-24 18:48:12,457 INFO: - App:  ---> Running in 85c6b30a49ec
+
+2015-10-24 18:48:12,923 INFO: - App:  ---> 48004a10bb59
+
+2015-10-24 18:48:12,939 INFO: - App: Removing intermediate container 85c6b30a49ec
+
+2015-10-24 18:48:12,947 INFO: - App: Step 13 : USER main
+
+2015-10-24 18:48:13,108 INFO: - App:  ---> Running in 3cdaed909e53
+
+2015-10-24 18:48:13,220 INFO: - App:  ---> ff8eb6fbb3a9
+
+2015-10-24 18:48:13,230 INFO: - App: Removing intermediate container 3cdaed909e53
+
+2015-10-24 18:48:13,249 INFO: - App: Step 14 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-24 18:48:13,317 INFO: - App:  ---> Running in f6b7ed91a638
+
+2015-10-24 18:48:13,986 INFO: - App:  ---> c534a4bd9ad2
+
+2015-10-24 18:48:14,021 INFO: - App: Removing intermediate container f6b7ed91a638
+
+2015-10-24 18:48:14,028 INFO: - App: Step 15 : WORKDIR $HOME/notebooks
+
+2015-10-24 18:48:14,134 INFO: - App:  ---> Running in eb8b57ccdc36
+
+2015-10-24 18:48:14,195 INFO: - App:  ---> cf4420810852
+
+2015-10-24 18:48:14,205 INFO: - App: Removing intermediate container eb8b57ccdc36
+
+2015-10-24 18:48:14,213 INFO: - App: Successfully built cf4420810852
+
+2015-10-24 18:48:14,219 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/binder-project-example-dockerfile-two to private registry...
+2015-10-24 18:48:38,976 INFO: - App: Preloading app image onto all nodes...
+2015-10-24 18:48:46,420 INFO: - App: Successfully built app binder-project-example-dockerfile-two
+2015-10-24 20:23:52,172 INFO: - App: Building service dependencies...
+2015-10-24 20:23:52,174 INFO: - App: Copying files and filling templates...
+2015-10-24 20:23:52,193 INFO: - App: Building the app image with Dockerfile...
+2015-10-24 20:23:52,227 INFO: - App: Sending build context to Docker daemon   107 kBSending build context to Docker daemon   107 kB
+
+2015-10-24 20:23:52,248 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-24 20:23:52,252 INFO: - App:  ---> 77377240dc83
+
+2015-10-24 20:23:52,254 INFO: - App: Step 1 : MAINTAINER Jeremy Freeman <freeman.jeremy@gmail.com>
+
+2015-10-24 20:23:52,332 INFO: - App:  ---> Running in 3c87d5f01948
+
+2015-10-24 20:23:52,384 INFO: - App:  ---> 16785d2aed2b
+
+2015-10-24 20:23:52,392 INFO: - App: Removing intermediate container 3c87d5f01948
+
+2015-10-24 20:23:52,394 INFO: - App: Step 2 : USER root
+
+2015-10-24 20:23:52,487 INFO: - App:  ---> Running in 5b79c19f7d27
+
+2015-10-24 20:23:52,539 INFO: - App:  ---> aad0b8b0531a
+
+2015-10-24 20:23:52,547 INFO: - App: Removing intermediate container 5b79c19f7d27
+
+2015-10-24 20:23:52,549 INFO: - App: Step 3 : RUN apt-get update
+
+2015-10-24 20:23:52,612 INFO: - App:  ---> Running in f2308e49304e
+
+2015-10-24 20:23:54,131 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-10-24 20:23:54,510 INFO: - App: Get:2 http://security.debian.org jessie/updates/main amd64 Packages [182 kB]
+
+2015-10-24 20:23:54,563 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-10-24 20:23:54,617 INFO: - App: Get:3 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-10-24 20:23:54,908 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-10-24 20:23:55,199 INFO: - App: Get:5 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-10-24 20:23:55,368 INFO: - App: Get:6 http://httpredir.debian.org jessie-updates/main amd64 Packages [3653 B]
+
+2015-10-24 20:23:55,501 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-10-24 20:24:06,637 INFO: - App: Fetched 9569 kB in 13s (708 kB/s)
+
+2015-10-24 20:24:07,525 INFO: - App: Reading package lists...
+
+2015-10-24 20:24:07,917 INFO: - App:  ---> fb28e453cc0f
+
+2015-10-24 20:24:07,926 INFO: - App: Removing intermediate container f2308e49304e
+
+2015-10-24 20:24:07,928 INFO: - App: Step 4 : RUN apt-get install -y graphviz
+
+2015-10-24 20:24:08,020 INFO: - App:  ---> Running in b80e6f255057
+
+2015-10-24 20:24:09,333 INFO: - App: Reading package lists...
+
+2015-10-24 20:24:09,494 INFO: - App: Building dependency tree...
+
+2015-10-24 20:24:09,497 INFO: - App: Reading state information...
+
+2015-10-24 20:24:09,568 INFO: - App: The following extra packages will be installed:
+
+2015-10-24 20:24:09,575 INFO: - App:   fonts-liberation libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-24 20:24:09,594 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-24 20:24:09,608 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-24 20:24:09,613 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-24 20:24:09,626 INFO: - App:   libxmu6 libxpm4
+
+2015-10-24 20:24:09,637 INFO: - App: Suggested packages:
+
+2015-10-24 20:24:09,648 INFO: - App:   gsfonts graphviz-doc libgd-tools
+
+2015-10-24 20:24:09,659 INFO: - App: The following NEW packages will be installed:
+
+2015-10-24 20:24:09,674 INFO: - App:   fonts-liberation graphviz libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-24 20:24:09,710 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-24 20:24:09,725 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-24 20:24:09,755 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-24 20:24:09,769 INFO: - App:   libxmu6 libxpm4
+
+2015-10-24 20:24:11,864 INFO: - App: 0 upgraded, 26 newly installed, 0 to remove and 29 not upgraded.
+
+2015-10-24 20:24:11,872 INFO: - App: Need to get 6533 kB of archives.
+
+2015-10-24 20:24:11,874 INFO: - App: After this operation, 23.2 MB of additional disk space will be used.
+
+2015-10-24 20:24:11,876 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libpixman-1-0 amd64 0.32.6-3 [507 kB]
+
+2015-10-24 20:24:12,432 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libxcb-render0 amd64 1.10-3+b1 [17.5 kB]
+
+2015-10-24 20:24:12,490 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libxcb-shm0 amd64 1.10-3+b1 [11.5 kB]
+
+2015-10-24 20:24:12,584 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libcairo2 amd64 1.14.0-2.1 [742 kB]
+
+2015-10-24 20:24:13,015 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libdatrie1 amd64 0.2.8-1 [32.6 kB]
+
+2015-10-24 20:24:13,131 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libvpx1 amd64 1.3.0-3 [599 kB]
+
+2015-10-24 20:24:13,603 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libxpm4 amd64 1:3.5.11-1+b1 [48.1 kB]
+
+2015-10-24 20:24:13,674 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libgd3 amd64 2.1.0-5 [147 kB]
+
+2015-10-24 20:24:13,812 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libgraphite2-3 amd64 1.2.4-3 [57.4 kB]
+
+2015-10-24 20:24:13,872 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libharfbuzz0b amd64 0.9.35-2 [485 kB]
+
+2015-10-24 20:24:14,175 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libltdl7 amd64 2.4.2-1.11 [45.2 kB]
+
+2015-10-24 20:24:14,272 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libthai-data all 0.1.21-1 [159 kB]
+
+2015-10-24 20:24:14,449 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libthai0 amd64 0.1.21-1 [46.1 kB]
+
+2015-10-24 20:24:14,787 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libpango-1.0-0 amd64 1.36.8-3 [291 kB]
+
+2015-10-24 20:24:15,112 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libpangoft2-1.0-0 amd64 1.36.8-3 [213 kB]
+
+2015-10-24 20:24:15,285 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libpangocairo-1.0-0 amd64 1.36.8-3 [200 kB]
+
+2015-10-24 20:24:15,447 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libxmu6 amd64 2:1.1.2-1 [58.6 kB]
+
+2015-10-24 20:24:15,508 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libxaw7 amd64 2:1.0.12-2+b1 [199 kB]
+
+2015-10-24 20:24:15,716 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main fonts-liberation all 1.07.4-1 [835 kB]
+
+2015-10-24 20:24:16,252 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libcdt5 amd64 2.38.0-7 [62.7 kB]
+
+2015-10-24 20:24:16,312 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libcgraph6 amd64 2.38.0-7 [85.2 kB]
+
+2015-10-24 20:24:16,378 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libpathplan4 amd64 2.38.0-7 [66.0 kB]
+
+2015-10-24 20:24:16,437 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libxdot4 amd64 2.38.0-7 [58.7 kB]
+
+2015-10-24 20:24:16,497 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libgvc6 amd64 2.38.0-7 [637 kB]
+
+2015-10-24 20:24:16,899 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libgvpr2 amd64 2.38.0-7 [212 kB]
+
+2015-10-24 20:24:17,148 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main graphviz amd64 2.38.0-7 [717 kB]
+
+2015-10-24 20:24:17,718 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-10-24 20:24:17,724 INFO: - App: Fetched 6533 kB in 6s (1052 kB/s)
+
+2015-10-24 20:24:17,829 INFO: - App: Selecting previously unselected package libpixman-1-0:amd64.
+
+2015-10-24 20:24:17,841 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-10-24 20:24:17,844 INFO: - App: Preparing to unpack .../libpixman-1-0_0.32.6-3_amd64.deb ...
+
+2015-10-24 20:24:17,846 INFO: - App: Unpacking libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-24 20:24:17,909 INFO: - App: Selecting previously unselected package libxcb-render0:amd64.
+
+2015-10-24 20:24:17,912 INFO: - App: Preparing to unpack .../libxcb-render0_1.10-3+b1_amd64.deb ...
+
+2015-10-24 20:24:17,916 INFO: - App: Unpacking libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-24 20:24:17,946 INFO: - App: Selecting previously unselected package libxcb-shm0:amd64.
+
+2015-10-24 20:24:17,948 INFO: - App: Preparing to unpack .../libxcb-shm0_1.10-3+b1_amd64.deb ...
+
+2015-10-24 20:24:17,951 INFO: - App: Unpacking libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-24 20:24:17,984 INFO: - App: Selecting previously unselected package libcairo2:amd64.
+
+2015-10-24 20:24:17,988 INFO: - App: Preparing to unpack .../libcairo2_1.14.0-2.1_amd64.deb ...
+
+2015-10-24 20:24:17,991 INFO: - App: Unpacking libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-24 20:24:18,075 INFO: - App: Selecting previously unselected package libdatrie1:amd64.
+
+2015-10-24 20:24:18,079 INFO: - App: Preparing to unpack .../libdatrie1_0.2.8-1_amd64.deb ...
+
+2015-10-24 20:24:18,082 INFO: - App: Unpacking libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-24 20:24:18,114 INFO: - App: Selecting previously unselected package libvpx1:amd64.
+
+2015-10-24 20:24:18,116 INFO: - App: Preparing to unpack .../libvpx1_1.3.0-3_amd64.deb ...
+
+2015-10-24 20:24:18,121 INFO: - App: Unpacking libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-24 20:24:18,206 INFO: - App: Selecting previously unselected package libxpm4:amd64.
+
+2015-10-24 20:24:18,209 INFO: - App: Preparing to unpack .../libxpm4_1%3a3.5.11-1+b1_amd64.deb ...
+
+2015-10-24 20:24:18,214 INFO: - App: Unpacking libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-24 20:24:18,247 INFO: - App: Selecting previously unselected package libgd3:amd64.
+
+2015-10-24 20:24:18,249 INFO: - App: Preparing to unpack .../libgd3_2.1.0-5_amd64.deb ...
+
+2015-10-24 20:24:18,253 INFO: - App: Unpacking libgd3:amd64 (2.1.0-5) ...
+
+2015-10-24 20:24:18,299 INFO: - App: Selecting previously unselected package libgraphite2-3:amd64.
+
+2015-10-24 20:24:18,308 INFO: - App: Preparing to unpack .../libgraphite2-3_1.2.4-3_amd64.deb ...
+
+2015-10-24 20:24:18,310 INFO: - App: Unpacking libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-24 20:24:18,343 INFO: - App: Selecting previously unselected package libharfbuzz0b:amd64.
+
+2015-10-24 20:24:18,353 INFO: - App: Preparing to unpack .../libharfbuzz0b_0.9.35-2_amd64.deb ...
+
+2015-10-24 20:24:18,355 INFO: - App: Unpacking libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-24 20:24:18,404 INFO: - App: Selecting previously unselected package libltdl7:amd64.
+
+2015-10-24 20:24:18,408 INFO: - App: Preparing to unpack .../libltdl7_2.4.2-1.11_amd64.deb ...
+
+2015-10-24 20:24:18,411 INFO: - App: Unpacking libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-24 20:24:18,434 INFO: - App: Selecting previously unselected package libthai-data.
+
+2015-10-24 20:24:18,437 INFO: - App: Preparing to unpack .../libthai-data_0.1.21-1_all.deb ...
+
+2015-10-24 20:24:18,441 INFO: - App: Unpacking libthai-data (0.1.21-1) ...
+
+2015-10-24 20:24:18,488 INFO: - App: Selecting previously unselected package libthai0:amd64.
+
+2015-10-24 20:24:18,490 INFO: - App: Preparing to unpack .../libthai0_0.1.21-1_amd64.deb ...
+
+2015-10-24 20:24:18,492 INFO: - App: Unpacking libthai0:amd64 (0.1.21-1) ...
+
+2015-10-24 20:24:18,536 INFO: - App: Selecting previously unselected package libpango-1.0-0:amd64.
+
+2015-10-24 20:24:18,538 INFO: - App: Preparing to unpack .../libpango-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 20:24:18,541 INFO: - App: Unpacking libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 20:24:18,592 INFO: - App: Selecting previously unselected package libpangoft2-1.0-0:amd64.
+
+2015-10-24 20:24:18,595 INFO: - App: Preparing to unpack .../libpangoft2-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 20:24:18,597 INFO: - App: Unpacking libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 20:24:18,643 INFO: - App: Selecting previously unselected package libpangocairo-1.0-0:amd64.
+
+2015-10-24 20:24:18,645 INFO: - App: Preparing to unpack .../libpangocairo-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-24 20:24:18,649 INFO: - App: Unpacking libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 20:24:18,687 INFO: - App: Selecting previously unselected package libxmu6:amd64.
+
+2015-10-24 20:24:18,724 INFO: - App: Preparing to unpack .../libxmu6_2%3a1.1.2-1_amd64.deb ...
+
+2015-10-24 20:24:18,730 INFO: - App: Unpacking libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-24 20:24:18,734 INFO: - App: Selecting previously unselected package libxaw7:amd64.
+
+2015-10-24 20:24:18,736 INFO: - App: Preparing to unpack .../libxaw7_2%3a1.0.12-2+b1_amd64.deb ...
+
+2015-10-24 20:24:18,740 INFO: - App: Unpacking libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-24 20:24:18,781 INFO: - App: Selecting previously unselected package fonts-liberation.
+
+2015-10-24 20:24:18,782 INFO: - App: Preparing to unpack .../fonts-liberation_1.07.4-1_all.deb ...
+
+2015-10-24 20:24:18,786 INFO: - App: Unpacking fonts-liberation (1.07.4-1) ...
+
+2015-10-24 20:24:18,900 INFO: - App: Selecting previously unselected package libcdt5.
+
+2015-10-24 20:24:18,940 INFO: - App: Preparing to unpack .../libcdt5_2.38.0-7_amd64.deb ...
+
+2015-10-24 20:24:18,944 INFO: - App: Unpacking libcdt5 (2.38.0-7) ...
+
+2015-10-24 20:24:18,952 INFO: - App: Selecting previously unselected package libcgraph6.
+
+2015-10-24 20:24:18,960 INFO: - App: Preparing to unpack .../libcgraph6_2.38.0-7_amd64.deb ...
+
+2015-10-24 20:24:18,963 INFO: - App: Unpacking libcgraph6 (2.38.0-7) ...
+
+2015-10-24 20:24:18,976 INFO: - App: Selecting previously unselected package libpathplan4.
+
+2015-10-24 20:24:18,981 INFO: - App: Preparing to unpack .../libpathplan4_2.38.0-7_amd64.deb ...
+
+2015-10-24 20:24:18,984 INFO: - App: Unpacking libpathplan4 (2.38.0-7) ...
+
+2015-10-24 20:24:19,020 INFO: - App: Selecting previously unselected package libxdot4.
+
+2015-10-24 20:24:19,022 INFO: - App: Preparing to unpack .../libxdot4_2.38.0-7_amd64.deb ...
+
+2015-10-24 20:24:19,024 INFO: - App: Unpacking libxdot4 (2.38.0-7) ...
+
+2015-10-24 20:24:19,062 INFO: - App: Selecting previously unselected package libgvc6.
+
+2015-10-24 20:24:19,065 INFO: - App: Preparing to unpack .../libgvc6_2.38.0-7_amd64.deb ...
+
+2015-10-24 20:24:19,067 INFO: - App: Unpacking libgvc6 (2.38.0-7) ...
+
+2015-10-24 20:24:19,155 INFO: - App: Selecting previously unselected package libgvpr2.
+
+2015-10-24 20:24:19,157 INFO: - App: Preparing to unpack .../libgvpr2_2.38.0-7_amd64.deb ...
+
+2015-10-24 20:24:19,161 INFO: - App: Unpacking libgvpr2 (2.38.0-7) ...
+
+2015-10-24 20:24:19,211 INFO: - App: Selecting previously unselected package graphviz.
+
+2015-10-24 20:24:19,214 INFO: - App: Preparing to unpack .../graphviz_2.38.0-7_amd64.deb ...
+
+2015-10-24 20:24:19,217 INFO: - App: Unpacking graphviz (2.38.0-7) ...
+
+2015-10-24 20:24:19,383 INFO: - App: Processing triggers for fontconfig (2.11.0-6.3) ...
+
+2015-10-24 20:24:19,559 INFO: - App: Setting up libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-24 20:24:19,579 INFO: - App: Setting up libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-24 20:24:19,596 INFO: - App: Setting up libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-24 20:24:19,617 INFO: - App: Setting up libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-24 20:24:19,629 INFO: - App: Setting up libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-24 20:24:19,646 INFO: - App: Setting up libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-24 20:24:19,662 INFO: - App: Setting up libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-24 20:24:19,678 INFO: - App: Setting up libgd3:amd64 (2.1.0-5) ...
+
+2015-10-24 20:24:19,695 INFO: - App: Setting up libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-24 20:24:19,711 INFO: - App: Setting up libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-24 20:24:19,727 INFO: - App: Setting up libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-24 20:24:19,742 INFO: - App: Setting up libthai-data (0.1.21-1) ...
+
+2015-10-24 20:24:19,752 INFO: - App: Setting up libthai0:amd64 (0.1.21-1) ...
+
+2015-10-24 20:24:19,767 INFO: - App: Setting up libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 20:24:19,783 INFO: - App: Setting up libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 20:24:19,799 INFO: - App: Setting up libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-24 20:24:19,812 INFO: - App: Setting up libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-24 20:24:19,828 INFO: - App: Setting up libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-24 20:24:19,843 INFO: - App: Setting up fonts-liberation (1.07.4-1) ...
+
+2015-10-24 20:24:19,854 INFO: - App: Setting up libcdt5 (2.38.0-7) ...
+
+2015-10-24 20:24:19,870 INFO: - App: Setting up libcgraph6 (2.38.0-7) ...
+
+2015-10-24 20:24:19,885 INFO: - App: Setting up libpathplan4 (2.38.0-7) ...
+
+2015-10-24 20:24:19,902 INFO: - App: Setting up libxdot4 (2.38.0-7) ...
+
+2015-10-24 20:24:19,918 INFO: - App: Setting up libgvc6 (2.38.0-7) ...
+
+2015-10-24 20:24:19,943 INFO: - App: Setting up libgvpr2 (2.38.0-7) ...
+
+2015-10-24 20:24:19,959 INFO: - App: Setting up graphviz (2.38.0-7) ...
+
+2015-10-24 20:24:19,971 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-10-24 20:24:22,504 INFO: - App:  ---> d28da6fadf6a
+
+2015-10-24 20:24:22,530 INFO: - App: Removing intermediate container b80e6f255057
+
+2015-10-24 20:24:22,556 INFO: - App: Step 5 : USER main
+
+2015-10-24 20:24:22,643 INFO: - App:  ---> Running in 0acfb3bcf912
+
+2015-10-24 20:24:22,685 INFO: - App:  ---> 34cfcb9d4f6f
+
+2015-10-24 20:24:22,702 INFO: - App: Removing intermediate container 0acfb3bcf912
+
+2015-10-24 20:24:22,738 INFO: - App: Step 6 : ADD requirements.txt requirements.txt
+
+2015-10-24 20:24:22,864 INFO: - App:  ---> ec14a23bfdaf
+
+2015-10-24 20:24:22,876 INFO: - App: Removing intermediate container a86ba605fcc1
+
+2015-10-24 20:24:22,883 INFO: - App: Step 7 : RUN pip install -r requirements.txt
+
+2015-10-24 20:24:22,959 INFO: - App:  ---> Running in b5e98e8cd826
+
+2015-10-24 20:24:24,899 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-24 20:24:24,901 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-24 20:24:24,917 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-24 20:24:25,135 INFO: - App:   Downloading graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-24 20:24:25,158 INFO: - App: Installing collected packages: graphviz
+
+2015-10-24 20:24:25,199 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-24 20:24:25,497 INFO: - App:  ---> fc8b694012a3
+
+2015-10-24 20:24:25,509 INFO: - App: Removing intermediate container b5e98e8cd826
+
+2015-10-24 20:24:25,511 INFO: - App: Step 8 : RUN /home/main/anaconda/envs/python3/bin/pip install -r requirements.txt
+
+2015-10-24 20:24:25,599 INFO: - App:  ---> Running in 0998d7d006cb
+
+2015-10-24 20:24:26,508 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-24 20:24:26,519 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-24 20:24:26,543 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-24 20:24:26,572 INFO: - App:   Using cached graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-24 20:24:26,595 INFO: - App: Installing collected packages: graphviz
+
+2015-10-24 20:24:26,668 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-24 20:24:26,976 INFO: - App:  ---> 2d8f3c8cd4c9
+
+2015-10-24 20:24:26,987 INFO: - App: Removing intermediate container 0998d7d006cb
+
+2015-10-24 20:24:26,991 INFO: - App: Step 9 : USER main
+
+2015-10-24 20:24:27,067 INFO: - App:  ---> Running in 627fe09db428
+
+2015-10-24 20:24:27,132 INFO: - App:  ---> 0891812e17ba
+
+2015-10-24 20:24:27,140 INFO: - App: Removing intermediate container 627fe09db428
+
+2015-10-24 20:24:27,142 INFO: - App: Step 10 : ADD . $HOME/notebooks
+
+2015-10-24 20:24:27,331 INFO: - App:  ---> 5f3034e0f8ec
+
+2015-10-24 20:24:27,348 INFO: - App: Removing intermediate container 1ce62ff0676d
+
+2015-10-24 20:24:27,350 INFO: - App: Step 11 : USER root
+
+2015-10-24 20:24:27,436 INFO: - App:  ---> Running in 25de61cd779f
+
+2015-10-24 20:24:27,515 INFO: - App:  ---> b0d7a27fe0e6
+
+2015-10-24 20:24:27,522 INFO: - App: Removing intermediate container 25de61cd779f
+
+2015-10-24 20:24:27,524 INFO: - App: Step 12 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-24 20:24:27,608 INFO: - App:  ---> Running in d02cf3b7adda
+
+2015-10-24 20:24:28,075 INFO: - App:  ---> 0e5300d190ea
+
+2015-10-24 20:24:28,087 INFO: - App: Removing intermediate container d02cf3b7adda
+
+2015-10-24 20:24:28,089 INFO: - App: Step 13 : USER main
+
+2015-10-24 20:24:28,179 INFO: - App:  ---> Running in f9f779a4970a
+
+2015-10-24 20:24:28,228 INFO: - App:  ---> 7c189b05be4f
+
+2015-10-24 20:24:28,239 INFO: - App: Removing intermediate container f9f779a4970a
+
+2015-10-24 20:24:28,241 INFO: - App: Step 14 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-24 20:24:28,324 INFO: - App:  ---> Running in 7f081601fb1b
+
+2015-10-24 20:24:28,784 INFO: - App:  ---> da7c23204b75
+
+2015-10-24 20:24:28,793 INFO: - App: Removing intermediate container 7f081601fb1b
+
+2015-10-24 20:24:28,801 INFO: - App: Step 15 : WORKDIR $HOME/notebooks
+
+2015-10-24 20:24:28,888 INFO: - App:  ---> Running in 3da45d097bef
+
+2015-10-24 20:24:28,939 INFO: - App:  ---> a2869f8091e1
+
+2015-10-24 20:24:28,947 INFO: - App: Removing intermediate container 3da45d097bef
+
+2015-10-24 20:24:28,957 INFO: - App: Successfully built a2869f8091e1
+
+2015-10-24 20:24:28,967 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/binder-project-example-dockerfile-two to private registry...
+2015-10-24 20:24:43,825 INFO: - App: Preloading app image onto all nodes...
+2015-10-24 20:24:51,285 INFO: - App: Successfully built app binder-project-example-dockerfile-two
+2015-10-28 13:03:07,804 INFO: - App: Building service dependencies...
+2015-10-28 13:03:07,806 INFO: - App: Copying files and filling templates...
+2015-10-28 13:03:07,819 INFO: - App: Building the app image with Dockerfile...
+2015-10-28 13:03:07,857 INFO: - App: Sending build context to Docker daemon   107 kBSending build context to Docker daemon   107 kB
+
+2015-10-28 13:03:07,876 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-28 13:03:07,879 INFO: - App:  ---> 77377240dc83
+
+2015-10-28 13:03:07,881 INFO: - App: Step 1 : MAINTAINER Jeremy Freeman <freeman.jeremy@gmail.com>
+
+2015-10-28 13:03:07,972 INFO: - App:  ---> Running in 226cbb1726ba
+
+2015-10-28 13:03:08,021 INFO: - App:  ---> 237430c8bc60
+
+2015-10-28 13:03:08,027 INFO: - App: Removing intermediate container 226cbb1726ba
+
+2015-10-28 13:03:08,030 INFO: - App: Step 2 : USER root
+
+2015-10-28 13:03:08,123 INFO: - App:  ---> Running in 03dafdd137b7
+
+2015-10-28 13:03:08,179 INFO: - App:  ---> 91e486cb77b5
+
+2015-10-28 13:03:08,187 INFO: - App: Removing intermediate container 03dafdd137b7
+
+2015-10-28 13:03:08,190 INFO: - App: Step 3 : RUN apt-get update
+
+2015-10-28 13:03:08,268 INFO: - App:  ---> Running in 86ede59cf666
+
+2015-10-28 13:03:09,773 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-10-28 13:03:10,267 INFO: - App: Get:2 http://security.debian.org jessie/updates/main amd64 Packages [182 kB]
+
+2015-10-28 13:03:10,297 INFO: - App: Get:3 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-10-28 13:03:10,351 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-10-28 13:03:10,718 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-10-28 13:03:10,870 INFO: - App: Get:5 http://httpredir.debian.org jessie-updates/main amd64 Packages [3619 B]
+
+2015-10-28 13:03:11,007 INFO: - App: Get:6 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-10-28 13:03:11,319 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-10-28 13:03:13,106 INFO: - App: Fetched 9570 kB in 4s (2203 kB/s)
+
+2015-10-28 13:03:13,949 INFO: - App: Reading package lists...
+
+2015-10-28 13:03:14,320 INFO: - App:  ---> d53e3a486491
+
+2015-10-28 13:03:14,329 INFO: - App: Removing intermediate container 86ede59cf666
+
+2015-10-28 13:03:14,332 INFO: - App: Step 4 : RUN apt-get install -y graphviz
+
+2015-10-28 13:03:14,424 INFO: - App:  ---> Running in 9d164b894817
+
+2015-10-28 13:03:15,703 INFO: - App: Reading package lists...
+
+2015-10-28 13:03:15,863 INFO: - App: Building dependency tree...
+
+2015-10-28 13:03:15,865 INFO: - App: Reading state information...
+
+2015-10-28 13:03:15,927 INFO: - App: The following extra packages will be installed:
+
+2015-10-28 13:03:15,931 INFO: - App:   fonts-liberation libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-28 13:03:15,933 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-28 13:03:15,935 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-28 13:03:15,936 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-28 13:03:15,938 INFO: - App:   libxmu6 libxpm4
+
+2015-10-28 13:03:15,939 INFO: - App: Suggested packages:
+
+2015-10-28 13:03:15,940 INFO: - App:   gsfonts graphviz-doc libgd-tools
+
+2015-10-28 13:03:15,942 INFO: - App: The following NEW packages will be installed:
+
+2015-10-28 13:03:15,943 INFO: - App:   fonts-liberation graphviz libcairo2 libcdt5 libcgraph6 libdatrie1 libgd3
+
+2015-10-28 13:03:15,988 INFO: - App:   libgraphite2-3 libgvc6 libgvpr2 libharfbuzz0b libltdl7 libpango-1.0-0
+
+2015-10-28 13:03:15,991 INFO: - App:   libpangocairo-1.0-0 libpangoft2-1.0-0 libpathplan4 libpixman-1-0
+
+2015-10-28 13:03:15,997 INFO: - App:   libthai-data libthai0 libvpx1 libxaw7 libxcb-render0 libxcb-shm0 libxdot4
+
+2015-10-28 13:03:16,022 INFO: - App:   libxmu6 libxpm4
+
+2015-10-28 13:03:18,048 INFO: - App: 0 upgraded, 26 newly installed, 0 to remove and 29 not upgraded.
+
+2015-10-28 13:03:18,091 INFO: - App: Need to get 6533 kB of archives.
+
+2015-10-28 13:03:18,094 INFO: - App: After this operation, 23.2 MB of additional disk space will be used.
+
+2015-10-28 13:03:18,095 INFO: - App: Get:1 http://httpredir.debian.org/debian/ jessie/main libpixman-1-0 amd64 0.32.6-3 [507 kB]
+
+2015-10-28 13:03:18,329 INFO: - App: Get:2 http://httpredir.debian.org/debian/ jessie/main libxcb-render0 amd64 1.10-3+b1 [17.5 kB]
+
+2015-10-28 13:03:18,380 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libxcb-shm0 amd64 1.10-3+b1 [11.5 kB]
+
+2015-10-28 13:03:18,382 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libcairo2 amd64 1.14.0-2.1 [742 kB]
+
+2015-10-28 13:03:18,428 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libdatrie1 amd64 0.2.8-1 [32.6 kB]
+
+2015-10-28 13:03:18,581 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libvpx1 amd64 1.3.0-3 [599 kB]
+
+2015-10-28 13:03:18,844 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main libgd3 amd64 2.1.0-5 [147 kB]
+
+2015-10-28 13:03:18,937 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main libharfbuzz0b amd64 0.9.35-2 [485 kB]
+
+2015-10-28 13:03:18,952 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main libxpm4 amd64 1:3.5.11-1+b1 [48.1 kB]
+
+2015-10-28 13:03:19,168 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main libgraphite2-3 amd64 1.2.4-3 [57.4 kB]
+
+2015-10-28 13:03:19,240 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main libltdl7 amd64 2.4.2-1.11 [45.2 kB]
+
+2015-10-28 13:03:19,267 INFO: - App: Get:12 http://httpredir.debian.org/debian/ jessie/main libthai0 amd64 0.1.21-1 [46.1 kB]
+
+2015-10-28 13:03:19,364 INFO: - App: Get:13 http://httpredir.debian.org/debian/ jessie/main libthai-data all 0.1.21-1 [159 kB]
+
+2015-10-28 13:03:19,377 INFO: - App: Get:14 http://httpredir.debian.org/debian/ jessie/main libpango-1.0-0 amd64 1.36.8-3 [291 kB]
+
+2015-10-28 13:03:19,502 INFO: - App: Get:15 http://httpredir.debian.org/debian/ jessie/main libpangoft2-1.0-0 amd64 1.36.8-3 [213 kB]
+
+2015-10-28 13:03:19,686 INFO: - App: Get:16 http://httpredir.debian.org/debian/ jessie/main libpangocairo-1.0-0 amd64 1.36.8-3 [200 kB]
+
+2015-10-28 13:03:19,727 INFO: - App: Get:17 http://httpredir.debian.org/debian/ jessie/main libxmu6 amd64 2:1.1.2-1 [58.6 kB]
+
+2015-10-28 13:03:19,843 INFO: - App: Get:18 http://httpredir.debian.org/debian/ jessie/main libxaw7 amd64 2:1.0.12-2+b1 [199 kB]
+
+2015-10-28 13:03:19,966 INFO: - App: Get:19 http://httpredir.debian.org/debian/ jessie/main fonts-liberation all 1.07.4-1 [835 kB]
+
+2015-10-28 13:03:20,061 INFO: - App: Get:20 http://httpredir.debian.org/debian/ jessie/main libcdt5 amd64 2.38.0-7 [62.7 kB]
+
+2015-10-28 13:03:20,176 INFO: - App: Get:21 http://httpredir.debian.org/debian/ jessie/main libcgraph6 amd64 2.38.0-7 [85.2 kB]
+
+2015-10-28 13:03:20,293 INFO: - App: Get:22 http://httpredir.debian.org/debian/ jessie/main libpathplan4 amd64 2.38.0-7 [66.0 kB]
+
+2015-10-28 13:03:20,491 INFO: - App: Get:23 http://httpredir.debian.org/debian/ jessie/main libxdot4 amd64 2.38.0-7 [58.7 kB]
+
+2015-10-28 13:03:20,527 INFO: - App: Get:24 http://httpredir.debian.org/debian/ jessie/main libgvc6 amd64 2.38.0-7 [637 kB]
+
+2015-10-28 13:03:20,632 INFO: - App: Get:25 http://httpredir.debian.org/debian/ jessie/main libgvpr2 amd64 2.38.0-7 [212 kB]
+
+2015-10-28 13:03:20,827 INFO: - App: Get:26 http://httpredir.debian.org/debian/ jessie/main graphviz amd64 2.38.0-7 [717 kB]
+
+2015-10-28 13:03:21,297 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-10-28 13:03:21,299 INFO: - App: Fetched 6533 kB in 3s (1882 kB/s)
+
+2015-10-28 13:03:21,396 INFO: - App: Selecting previously unselected package libpixman-1-0:amd64.
+
+2015-10-28 13:03:21,414 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-10-28 13:03:21,416 INFO: - App: Preparing to unpack .../libpixman-1-0_0.32.6-3_amd64.deb ...
+
+2015-10-28 13:03:21,419 INFO: - App: Unpacking libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-28 13:03:21,497 INFO: - App: Selecting previously unselected package libxcb-render0:amd64.
+
+2015-10-28 13:03:21,513 INFO: - App: Preparing to unpack .../libxcb-render0_1.10-3+b1_amd64.deb ...
+
+2015-10-28 13:03:21,525 INFO: - App: Unpacking libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-28 13:03:21,526 INFO: - App: Selecting previously unselected package libxcb-shm0:amd64.
+
+2015-10-28 13:03:21,528 INFO: - App: Preparing to unpack .../libxcb-shm0_1.10-3+b1_amd64.deb ...
+
+2015-10-28 13:03:21,530 INFO: - App: Unpacking libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-28 13:03:21,553 INFO: - App: Selecting previously unselected package libcairo2:amd64.
+
+2015-10-28 13:03:21,558 INFO: - App: Preparing to unpack .../libcairo2_1.14.0-2.1_amd64.deb ...
+
+2015-10-28 13:03:21,560 INFO: - App: Unpacking libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-28 13:03:21,640 INFO: - App: Selecting previously unselected package libdatrie1:amd64.
+
+2015-10-28 13:03:21,641 INFO: - App: Preparing to unpack .../libdatrie1_0.2.8-1_amd64.deb ...
+
+2015-10-28 13:03:21,644 INFO: - App: Unpacking libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-28 13:03:21,678 INFO: - App: Selecting previously unselected package libvpx1:amd64.
+
+2015-10-28 13:03:21,684 INFO: - App: Preparing to unpack .../libvpx1_1.3.0-3_amd64.deb ...
+
+2015-10-28 13:03:21,686 INFO: - App: Unpacking libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-28 13:03:21,769 INFO: - App: Selecting previously unselected package libxpm4:amd64.
+
+2015-10-28 13:03:21,771 INFO: - App: Preparing to unpack .../libxpm4_1%3a3.5.11-1+b1_amd64.deb ...
+
+2015-10-28 13:03:21,774 INFO: - App: Unpacking libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-28 13:03:21,810 INFO: - App: Selecting previously unselected package libgd3:amd64.
+
+2015-10-28 13:03:21,816 INFO: - App: Preparing to unpack .../libgd3_2.1.0-5_amd64.deb ...
+
+2015-10-28 13:03:21,819 INFO: - App: Unpacking libgd3:amd64 (2.1.0-5) ...
+
+2015-10-28 13:03:21,860 INFO: - App: Selecting previously unselected package libgraphite2-3:amd64.
+
+2015-10-28 13:03:21,862 INFO: - App: Preparing to unpack .../libgraphite2-3_1.2.4-3_amd64.deb ...
+
+2015-10-28 13:03:21,864 INFO: - App: Unpacking libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-28 13:03:21,903 INFO: - App: Selecting previously unselected package libharfbuzz0b:amd64.
+
+2015-10-28 13:03:21,906 INFO: - App: Preparing to unpack .../libharfbuzz0b_0.9.35-2_amd64.deb ...
+
+2015-10-28 13:03:21,912 INFO: - App: Unpacking libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-28 13:03:21,958 INFO: - App: Selecting previously unselected package libltdl7:amd64.
+
+2015-10-28 13:03:21,960 INFO: - App: Preparing to unpack .../libltdl7_2.4.2-1.11_amd64.deb ...
+
+2015-10-28 13:03:21,964 INFO: - App: Unpacking libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-28 13:03:21,990 INFO: - App: Selecting previously unselected package libthai-data.
+
+2015-10-28 13:03:21,991 INFO: - App: Preparing to unpack .../libthai-data_0.1.21-1_all.deb ...
+
+2015-10-28 13:03:21,994 INFO: - App: Unpacking libthai-data (0.1.21-1) ...
+
+2015-10-28 13:03:22,043 INFO: - App: Selecting previously unselected package libthai0:amd64.
+
+2015-10-28 13:03:22,046 INFO: - App: Preparing to unpack .../libthai0_0.1.21-1_amd64.deb ...
+
+2015-10-28 13:03:22,049 INFO: - App: Unpacking libthai0:amd64 (0.1.21-1) ...
+
+2015-10-28 13:03:22,085 INFO: - App: Selecting previously unselected package libpango-1.0-0:amd64.
+
+2015-10-28 13:03:22,086 INFO: - App: Preparing to unpack .../libpango-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-28 13:03:22,090 INFO: - App: Unpacking libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-28 13:03:22,143 INFO: - App: Selecting previously unselected package libpangoft2-1.0-0:amd64.
+
+2015-10-28 13:03:22,145 INFO: - App: Preparing to unpack .../libpangoft2-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-28 13:03:22,160 INFO: - App: Unpacking libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-28 13:03:22,196 INFO: - App: Selecting previously unselected package libpangocairo-1.0-0:amd64.
+
+2015-10-28 13:03:22,198 INFO: - App: Preparing to unpack .../libpangocairo-1.0-0_1.36.8-3_amd64.deb ...
+
+2015-10-28 13:03:22,201 INFO: - App: Unpacking libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-28 13:03:22,239 INFO: - App: Selecting previously unselected package libxmu6:amd64.
+
+2015-10-28 13:03:22,241 INFO: - App: Preparing to unpack .../libxmu6_2%3a1.1.2-1_amd64.deb ...
+
+2015-10-28 13:03:22,244 INFO: - App: Unpacking libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-28 13:03:22,280 INFO: - App: Selecting previously unselected package libxaw7:amd64.
+
+2015-10-28 13:03:22,284 INFO: - App: Preparing to unpack .../libxaw7_2%3a1.0.12-2+b1_amd64.deb ...
+
+2015-10-28 13:03:22,286 INFO: - App: Unpacking libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-28 13:03:22,329 INFO: - App: Selecting previously unselected package fonts-liberation.
+
+2015-10-28 13:03:22,330 INFO: - App: Preparing to unpack .../fonts-liberation_1.07.4-1_all.deb ...
+
+2015-10-28 13:03:22,333 INFO: - App: Unpacking fonts-liberation (1.07.4-1) ...
+
+2015-10-28 13:03:22,435 INFO: - App: Selecting previously unselected package libcdt5.
+
+2015-10-28 13:03:22,438 INFO: - App: Preparing to unpack .../libcdt5_2.38.0-7_amd64.deb ...
+
+2015-10-28 13:03:22,439 INFO: - App: Unpacking libcdt5 (2.38.0-7) ...
+
+2015-10-28 13:03:22,477 INFO: - App: Selecting previously unselected package libcgraph6.
+
+2015-10-28 13:03:22,479 INFO: - App: Preparing to unpack .../libcgraph6_2.38.0-7_amd64.deb ...
+
+2015-10-28 13:03:22,485 INFO: - App: Unpacking libcgraph6 (2.38.0-7) ...
+
+2015-10-28 13:03:22,515 INFO: - App: Selecting previously unselected package libpathplan4.
+
+2015-10-28 13:03:22,518 INFO: - App: Preparing to unpack .../libpathplan4_2.38.0-7_amd64.deb ...
+
+2015-10-28 13:03:22,520 INFO: - App: Unpacking libpathplan4 (2.38.0-7) ...
+
+2015-10-28 13:03:22,556 INFO: - App: Selecting previously unselected package libxdot4.
+
+2015-10-28 13:03:22,575 INFO: - App: Preparing to unpack .../libxdot4_2.38.0-7_amd64.deb ...
+
+2015-10-28 13:03:22,597 INFO: - App: Unpacking libxdot4 (2.38.0-7) ...
+
+2015-10-28 13:03:22,602 INFO: - App: Selecting previously unselected package libgvc6.
+
+2015-10-28 13:03:22,603 INFO: - App: Preparing to unpack .../libgvc6_2.38.0-7_amd64.deb ...
+
+2015-10-28 13:03:22,605 INFO: - App: Unpacking libgvc6 (2.38.0-7) ...
+
+2015-10-28 13:03:22,688 INFO: - App: Selecting previously unselected package libgvpr2.
+
+2015-10-28 13:03:22,689 INFO: - App: Preparing to unpack .../libgvpr2_2.38.0-7_amd64.deb ...
+
+2015-10-28 13:03:22,693 INFO: - App: Unpacking libgvpr2 (2.38.0-7) ...
+
+2015-10-28 13:03:22,739 INFO: - App: Selecting previously unselected package graphviz.
+
+2015-10-28 13:03:22,742 INFO: - App: Preparing to unpack .../graphviz_2.38.0-7_amd64.deb ...
+
+2015-10-28 13:03:22,745 INFO: - App: Unpacking graphviz (2.38.0-7) ...
+
+2015-10-28 13:03:22,901 INFO: - App: Processing triggers for fontconfig (2.11.0-6.3) ...
+
+2015-10-28 13:03:23,078 INFO: - App: Setting up libpixman-1-0:amd64 (0.32.6-3) ...
+
+2015-10-28 13:03:23,098 INFO: - App: Setting up libxcb-render0:amd64 (1.10-3+b1) ...
+
+2015-10-28 13:03:23,115 INFO: - App: Setting up libxcb-shm0:amd64 (1.10-3+b1) ...
+
+2015-10-28 13:03:23,132 INFO: - App: Setting up libcairo2:amd64 (1.14.0-2.1) ...
+
+2015-10-28 13:03:23,147 INFO: - App: Setting up libdatrie1:amd64 (0.2.8-1) ...
+
+2015-10-28 13:03:23,164 INFO: - App: Setting up libvpx1:amd64 (1.3.0-3) ...
+
+2015-10-28 13:03:23,181 INFO: - App: Setting up libxpm4:amd64 (1:3.5.11-1+b1) ...
+
+2015-10-28 13:03:23,200 INFO: - App: Setting up libgd3:amd64 (2.1.0-5) ...
+
+2015-10-28 13:03:23,215 INFO: - App: Setting up libgraphite2-3:amd64 (1.2.4-3) ...
+
+2015-10-28 13:03:23,228 INFO: - App: Setting up libharfbuzz0b:amd64 (0.9.35-2) ...
+
+2015-10-28 13:03:23,244 INFO: - App: Setting up libltdl7:amd64 (2.4.2-1.11) ...
+
+2015-10-28 13:03:23,260 INFO: - App: Setting up libthai-data (0.1.21-1) ...
+
+2015-10-28 13:03:23,269 INFO: - App: Setting up libthai0:amd64 (0.1.21-1) ...
+
+2015-10-28 13:03:23,285 INFO: - App: Setting up libpango-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-28 13:03:23,303 INFO: - App: Setting up libpangoft2-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-28 13:03:23,317 INFO: - App: Setting up libpangocairo-1.0-0:amd64 (1.36.8-3) ...
+
+2015-10-28 13:03:23,340 INFO: - App: Setting up libxmu6:amd64 (2:1.1.2-1) ...
+
+2015-10-28 13:03:23,348 INFO: - App: Setting up libxaw7:amd64 (2:1.0.12-2+b1) ...
+
+2015-10-28 13:03:23,363 INFO: - App: Setting up fonts-liberation (1.07.4-1) ...
+
+2015-10-28 13:03:23,373 INFO: - App: Setting up libcdt5 (2.38.0-7) ...
+
+2015-10-28 13:03:23,389 INFO: - App: Setting up libcgraph6 (2.38.0-7) ...
+
+2015-10-28 13:03:23,405 INFO: - App: Setting up libpathplan4 (2.38.0-7) ...
+
+2015-10-28 13:03:23,421 INFO: - App: Setting up libxdot4 (2.38.0-7) ...
+
+2015-10-28 13:03:23,440 INFO: - App: Setting up libgvc6 (2.38.0-7) ...
+
+2015-10-28 13:03:23,462 INFO: - App: Setting up libgvpr2 (2.38.0-7) ...
+
+2015-10-28 13:03:23,478 INFO: - App: Setting up graphviz (2.38.0-7) ...
+
+2015-10-28 13:03:23,489 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-10-28 13:03:25,792 INFO: - App:  ---> 338e11b027e4
+
+2015-10-28 13:03:25,819 INFO: - App: Removing intermediate container 9d164b894817
+
+2015-10-28 13:03:25,821 INFO: - App: Step 5 : USER main
+
+2015-10-28 13:03:25,922 INFO: - App:  ---> Running in c923cd579b10
+
+2015-10-28 13:03:25,968 INFO: - App:  ---> 2ee8bbf4fde2
+
+2015-10-28 13:03:25,976 INFO: - App: Removing intermediate container c923cd579b10
+
+2015-10-28 13:03:25,977 INFO: - App: Step 6 : ADD requirements.txt requirements.txt
+
+2015-10-28 13:03:26,124 INFO: - App:  ---> 65a0b152b309
+
+2015-10-28 13:03:26,133 INFO: - App: Removing intermediate container ac14bbe09d08
+
+2015-10-28 13:03:26,135 INFO: - App: Step 7 : RUN pip install -r requirements.txt
+
+2015-10-28 13:03:26,211 INFO: - App:  ---> Running in 3bf4e3ba0562
+
+2015-10-28 13:03:27,714 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-28 13:03:27,744 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-28 13:03:27,757 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-28 13:03:27,831 INFO: - App:   Downloading graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-28 13:03:27,852 INFO: - App: Installing collected packages: graphviz
+
+2015-10-28 13:03:27,891 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-28 13:03:28,196 INFO: - App:  ---> 095d6c22a972
+
+2015-10-28 13:03:28,206 INFO: - App: Removing intermediate container 3bf4e3ba0562
+
+2015-10-28 13:03:28,211 INFO: - App: Step 8 : RUN /home/main/anaconda/envs/python3/bin/pip install -r requirements.txt
+
+2015-10-28 13:03:28,283 INFO: - App:  ---> Running in 8007a2ee79fd
+
+2015-10-28 13:03:28,976 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-28 13:03:28,978 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-28 13:03:28,992 INFO: - App: Collecting graphviz (from -r requirements.txt (line 1))
+
+2015-10-28 13:03:29,039 INFO: - App:   Using cached graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-28 13:03:29,057 INFO: - App: Installing collected packages: graphviz
+
+2015-10-28 13:03:29,106 INFO: - App: Successfully installed graphviz-0.4.7
+
+2015-10-28 13:03:29,383 INFO: - App:  ---> d9dc594d2633
+
+2015-10-28 13:03:29,394 INFO: - App: Removing intermediate container 8007a2ee79fd
+
+2015-10-28 13:03:29,396 INFO: - App: Step 9 : USER main
+
+2015-10-28 13:03:29,471 INFO: - App:  ---> Running in f00f35ea44ab
+
+2015-10-28 13:03:29,519 INFO: - App:  ---> 9b00cdfc5856
+
+2015-10-28 13:03:29,527 INFO: - App: Removing intermediate container f00f35ea44ab
+
+2015-10-28 13:03:29,528 INFO: - App: Step 10 : ADD . $HOME/notebooks
+
+2015-10-28 13:03:29,707 INFO: - App:  ---> 41afde2fa4d5
+
+2015-10-28 13:03:29,717 INFO: - App: Removing intermediate container 7372f7f1fa45
+
+2015-10-28 13:03:29,718 INFO: - App: Step 11 : USER root
+
+2015-10-28 13:03:29,795 INFO: - App:  ---> Running in 0e651ae721f7
+
+2015-10-28 13:03:29,851 INFO: - App:  ---> 921c7db7c352
+
+2015-10-28 13:03:29,859 INFO: - App: Removing intermediate container 0e651ae721f7
+
+2015-10-28 13:03:29,862 INFO: - App: Step 12 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-28 13:03:29,927 INFO: - App:  ---> Running in 2338fb53d76f
+
+2015-10-28 13:03:30,331 INFO: - App:  ---> 9a641f27a317
+
+2015-10-28 13:03:30,352 INFO: - App: Removing intermediate container 2338fb53d76f
+
+2015-10-28 13:03:30,354 INFO: - App: Step 13 : USER main
+
+2015-10-28 13:03:30,423 INFO: - App:  ---> Running in 10237b7cfb3b
+
+2015-10-28 13:03:30,475 INFO: - App:  ---> 631fdc3e3e83
+
+2015-10-28 13:03:30,484 INFO: - App: Removing intermediate container 10237b7cfb3b
+
+2015-10-28 13:03:30,486 INFO: - App: Step 14 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-28 13:03:30,564 INFO: - App:  ---> Running in 4cae6d1bb3ee
+
+2015-10-28 13:03:31,056 INFO: - App:  ---> 2ce333e1fd04
+
+2015-10-28 13:03:31,068 INFO: - App: Removing intermediate container 4cae6d1bb3ee
+
+2015-10-28 13:03:31,070 INFO: - App: Step 15 : WORKDIR $HOME/notebooks
+
+2015-10-28 13:03:31,143 INFO: - App:  ---> Running in 85fff17abede
+
+2015-10-28 13:03:31,200 INFO: - App:  ---> 11ef89f4019e
+
+2015-10-28 13:03:31,208 INFO: - App: Removing intermediate container 85fff17abede
+
+2015-10-28 13:03:31,209 INFO: - App: Successfully built 11ef89f4019e
+
+2015-10-28 13:03:31,218 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/binder-project-example-dockerfile-two to private registry...
+2015-10-28 13:03:50,937 INFO: - App: Preloading app image onto all nodes...
+2015-10-28 13:03:59,578 INFO: - App: Successfully built app binder-project-example-dockerfile-two

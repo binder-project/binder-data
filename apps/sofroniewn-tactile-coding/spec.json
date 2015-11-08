@@ -1,0 +1,1 @@
+{"services": [{"version": "1.4.1", "name": "spark"}], "repo": "https://www.github.com/sofroniewn/tactile-coding", "dependencies": ["requirements.txt"], "name": "sofroniewn-tactile-coding"}

@@ -1,0 +1,1 @@
+{"services": [{"version": "9.4", "name": "postgres"}], "repo": "https://www.github.com/andrewosh/dummy-repo", "dependencies": [], "name": "andrewosh-dummy-repo"}

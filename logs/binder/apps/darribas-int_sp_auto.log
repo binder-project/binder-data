@@ -1,0 +1,562 @@
+2015-10-31 22:15:24,921 INFO: - App: Building service dependencies...
+2015-10-31 22:15:24,925 INFO: - App: Copying files and filling templates...
+2015-10-31 22:15:24,933 INFO: - App: Building app image without Dockerfile...
+2015-10-31 22:15:24,984 INFO: - App: Sending build context to Docker daemon 187.9 kBSending build context to Docker daemon 187.9 kB
+
+2015-10-31 22:15:25,004 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-31 22:15:25,006 INFO: - App:  ---> 77377240dc83
+
+2015-10-31 22:15:25,012 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-31 22:15:25,171 INFO: - App:  ---> 1b5fb0ddd1dc
+
+2015-10-31 22:15:25,179 INFO: - App: Removing intermediate container 188092f6b7da
+
+2015-10-31 22:15:25,181 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-31 22:15:25,356 INFO: - App:  ---> 9ebb99897ae6
+
+2015-10-31 22:15:25,365 INFO: - App: Removing intermediate container 53dc8da3712a
+
+2015-10-31 22:15:25,370 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-31 22:15:25,447 INFO: - App:  ---> Running in 16d394b7acd2
+
+2015-10-31 22:15:25,592 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-31 22:15:26,928 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-31 22:15:26,940 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-31 22:15:26,960 INFO: - App: Collecting pysal (from -r requirements.txt (line 1))
+
+2015-10-31 22:15:27,053 INFO: - App:   Downloading PySAL-1.10.0.tar.gz (13.4MB)
+
+2015-10-31 22:15:30,804 INFO: - App: Installing collected packages: pysal
+
+2015-10-31 22:15:30,806 INFO: - App:   Running setup.py install for pysal
+
+2015-10-31 22:15:31,977 INFO: - App: Successfully installed pysal-1.10.0
+
+2015-10-31 22:15:31,997 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-31 22:15:32,315 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-31 22:15:32,319 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-31 22:15:32,333 INFO: - App: Collecting pysal (from -r requirements.txt (line 1))
+
+2015-10-31 22:15:32,573 INFO: - App:   Using cached PySAL-1.10.0.tar.gz
+
+2015-10-31 22:15:33,620 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-10-31 22:15:33,622 INFO: - App:     Traceback (most recent call last):
+
+2015-10-31 22:15:33,624 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-10-31 22:15:33,627 INFO: - App:       File "/tmp/pip-build-thinag/pysal/setup.py", line 16, in <module>
+
+2015-10-31 22:15:33,636 INFO: - App:         from pysal.version import version as dversion
+
+2015-10-31 22:15:33,639 INFO: - App:       File "./pysal/__init__.py", line 40, in <module>
+
+2015-10-31 22:15:33,647 INFO: - App:         import pysal.cg
+
+2015-10-31 22:15:33,649 INFO: - App:       File "./pysal/cg/__init__.py", line 4, in <module>
+
+2015-10-31 22:15:33,651 INFO: - App:         from shapes import *
+
+2015-10-31 22:15:33,653 INFO: - App:     ImportError: No module named 'shapes'
+
+2015-10-31 22:15:33,655 INFO: - App:     
+
+2015-10-31 22:15:33,660 INFO: - App:     ----------------------------------------
+
+2015-10-31 22:15:33,663 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-thinag/pysal
+
+2015-10-31 22:15:33,665 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-31 22:15:34,233 INFO: - App:  ---> 030e10102c98
+
+2015-10-31 22:15:34,264 INFO: - App: Removing intermediate container 16d394b7acd2
+
+2015-10-31 22:15:34,266 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-31 22:15:34,437 INFO: - App:  ---> 22515ff7cd64
+
+2015-10-31 22:15:34,446 INFO: - App: Removing intermediate container cd10fed9f2e1
+
+2015-10-31 22:15:34,448 INFO: - App: Step 5 : USER root
+
+2015-10-31 22:15:34,515 INFO: - App:  ---> Running in c5d3376b9680
+
+2015-10-31 22:15:34,563 INFO: - App:  ---> 5493b41bdabb
+
+2015-10-31 22:15:34,571 INFO: - App: Removing intermediate container c5d3376b9680
+
+2015-10-31 22:15:34,575 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-31 22:15:34,664 INFO: - App:  ---> Running in a7e47388d215
+
+2015-10-31 22:15:35,126 INFO: - App:  ---> 6cbd8c4ece96
+
+2015-10-31 22:15:35,135 INFO: - App: Removing intermediate container a7e47388d215
+
+2015-10-31 22:15:35,139 INFO: - App: Step 7 : USER main
+
+2015-10-31 22:15:35,219 INFO: - App:  ---> Running in d0f6ccd4fd15
+
+2015-10-31 22:15:35,268 INFO: - App:  ---> 42b844009442
+
+2015-10-31 22:15:35,276 INFO: - App: Removing intermediate container d0f6ccd4fd15
+
+2015-10-31 22:15:35,277 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-31 22:15:35,347 INFO: - App:  ---> Running in 4676dbb7c7a2
+
+2015-10-31 22:15:35,815 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-31 22:15:36,098 INFO: - App:  ---> d47291415e5c
+
+2015-10-31 22:15:36,106 INFO: - App: Removing intermediate container 4676dbb7c7a2
+
+2015-10-31 22:15:36,110 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-31 22:15:36,182 INFO: - App:  ---> Running in 2095d5388adb
+
+2015-10-31 22:15:36,231 INFO: - App:  ---> eafbf2d51521
+
+2015-10-31 22:15:36,239 INFO: - App: Removing intermediate container 2095d5388adb
+
+2015-10-31 22:15:36,241 INFO: - App: Successfully built eafbf2d51521
+
+2015-10-31 22:15:36,248 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/darribas-int_sp_auto to private registry...
+2015-10-31 22:15:50,475 INFO: - App: Preloading app image onto all nodes...
+2015-10-31 22:16:00,419 INFO: - App: Successfully built app darribas-int_sp_auto
+2015-10-31 22:41:03,605 INFO: - App: Building service dependencies...
+2015-10-31 22:41:03,607 INFO: - App: Copying files and filling templates...
+2015-10-31 22:41:03,618 INFO: - App: Building app image without Dockerfile...
+2015-10-31 22:41:03,650 INFO: - App: Sending build context to Docker daemon 202.8 kBSending build context to Docker daemon 202.8 kB
+
+2015-10-31 22:41:03,670 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-31 22:41:03,672 INFO: - App:  ---> 77377240dc83
+
+2015-10-31 22:41:03,673 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-31 22:41:03,851 INFO: - App:  ---> bacd09467c24
+
+2015-10-31 22:41:03,864 INFO: - App: Removing intermediate container eea75f3d7634
+
+2015-10-31 22:41:03,866 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-31 22:41:04,020 INFO: - App:  ---> 696082dc865e
+
+2015-10-31 22:41:04,024 INFO: - App: Removing intermediate container 0e19a000472d
+
+2015-10-31 22:41:04,027 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-31 22:41:04,095 INFO: - App:  ---> Running in ea214516de9c
+
+2015-10-31 22:41:04,234 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-31 22:41:05,541 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-31 22:41:05,543 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-31 22:41:05,562 INFO: - App: Collecting pysal (from -r requirements.txt (line 1))
+
+2015-10-31 22:41:05,659 INFO: - App:   Downloading PySAL-1.10.0.tar.gz (13.4MB)
+
+2015-10-31 22:41:08,539 INFO: - App: Collecting seaborn (from -r requirements.txt (line 2))
+
+2015-10-31 22:41:08,574 INFO: - App:   Downloading seaborn-0.6.0.tar.gz (145kB)
+
+2015-10-31 22:41:09,037 INFO: - App: Installing collected packages: pysal, seaborn
+
+2015-10-31 22:41:09,039 INFO: - App:   Running setup.py install for pysal
+
+2015-10-31 22:41:10,179 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-31 22:41:10,799 INFO: - App: Successfully installed pysal-1.10.0 seaborn-0.6.0
+
+2015-10-31 22:41:10,821 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-31 22:41:11,128 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-31 22:41:11,130 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-31 22:41:11,145 INFO: - App: Collecting pysal (from -r requirements.txt (line 1))
+
+2015-10-31 22:41:11,376 INFO: - App:   Using cached PySAL-1.10.0.tar.gz
+
+2015-10-31 22:41:12,440 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-10-31 22:41:12,442 INFO: - App:     Traceback (most recent call last):
+
+2015-10-31 22:41:12,445 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-10-31 22:41:12,447 INFO: - App:       File "/tmp/pip-build-sli2m8/pysal/setup.py", line 16, in <module>
+
+2015-10-31 22:41:12,452 INFO: - App:         from pysal.version import version as dversion
+
+2015-10-31 22:41:12,455 INFO: - App:       File "./pysal/__init__.py", line 40, in <module>
+
+2015-10-31 22:41:12,456 INFO: - App:         import pysal.cg
+
+2015-10-31 22:41:12,458 INFO: - App:       File "./pysal/cg/__init__.py", line 4, in <module>
+
+2015-10-31 22:41:12,460 INFO: - App:         from shapes import *
+
+2015-10-31 22:41:12,462 INFO: - App:     ImportError: No module named 'shapes'
+
+2015-10-31 22:41:12,464 INFO: - App:     
+
+2015-10-31 22:41:12,468 INFO: - App:     ----------------------------------------
+
+2015-10-31 22:41:12,470 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-sli2m8/pysal
+
+2015-10-31 22:41:12,487 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-31 22:41:13,087 INFO: - App:  ---> 0b01da217573
+
+2015-10-31 22:41:13,120 INFO: - App: Removing intermediate container ea214516de9c
+
+2015-10-31 22:41:13,122 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-31 22:41:13,286 INFO: - App:  ---> 74c65c246372
+
+2015-10-31 22:41:13,294 INFO: - App: Removing intermediate container f3962b9b39e9
+
+2015-10-31 22:41:13,296 INFO: - App: Step 5 : USER root
+
+2015-10-31 22:41:13,372 INFO: - App:  ---> Running in 7dc401830ecb
+
+2015-10-31 22:41:13,426 INFO: - App:  ---> c119509ddfe5
+
+2015-10-31 22:41:13,443 INFO: - App: Removing intermediate container 7dc401830ecb
+
+2015-10-31 22:41:13,460 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-31 22:41:13,516 INFO: - App:  ---> Running in 4aa3b9b1d223
+
+2015-10-31 22:41:13,966 INFO: - App:  ---> 958948633a1f
+
+2015-10-31 22:41:13,975 INFO: - App: Removing intermediate container 4aa3b9b1d223
+
+2015-10-31 22:41:13,977 INFO: - App: Step 7 : USER main
+
+2015-10-31 22:41:14,071 INFO: - App:  ---> Running in d25888c1485f
+
+2015-10-31 22:41:14,119 INFO: - App:  ---> c8c25f88ec68
+
+2015-10-31 22:41:14,127 INFO: - App: Removing intermediate container d25888c1485f
+
+2015-10-31 22:41:14,130 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-31 22:41:14,211 INFO: - App:  ---> Running in 45a48f1518ea
+
+2015-10-31 22:41:14,694 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-31 22:41:14,999 INFO: - App:  ---> de1d5169b647
+
+2015-10-31 22:41:15,007 INFO: - App: Removing intermediate container 45a48f1518ea
+
+2015-10-31 22:41:15,009 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-31 22:41:15,095 INFO: - App:  ---> Running in cbd0082e6d14
+
+2015-10-31 22:41:15,143 INFO: - App:  ---> 598f35e5096b
+
+2015-10-31 22:41:15,155 INFO: - App: Removing intermediate container cbd0082e6d14
+
+2015-10-31 22:41:15,159 INFO: - App: Successfully built 598f35e5096b
+
+2015-10-31 22:41:15,165 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/darribas-int_sp_auto to private registry...
+2015-10-31 22:41:28,830 INFO: - App: Preloading app image onto all nodes...
+2015-10-31 22:41:36,955 INFO: - App: Successfully built app darribas-int_sp_auto
+2015-10-31 23:50:15,181 INFO: - App: Building service dependencies...
+2015-10-31 23:50:15,194 INFO: - App: Copying files and filling templates...
+2015-10-31 23:50:15,213 INFO: - App: Building app image without Dockerfile...
+2015-10-31 23:50:15,225 INFO: - App: Sending build context to Docker daemon 249.9 kBSending build context to Docker daemon 249.9 kB
+
+2015-10-31 23:50:15,236 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-31 23:50:15,239 INFO: - App:  ---> 77377240dc83
+
+2015-10-31 23:50:15,241 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-31 23:50:15,413 INFO: - App:  ---> aabb0428f4c0
+
+2015-10-31 23:50:15,415 INFO: - App: Removing intermediate container bad48c563fe5
+
+2015-10-31 23:50:15,417 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-31 23:50:15,567 INFO: - App:  ---> a0e4b0056c99
+
+2015-10-31 23:50:15,575 INFO: - App: Removing intermediate container 314b8ae96a54
+
+2015-10-31 23:50:15,580 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-31 23:50:15,651 INFO: - App:  ---> Running in 34496d65fb2e
+
+2015-10-31 23:50:15,787 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-31 23:50:17,099 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-31 23:50:17,107 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-31 23:50:17,120 INFO: - App: Collecting pysal (from -r requirements.txt (line 1))
+
+2015-10-31 23:50:17,217 INFO: - App:   Downloading PySAL-1.10.0.tar.gz (13.4MB)
+
+2015-10-31 23:50:20,104 INFO: - App: Collecting seaborn (from -r requirements.txt (line 2))
+
+2015-10-31 23:50:20,144 INFO: - App:   Downloading seaborn-0.6.0.tar.gz (145kB)
+
+2015-10-31 23:50:20,601 INFO: - App: Installing collected packages: pysal, seaborn
+
+2015-10-31 23:50:20,607 INFO: - App:   Running setup.py install for pysal
+
+2015-10-31 23:50:21,748 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-31 23:50:22,353 INFO: - App: Successfully installed pysal-1.10.0 seaborn-0.6.0
+
+2015-10-31 23:50:22,376 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-31 23:50:22,681 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-31 23:50:22,683 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-31 23:50:22,698 INFO: - App: Collecting pysal (from -r requirements.txt (line 1))
+
+2015-10-31 23:50:22,931 INFO: - App:   Using cached PySAL-1.10.0.tar.gz
+
+2015-10-31 23:50:23,979 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-10-31 23:50:23,982 INFO: - App:     Traceback (most recent call last):
+
+2015-10-31 23:50:23,984 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-10-31 23:50:23,987 INFO: - App:       File "/tmp/pip-build-3mh7uy/pysal/setup.py", line 16, in <module>
+
+2015-10-31 23:50:23,990 INFO: - App:         from pysal.version import version as dversion
+
+2015-10-31 23:50:23,992 INFO: - App:       File "./pysal/__init__.py", line 40, in <module>
+
+2015-10-31 23:50:23,994 INFO: - App:         import pysal.cg
+
+2015-10-31 23:50:23,996 INFO: - App:       File "./pysal/cg/__init__.py", line 4, in <module>
+
+2015-10-31 23:50:23,998 INFO: - App:         from shapes import *
+
+2015-10-31 23:50:24,001 INFO: - App:     ImportError: No module named 'shapes'
+
+2015-10-31 23:50:24,012 INFO: - App:     
+
+2015-10-31 23:50:24,014 INFO: - App:     ----------------------------------------
+
+2015-10-31 23:50:24,019 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-3mh7uy/pysal
+
+2015-10-31 23:50:24,027 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-31 23:50:24,603 INFO: - App:  ---> e19661ce3388
+
+2015-10-31 23:50:24,632 INFO: - App: Removing intermediate container 34496d65fb2e
+
+2015-10-31 23:50:24,634 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-31 23:50:24,823 INFO: - App:  ---> 5540347c0dd5
+
+2015-10-31 23:50:24,827 INFO: - App: Removing intermediate container cccbf52018ad
+
+2015-10-31 23:50:24,830 INFO: - App: Step 5 : USER root
+
+2015-10-31 23:50:24,911 INFO: - App:  ---> Running in f572a815afbc
+
+2015-10-31 23:50:24,967 INFO: - App:  ---> 937172ed0119
+
+2015-10-31 23:50:24,975 INFO: - App: Removing intermediate container f572a815afbc
+
+2015-10-31 23:50:24,977 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-31 23:50:25,047 INFO: - App:  ---> Running in 8427f295b3ef
+
+2015-10-31 23:50:25,498 INFO: - App:  ---> 71c9fe4c498c
+
+2015-10-31 23:50:25,508 INFO: - App: Removing intermediate container 8427f295b3ef
+
+2015-10-31 23:50:25,511 INFO: - App: Step 7 : USER main
+
+2015-10-31 23:50:25,599 INFO: - App:  ---> Running in ee036f4d3d09
+
+2015-10-31 23:50:25,647 INFO: - App:  ---> 0f0dd1014053
+
+2015-10-31 23:50:25,656 INFO: - App: Removing intermediate container ee036f4d3d09
+
+2015-10-31 23:50:25,659 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-31 23:50:25,727 INFO: - App:  ---> Running in 778989de6a33
+
+2015-10-31 23:50:26,282 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-31 23:50:26,534 INFO: - App:  ---> ab9c0f22eb41
+
+2015-10-31 23:50:26,542 INFO: - App: Removing intermediate container 778989de6a33
+
+2015-10-31 23:50:26,544 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-31 23:50:26,615 INFO: - App:  ---> Running in 34691a490753
+
+2015-10-31 23:50:26,664 INFO: - App:  ---> 6c0d845770f3
+
+2015-10-31 23:50:26,672 INFO: - App: Removing intermediate container 34691a490753
+
+2015-10-31 23:50:26,673 INFO: - App: Successfully built 6c0d845770f3
+
+2015-10-31 23:50:26,680 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/darribas-int_sp_auto to private registry...
+2015-10-31 23:50:40,980 INFO: - App: Preloading app image onto all nodes...
+2015-10-31 23:50:51,889 INFO: - App: Successfully built app darribas-int_sp_auto
+2015-10-31 23:56:53,496 INFO: - App: Building service dependencies...
+2015-10-31 23:56:53,503 INFO: - App: Copying files and filling templates...
+2015-10-31 23:56:53,511 INFO: - App: Building app image without Dockerfile...
+2015-10-31 23:56:53,563 INFO: - App: Sending build context to Docker daemon 308.2 kBSending build context to Docker daemon 308.2 kB
+
+2015-10-31 23:56:53,566 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-31 23:56:53,571 INFO: - App:  ---> 77377240dc83
+
+2015-10-31 23:56:53,574 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-31 23:56:53,747 INFO: - App:  ---> df33551e160f
+
+2015-10-31 23:56:53,761 INFO: - App: Removing intermediate container e4996a7d6f9b
+
+2015-10-31 23:56:53,763 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-31 23:56:53,927 INFO: - App:  ---> f8c37af9a62b
+
+2015-10-31 23:56:53,935 INFO: - App: Removing intermediate container aaa43c0e994f
+
+2015-10-31 23:56:53,937 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-31 23:56:54,007 INFO: - App:  ---> Running in bc161596fc33
+
+2015-10-31 23:56:54,164 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-31 23:56:55,507 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-31 23:56:55,510 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-31 23:56:55,526 INFO: - App: Collecting pysal (from -r requirements.txt (line 1))
+
+2015-10-31 23:56:55,664 INFO: - App:   Downloading PySAL-1.10.0.tar.gz (13.4MB)
+
+2015-10-31 23:56:58,491 INFO: - App: Collecting seaborn (from -r requirements.txt (line 2))
+
+2015-10-31 23:56:58,530 INFO: - App:   Downloading seaborn-0.6.0.tar.gz (145kB)
+
+2015-10-31 23:56:58,977 INFO: - App: Installing collected packages: pysal, seaborn
+
+2015-10-31 23:56:58,980 INFO: - App:   Running setup.py install for pysal
+
+2015-10-31 23:57:00,128 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-31 23:57:00,742 INFO: - App: Successfully installed pysal-1.10.0 seaborn-0.6.0
+
+2015-10-31 23:57:00,764 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-31 23:57:01,063 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-31 23:57:01,075 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-31 23:57:01,080 INFO: - App: Collecting pysal (from -r requirements.txt (line 1))
+
+2015-10-31 23:57:01,309 INFO: - App:   Using cached PySAL-1.10.0.tar.gz
+
+2015-10-31 23:57:02,342 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-10-31 23:57:02,344 INFO: - App:     Traceback (most recent call last):
+
+2015-10-31 23:57:02,346 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-10-31 23:57:02,348 INFO: - App:       File "/tmp/pip-build-kateri/pysal/setup.py", line 16, in <module>
+
+2015-10-31 23:57:02,350 INFO: - App:         from pysal.version import version as dversion
+
+2015-10-31 23:57:02,352 INFO: - App:       File "./pysal/__init__.py", line 40, in <module>
+
+2015-10-31 23:57:02,354 INFO: - App:         import pysal.cg
+
+2015-10-31 23:57:02,356 INFO: - App:       File "./pysal/cg/__init__.py", line 4, in <module>
+
+2015-10-31 23:57:02,358 INFO: - App:         from shapes import *
+
+2015-10-31 23:57:02,363 INFO: - App:     ImportError: No module named 'shapes'
+
+2015-10-31 23:57:02,366 INFO: - App:     
+
+2015-10-31 23:57:02,370 INFO: - App:     ----------------------------------------
+
+2015-10-31 23:57:02,372 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-kateri/pysal
+
+2015-10-31 23:57:02,389 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-31 23:57:02,975 INFO: - App:  ---> f1631d94c495
+
+2015-10-31 23:57:03,002 INFO: - App: Removing intermediate container bc161596fc33
+
+2015-10-31 23:57:03,007 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-31 23:57:03,194 INFO: - App:  ---> db6412a1d081
+
+2015-10-31 23:57:03,205 INFO: - App: Removing intermediate container adcd78cec096
+
+2015-10-31 23:57:03,207 INFO: - App: Step 5 : USER root
+
+2015-10-31 23:57:03,272 INFO: - App:  ---> Running in 6195c49ffc0e
+
+2015-10-31 23:57:03,319 INFO: - App:  ---> 0b09e3889280
+
+2015-10-31 23:57:03,327 INFO: - App: Removing intermediate container 6195c49ffc0e
+
+2015-10-31 23:57:03,329 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-31 23:57:03,423 INFO: - App:  ---> Running in 1ddd51246312
+
+2015-10-31 23:57:03,869 INFO: - App:  ---> 2494233d09dd
+
+2015-10-31 23:57:03,884 INFO: - App: Removing intermediate container 1ddd51246312
+
+2015-10-31 23:57:03,891 INFO: - App: Step 7 : USER main
+
+2015-10-31 23:57:03,976 INFO: - App:  ---> Running in 048d86d02a24
+
+2015-10-31 23:57:04,019 INFO: - App:  ---> 4fb6371851a2
+
+2015-10-31 23:57:04,029 INFO: - App: Removing intermediate container 048d86d02a24
+
+2015-10-31 23:57:04,033 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-31 23:57:04,114 INFO: - App:  ---> Running in a3d949ce71dd
+
+2015-10-31 23:57:04,598 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-31 23:57:04,890 INFO: - App:  ---> fce89bef62f4
+
+2015-10-31 23:57:04,900 INFO: - App: Removing intermediate container a3d949ce71dd
+
+2015-10-31 23:57:04,903 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-31 23:57:04,983 INFO: - App:  ---> Running in ca46472e5e50
+
+2015-10-31 23:57:05,031 INFO: - App:  ---> a2511328cf08
+
+2015-10-31 23:57:05,039 INFO: - App: Removing intermediate container ca46472e5e50
+
+2015-10-31 23:57:05,043 INFO: - App: Successfully built a2511328cf08
+
+2015-10-31 23:57:05,051 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/darribas-int_sp_auto to private registry...
+2015-10-31 23:57:20,090 INFO: - App: Preloading app image onto all nodes...
+2015-10-31 23:57:31,732 INFO: - App: Successfully built app darribas-int_sp_auto

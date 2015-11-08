@@ -1,0 +1,32 @@
+2015-10-30 18:14:50,084 INFO: - App: Building service dependencies...
+2015-10-30 18:14:50,087 INFO: - App: Copying files and filling templates...
+2015-10-30 18:14:50,126 INFO: - App: Building the app image with Dockerfile...
+2015-10-30 18:14:50,128 WARNING: - App: Dockerfile base image is not binder-base. Building may fail.
+2015-10-30 18:14:50,288 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.652 MBSending build context to Docker daemon 7.209 MBSending build context to Docker daemon 7.766 MBSending build context to Docker daemon 8.323 MBSending build context to Docker daemon  8.88 MBSending build context to Docker daemon 9.437 MBSending build context to Docker daemon 9.994 MBSending build context to Docker daemon 10.55 MBSending build context to Docker daemon 11.11 MBSending build context to Docker daemon 11.67 MBSending build context to Docker daemon 12.22 MBSending build context to Docker daemon 12.78 MBSending build context to Docker daemon 13.34 MBSending build context to Docker daemon 13.89 MBSending build context to Docker daemon 13.99 MBSending build context to Docker daemon 13.99 MB
+
+2015-10-30 18:14:50,291 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-30 18:14:50,294 INFO: - App:  ---> 77377240dc83
+
+2015-10-30 18:14:50,296 INFO: - App: Step 1 : MAINTAINER tony.hirst@gmail.com
+
+2015-10-30 18:14:50,399 INFO: - App:  ---> Running in d0afcc802a59
+
+2015-10-30 18:14:50,451 INFO: - App:  ---> a4ba16ba7328
+
+2015-10-30 18:14:50,459 INFO: - App: Removing intermediate container d0afcc802a59
+
+2015-10-30 18:14:50,462 INFO: - App: Step 2 : RUN apt-get update && apt-get install -y openjdk-7-jre-headless wget
+
+2015-10-30 18:14:50,551 INFO: - App:  ---> Running in 279cb508de32
+
+2015-10-30 18:14:50,763 INFO: - App: E: List directory /var/lib/apt/lists/partial is missing. - Acquire (13: Permission denied)
+
+2015-10-30 18:14:50,765 INFO: - App: E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+
+2015-10-30 18:14:50,768 INFO: - App: E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+
+2015-10-30 18:14:51,010 ERROR: - App: The command '/bin/sh -c apt-get update && apt-get install -y openjdk-7-jre-headless wget' returned a non-zero code: 100
+
+2015-10-30 18:14:51,012 INFO: - App: 
+2015-10-30 18:14:51,015 ERROR: - App: could not build app psychemedia-docker-openrefine: Command '['docker', 'build', '-t', u'gcr.io/generic-notebooks/psychemedia-docker-openrefine', '--no-cache', u'/home/andrew/binder/apps/psychemedia-docker-openrefine/build/app/repo']' returned non-zero exit status 1

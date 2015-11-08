@@ -1,0 +1,62 @@
+2015-11-03 00:12:45,341 INFO: - App: Building service dependencies...
+2015-11-03 00:12:45,345 INFO: - App: Copying files and filling templates...
+2015-11-03 00:12:45,350 INFO: - App: Building app image without Dockerfile...
+2015-11-03 00:12:45,380 INFO: - App: Sending build context to Docker daemon 76.29 kBSending build context to Docker daemon 76.29 kB
+
+2015-11-03 00:12:45,401 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 00:12:45,411 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 00:12:45,426 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 00:12:45,588 INFO: - App:  ---> bbec308c908b
+
+2015-11-03 00:12:45,616 INFO: - App: Removing intermediate container 8a5228909fc3
+
+2015-11-03 00:12:45,631 INFO: - App: Step 2 : USER root
+
+2015-11-03 00:12:45,684 INFO: - App:  ---> Running in 24334a082d7f
+
+2015-11-03 00:12:45,732 INFO: - App:  ---> cd196376f696
+
+2015-11-03 00:12:45,752 INFO: - App: Removing intermediate container 24334a082d7f
+
+2015-11-03 00:12:45,760 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 00:12:45,822 INFO: - App:  ---> Running in c9b810aec749
+
+2015-11-03 00:12:46,266 INFO: - App:  ---> 6540a000c0c2
+
+2015-11-03 00:12:46,282 INFO: - App: Removing intermediate container c9b810aec749
+
+2015-11-03 00:12:46,286 INFO: - App: Step 4 : USER main
+
+2015-11-03 00:12:46,347 INFO: - App:  ---> Running in 673e6255d249
+
+2015-11-03 00:12:46,401 INFO: - App:  ---> d4acff0253b4
+
+2015-11-03 00:12:46,418 INFO: - App: Removing intermediate container 673e6255d249
+
+2015-11-03 00:12:46,439 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 00:12:46,495 INFO: - App:  ---> Running in 642e035337ea
+
+2015-11-03 00:12:46,998 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Hello.ipynb
+
+2015-11-03 00:12:47,302 INFO: - App:  ---> 6707f0f294d6
+
+2015-11-03 00:12:47,312 INFO: - App: Removing intermediate container 642e035337ea
+
+2015-11-03 00:12:47,340 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 00:12:47,398 INFO: - App:  ---> Running in b413eb9dc5e2
+
+2015-11-03 00:12:47,444 INFO: - App:  ---> 7ff32266419c
+
+2015-11-03 00:12:47,452 INFO: - App: Removing intermediate container b413eb9dc5e2
+
+2015-11-03 00:12:47,466 INFO: - App: Successfully built 7ff32266419c
+
+2015-11-03 00:12:47,479 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/rdhyee-mybinder-test to private registry...
+2015-11-03 00:12:53,202 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 00:12:56,003 INFO: - App: Successfully built app rdhyee-mybinder-test

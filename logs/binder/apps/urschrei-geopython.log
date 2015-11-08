@@ -1,0 +1,141 @@
+2015-10-25 02:59:02,826 INFO: - App: Building service dependencies...
+2015-10-25 02:59:02,828 INFO: - App: Copying files and filling templates...
+2015-10-25 02:59:02,999 INFO: - App: Building app image without Dockerfile...
+2015-10-25 02:59:04,091 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon 71.28 MBSending build context to Docker daemon 71.83 MBSending build context to Docker daemon 72.38 MBSending build context to Docker daemon 72.94 MBSending build context to Docker daemon  73.5 MBSending build context to Docker daemon 74.06 MBSending build context to Docker daemon 74.61 MBSending build context to Docker daemon 75.17 MBSending build context to Docker daemon 75.73 MBSending build context to Docker daemon 76.28 MBSending build context to Docker daemon 76.84 MBSending build context to Docker daemon  77.4 MBSending build context to Docker daemon 77.96 MBSending build context to Docker daemon 78.51 MBSending build context to Docker daemon 79.07 MBSending build context to Docker daemon 79.63 MBSending build context to Docker daemon 80.18 MBSending build context to Docker daemon 80.74 MBSending build context to Docker daemon  81.3 MBSending build context to Docker daemon 81.85 MBSending build context to Docker daemon 82.41 MBSending build context to Docker daemon 82.97 MBSending build context to Docker daemon 83.53 MBSending build context to Docker daemon 84.08 MBSending build context to Docker daemon 84.64 MBSending build context to Docker daemon  85.2 MBSending build context to Docker daemon 85.75 MBSending build context to Docker daemon 86.31 MBSending build context to Docker daemon 86.87 MBSending build context to Docker daemon 87.43 MBSending build context to Docker daemon 87.98 MBSending build context to Docker daemon 88.54 MBSending build context to Docker daemon  89.1 MBSending build context to Docker daemon 89.65 MBSending build context to Docker daemon 90.21 MBSending build context to Docker daemon 90.77 MBSending build context to Docker daemon 91.32 MBSending build context to Docker daemon 91.88 MBSending build context to Docker daemon 92.44 MBSending build context to Docker daemon    93 MBSending build context to Docker daemon 93.55 MBSending build context to Docker daemon 94.11 MBSending build context to Docker daemon 94.67 MBSending build context to Docker daemon 95.22 MBSending build context to Docker daemon 95.78 MBSending build context to Docker daemon 96.34 MBSending build context to Docker daemon 96.89 MBSending build context to Docker daemon 97.45 MBSending build context to Docker daemon 98.01 MBSending build context to Docker daemon 98.57 MBSending build context to Docker daemon 99.12 MBSending build context to Docker daemon 99.68 MBSending build context to Docker daemon 100.2 MBSending build context to Docker daemon 100.8 MBSending build context to Docker daemon 101.4 MBSending build context to Docker daemon 101.9 MBSending build context to Docker daemon 102.5 MBSending build context to Docker daemon   103 MBSending build context to Docker daemon 103.6 MBSending build context to Docker daemon 104.1 MBSending build context to Docker daemon 104.7 MBSending build context to Docker daemon 105.3 MBSending build context to Docker daemon 105.8 MBSending build context to Docker daemon 106.4 MBSending build context to Docker daemon 106.9 MBSending build context to Docker daemon 107.5 MBSending build context to Docker daemon   108 MBSending build context to Docker daemon 108.6 MBSending build context to Docker daemon 109.2 MBSending build context to Docker daemon 109.7 MBSending build context to Docker daemon 110.3 MBSending build context to Docker daemon 110.8 MBSending build context to Docker daemon 111.4 MBSending build context to Docker daemon 111.9 MBSending build context to Docker daemon 112.5 MBSending build context to Docker daemon   113 MBSending build context to Docker daemon 113.6 MBSending build context to Docker daemon 114.2 MBSending build context to Docker daemon 114.7 MBSending build context to Docker daemon 115.3 MBSending build context to Docker daemon 115.8 MBSending build context to Docker daemon 116.4 MBSending build context to Docker daemon 116.9 MBSending build context to Docker daemon 117.5 MBSending build context to Docker daemon 118.1 MBSending build context to Docker daemon 118.6 MBSending build context to Docker daemon 119.2 MBSending build context to Docker daemon 119.7 MBSending build context to Docker daemon 120.3 MBSending build context to Docker daemon 120.8 MBSending build context to Docker daemon 121.4 MBSending build context to Docker daemon   122 MBSending build context to Docker daemon 122.5 MBSending build context to Docker daemon 123.1 MBSending build context to Docker daemon 123.6 MBSending build context to Docker daemon 124.2 MBSending build context to Docker daemon 124.7 MBSending build context to Docker daemon 125.3 MBSending build context to Docker daemon 125.9 MBSending build context to Docker daemon 126.4 MBSending build context to Docker daemon   127 MBSending build context to Docker daemon 127.5 MBSending build context to Docker daemon 128.1 MBSending build context to Docker daemon 128.6 MBSending build context to Docker daemon 129.2 MBSending build context to Docker daemon 129.8 MBSending build context to Docker daemon 130.3 MBSending build context to Docker daemon 130.9 MBSending build context to Docker daemon 131.4 MBSending build context to Docker daemon   132 MBSending build context to Docker daemon 132.5 MBSending build context to Docker daemon 133.1 MBSending build context to Docker daemon 133.7 MBSending build context to Docker daemon 134.2 MBSending build context to Docker daemon 134.8 MBSending build context to Docker daemon 135.3 MBSending build context to Docker daemon 135.9 MBSending build context to Docker daemon 136.4 MBSending build context to Docker daemon   137 MBSending build context to Docker daemon 137.6 MBSending build context to Docker daemon 138.1 MBSending build context to Docker daemon 138.7 MBSending build context to Docker daemon 139.2 MBSending build context to Docker daemon 139.8 MBSending build context to Docker daemon 140.3 MBSending build context to Docker daemon 140.9 MBSending build context to Docker daemon 141.5 MBSending build context to Docker daemon   142 MBSending build context to Docker daemon 142.6 MBSending build context to Docker daemon 143.1 MBSending build context to Docker daemon 143.7 MBSending build context to Docker daemon 144.1 MBSending build context to Docker daemon 144.1 MB
+
+2015-10-25 02:59:04,097 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-25 02:59:04,098 INFO: - App:  ---> 77377240dc83
+
+2015-10-25 02:59:04,100 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-25 02:59:04,301 INFO: - App:  ---> dfda3421e1e9
+
+2015-10-25 02:59:04,316 INFO: - App: Removing intermediate container f05fdd0e3538
+
+2015-10-25 02:59:04,347 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-25 02:59:04,488 INFO: - App:  ---> bd985ca4452a
+
+2015-10-25 02:59:04,496 INFO: - App: Removing intermediate container 588b05af2309
+
+2015-10-25 02:59:04,498 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-25 02:59:04,587 INFO: - App:  ---> Running in d26acd5b9b7d
+
+2015-10-25 02:59:04,755 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 02:59:06,071 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 02:59:06,074 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 02:59:06,106 INFO: - App: Collecting Fiona (from -r requirements.txt (line 1))
+
+2015-10-25 02:59:06,299 INFO: - App:   Downloading Fiona-1.6.2.tar.gz (1.1MB)
+
+2015-10-25 02:59:07,000 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): Jinja2 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 02:59:07,002 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): MarkupSafe in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-10-25 02:59:07,004 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): Pillow in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 02:59:07,017 INFO: - App: Collecting PySAL (from -r requirements.txt (line 5))
+
+2015-10-25 02:59:07,055 INFO: - App:   Downloading PySAL-1.10.0.tar.gz (13.4MB)
+
+2015-10-25 02:59:10,348 INFO: - App: Collecting Shapely (from -r requirements.txt (line 6))
+
+2015-10-25 02:59:10,596 INFO: - App:   Downloading Shapely-1.5.13.tar.gz (176kB)
+
+2015-10-25 02:59:10,839 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-10-25 02:59:10,841 INFO: - App:     Failed `CDLL(libgeos_c.so.1)`
+
+2015-10-25 02:59:10,843 INFO: - App:     Failed `CDLL(libgeos_c.so)`
+
+2015-10-25 02:59:10,845 INFO: - App:     Traceback (most recent call last):
+
+2015-10-25 02:59:10,859 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-10-25 02:59:10,864 INFO: - App:       File "/tmp/pip-build-apdVSc/Shapely/setup.py", line 38, in <module>
+
+2015-10-25 02:59:10,867 INFO: - App:         from shapely._buildcfg import geos_version_string, geos_version, \
+
+2015-10-25 02:59:10,873 INFO: - App:       File "shapely/_buildcfg.py", line 167, in <module>
+
+2015-10-25 02:59:10,876 INFO: - App:         fallbacks=['libgeos_c.so.1', 'libgeos_c.so'])
+
+2015-10-25 02:59:10,880 INFO: - App:       File "shapely/_buildcfg.py", line 161, in load_dll
+
+2015-10-25 02:59:10,883 INFO: - App:         libname, fallbacks or []))
+
+2015-10-25 02:59:10,888 INFO: - App:     OSError: Could not find library geos_c or load any of its variants ['libgeos_c.so.1', 'libgeos_c.so']
+
+2015-10-25 02:59:10,900 INFO: - App:     
+
+2015-10-25 02:59:10,902 INFO: - App:     ----------------------------------------
+
+2015-10-25 02:59:10,903 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-apdVSc/Shapely
+
+2015-10-25 02:59:10,950 INFO: - App: installation command failed: Command '['pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-25 02:59:10,961 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 02:59:11,264 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 02:59:11,268 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 02:59:11,300 INFO: - App: Collecting Fiona (from -r requirements.txt (line 1))
+
+2015-10-25 02:59:11,392 INFO: - App:   Using cached Fiona-1.6.2.tar.gz
+
+2015-10-25 02:59:11,898 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): Jinja2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 02:59:11,900 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): MarkupSafe in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-10-25 02:59:11,902 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): Pillow in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 02:59:11,913 INFO: - App: Collecting PySAL (from -r requirements.txt (line 5))
+
+2015-10-25 02:59:12,117 INFO: - App:   Using cached PySAL-1.10.0.tar.gz
+
+2015-10-25 02:59:13,115 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-10-25 02:59:13,144 INFO: - App:     Traceback (most recent call last):
+
+2015-10-25 02:59:13,163 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-10-25 02:59:13,171 INFO: - App:       File "/tmp/pip-build-fduqyq/PySAL/setup.py", line 16, in <module>
+
+2015-10-25 02:59:13,191 INFO: - App:         from pysal.version import version as dversion
+
+2015-10-25 02:59:13,192 INFO: - App:       File "./pysal/__init__.py", line 40, in <module>
+
+2015-10-25 02:59:13,194 INFO: - App:         import pysal.cg
+
+2015-10-25 02:59:13,195 INFO: - App:       File "./pysal/cg/__init__.py", line 4, in <module>
+
+2015-10-25 02:59:13,197 INFO: - App:         from shapes import *
+
+2015-10-25 02:59:13,199 INFO: - App:     ImportError: No module named 'shapes'
+
+2015-10-25 02:59:13,200 INFO: - App:     
+
+2015-10-25 02:59:13,202 INFO: - App:     ----------------------------------------
+
+2015-10-25 02:59:13,204 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-fduqyq/PySAL
+
+2015-10-25 02:59:13,206 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-25 02:59:13,207 INFO: - App: Traceback (most recent call last):
+
+2015-10-25 02:59:13,209 INFO: - App:   File "handle-requirements.py", line 19, in <module>
+
+2015-10-25 02:59:13,211 INFO: - App: [91m    raise Exception("All installation commands failed")
+
+2015-10-25 02:59:13,213 INFO: - App: Exception: All installation commands failed
+
+2015-10-25 02:59:13,444 ERROR: - App: The command '/bin/sh -c python handle-requirements.py' returned a non-zero code: 1
+
+2015-10-25 02:59:13,447 INFO: - App: 
+2015-10-25 02:59:13,449 ERROR: - App: could not build app urschrei-geopython: Command '['docker', 'build', '-t', u'gcr.io/generic-notebooks/urschrei-geopython', '--no-cache', u'/home/andrew/binder/apps/urschrei-geopython/build/app']' returned non-zero exit status 1

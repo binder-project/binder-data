@@ -1,0 +1,256 @@
+2015-11-02 15:50:09,957 INFO: - App: Building service dependencies...
+2015-11-02 15:50:09,961 INFO: - App: Copying files and filling templates...
+2015-11-02 15:50:09,976 INFO: - App: Building app image without Dockerfile...
+2015-11-02 15:50:10,033 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 933.9 kBSending build context to Docker daemon 933.9 kB
+
+2015-11-02 15:50:10,036 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-02 15:50:10,067 INFO: - App:  ---> 77377240dc83
+
+2015-11-02 15:50:10,076 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-02 15:50:10,418 INFO: - App:  ---> a56ac3bf91ce
+
+2015-11-02 15:50:10,430 INFO: - App: Removing intermediate container f4d2762ec0e9
+
+2015-11-02 15:50:10,437 INFO: - App: Step 2 : USER root
+
+2015-11-02 15:50:10,515 INFO: - App:  ---> Running in d29411866f99
+
+2015-11-02 15:50:10,559 INFO: - App:  ---> 9df8468cd745
+
+2015-11-02 15:50:10,566 INFO: - App: Removing intermediate container d29411866f99
+
+2015-11-02 15:50:10,571 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-02 15:50:10,659 INFO: - App:  ---> Running in 62cbcc54d828
+
+2015-11-02 15:50:11,078 INFO: - App:  ---> b566edb4f367
+
+2015-11-02 15:50:11,094 INFO: - App: Removing intermediate container 62cbcc54d828
+
+2015-11-02 15:50:11,096 INFO: - App: Step 4 : USER main
+
+2015-11-02 15:50:11,163 INFO: - App:  ---> Running in 5b3ef5542a98
+
+2015-11-02 15:50:11,221 INFO: - App:  ---> 9a52df04054c
+
+2015-11-02 15:50:11,234 INFO: - App: Removing intermediate container 5b3ef5542a98
+
+2015-11-02 15:50:11,245 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-02 15:50:11,316 INFO: - App:  ---> Running in c5f590b013d6
+
+2015-11-02 15:50:11,817 INFO: - App: Signing notebook: /home/main/notebooks/examples/GaAs-AlAs Bragg Mirror.ipynb
+
+2015-11-02 15:50:12,054 INFO: - App: Signing notebook: /home/main/notebooks/examples/TiO2-SiO2 Bragg Mirror.ipynb
+
+2015-11-02 15:50:12,328 INFO: - App:  ---> 97860429f5da
+
+2015-11-02 15:50:12,334 INFO: - App: Removing intermediate container c5f590b013d6
+
+2015-11-02 15:50:12,337 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-02 15:50:12,407 INFO: - App:  ---> Running in d227dad471ce
+
+2015-11-02 15:50:12,455 INFO: - App:  ---> 876558c6fcf8
+
+2015-11-02 15:50:12,464 INFO: - App: Removing intermediate container d227dad471ce
+
+2015-11-02 15:50:12,468 INFO: - App: Successfully built 876558c6fcf8
+
+2015-11-02 15:50:12,471 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/gevero-1dpyhc to private registry...
+2015-11-02 15:50:19,282 INFO: - App: Preloading app image onto all nodes...
+2015-11-02 15:50:22,525 INFO: - App: Successfully built app gevero-1dpyhc
+2015-11-03 14:07:34,818 INFO: - App: Building service dependencies...
+2015-11-03 14:07:34,822 INFO: - App: Copying files and filling templates...
+2015-11-03 14:07:34,836 INFO: - App: Building app image without Dockerfile...
+2015-11-03 14:07:34,898 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 938.5 kBSending build context to Docker daemon 938.5 kB
+
+2015-11-03 14:07:34,900 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 14:07:34,903 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 14:07:34,908 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 14:07:35,096 INFO: - App:  ---> 173a2f2a4f59
+
+2015-11-03 14:07:35,098 INFO: - App: Removing intermediate container bbd0e655f5ca
+
+2015-11-03 14:07:35,103 INFO: - App: Step 2 : USER root
+
+2015-11-03 14:07:35,183 INFO: - App:  ---> Running in e8a40eccb4be
+
+2015-11-03 14:07:35,231 INFO: - App:  ---> 47178bf9f9b8
+
+2015-11-03 14:07:35,240 INFO: - App: Removing intermediate container e8a40eccb4be
+
+2015-11-03 14:07:35,243 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 14:07:35,315 INFO: - App:  ---> Running in ec660f31e65c
+
+2015-11-03 14:07:35,757 INFO: - App:  ---> 3a46f3a243ca
+
+2015-11-03 14:07:35,769 INFO: - App: Removing intermediate container ec660f31e65c
+
+2015-11-03 14:07:35,772 INFO: - App: Step 4 : USER main
+
+2015-11-03 14:07:35,852 INFO: - App:  ---> Running in ac94548cc290
+
+2015-11-03 14:07:35,899 INFO: - App:  ---> 6c1c7f8cb8ba
+
+2015-11-03 14:07:35,916 INFO: - App: Removing intermediate container ac94548cc290
+
+2015-11-03 14:07:35,932 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 14:07:36,000 INFO: - App:  ---> Running in 8a701702a9a7
+
+2015-11-03 14:07:36,473 INFO: - App: Signing notebook: /home/main/notebooks/examples/GaAs-AlAs Bragg Mirror.ipynb
+
+2015-11-03 14:07:36,714 INFO: - App: Signing notebook: /home/main/notebooks/examples/TiO2-SiO2 Bragg Mirror.ipynb
+
+2015-11-03 14:07:36,980 INFO: - App:  ---> db3251581112
+
+2015-11-03 14:07:37,004 INFO: - App: Removing intermediate container 8a701702a9a7
+
+2015-11-03 14:07:37,020 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 14:07:37,090 INFO: - App:  ---> Running in 636d2e60cbf5
+
+2015-11-03 14:07:37,128 INFO: - App:  ---> 4753df594bb2
+
+2015-11-03 14:07:37,138 INFO: - App: Removing intermediate container 636d2e60cbf5
+
+2015-11-03 14:07:37,152 INFO: - App: Successfully built 4753df594bb2
+
+2015-11-03 14:07:37,169 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/gevero-1dpyhc to private registry...
+2015-11-03 14:07:44,158 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 14:07:49,454 INFO: - App: Successfully built app gevero-1dpyhc
+2015-11-03 14:11:21,336 INFO: - App: Building service dependencies...
+2015-11-03 14:11:21,354 INFO: - App: Copying files and filling templates...
+2015-11-03 14:11:21,383 INFO: - App: Building app image without Dockerfile...
+2015-11-03 14:11:21,433 INFO: - App: Sending build context to Docker daemon 536.4 kBSending build context to Docker daemon 986.1 kBSending build context to Docker daemon 986.1 kB
+
+2015-11-03 14:11:21,456 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 14:11:21,490 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 14:11:21,518 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 14:11:21,635 INFO: - App:  ---> a07ba93f50a2
+
+2015-11-03 14:11:21,647 INFO: - App: Removing intermediate container adc3e8115901
+
+2015-11-03 14:11:21,650 INFO: - App: Step 2 : USER root
+
+2015-11-03 14:11:21,727 INFO: - App:  ---> Running in eb13669c84dd
+
+2015-11-03 14:11:21,775 INFO: - App:  ---> cbbdb58a5dcb
+
+2015-11-03 14:11:21,782 INFO: - App: Removing intermediate container eb13669c84dd
+
+2015-11-03 14:11:21,785 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 14:11:21,878 INFO: - App:  ---> Running in b9b3a1645465
+
+2015-11-03 14:11:22,311 INFO: - App:  ---> 8d48e19e3438
+
+2015-11-03 14:11:22,322 INFO: - App: Removing intermediate container b9b3a1645465
+
+2015-11-03 14:11:22,325 INFO: - App: Step 4 : USER main
+
+2015-11-03 14:11:22,403 INFO: - App:  ---> Running in b7ec7d90db56
+
+2015-11-03 14:11:22,455 INFO: - App:  ---> e7927a307b16
+
+2015-11-03 14:11:22,465 INFO: - App: Removing intermediate container b7ec7d90db56
+
+2015-11-03 14:11:22,467 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 14:11:22,530 INFO: - App:  ---> Running in 9e551f4e6ca4
+
+2015-11-03 14:11:23,059 INFO: - App: Signing notebook: /home/main/notebooks/examples/GaAs-AlAs Bragg Mirror.ipynb
+
+2015-11-03 14:11:23,294 INFO: - App: Signing notebook: /home/main/notebooks/examples/TiO2-SiO2 Bragg Mirror.ipynb
+
+2015-11-03 14:11:23,567 INFO: - App:  ---> 42d1b50f4710
+
+2015-11-03 14:11:23,575 INFO: - App: Removing intermediate container 9e551f4e6ca4
+
+2015-11-03 14:11:23,579 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 14:11:23,647 INFO: - App:  ---> Running in 3f912f4ca09c
+
+2015-11-03 14:11:23,699 INFO: - App:  ---> 74b95aaa872a
+
+2015-11-03 14:11:23,707 INFO: - App: Removing intermediate container 3f912f4ca09c
+
+2015-11-03 14:11:23,710 INFO: - App: Successfully built 74b95aaa872a
+
+2015-11-03 14:11:23,720 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/gevero-1dpyhc to private registry...
+2015-11-03 14:11:30,788 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 14:11:36,949 INFO: - App: Successfully built app gevero-1dpyhc
+2015-11-03 14:14:52,837 INFO: - App: Building service dependencies...
+2015-11-03 14:14:52,839 INFO: - App: Copying files and filling templates...
+2015-11-03 14:14:52,855 INFO: - App: Building app image without Dockerfile...
+2015-11-03 14:14:52,913 INFO: - App: Sending build context to Docker daemon 539.5 kBSending build context to Docker daemon 1.031 MBSending build context to Docker daemon 1.031 MB
+
+2015-11-03 14:14:52,915 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 14:14:52,917 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 14:14:52,919 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 14:14:53,131 INFO: - App:  ---> 8f97ccd35149
+
+2015-11-03 14:14:53,143 INFO: - App: Removing intermediate container d541ce3f836a
+
+2015-11-03 14:14:53,148 INFO: - App: Step 2 : USER root
+
+2015-11-03 14:14:53,215 INFO: - App:  ---> Running in e52cfac5e74e
+
+2015-11-03 14:14:53,268 INFO: - App:  ---> cceec6f86b63
+
+2015-11-03 14:14:53,277 INFO: - App: Removing intermediate container e52cfac5e74e
+
+2015-11-03 14:14:53,280 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 14:14:53,375 INFO: - App:  ---> Running in 966072cb68fc
+
+2015-11-03 14:14:53,795 INFO: - App:  ---> 89f5e8ec4314
+
+2015-11-03 14:14:53,801 INFO: - App: Removing intermediate container 966072cb68fc
+
+2015-11-03 14:14:53,804 INFO: - App: Step 4 : USER main
+
+2015-11-03 14:14:53,892 INFO: - App:  ---> Running in 788f7ad3799c
+
+2015-11-03 14:14:53,943 INFO: - App:  ---> ab2b750231b3
+
+2015-11-03 14:14:53,953 INFO: - App: Removing intermediate container 788f7ad3799c
+
+2015-11-03 14:14:53,964 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 14:14:54,040 INFO: - App:  ---> Running in 9c42f2137e37
+
+2015-11-03 14:14:54,530 INFO: - App: Signing notebook: /home/main/notebooks/examples/GaAs-AlAs Bragg Mirror.ipynb
+
+2015-11-03 14:14:54,767 INFO: - App: Signing notebook: /home/main/notebooks/examples/TiO2-SiO2 Bragg Mirror.ipynb
+
+2015-11-03 14:14:55,071 INFO: - App:  ---> 809c27aefac1
+
+2015-11-03 14:14:55,074 INFO: - App: Removing intermediate container 9c42f2137e37
+
+2015-11-03 14:14:55,077 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 14:14:55,171 INFO: - App:  ---> Running in bc3796f70482
+
+2015-11-03 14:14:55,210 INFO: - App:  ---> b48f4ba50311
+
+2015-11-03 14:14:55,220 INFO: - App: Removing intermediate container bc3796f70482
+
+2015-11-03 14:14:55,223 INFO: - App: Successfully built b48f4ba50311
+
+2015-11-03 14:14:55,229 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/gevero-1dpyhc to private registry...
+2015-11-03 14:15:01,309 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 14:15:07,399 INFO: - App: Successfully built app gevero-1dpyhc

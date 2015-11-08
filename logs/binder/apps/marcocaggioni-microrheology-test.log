@@ -1,0 +1,439 @@
+2015-11-04 04:01:31,771 INFO: - App: Building service dependencies...
+2015-11-04 04:01:31,773 INFO: - App: Copying files and filling templates...
+2015-11-04 04:01:31,777 INFO: - App: Building app image without Dockerfile...
+2015-11-04 04:01:31,810 INFO: - App: Sending build context to Docker daemon 61.95 kBSending build context to Docker daemon 61.95 kB
+
+2015-11-04 04:01:31,836 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 04:01:31,839 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 04:01:31,840 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-04 04:01:32,026 INFO: - App:  ---> 82d851d69322
+
+2015-11-04 04:01:32,032 INFO: - App: Removing intermediate container 90deb83f7ef6
+
+2015-11-04 04:01:32,034 INFO: - App: Step 2 : USER root
+
+2015-11-04 04:01:32,111 INFO: - App:  ---> Running in 64d30060a828
+
+2015-11-04 04:01:32,159 INFO: - App:  ---> 345dcedec268
+
+2015-11-04 04:01:32,167 INFO: - App: Removing intermediate container 64d30060a828
+
+2015-11-04 04:01:32,168 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 04:01:32,236 INFO: - App:  ---> Running in d5c99ef7b6ee
+
+2015-11-04 04:01:32,625 INFO: - App:  ---> 6e2ea01d8cf0
+
+2015-11-04 04:01:32,636 INFO: - App: Removing intermediate container d5c99ef7b6ee
+
+2015-11-04 04:01:32,638 INFO: - App: Step 4 : USER main
+
+2015-11-04 04:01:32,723 INFO: - App:  ---> Running in 0ea0240c7be7
+
+2015-11-04 04:01:32,774 INFO: - App:  ---> 559b989e449d
+
+2015-11-04 04:01:32,779 INFO: - App: Removing intermediate container 0ea0240c7be7
+
+2015-11-04 04:01:32,787 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 04:01:32,868 INFO: - App:  ---> Running in 59b4d1992f68
+
+2015-11-04 04:01:33,358 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-04 04:01:33,639 INFO: - App:  ---> d8aed7a9d5c1
+
+2015-11-04 04:01:33,648 INFO: - App: Removing intermediate container 59b4d1992f68
+
+2015-11-04 04:01:33,651 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-04 04:01:33,719 INFO: - App:  ---> Running in 360e2faa32dd
+
+2015-11-04 04:01:33,766 INFO: - App:  ---> f21c37abcda4
+
+2015-11-04 04:01:33,775 INFO: - App: Removing intermediate container 360e2faa32dd
+
+2015-11-04 04:01:33,781 INFO: - App: Successfully built f21c37abcda4
+
+2015-11-04 04:01:33,787 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology-test to private registry...
+2015-11-04 04:01:43,680 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 04:01:47,360 INFO: - App: Successfully built app marcocaggioni-microrheology-test
+2015-11-04 04:07:08,792 INFO: - App: Building service dependencies...
+2015-11-04 04:07:08,794 INFO: - App: Copying files and filling templates...
+2015-11-04 04:07:08,805 INFO: - App: Building app image without Dockerfile...
+2015-11-04 04:07:08,835 INFO: - App: Sending build context to Docker daemon 66.56 kBSending build context to Docker daemon 66.56 kB
+
+2015-11-04 04:07:08,857 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 04:07:08,859 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 04:07:08,861 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-04 04:07:09,035 INFO: - App:  ---> fd4b3628a94c
+
+2015-11-04 04:07:09,048 INFO: - App: Removing intermediate container 0be52018a859
+
+2015-11-04 04:07:09,064 INFO: - App: Step 2 : USER root
+
+2015-11-04 04:07:09,143 INFO: - App:  ---> Running in b69cc7498c84
+
+2015-11-04 04:07:09,195 INFO: - App:  ---> 7eff4cad60b0
+
+2015-11-04 04:07:09,203 INFO: - App: Removing intermediate container b69cc7498c84
+
+2015-11-04 04:07:09,205 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 04:07:09,274 INFO: - App:  ---> Running in 34b6478302fb
+
+2015-11-04 04:07:09,665 INFO: - App:  ---> 14a504f8872e
+
+2015-11-04 04:07:09,674 INFO: - App: Removing intermediate container 34b6478302fb
+
+2015-11-04 04:07:09,675 INFO: - App: Step 4 : USER main
+
+2015-11-04 04:07:09,750 INFO: - App:  ---> Running in c61a4aa38bd2
+
+2015-11-04 04:07:09,799 INFO: - App:  ---> 643b5e314e93
+
+2015-11-04 04:07:09,807 INFO: - App: Removing intermediate container c61a4aa38bd2
+
+2015-11-04 04:07:09,809 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 04:07:09,883 INFO: - App:  ---> Running in 997d91a8c94d
+
+2015-11-04 04:07:10,430 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-04 04:07:10,728 INFO: - App:  ---> 650c0426c368
+
+2015-11-04 04:07:10,757 INFO: - App: Removing intermediate container 997d91a8c94d
+
+2015-11-04 04:07:10,791 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-04 04:07:10,830 INFO: - App:  ---> Running in 4836b4f462b1
+
+2015-11-04 04:07:10,846 INFO: - App:  ---> b3fe9de75309
+
+2015-11-04 04:07:10,852 INFO: - App: Removing intermediate container 4836b4f462b1
+
+2015-11-04 04:07:10,856 INFO: - App: Successfully built b3fe9de75309
+
+2015-11-04 04:07:10,868 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology-test to private registry...
+2015-11-04 04:07:17,096 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 04:07:21,007 INFO: - App: Successfully built app marcocaggioni-microrheology-test
+2015-11-04 04:39:50,582 INFO: - App: Building service dependencies...
+2015-11-04 04:39:50,584 INFO: - App: Copying files and filling templates...
+2015-11-04 04:39:50,596 INFO: - App: Building app image without Dockerfile...
+2015-11-04 04:39:50,638 INFO: - App: Sending build context to Docker daemon 229.4 kBSending build context to Docker daemon 229.4 kB
+
+2015-11-04 04:39:50,665 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 04:39:50,667 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 04:39:50,669 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-04 04:39:50,842 INFO: - App:  ---> 043d8650f2f4
+
+2015-11-04 04:39:50,850 INFO: - App: Removing intermediate container 207ee8b17bee
+
+2015-11-04 04:39:50,852 INFO: - App: Step 2 : USER root
+
+2015-11-04 04:39:50,922 INFO: - App:  ---> Running in 4429a555c261
+
+2015-11-04 04:39:50,970 INFO: - App:  ---> eb8c90d06ba1
+
+2015-11-04 04:39:50,978 INFO: - App: Removing intermediate container 4429a555c261
+
+2015-11-04 04:39:50,982 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 04:39:51,051 INFO: - App:  ---> Running in 1083701495f2
+
+2015-11-04 04:39:51,482 INFO: - App:  ---> 81562dff07c9
+
+2015-11-04 04:39:51,494 INFO: - App: Removing intermediate container 1083701495f2
+
+2015-11-04 04:39:51,501 INFO: - App: Step 4 : USER main
+
+2015-11-04 04:39:51,583 INFO: - App:  ---> Running in 33ae2e2cbc12
+
+2015-11-04 04:39:51,638 INFO: - App:  ---> be5fcda808e6
+
+2015-11-04 04:39:51,651 INFO: - App: Removing intermediate container 33ae2e2cbc12
+
+2015-11-04 04:39:51,655 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 04:39:51,735 INFO: - App:  ---> Running in 643478cb7b13
+
+2015-11-04 04:39:52,199 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-04 04:39:52,451 INFO: - App:  ---> 8c46d95a9001
+
+2015-11-04 04:39:52,455 INFO: - App: Removing intermediate container 643478cb7b13
+
+2015-11-04 04:39:52,460 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-04 04:39:52,535 INFO: - App:  ---> Running in cc96069dfd69
+
+2015-11-04 04:39:52,584 INFO: - App:  ---> 73d2ba961898
+
+2015-11-04 04:39:52,592 INFO: - App: Removing intermediate container cc96069dfd69
+
+2015-11-04 04:39:52,593 INFO: - App: Successfully built 73d2ba961898
+
+2015-11-04 04:39:52,601 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology-test to private registry...
+2015-11-04 04:40:01,251 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 04:40:11,480 INFO: - App: Successfully built app marcocaggioni-microrheology-test
+2015-11-04 15:34:43,854 INFO: - App: Building service dependencies...
+2015-11-04 15:34:43,857 INFO: - App: Copying files and filling templates...
+2015-11-04 15:34:43,865 INFO: - App: Building app image without Dockerfile...
+2015-11-04 15:34:43,898 INFO: - App: Sending build context to Docker daemon 229.4 kBSending build context to Docker daemon 229.4 kB
+
+2015-11-04 15:34:43,932 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 15:34:43,942 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 15:34:43,944 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-04 15:34:44,111 INFO: - App:  ---> ed8fb80884db
+
+2015-11-04 15:34:44,120 INFO: - App: Removing intermediate container 0dcacb5b4b4f
+
+2015-11-04 15:34:44,123 INFO: - App: Step 2 : USER root
+
+2015-11-04 15:34:44,195 INFO: - App:  ---> Running in 70de74b7dc66
+
+2015-11-04 15:34:44,243 INFO: - App:  ---> 58e5e6d35d17
+
+2015-11-04 15:34:44,254 INFO: - App: Removing intermediate container 70de74b7dc66
+
+2015-11-04 15:34:44,256 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 15:34:44,331 INFO: - App:  ---> Running in c86a9010aa6a
+
+2015-11-04 15:34:44,722 INFO: - App:  ---> fe1760d341f3
+
+2015-11-04 15:34:44,732 INFO: - App: Removing intermediate container c86a9010aa6a
+
+2015-11-04 15:34:44,734 INFO: - App: Step 4 : USER main
+
+2015-11-04 15:34:44,807 INFO: - App:  ---> Running in 7af331994998
+
+2015-11-04 15:34:44,871 INFO: - App:  ---> 3b4e3050f0dd
+
+2015-11-04 15:34:44,879 INFO: - App: Removing intermediate container 7af331994998
+
+2015-11-04 15:34:44,881 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 15:34:44,951 INFO: - App:  ---> Running in 2c04905e0c97
+
+2015-11-04 15:34:45,460 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-04 15:34:45,740 INFO: - App:  ---> 7d7d9eb0b07d
+
+2015-11-04 15:34:45,744 INFO: - App: Removing intermediate container 2c04905e0c97
+
+2015-11-04 15:34:45,746 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-04 15:34:45,827 INFO: - App:  ---> Running in ce6bd16bfce4
+
+2015-11-04 15:34:45,886 INFO: - App:  ---> a6717957e7a6
+
+2015-11-04 15:34:45,900 INFO: - App: Removing intermediate container ce6bd16bfce4
+
+2015-11-04 15:34:45,903 INFO: - App: Successfully built a6717957e7a6
+
+2015-11-04 15:34:45,907 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology-test to private registry...
+2015-11-04 15:34:55,655 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 15:35:04,527 INFO: - App: Successfully built app marcocaggioni-microrheology-test
+2015-11-04 19:09:31,593 INFO: - App: Building service dependencies...
+2015-11-04 19:09:31,596 INFO: - App: Copying files and filling templates...
+2015-11-04 19:09:31,618 INFO: - App: Building app image without Dockerfile...
+2015-11-04 19:09:31,651 INFO: - App: Sending build context to Docker daemon 239.6 kBSending build context to Docker daemon 239.6 kB
+
+2015-11-04 19:09:31,675 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 19:09:31,679 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 19:09:31,682 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-04 19:09:31,895 INFO: - App:  ---> 890e30d42558
+
+2015-11-04 19:09:31,908 INFO: - App: Removing intermediate container 17c6db1b73d9
+
+2015-11-04 19:09:31,916 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-04 19:09:32,096 INFO: - App:  ---> 02500b19bc08
+
+2015-11-04 19:09:32,104 INFO: - App: Removing intermediate container aaca0a86ea4d
+
+2015-11-04 19:09:32,106 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-04 19:09:32,191 INFO: - App:  ---> Running in 50389250a231
+
+2015-11-04 19:09:32,356 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-04 19:09:33,686 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 19:09:33,692 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 19:09:33,707 INFO: - App: Collecting trackpy (from -r requirements.txt (line 1))
+
+2015-11-04 19:09:33,837 INFO: - App:   Downloading trackpy-0.2.4.tar.gz (59kB)
+
+2015-11-04 19:09:34,224 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-04 19:09:34,342 INFO: - App:   Downloading PIMS-0.3.1.tar.gz (70kB)
+
+2015-11-04 19:09:34,589 INFO: - App: Collecting pymongo (from -r requirements.txt (line 3))
+
+2015-11-04 19:09:35,117 INFO: - App:   Downloading pymongo-3.1.tar.gz (462kB)
+
+2015-11-04 19:09:35,504 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,539 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,552 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,601 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,635 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,641 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,653 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-04 19:09:35,677 INFO: - App:   Downloading slicerator-0.9.4.tar.gz
+
+2015-11-04 19:09:35,767 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,772 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,775 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,777 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,779 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:35,782 INFO: - App: Installing collected packages: slicerator, pims, trackpy, pymongo
+
+2015-11-04 19:09:35,785 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-04 19:09:36,008 INFO: - App:   Running setup.py install for pims
+
+2015-11-04 19:09:36,302 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-04 19:09:36,607 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-04 19:09:38,659 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-04 19:09:38,687 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-04 19:09:39,019 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 19:09:39,023 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 19:09:39,039 INFO: - App: Collecting trackpy (from -r requirements.txt (line 1))
+
+2015-11-04 19:09:39,092 INFO: - App:   Using cached trackpy-0.2.4.tar.gz
+
+2015-11-04 19:09:39,527 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-04 19:09:39,538 INFO: - App:   Using cached PIMS-0.3.1.tar.gz
+
+2015-11-04 19:09:39,831 INFO: - App: Collecting pymongo (from -r requirements.txt (line 3))
+
+2015-11-04 19:09:40,325 INFO: - App:   Using cached pymongo-3.1.tar.gz
+
+2015-11-04 19:09:40,705 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:40,708 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:40,713 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:40,718 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:40,731 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:40,744 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:40,753 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-04 19:09:40,756 INFO: - App:   Using cached slicerator-0.9.4.tar.gz
+
+2015-11-04 19:09:40,991 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:40,995 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:40,999 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:41,002 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 1))
+
+2015-11-04 19:09:41,005 INFO: - App: Installing collected packages: slicerator, pims, trackpy, pymongo
+
+2015-11-04 19:09:41,007 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-04 19:09:41,311 INFO: - App:   Running setup.py install for pims
+
+2015-11-04 19:09:41,691 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-04 19:09:42,127 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-04 19:09:44,296 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-04 19:09:44,696 INFO: - App:  ---> 0f7fbc1cc947
+
+2015-11-04 19:09:44,727 INFO: - App: Removing intermediate container 50389250a231
+
+2015-11-04 19:09:44,742 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-04 19:09:44,912 INFO: - App:  ---> 809b9ef20a09
+
+2015-11-04 19:09:44,928 INFO: - App: Removing intermediate container 946533fac00d
+
+2015-11-04 19:09:44,936 INFO: - App: Step 5 : USER root
+
+2015-11-04 19:09:45,010 INFO: - App:  ---> Running in 8bc37430ca48
+
+2015-11-04 19:09:45,068 INFO: - App:  ---> 4979d8272ce0
+
+2015-11-04 19:09:45,084 INFO: - App: Removing intermediate container 8bc37430ca48
+
+2015-11-04 19:09:45,086 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 19:09:45,147 INFO: - App:  ---> Running in 890bb4771c5b
+
+2015-11-04 19:09:45,581 INFO: - App:  ---> b6ab3de994f0
+
+2015-11-04 19:09:45,638 INFO: - App: Removing intermediate container 890bb4771c5b
+
+2015-11-04 19:09:45,660 INFO: - App: Step 7 : USER main
+
+2015-11-04 19:09:45,712 INFO: - App:  ---> Running in 7fdcdf29725c
+
+2015-11-04 19:09:45,764 INFO: - App:  ---> b26f654b9c89
+
+2015-11-04 19:09:45,778 INFO: - App: Removing intermediate container 7fdcdf29725c
+
+2015-11-04 19:09:45,797 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 19:09:45,847 INFO: - App:  ---> Running in 054e8df3e2da
+
+2015-11-04 19:09:46,338 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-04 19:09:46,610 INFO: - App:  ---> 32799dc5c9d0
+
+2015-11-04 19:09:46,619 INFO: - App: Removing intermediate container 054e8df3e2da
+
+2015-11-04 19:09:46,623 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-04 19:09:46,717 INFO: - App:  ---> Running in 19cfa3c9a8e5
+
+2015-11-04 19:09:46,763 INFO: - App:  ---> a8eaafcbffa5
+
+2015-11-04 19:09:46,771 INFO: - App: Removing intermediate container 19cfa3c9a8e5
+
+2015-11-04 19:09:46,774 INFO: - App: Successfully built a8eaafcbffa5
+
+2015-11-04 19:09:46,780 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology-test to private registry...
+2015-11-04 19:09:58,598 INFO: - App: Preloading app image onto all nodes...

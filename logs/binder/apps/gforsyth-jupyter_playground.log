@@ -1,0 +1,889 @@
+2015-10-26 15:30:48,021 INFO: - App: Building service dependencies...
+2015-10-26 15:30:48,024 INFO: - App: Copying files and filling templates...
+2015-10-26 15:30:48,053 INFO: - App: Building app image without Dockerfile...
+2015-10-26 15:30:48,080 INFO: - App: Sending build context to Docker daemon 59.39 kBSending build context to Docker daemon 59.39 kB
+
+2015-10-26 15:30:48,101 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 15:30:48,104 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 15:30:48,107 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-26 15:30:48,272 INFO: - App:  ---> 6ab8493cdccb
+
+2015-10-26 15:30:48,281 INFO: - App: Removing intermediate container 94ffe4401c6d
+
+2015-10-26 15:30:48,283 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-26 15:30:48,432 INFO: - App:  ---> a3fd6915e5f8
+
+2015-10-26 15:30:48,440 INFO: - App: Removing intermediate container e4bdbbd6e0af
+
+2015-10-26 15:30:48,442 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-26 15:30:48,513 INFO: - App:  ---> Running in 8a4a8c9785cb
+
+2015-10-26 15:30:48,657 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 15:30:49,958 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 15:30:49,960 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 15:30:50,008 INFO: - App: Collecting bqplot==0.4.2 (from -r requirements.txt (line 1))
+
+2015-10-26 15:30:50,095 INFO: - App:   Downloading bqplot-0.4.2-py2.py3-none-any.whl (518kB)
+
+2015-10-26 15:30:50,252 INFO: - App: Collecting certifi==2015.9.6.2 (from -r requirements.txt (line 2))
+
+2015-10-26 15:30:50,294 INFO: - App:   Downloading certifi-2015.9.6.2-py2.py3-none-any.whl (371kB)
+
+2015-10-26 15:30:50,347 INFO: - App: Collecting decorator==4.0.4 (from -r requirements.txt (line 3))
+
+2015-10-26 15:30:50,384 INFO: - App:   Downloading decorator-4.0.4-py2.py3-none-any.whl
+
+2015-10-26 15:30:50,403 INFO: - App: Collecting ipykernel==4.1.1 (from -r requirements.txt (line 4))
+
+2015-10-26 15:30:50,446 INFO: - App:   Downloading ipykernel-4.1.1-py2.py3-none-any.whl (90kB)
+
+2015-10-26 15:30:50,483 INFO: - App: Collecting ipython==4.0.0 (from -r requirements.txt (line 5))
+
+2015-10-26 15:30:50,561 INFO: - App:   Downloading ipython-4.0.0-py2-none-any.whl (730kB)
+
+2015-10-26 15:30:50,731 INFO: - App: Collecting ipython-genutils==0.1.0 (from -r requirements.txt (line 6))
+
+2015-10-26 15:30:50,764 INFO: - App:   Downloading ipython_genutils-0.1.0-py2.py3-none-any.whl
+
+2015-10-26 15:30:50,816 INFO: - App: Collecting ipywidgets==4.1.0 (from -r requirements.txt (line 7))
+
+2015-10-26 15:30:50,845 INFO: - App:   Downloading ipywidgets-4.1.0-py2.py3-none-any.whl (117kB)
+
+2015-10-26 15:30:50,888 INFO: - App: Collecting Jinja2==2.8 (from -r requirements.txt (line 8))
+
+2015-10-26 15:30:50,936 INFO: - App:   Downloading Jinja2-2.8-py2.py3-none-any.whl (263kB)
+
+2015-10-26 15:30:50,967 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jsonschema==2.4.0 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 9))
+
+2015-10-26 15:30:50,982 INFO: - App: Collecting jupyter==1.0.0 (from -r requirements.txt (line 10))
+
+2015-10-26 15:30:51,015 INFO: - App:   Downloading jupyter-1.0.0-py2.py3-none-any.whl
+
+2015-10-26 15:30:51,051 INFO: - App: Collecting jupyter-client==4.1.1 (from -r requirements.txt (line 11))
+
+2015-10-26 15:30:51,088 INFO: - App:   Downloading jupyter_client-4.1.1-py2.py3-none-any.whl (70kB)
+
+2015-10-26 15:30:51,134 INFO: - App: Collecting jupyter-console==4.0.3 (from -r requirements.txt (line 12))
+
+2015-10-26 15:30:51,174 INFO: - App:   Downloading jupyter_console-4.0.3-py2.py3-none-any.whl
+
+2015-10-26 15:30:51,211 INFO: - App: Collecting jupyter-core==4.0.6 (from -r requirements.txt (line 13))
+
+2015-10-26 15:30:51,253 INFO: - App:   Downloading jupyter_core-4.0.6-py2.py3-none-any.whl (74kB)
+
+2015-10-26 15:30:51,288 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): MarkupSafe==0.23 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 14))
+
+2015-10-26 15:30:51,290 INFO: - App: Collecting mistune==0.7.1 (from -r requirements.txt (line 15))
+
+2015-10-26 15:30:51,341 INFO: - App:   Downloading mistune-0.7.1-py2.py3-none-any.whl
+
+2015-10-26 15:30:51,357 INFO: - App: Collecting nbconvert==4.0.0 (from -r requirements.txt (line 16))
+
+2015-10-26 15:30:51,390 INFO: - App:   Downloading nbconvert-4.0.0-py2.py3-none-any.whl (278kB)
+
+2015-10-26 15:30:51,490 INFO: - App: Collecting nbformat==4.0.1 (from -r requirements.txt (line 17))
+
+2015-10-26 15:30:51,528 INFO: - App:   Downloading nbformat-4.0.1-py2.py3-none-any.whl (138kB)
+
+2015-10-26 15:30:51,583 INFO: - App: Collecting notebook==4.0.6 (from -r requirements.txt (line 18))
+
+2015-10-26 15:30:51,630 INFO: - App:   Downloading notebook-4.0.6-py2.py3-none-any.whl (5.6MB)
+
+2015-10-26 15:30:52,639 INFO: - App: Collecting numpy==1.10.1 (from -r requirements.txt (line 19))
+
+2015-10-26 15:30:52,708 INFO: - App:   Downloading numpy-1.10.1.tar.gz (4.0MB)
+
+2015-10-26 15:30:53,989 INFO: - App: Collecting pandas==0.17.0 (from -r requirements.txt (line 20))
+
+2015-10-26 15:30:54,178 INFO: - App:   Downloading pandas-0.17.0.tar.gz (6.5MB)
+
+2015-10-26 15:30:55,832 INFO: - App: Collecting path.py==0.0.0 (from -r requirements.txt (line 21))
+
+2015-10-26 15:30:55,882 INFO: - App:   Could not find a version that satisfies the requirement path.py==0.0.0 (from -r requirements.txt (line 21)) (from versions: 2.2.2, 2.3, 2.4, 2.4.1, 2.5, 2.6, 2.6.1, 3.0, 3.0.1, 3.1, 3.2, 4.0, 4.1, 4.2, 4.3, 4.4, 5.0, 5.1, 5.2, 5.3, 6.0, 6.1, 6.2, 7.0, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.6.1, 7.6.2, 7.7, 7.7.1, 8.1, 8.1.1, 8.1.2)
+
+2015-10-26 15:30:55,885 INFO: - App: [91m  Some externally hosted files were ignored as access to them may be unreliable (use --allow-external path.py to allow).
+
+2015-10-26 15:30:56,057 INFO: - App: [91mNo matching distribution found for path.py==0.0.0 (from -r requirements.txt (line 21))
+
+2015-10-26 15:30:56,095 INFO: - App: installation command failed: Command '['pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-26 15:30:56,096 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 15:30:56,389 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 15:30:56,391 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 15:30:56,423 INFO: - App: Collecting bqplot==0.4.2 (from -r requirements.txt (line 1))
+
+2015-10-26 15:30:56,466 INFO: - App:   Using cached bqplot-0.4.2-py2.py3-none-any.whl
+
+2015-10-26 15:30:56,515 INFO: - App: Collecting certifi==2015.9.6.2 (from -r requirements.txt (line 2))
+
+2015-10-26 15:30:56,535 INFO: - App:   Using cached certifi-2015.9.6.2-py2.py3-none-any.whl
+
+2015-10-26 15:30:56,546 INFO: - App: Collecting decorator==4.0.4 (from -r requirements.txt (line 3))
+
+2015-10-26 15:30:56,559 INFO: - App:   Using cached decorator-4.0.4-py2.py3-none-any.whl
+
+2015-10-26 15:30:56,575 INFO: - App: Collecting ipykernel==4.1.1 (from -r requirements.txt (line 4))
+
+2015-10-26 15:30:56,599 INFO: - App:   Using cached ipykernel-4.1.1-py2.py3-none-any.whl
+
+2015-10-26 15:30:56,618 INFO: - App: Collecting ipython==4.0.0 (from -r requirements.txt (line 5))
+
+2015-10-26 15:30:56,764 INFO: - App:   Downloading ipython-4.0.0-py3-none-any.whl (730kB)
+
+2015-10-26 15:30:56,959 INFO: - App: Collecting ipython-genutils==0.1.0 (from -r requirements.txt (line 6))
+
+2015-10-26 15:30:56,967 INFO: - App:   Using cached ipython_genutils-0.1.0-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,001 INFO: - App: Collecting ipywidgets==4.1.0 (from -r requirements.txt (line 7))
+
+2015-10-26 15:30:57,014 INFO: - App:   Using cached ipywidgets-4.1.0-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,046 INFO: - App: Collecting Jinja2==2.8 (from -r requirements.txt (line 8))
+
+2015-10-26 15:30:57,070 INFO: - App:   Using cached Jinja2-2.8-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,084 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jsonschema==2.4.0 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 9))
+
+2015-10-26 15:30:57,101 INFO: - App: Collecting jupyter==1.0.0 (from -r requirements.txt (line 10))
+
+2015-10-26 15:30:57,113 INFO: - App:   Using cached jupyter-1.0.0-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,141 INFO: - App: Collecting jupyter-client==4.1.1 (from -r requirements.txt (line 11))
+
+2015-10-26 15:30:57,177 INFO: - App:   Using cached jupyter_client-4.1.1-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,201 INFO: - App: Collecting jupyter-console==4.0.3 (from -r requirements.txt (line 12))
+
+2015-10-26 15:30:57,218 INFO: - App:   Using cached jupyter_console-4.0.3-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,233 INFO: - App: Collecting jupyter-core==4.0.6 (from -r requirements.txt (line 13))
+
+2015-10-26 15:30:57,252 INFO: - App:   Using cached jupyter_core-4.0.6-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,284 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): MarkupSafe==0.23 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 14))
+
+2015-10-26 15:30:57,309 INFO: - App: Collecting mistune==0.7.1 (from -r requirements.txt (line 15))
+
+2015-10-26 15:30:57,324 INFO: - App:   Using cached mistune-0.7.1-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,333 INFO: - App: Collecting nbconvert==4.0.0 (from -r requirements.txt (line 16))
+
+2015-10-26 15:30:57,386 INFO: - App:   Using cached nbconvert-4.0.0-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,404 INFO: - App: Collecting nbformat==4.0.1 (from -r requirements.txt (line 17))
+
+2015-10-26 15:30:57,414 INFO: - App:   Using cached nbformat-4.0.1-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,459 INFO: - App: Collecting notebook==4.0.6 (from -r requirements.txt (line 18))
+
+2015-10-26 15:30:57,555 INFO: - App:   Using cached notebook-4.0.6-py2.py3-none-any.whl
+
+2015-10-26 15:30:57,871 INFO: - App: Collecting numpy==1.10.1 (from -r requirements.txt (line 19))
+
+2015-10-26 15:30:57,980 INFO: - App:   Using cached numpy-1.10.1.tar.gz
+
+2015-10-26 15:30:58,931 INFO: - App: Collecting pandas==0.17.0 (from -r requirements.txt (line 20))
+
+2015-10-26 15:30:59,174 INFO: - App:   Using cached pandas-0.17.0.tar.gz
+
+2015-10-26 15:31:00,251 INFO: - App: Collecting path.py==0.0.0 (from -r requirements.txt (line 21))
+
+2015-10-26 15:31:00,283 INFO: - App:   Could not find a version that satisfies the requirement path.py==0.0.0 (from -r requirements.txt (line 21)) (from versions: 2.2.2, 2.3, 2.4, 2.4.1, 2.5, 2.6, 2.6.1, 3.0, 3.0.1, 3.1, 3.2, 4.0, 4.1, 4.2, 4.3, 4.4, 5.0, 5.1, 5.2, 5.3, 6.0, 6.1, 6.2, 7.0, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.6.1, 7.6.2, 7.7, 7.7.1, 8.1, 8.1.1, 8.1.2)
+
+2015-10-26 15:31:00,286 INFO: - App: [91m  Some externally hosted files were ignored as access to them may be unreliable (use --allow-external path.py to allow).
+
+2015-10-26 15:31:00,480 INFO: - App: [91mNo matching distribution found for path.py==0.0.0 (from -r requirements.txt (line 21))
+
+2015-10-26 15:31:00,531 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-26 15:31:00,533 INFO: - App: Traceback (most recent call last):
+
+2015-10-26 15:31:00,535 INFO: - App:   File "handle-requirements.py", line 19, in <module>
+
+2015-10-26 15:31:00,537 INFO: - App: [91m    raise Exception("All installation commands failed")
+
+2015-10-26 15:31:00,539 INFO: - App: Exception: All installation commands failed
+
+2015-10-26 15:31:00,783 ERROR: - App: The command '/bin/sh -c python handle-requirements.py' returned a non-zero code: 1
+
+2015-10-26 15:31:00,786 INFO: - App: 
+2015-10-26 15:31:00,788 ERROR: - App: could not build app gforsyth-jupyter_playground: Command '['docker', 'build', '-t', u'gcr.io/generic-notebooks/gforsyth-jupyter_playground', '--no-cache', u'/home/andrew/binder/apps/gforsyth-jupyter_playground/build/app']' returned non-zero exit status 1
+2015-10-26 15:35:39,677 INFO: - App: Building service dependencies...
+2015-10-26 15:35:39,679 INFO: - App: Copying files and filling templates...
+2015-10-26 15:35:39,693 INFO: - App: Building app image without Dockerfile...
+2015-10-26 15:35:39,722 INFO: - App: Sending build context to Docker daemon 71.68 kBSending build context to Docker daemon 71.68 kB
+
+2015-10-26 15:35:39,741 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 15:35:39,743 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 15:35:39,746 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-26 15:35:39,912 INFO: - App:  ---> fd6520ceba87
+
+2015-10-26 15:35:39,925 INFO: - App: Removing intermediate container 64d8d85ca064
+
+2015-10-26 15:35:39,929 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-26 15:35:40,093 INFO: - App:  ---> 3e80acb5c98a
+
+2015-10-26 15:35:40,101 INFO: - App: Removing intermediate container ce1c0346db46
+
+2015-10-26 15:35:40,103 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-26 15:35:40,168 INFO: - App:  ---> Running in 420076a382ac
+
+2015-10-26 15:35:40,320 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 15:35:41,682 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 15:35:41,704 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 15:35:41,738 INFO: - App: Collecting bqplot (from -r requirements.txt (line 1))
+
+2015-10-26 15:35:41,808 INFO: - App:   Downloading bqplot-0.4.2-py2.py3-none-any.whl (518kB)
+
+2015-10-26 15:35:41,944 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:41,970 INFO: - App: Collecting ipywidgets (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:42,002 INFO: - App:   Downloading ipywidgets-4.1.0-py2.py3-none-any.whl (117kB)
+
+2015-10-26 15:35:42,039 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:42,053 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:42,071 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:42,086 INFO: - App: Collecting ipykernel (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:42,098 INFO: - App:   Downloading ipykernel-4.1.1-py2.py3-none-any.whl (90kB)
+
+2015-10-26 15:35:42,157 INFO: - App: Collecting traitlets (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:42,195 INFO: - App:   Downloading traitlets-4.0.0-py2.py3-none-any.whl (56kB)
+
+2015-10-26 15:35:42,216 INFO: - App: Collecting ipython>=4.0.0dev0 (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:42,292 INFO: - App:   Downloading ipython-4.0.0-py2-none-any.whl (730kB)
+
+2015-10-26 15:35:42,458 INFO: - App: Collecting notebook (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:42,495 INFO: - App:   Downloading notebook-4.0.6-py2.py3-none-any.whl (5.6MB)
+
+2015-10-26 15:35:43,331 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/lib/python2.7/site-packages (from python-dateutil->pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:43,345 INFO: - App: Collecting jupyter-client (from ipykernel->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:43,381 INFO: - App:   Downloading jupyter_client-4.1.1-py2.py3-none-any.whl (70kB)
+
+2015-10-26 15:35:43,415 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): decorator in ./anaconda/lib/python2.7/site-packages (from traitlets->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:43,430 INFO: - App: Collecting ipython-genutils (from traitlets->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:43,462 INFO: - App:   Downloading ipython_genutils-0.1.0-py2.py3-none-any.whl
+
+2015-10-26 15:35:43,499 INFO: - App: Collecting simplegeneric>0.8 (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:43,531 INFO: - App:   Downloading simplegeneric-0.8.1.zip
+
+2015-10-26 15:35:43,806 INFO: - App: Collecting pexpect (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:43,845 INFO: - App:   Downloading pexpect-4.0.1.tar.gz (143kB)
+
+2015-10-26 15:35:44,105 INFO: - App: Collecting pickleshare (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,148 INFO: - App:   Downloading pickleshare-0.5.tar.gz
+
+2015-10-26 15:35:44,352 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): tornado>=4 in ./anaconda/lib/python2.7/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,358 INFO: - App: Collecting nbformat (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,384 INFO: - App:   Downloading nbformat-4.0.1-py2.py3-none-any.whl (138kB)
+
+2015-10-26 15:35:44,454 INFO: - App: Collecting jupyter-core (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,500 INFO: - App:   Downloading jupyter_core-4.0.6-py2.py3-none-any.whl (74kB)
+
+2015-10-26 15:35:44,531 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jinja2 in ./anaconda/lib/python2.7/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,554 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): terminado>=0.3.3 in ./anaconda/lib/python2.7/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,561 INFO: - App: Collecting nbconvert (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,584 INFO: - App:   Downloading nbconvert-4.0.0-py2.py3-none-any.whl (278kB)
+
+2015-10-26 15:35:44,650 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyzmq>=13 in ./anaconda/lib/python2.7/site-packages (from jupyter-client->ipykernel->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,662 INFO: - App: Collecting ptyprocess>=0.5 (from pexpect->ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,688 INFO: - App:   Downloading ptyprocess-0.5.tar.gz
+
+2015-10-26 15:35:44,873 INFO: - App: Collecting path.py (from pickleshare->ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,939 INFO: - App:   Downloading path.py-8.1.2-py2.py3-none-any.whl
+
+2015-10-26 15:35:44,964 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jsonschema!=2.5.0,>=2.0 in ./anaconda/lib/python2.7/site-packages (from nbformat->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:44,984 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pygments in ./anaconda/lib/python2.7/site-packages (from nbconvert->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:45,012 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mistune!=0.6 in ./anaconda/lib/python2.7/site-packages (from nbconvert->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:45,023 INFO: - App: Installing collected packages: simplegeneric, ptyprocess, pexpect, ipython-genutils, traitlets, path.py, pickleshare, ipython, jupyter-core, jupyter-client, ipykernel, nbformat, nbconvert, notebook, ipywidgets, bqplot
+
+2015-10-26 15:35:45,041 INFO: - App:   Running setup.py install for simplegeneric
+
+2015-10-26 15:35:45,191 INFO: - App:   Found existing installation: ptyprocess 0.4
+
+2015-10-26 15:35:45,214 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ptyprocess) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-10-26 15:35:45,224 INFO: - App:     Uninstalling ptyprocess-0.4:
+
+2015-10-26 15:35:45,236 INFO: - App:       Successfully uninstalled ptyprocess-0.4
+
+2015-10-26 15:35:45,252 INFO: - App:   Running setup.py install for ptyprocess
+
+2015-10-26 15:35:45,455 INFO: - App:   Running setup.py install for pexpect
+
+2015-10-26 15:35:45,808 INFO: - App:   Running setup.py install for pickleshare
+
+2015-10-26 15:35:46,031 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-10-26 15:35:46,048 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-10-26 15:35:46,084 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-10-26 15:35:46,102 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-10-26 15:35:48,062 INFO: - App: Successfully installed bqplot-0.4.2 ipykernel-4.1.1 ipython-4.0.0 ipython-genutils-0.1.0 ipywidgets-4.1.0 jupyter-client-4.1.1 jupyter-core-4.0.6 nbconvert-4.0.0 nbformat-4.0.1 notebook-4.0.6 path.py-8.1.2 pexpect-4.0.1 pickleshare-0.5 ptyprocess-0.5 simplegeneric-0.8.1 traitlets-4.0.0
+
+2015-10-26 15:35:48,207 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 15:35:48,513 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 15:35:48,515 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 15:35:48,531 INFO: - App: Collecting bqplot (from -r requirements.txt (line 1))
+
+2015-10-26 15:35:48,576 INFO: - App:   Using cached bqplot-0.4.2-py2.py3-none-any.whl
+
+2015-10-26 15:35:48,627 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:48,642 INFO: - App: Collecting ipywidgets (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:48,656 INFO: - App:   Using cached ipywidgets-4.1.0-py2.py3-none-any.whl
+
+2015-10-26 15:35:48,689 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:48,690 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:48,692 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:48,704 INFO: - App: Collecting notebook (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:48,796 INFO: - App:   Using cached notebook-4.0.6-py2.py3-none-any.whl
+
+2015-10-26 15:35:49,133 INFO: - App: Collecting ipython>=4.0.0dev0 (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,258 INFO: - App:   Downloading ipython-4.0.0-py3-none-any.whl (730kB)
+
+2015-10-26 15:35:49,453 INFO: - App: Collecting ipykernel (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,468 INFO: - App:   Using cached ipykernel-4.1.1-py2.py3-none-any.whl
+
+2015-10-26 15:35:49,510 INFO: - App: Collecting traitlets (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,521 INFO: - App:   Using cached traitlets-4.0.0-py2.py3-none-any.whl
+
+2015-10-26 15:35:49,543 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/envs/python3/lib/python3.3/site-packages (from python-dateutil>=2->pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,556 INFO: - App: Collecting jupyter-client (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,567 INFO: - App:   Using cached jupyter_client-4.1.1-py2.py3-none-any.whl
+
+2015-10-26 15:35:49,605 INFO: - App: Collecting nbformat (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,615 INFO: - App:   Using cached nbformat-4.0.1-py2.py3-none-any.whl
+
+2015-10-26 15:35:49,648 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): terminado>=0.3.3 in ./anaconda/envs/python3/lib/python3.3/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,650 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jinja2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,662 INFO: - App: Collecting ipython-genutils (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,670 INFO: - App:   Using cached ipython_genutils-0.1.0-py2.py3-none-any.whl
+
+2015-10-26 15:35:49,702 INFO: - App: Collecting nbconvert (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,713 INFO: - App:   Using cached nbconvert-4.0.0-py2.py3-none-any.whl
+
+2015-10-26 15:35:49,777 INFO: - App: Collecting jupyter-core (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,793 INFO: - App:   Using cached jupyter_core-4.0.6-py2.py3-none-any.whl
+
+2015-10-26 15:35:49,817 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): tornado>=4 in ./anaconda/envs/python3/lib/python3.3/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,831 INFO: - App: Collecting pexpect (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:49,847 INFO: - App:   Using cached pexpect-4.0.1.tar.gz
+
+2015-10-26 15:35:50,225 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): decorator in ./anaconda/envs/python3/lib/python3.3/site-packages (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:50,247 INFO: - App: Collecting simplegeneric>0.8 (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:50,256 INFO: - App:   Using cached simplegeneric-0.8.1.zip
+
+2015-10-26 15:35:50,519 INFO: - App: Collecting pickleshare (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:50,530 INFO: - App:   Using cached pickleshare-0.5.tar.gz
+
+2015-10-26 15:35:50,783 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyzmq>=13 in ./anaconda/envs/python3/lib/python3.3/site-packages (from jupyter-client->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:50,785 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jsonschema!=2.5.0,>=2.0 in ./anaconda/envs/python3/lib/python3.3/site-packages (from nbformat->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:50,786 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pygments in ./anaconda/envs/python3/lib/python3.3/site-packages (from nbconvert->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:50,788 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mistune!=0.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from nbconvert->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:50,789 INFO: - App: Collecting ptyprocess>=0.5 (from pexpect->ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:50,795 INFO: - App:   Using cached ptyprocess-0.5.tar.gz
+
+2015-10-26 15:35:51,055 INFO: - App: Collecting path.py (from pickleshare->ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 15:35:51,089 INFO: - App:   Using cached path.py-8.1.2-py2.py3-none-any.whl
+
+2015-10-26 15:35:51,107 INFO: - App: Installing collected packages: ipython-genutils, traitlets, jupyter-core, jupyter-client, nbformat, nbconvert, ptyprocess, pexpect, simplegeneric, path.py, pickleshare, ipython, ipykernel, notebook, ipywidgets, bqplot
+
+2015-10-26 15:35:51,604 INFO: - App:   Found existing installation: ptyprocess 0.4
+
+2015-10-26 15:35:51,633 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ptyprocess) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-10-26 15:35:51,641 INFO: - App:     Uninstalling ptyprocess-0.4:
+
+2015-10-26 15:35:51,642 INFO: - App:       Successfully uninstalled ptyprocess-0.4
+
+2015-10-26 15:35:51,644 INFO: - App:   Running setup.py install for ptyprocess
+
+2015-10-26 15:35:51,955 INFO: - App:   Running setup.py install for pexpect
+
+2015-10-26 15:35:52,304 INFO: - App:   Running setup.py install for simplegeneric
+
+2015-10-26 15:35:52,628 INFO: - App:   Running setup.py install for pickleshare
+
+2015-10-26 15:35:52,945 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-10-26 15:35:52,948 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-10-26 15:35:52,950 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-10-26 15:35:52,961 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-10-26 15:35:54,904 INFO: - App: Successfully installed bqplot-0.4.2 ipykernel-4.1.1 ipython-4.0.0 ipython-genutils-0.1.0 ipywidgets-4.1.0 jupyter-client-4.1.1 jupyter-core-4.0.6 nbconvert-4.0.0 nbformat-4.0.1 notebook-4.0.6 path.py-8.1.2 pexpect-4.0.1 pickleshare-0.5 ptyprocess-0.5 simplegeneric-0.8.1 traitlets-4.0.0
+
+2015-10-26 15:35:58,129 INFO: - App:  ---> e6e5f3b6c5cd
+
+2015-10-26 15:35:58,290 INFO: - App: Removing intermediate container 420076a382ac
+
+2015-10-26 15:35:58,292 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-26 15:35:58,465 INFO: - App:  ---> 3d7b64599ead
+
+2015-10-26 15:35:58,474 INFO: - App: Removing intermediate container f3aa02b44aff
+
+2015-10-26 15:35:58,476 INFO: - App: Step 5 : USER root
+
+2015-10-26 15:35:58,544 INFO: - App:  ---> Running in 2e8db3a479d4
+
+2015-10-26 15:35:58,600 INFO: - App:  ---> aa48a186466d
+
+2015-10-26 15:35:58,611 INFO: - App: Removing intermediate container 2e8db3a479d4
+
+2015-10-26 15:35:58,617 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 15:35:58,675 INFO: - App:  ---> Running in 832bd0983907
+
+2015-10-26 15:35:59,101 INFO: - App:  ---> 18a5f0b4b22a
+
+2015-10-26 15:35:59,106 INFO: - App: Removing intermediate container 832bd0983907
+
+2015-10-26 15:35:59,112 INFO: - App: Step 7 : USER main
+
+2015-10-26 15:35:59,196 INFO: - App:  ---> Running in 6c67a60a2bd5
+
+2015-10-26 15:35:59,243 INFO: - App:  ---> 012a9aab2aa0
+
+2015-10-26 15:35:59,254 INFO: - App: Removing intermediate container 6c67a60a2bd5
+
+2015-10-26 15:35:59,256 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 15:35:59,327 INFO: - App:  ---> Running in 0666624bd920
+
+2015-10-26 15:35:59,890 INFO: - App: [TrustNotebookApp] Copying /home/main/.ipython/kernels -> /home/main/.local/share/jupyter/kernels
+
+2015-10-26 15:35:59,917 INFO: - App: [91m[TrustNotebookApp] Writing notebook-signing key to /home/main/.local/share/jupyter/notebook_secret
+
+2015-10-26 15:35:59,923 INFO: - App: Signing notebook: /home/main/notebooks/bqplot.ipynb
+
+2015-10-26 15:36:00,204 INFO: - App:  ---> ec86a24e08f9
+
+2015-10-26 15:36:00,212 INFO: - App: Removing intermediate container 0666624bd920
+
+2015-10-26 15:36:00,214 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-26 15:36:00,285 INFO: - App:  ---> Running in e09d55690bdb
+
+2015-10-26 15:36:00,344 INFO: - App:  ---> b0ee943ba34a
+
+2015-10-26 15:36:00,354 INFO: - App: Removing intermediate container e09d55690bdb
+
+2015-10-26 15:36:00,358 INFO: - App: Successfully built b0ee943ba34a
+
+2015-10-26 15:36:00,364 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/gforsyth-jupyter_playground to private registry...
+2015-10-26 15:36:17,536 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 15:36:26,785 INFO: - App: Successfully built app gforsyth-jupyter_playground
+2015-10-26 16:06:19,153 INFO: - App: Building service dependencies...
+2015-10-26 16:06:19,156 INFO: - App: Copying files and filling templates...
+2015-10-26 16:06:19,187 INFO: - App: Building app image without Dockerfile...
+2015-10-26 16:06:19,229 INFO: - App: Sending build context to Docker daemon 82.94 kBSending build context to Docker daemon 82.94 kB
+
+2015-10-26 16:06:19,240 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 16:06:19,241 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 16:06:19,243 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-26 16:06:19,394 INFO: - App:  ---> 279e60918000
+
+2015-10-26 16:06:19,405 INFO: - App: Removing intermediate container db137c7ac5ae
+
+2015-10-26 16:06:19,408 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-26 16:06:19,556 INFO: - App:  ---> e2bc8940439a
+
+2015-10-26 16:06:19,564 INFO: - App: Removing intermediate container 08a120895cbe
+
+2015-10-26 16:06:19,566 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-26 16:06:19,646 INFO: - App:  ---> Running in ffa8f559e414
+
+2015-10-26 16:06:19,781 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 16:06:21,147 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 16:06:21,149 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 16:06:21,159 INFO: - App: Collecting bqplot (from -r requirements.txt (line 1))
+
+2015-10-26 16:06:21,267 INFO: - App:   Downloading bqplot-0.4.2-py2.py3-none-any.whl (518kB)
+
+2015-10-26 16:06:21,413 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:21,428 INFO: - App: Collecting ipywidgets (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:21,464 INFO: - App:   Downloading ipywidgets-4.1.0-py2.py3-none-any.whl (117kB)
+
+2015-10-26 16:06:21,512 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:21,514 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:21,516 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:21,525 INFO: - App: Collecting ipykernel (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:21,564 INFO: - App:   Downloading ipykernel-4.1.1-py2.py3-none-any.whl (90kB)
+
+2015-10-26 16:06:21,612 INFO: - App: Collecting traitlets (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:21,646 INFO: - App:   Downloading traitlets-4.0.0-py2.py3-none-any.whl (56kB)
+
+2015-10-26 16:06:21,675 INFO: - App: Collecting ipython>=4.0.0dev0 (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:21,747 INFO: - App:   Downloading ipython-4.0.0-py2-none-any.whl (730kB)
+
+2015-10-26 16:06:21,916 INFO: - App: Collecting notebook (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:21,956 INFO: - App:   Downloading notebook-4.0.6-py2.py3-none-any.whl (5.6MB)
+
+2015-10-26 16:06:22,776 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/lib/python2.7/site-packages (from python-dateutil->pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:22,787 INFO: - App: Collecting jupyter-client (from ipykernel->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:22,823 INFO: - App:   Downloading jupyter_client-4.1.1-py2.py3-none-any.whl (70kB)
+
+2015-10-26 16:06:22,856 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): decorator in ./anaconda/lib/python2.7/site-packages (from traitlets->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:22,872 INFO: - App: Collecting ipython-genutils (from traitlets->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:22,907 INFO: - App:   Downloading ipython_genutils-0.1.0-py2.py3-none-any.whl
+
+2015-10-26 16:06:22,947 INFO: - App: Collecting simplegeneric>0.8 (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:22,986 INFO: - App:   Downloading simplegeneric-0.8.1.zip
+
+2015-10-26 16:06:23,267 INFO: - App: Collecting pexpect (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:23,308 INFO: - App:   Downloading pexpect-4.0.1.tar.gz (143kB)
+
+2015-10-26 16:06:23,570 INFO: - App: Collecting pickleshare (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:23,608 INFO: - App:   Downloading pickleshare-0.5.tar.gz
+
+2015-10-26 16:06:23,792 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): tornado>=4 in ./anaconda/lib/python2.7/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:23,808 INFO: - App: Collecting nbformat (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:23,844 INFO: - App:   Downloading nbformat-4.0.1-py2.py3-none-any.whl (138kB)
+
+2015-10-26 16:06:23,914 INFO: - App: Collecting jupyter-core (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:23,964 INFO: - App:   Downloading jupyter_core-4.0.6-py2.py3-none-any.whl (74kB)
+
+2015-10-26 16:06:24,000 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jinja2 in ./anaconda/lib/python2.7/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:24,002 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): terminado>=0.3.3 in ./anaconda/lib/python2.7/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:24,015 INFO: - App: Collecting nbconvert (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:24,058 INFO: - App:   Downloading nbconvert-4.0.0-py2.py3-none-any.whl (278kB)
+
+2015-10-26 16:06:24,145 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyzmq>=13 in ./anaconda/lib/python2.7/site-packages (from jupyter-client->ipykernel->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:24,147 INFO: - App: Collecting ptyprocess>=0.5 (from pexpect->ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:24,178 INFO: - App:   Downloading ptyprocess-0.5.tar.gz
+
+2015-10-26 16:06:24,371 INFO: - App: Collecting path.py (from pickleshare->ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:24,428 INFO: - App:   Downloading path.py-8.1.2-py2.py3-none-any.whl
+
+2015-10-26 16:06:24,452 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jsonschema!=2.5.0,>=2.0 in ./anaconda/lib/python2.7/site-packages (from nbformat->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:24,454 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pygments in ./anaconda/lib/python2.7/site-packages (from nbconvert->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:24,456 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mistune!=0.6 in ./anaconda/lib/python2.7/site-packages (from nbconvert->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:24,457 INFO: - App: Installing collected packages: simplegeneric, ptyprocess, pexpect, ipython-genutils, traitlets, path.py, pickleshare, ipython, jupyter-core, jupyter-client, ipykernel, nbformat, nbconvert, notebook, ipywidgets, bqplot
+
+2015-10-26 16:06:24,459 INFO: - App:   Running setup.py install for simplegeneric
+
+2015-10-26 16:06:24,679 INFO: - App:   Found existing installation: ptyprocess 0.4
+
+2015-10-26 16:06:24,682 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ptyprocess) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-10-26 16:06:24,683 INFO: - App:     Uninstalling ptyprocess-0.4:
+
+2015-10-26 16:06:24,688 INFO: - App:       Successfully uninstalled ptyprocess-0.4
+
+2015-10-26 16:06:24,690 INFO: - App:   Running setup.py install for ptyprocess
+
+2015-10-26 16:06:24,918 INFO: - App:   Running setup.py install for pexpect
+
+2015-10-26 16:06:25,279 INFO: - App:   Running setup.py install for pickleshare
+
+2015-10-26 16:06:25,503 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-10-26 16:06:25,511 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-10-26 16:06:25,521 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-10-26 16:06:25,523 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-10-26 16:06:27,494 INFO: - App: Successfully installed bqplot-0.4.2 ipykernel-4.1.1 ipython-4.0.0 ipython-genutils-0.1.0 ipywidgets-4.1.0 jupyter-client-4.1.1 jupyter-core-4.0.6 nbconvert-4.0.0 nbformat-4.0.1 notebook-4.0.6 path.py-8.1.2 pexpect-4.0.1 pickleshare-0.5 ptyprocess-0.5 simplegeneric-0.8.1 traitlets-4.0.0
+
+2015-10-26 16:06:27,620 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 16:06:27,918 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 16:06:27,919 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 16:06:27,935 INFO: - App: Collecting bqplot (from -r requirements.txt (line 1))
+
+2015-10-26 16:06:27,977 INFO: - App:   Using cached bqplot-0.4.2-py2.py3-none-any.whl
+
+2015-10-26 16:06:28,028 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,030 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,043 INFO: - App: Collecting ipywidgets (from bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,057 INFO: - App:   Using cached ipywidgets-4.1.0-py2.py3-none-any.whl
+
+2015-10-26 16:06:28,092 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,096 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,099 INFO: - App: Collecting ipython>=4.0.0dev0 (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,233 INFO: - App:   Downloading ipython-4.0.0-py3-none-any.whl (730kB)
+
+2015-10-26 16:06:28,431 INFO: - App: Collecting traitlets (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,443 INFO: - App:   Using cached traitlets-4.0.0-py2.py3-none-any.whl
+
+2015-10-26 16:06:28,483 INFO: - App: Collecting ipykernel (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,496 INFO: - App:   Using cached ipykernel-4.1.1-py2.py3-none-any.whl
+
+2015-10-26 16:06:28,540 INFO: - App: Collecting notebook (from ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,634 INFO: - App:   Using cached notebook-4.0.6-py2.py3-none-any.whl
+
+2015-10-26 16:06:28,965 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/envs/python3/lib/python3.3/site-packages (from python-dateutil>=2->pandas->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,984 INFO: - App: Collecting pexpect (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:28,993 INFO: - App:   Using cached pexpect-4.0.1.tar.gz
+
+2015-10-26 16:06:29,386 INFO: - App: Collecting simplegeneric>0.8 (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:29,399 INFO: - App:   Using cached simplegeneric-0.8.1.zip
+
+2015-10-26 16:06:29,675 INFO: - App: Collecting pickleshare (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:29,705 INFO: - App:   Using cached pickleshare-0.5.tar.gz
+
+2015-10-26 16:06:29,956 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): decorator in ./anaconda/envs/python3/lib/python3.3/site-packages (from ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:29,970 INFO: - App: Collecting ipython-genutils (from traitlets->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:29,980 INFO: - App:   Using cached ipython_genutils-0.1.0-py2.py3-none-any.whl
+
+2015-10-26 16:06:30,015 INFO: - App: Collecting jupyter-client (from ipykernel->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,027 INFO: - App:   Using cached jupyter_client-4.1.1-py2.py3-none-any.whl
+
+2015-10-26 16:06:30,065 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): tornado>=4 in ./anaconda/envs/python3/lib/python3.3/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,067 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jinja2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,080 INFO: - App: Collecting nbformat (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,093 INFO: - App:   Using cached nbformat-4.0.1-py2.py3-none-any.whl
+
+2015-10-26 16:06:30,129 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): terminado>=0.3.3 in ./anaconda/envs/python3/lib/python3.3/site-packages (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,144 INFO: - App: Collecting nbconvert (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,158 INFO: - App:   Using cached nbconvert-4.0.0-py2.py3-none-any.whl
+
+2015-10-26 16:06:30,224 INFO: - App: Collecting jupyter-core (from notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,241 INFO: - App:   Using cached jupyter_core-4.0.6-py2.py3-none-any.whl
+
+2015-10-26 16:06:30,267 INFO: - App: Collecting ptyprocess>=0.5 (from pexpect->ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,277 INFO: - App:   Using cached ptyprocess-0.5.tar.gz
+
+2015-10-26 16:06:30,542 INFO: - App: Collecting path.py (from pickleshare->ipython>=4.0.0dev0->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,575 INFO: - App:   Using cached path.py-8.1.2-py2.py3-none-any.whl
+
+2015-10-26 16:06:30,594 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyzmq>=13 in ./anaconda/envs/python3/lib/python3.3/site-packages (from jupyter-client->ipykernel->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,596 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jsonschema!=2.5.0,>=2.0 in ./anaconda/envs/python3/lib/python3.3/site-packages (from nbformat->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,598 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pygments in ./anaconda/envs/python3/lib/python3.3/site-packages (from nbconvert->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,625 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mistune!=0.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from nbconvert->notebook->ipywidgets->bqplot->-r requirements.txt (line 1))
+
+2015-10-26 16:06:30,638 INFO: - App: Installing collected packages: ptyprocess, pexpect, simplegeneric, path.py, pickleshare, ipython-genutils, traitlets, ipython, jupyter-core, jupyter-client, ipykernel, nbformat, nbconvert, notebook, ipywidgets, bqplot
+
+2015-10-26 16:06:30,653 INFO: - App:   Found existing installation: ptyprocess 0.4
+
+2015-10-26 16:06:30,689 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ptyprocess) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-10-26 16:06:30,706 INFO: - App:     Uninstalling ptyprocess-0.4:
+
+2015-10-26 16:06:30,736 INFO: - App:       Successfully uninstalled ptyprocess-0.4
+
+2015-10-26 16:06:30,750 INFO: - App:   Running setup.py install for ptyprocess
+
+2015-10-26 16:06:30,925 INFO: - App:   Running setup.py install for pexpect
+
+2015-10-26 16:06:31,283 INFO: - App:   Running setup.py install for simplegeneric
+
+2015-10-26 16:06:31,636 INFO: - App:   Running setup.py install for pickleshare
+
+2015-10-26 16:06:32,056 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-10-26 16:06:32,059 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-10-26 16:06:32,060 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-10-26 16:06:32,062 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-10-26 16:06:34,429 INFO: - App: Successfully installed bqplot-0.4.2 ipykernel-4.1.1 ipython-4.0.0 ipython-genutils-0.1.0 ipywidgets-4.1.0 jupyter-client-4.1.1 jupyter-core-4.0.6 nbconvert-4.0.0 nbformat-4.0.1 notebook-4.0.6 path.py-8.1.2 pexpect-4.0.1 pickleshare-0.5 ptyprocess-0.5 simplegeneric-0.8.1 traitlets-4.0.0
+
+2015-10-26 16:06:37,665 INFO: - App:  ---> 37868bd7188b
+
+2015-10-26 16:06:37,863 INFO: - App: Removing intermediate container ffa8f559e414
+
+2015-10-26 16:06:37,876 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-26 16:06:38,025 INFO: - App:  ---> 4e362dcf7aaf
+
+2015-10-26 16:06:38,034 INFO: - App: Removing intermediate container f02404f5801e
+
+2015-10-26 16:06:38,036 INFO: - App: Step 5 : USER root
+
+2015-10-26 16:06:38,111 INFO: - App:  ---> Running in b16c6ebdd97f
+
+2015-10-26 16:06:38,167 INFO: - App:  ---> 58e926476623
+
+2015-10-26 16:06:38,175 INFO: - App: Removing intermediate container b16c6ebdd97f
+
+2015-10-26 16:06:38,177 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 16:06:38,263 INFO: - App:  ---> Running in 2e62672a2c1c
+
+2015-10-26 16:06:38,645 INFO: - App:  ---> c5b8200afca5
+
+2015-10-26 16:06:38,651 INFO: - App: Removing intermediate container 2e62672a2c1c
+
+2015-10-26 16:06:38,653 INFO: - App: Step 7 : USER main
+
+2015-10-26 16:06:38,719 INFO: - App:  ---> Running in 978c65339c0c
+
+2015-10-26 16:06:38,779 INFO: - App:  ---> 2c68f96f1468
+
+2015-10-26 16:06:38,787 INFO: - App: Removing intermediate container 978c65339c0c
+
+2015-10-26 16:06:38,792 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 16:06:38,876 INFO: - App:  ---> Running in c1a5eb7b3b71
+
+2015-10-26 16:06:39,449 INFO: - App: [TrustNotebookApp] Copying /home/main/.ipython/kernels -> /home/main/.local/share/jupyter/kernels
+
+2015-10-26 16:06:39,475 INFO: - App: [91m[TrustNotebookApp] Writing notebook-signing key to /home/main/.local/share/jupyter/notebook_secret
+
+2015-10-26 16:06:39,482 INFO: - App: Signing notebook: /home/main/notebooks/bqplot.ipynb
+
+2015-10-26 16:06:39,777 INFO: - App:  ---> f785c2ac4b6e
+
+2015-10-26 16:06:39,785 INFO: - App: Removing intermediate container c1a5eb7b3b71
+
+2015-10-26 16:06:39,786 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-26 16:06:39,855 INFO: - App:  ---> Running in 333e21a9fead
+
+2015-10-26 16:06:39,907 INFO: - App:  ---> e87b755dd3ed
+
+2015-10-26 16:06:39,914 INFO: - App: Removing intermediate container 333e21a9fead
+
+2015-10-26 16:06:39,916 INFO: - App: Successfully built e87b755dd3ed
+
+2015-10-26 16:06:39,922 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/gforsyth-jupyter_playground to private registry...
+2015-10-26 16:06:55,692 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 16:07:07,499 INFO: - App: Successfully built app gforsyth-jupyter_playground

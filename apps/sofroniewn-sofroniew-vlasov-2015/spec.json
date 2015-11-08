@@ -1,0 +1,1 @@
+{"services": [{"version": "1.4.1", "name": "spark"}], "repo": "https://www.github.com/sofroniewn/sofroniew-vlasov-2015", "dependencies": ["requirements.txt"], "name": "sofroniewn-sofroniew-vlasov-2015"}

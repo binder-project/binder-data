@@ -1,0 +1,1 @@
+{"services": [{"version": "9.4", "name": "postgres"}], "repo": "https://www.github.com/MBARIMike/stoqs", "dependencies": [], "name": "mbarimike-stoqs"}

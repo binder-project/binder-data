@@ -1,0 +1,280 @@
+2015-10-24 23:53:03,665 INFO: - App: Building service dependencies...
+2015-10-24 23:53:03,668 INFO: - App: Copying files and filling templates...
+2015-10-24 23:53:03,696 INFO: - App: Building app image without Dockerfile...
+2015-10-24 23:53:03,743 INFO: - App: Sending build context to Docker daemon 237.6 kBSending build context to Docker daemon 237.6 kB
+
+2015-10-24 23:53:03,758 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-24 23:53:03,760 INFO: - App:  ---> 77377240dc83
+
+2015-10-24 23:53:03,762 INFO: - App: Step 1 : USER root
+
+2015-10-24 23:53:03,877 INFO: - App:  ---> Running in ca38089f26ea
+
+2015-10-24 23:53:03,939 INFO: - App:  ---> 42ca4b7b6e25
+
+2015-10-24 23:53:03,947 INFO: - App: Removing intermediate container ca38089f26ea
+
+2015-10-24 23:53:03,952 INFO: - App: Step 2 : RUN apt-get update -y &&    apt-get install -y python-psycopg2 libpq-dev python-dev &&    apt-get clean
+
+2015-10-24 23:53:04,039 INFO: - App:  ---> Running in 1c6e85b4e181
+
+2015-10-24 23:53:05,514 INFO: - App: Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+
+2015-10-24 23:53:05,923 INFO: - App: Get:2 http://security.debian.org jessie/updates/main amd64 Packages [182 kB]
+
+2015-10-24 23:53:05,945 INFO: - App: Ign http://httpredir.debian.org jessie InRelease
+
+2015-10-24 23:53:06,125 INFO: - App: Get:3 http://httpredir.debian.org jessie-updates InRelease [135 kB]
+
+2015-10-24 23:53:06,270 INFO: - App: Get:4 http://httpredir.debian.org jessie Release.gpg [2373 B]
+
+2015-10-24 23:53:06,437 INFO: - App: Get:5 http://httpredir.debian.org jessie Release [148 kB]
+
+2015-10-24 23:53:06,581 INFO: - App: Get:6 http://httpredir.debian.org jessie-updates/main amd64 Packages [3653 B]
+
+2015-10-24 23:53:06,708 INFO: - App: Get:7 http://httpredir.debian.org jessie/main amd64 Packages [9035 kB]
+
+2015-10-24 23:53:07,901 INFO: - App: Fetched 9569 kB in 3s (2850 kB/s)
+
+2015-10-24 23:53:08,752 INFO: - App: Reading package lists...
+
+2015-10-24 23:53:09,788 INFO: - App: Reading package lists...
+
+2015-10-24 23:53:09,952 INFO: - App: Building dependency tree...
+
+2015-10-24 23:53:09,954 INFO: - App: Reading state information...
+
+2015-10-24 23:53:10,016 INFO: - App: python-dev is already the newest version.
+
+2015-10-24 23:53:10,056 INFO: - App: The following extra packages will be installed:
+
+2015-10-24 23:53:10,065 INFO: - App:   comerr-dev krb5-multidev libgssrpc4 libkadm5clnt-mit9 libkadm5srv-mit9
+
+2015-10-24 23:53:10,074 INFO: - App:   libkdb5-7 libpq5 python-egenix-mxdatetime python-egenix-mxtools
+
+2015-10-24 23:53:10,090 INFO: - App: Suggested packages:
+
+2015-10-24 23:53:10,107 INFO: - App:   doc-base krb5-doc krb5-user postgresql-doc-9.4 python-egenix-mxdatetime-dbg
+
+2015-10-24 23:53:10,138 INFO: - App:   python-egenix-mxdatetime-doc python-egenix-mxtools-dbg
+
+2015-10-24 23:53:10,158 INFO: - App:   python-egenix-mxtools-doc python-psycopg2-doc
+
+2015-10-24 23:53:10,174 INFO: - App: The following NEW packages will be installed:
+
+2015-10-24 23:53:10,181 INFO: - App:   comerr-dev krb5-multidev libgssrpc4 libkadm5clnt-mit9 libkadm5srv-mit9
+
+2015-10-24 23:53:10,206 INFO: - App:   libkdb5-7 libpq-dev libpq5 python-egenix-mxdatetime python-egenix-mxtools
+
+2015-10-24 23:53:10,228 INFO: - App:   python-psycopg2
+
+2015-10-24 23:53:10,813 INFO: - App: 0 upgraded, 11 newly installed, 0 to remove and 29 not upgraded.
+
+2015-10-24 23:53:10,845 INFO: - App: Need to get 1070 kB of archives.
+
+2015-10-24 23:53:10,863 INFO: - App: After this operation, 4328 kB of additional disk space will be used.
+
+2015-10-24 23:53:10,879 INFO: - App: Get:1 http://security.debian.org/ jessie/updates/main libpq5 amd64 9.4.5-0+deb8u1 [123 kB]
+
+2015-10-24 23:53:10,935 INFO: - App: Get:2 http://security.debian.org/ jessie/updates/main libpq-dev amd64 9.4.5-0+deb8u1 [163 kB]
+
+2015-10-24 23:53:11,144 INFO: - App: Get:3 http://httpredir.debian.org/debian/ jessie/main libgssrpc4 amd64 1.12.1+dfsg-19 [85.6 kB]
+
+2015-10-24 23:53:11,319 INFO: - App: Get:4 http://httpredir.debian.org/debian/ jessie/main libkadm5clnt-mit9 amd64 1.12.1+dfsg-19 [67.9 kB]
+
+2015-10-24 23:53:11,405 INFO: - App: Get:5 http://httpredir.debian.org/debian/ jessie/main libkdb5-7 amd64 1.12.1+dfsg-19 [68.0 kB]
+
+2015-10-24 23:53:11,534 INFO: - App: Get:6 http://httpredir.debian.org/debian/ jessie/main libkadm5srv-mit9 amd64 1.12.1+dfsg-19 [82.4 kB]
+
+2015-10-24 23:53:11,589 INFO: - App: Get:7 http://httpredir.debian.org/debian/ jessie/main comerr-dev amd64 2.1-1.42.12-1.1 [38.4 kB]
+
+2015-10-24 23:53:11,645 INFO: - App: Get:8 http://httpredir.debian.org/debian/ jessie/main krb5-multidev amd64 1.12.1+dfsg-19 [145 kB]
+
+2015-10-24 23:53:11,697 INFO: - App: Get:9 http://httpredir.debian.org/debian/ jessie/main python-egenix-mxtools amd64 3.2.8-1 [77.7 kB]
+
+2015-10-24 23:53:11,818 INFO: - App: Get:10 http://httpredir.debian.org/debian/ jessie/main python-egenix-mxdatetime amd64 3.2.8-1 [71.3 kB]
+
+2015-10-24 23:53:11,947 INFO: - App: Get:11 http://httpredir.debian.org/debian/ jessie/main python-psycopg2 amd64 2.5.4+dfsg-1 [149 kB]
+
+2015-10-24 23:53:12,264 INFO: - App: debconf: delaying package configuration, since apt-utils is not installed
+
+2015-10-24 23:53:12,271 INFO: - App: Fetched 1070 kB in 1s (822 kB/s)
+
+2015-10-24 23:53:12,368 INFO: - App: Selecting previously unselected package libgssrpc4:amd64.
+
+2015-10-24 23:53:12,391 INFO: - App: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26429 files and directories currently installed.)
+
+2015-10-24 23:53:12,394 INFO: - App: Preparing to unpack .../libgssrpc4_1.12.1+dfsg-19_amd64.deb ...
+
+2015-10-24 23:53:12,395 INFO: - App: Unpacking libgssrpc4:amd64 (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:12,439 INFO: - App: Selecting previously unselected package libkadm5clnt-mit9:amd64.
+
+2015-10-24 23:53:12,441 INFO: - App: Preparing to unpack .../libkadm5clnt-mit9_1.12.1+dfsg-19_amd64.deb ...
+
+2015-10-24 23:53:12,447 INFO: - App: Unpacking libkadm5clnt-mit9:amd64 (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:12,486 INFO: - App: Selecting previously unselected package libkdb5-7:amd64.
+
+2015-10-24 23:53:12,487 INFO: - App: Preparing to unpack .../libkdb5-7_1.12.1+dfsg-19_amd64.deb ...
+
+2015-10-24 23:53:12,493 INFO: - App: Unpacking libkdb5-7:amd64 (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:12,531 INFO: - App: Selecting previously unselected package libkadm5srv-mit9:amd64.
+
+2015-10-24 23:53:12,533 INFO: - App: Preparing to unpack .../libkadm5srv-mit9_1.12.1+dfsg-19_amd64.deb ...
+
+2015-10-24 23:53:12,538 INFO: - App: Unpacking libkadm5srv-mit9:amd64 (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:12,583 INFO: - App: Selecting previously unselected package libpq5:amd64.
+
+2015-10-24 23:53:12,585 INFO: - App: Preparing to unpack .../libpq5_9.4.5-0+deb8u1_amd64.deb ...
+
+2015-10-24 23:53:12,586 INFO: - App: Unpacking libpq5:amd64 (9.4.5-0+deb8u1) ...
+
+2015-10-24 23:53:12,625 INFO: - App: Selecting previously unselected package comerr-dev.
+
+2015-10-24 23:53:12,626 INFO: - App: Preparing to unpack .../comerr-dev_2.1-1.42.12-1.1_amd64.deb ...
+
+2015-10-24 23:53:12,629 INFO: - App: Unpacking comerr-dev (2.1-1.42.12-1.1) ...
+
+2015-10-24 23:53:12,666 INFO: - App: Selecting previously unselected package krb5-multidev.
+
+2015-10-24 23:53:12,668 INFO: - App: Preparing to unpack .../krb5-multidev_1.12.1+dfsg-19_amd64.deb ...
+
+2015-10-24 23:53:12,671 INFO: - App: Unpacking krb5-multidev (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:12,716 INFO: - App: Selecting previously unselected package libpq-dev.
+
+2015-10-24 23:53:12,718 INFO: - App: Preparing to unpack .../libpq-dev_9.4.5-0+deb8u1_amd64.deb ...
+
+2015-10-24 23:53:12,722 INFO: - App: Unpacking libpq-dev (9.4.5-0+deb8u1) ...
+
+2015-10-24 23:53:12,772 INFO: - App: Selecting previously unselected package python-egenix-mxtools.
+
+2015-10-24 23:53:12,774 INFO: - App: Preparing to unpack .../python-egenix-mxtools_3.2.8-1_amd64.deb ...
+
+2015-10-24 23:53:12,778 INFO: - App: Unpacking python-egenix-mxtools (3.2.8-1) ...
+
+2015-10-24 23:53:12,817 INFO: - App: Selecting previously unselected package python-egenix-mxdatetime.
+
+2015-10-24 23:53:12,819 INFO: - App: Preparing to unpack .../python-egenix-mxdatetime_3.2.8-1_amd64.deb ...
+
+2015-10-24 23:53:12,821 INFO: - App: Unpacking python-egenix-mxdatetime (3.2.8-1) ...
+
+2015-10-24 23:53:12,860 INFO: - App: Selecting previously unselected package python-psycopg2.
+
+2015-10-24 23:53:12,862 INFO: - App: Preparing to unpack .../python-psycopg2_2.5.4+dfsg-1_amd64.deb ...
+
+2015-10-24 23:53:12,864 INFO: - App: Unpacking python-psycopg2 (2.5.4+dfsg-1) ...
+
+2015-10-24 23:53:12,986 INFO: - App: Setting up libgssrpc4:amd64 (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:13,008 INFO: - App: Setting up libkadm5clnt-mit9:amd64 (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:13,025 INFO: - App: Setting up libkdb5-7:amd64 (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:13,046 INFO: - App: Setting up libkadm5srv-mit9:amd64 (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:13,063 INFO: - App: Setting up libpq5:amd64 (9.4.5-0+deb8u1) ...
+
+2015-10-24 23:53:13,080 INFO: - App: Setting up comerr-dev (2.1-1.42.12-1.1) ...
+
+2015-10-24 23:53:13,090 INFO: - App: Setting up krb5-multidev (1.12.1+dfsg-19) ...
+
+2015-10-24 23:53:13,104 INFO: - App: Setting up libpq-dev (9.4.5-0+deb8u1) ...
+
+2015-10-24 23:53:13,111 INFO: - App: Setting up python-egenix-mxtools (3.2.8-1) ...
+
+2015-10-24 23:53:13,254 INFO: - App: Setting up python-egenix-mxdatetime (3.2.8-1) ...
+
+2015-10-24 23:53:13,373 INFO: - App: Setting up python-psycopg2 (2.5.4+dfsg-1) ...
+
+2015-10-24 23:53:13,561 INFO: - App: Processing triggers for libc-bin (2.19-18) ...
+
+2015-10-24 23:53:16,314 INFO: - App:  ---> a70ddafe8427
+
+2015-10-24 23:53:16,344 INFO: - App: Removing intermediate container 1c6e85b4e181
+
+2015-10-24 23:53:16,346 INFO: - App: Step 3 : USER main
+
+2015-10-24 23:53:16,407 INFO: - App:  ---> Running in d093f01300e3
+
+2015-10-24 23:53:16,467 INFO: - App:  ---> ad58c484a0c0
+
+2015-10-24 23:53:16,473 INFO: - App: Removing intermediate container d093f01300e3
+
+2015-10-24 23:53:16,476 INFO: - App: Step 4 : RUN pip install psycopg2
+
+2015-10-24 23:53:16,564 INFO: - App:  ---> Running in bd0a90e79fb2
+
+2015-10-24 23:53:18,040 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-24 23:53:18,076 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-24 23:53:18,108 INFO: - App: Collecting psycopg2
+
+2015-10-24 23:53:18,185 INFO: - App:   Downloading psycopg2-2.6.1.tar.gz (371kB)
+
+2015-10-24 23:53:18,668 INFO: - App: Installing collected packages: psycopg2
+
+2015-10-24 23:53:18,698 INFO: - App:   Running setup.py install for psycopg2
+
+2015-10-24 23:53:23,615 INFO: - App: Successfully installed psycopg2-2.6.1
+
+2015-10-24 23:53:23,937 INFO: - App:  ---> a6f988dd1a59
+
+2015-10-24 23:53:23,947 INFO: - App: Removing intermediate container bd0a90e79fb2
+
+2015-10-24 23:53:23,949 INFO: - App: Step 5 : ADD repo $HOME/notebooks
+
+2015-10-24 23:53:24,140 INFO: - App:  ---> 23525934cdb1
+
+2015-10-24 23:53:24,154 INFO: - App: Removing intermediate container ff7ba59d889c
+
+2015-10-24 23:53:24,161 INFO: - App: Step 6 : USER root
+
+2015-10-24 23:53:24,227 INFO: - App:  ---> Running in 2e6bd9021bf9
+
+2015-10-24 23:53:24,275 INFO: - App:  ---> 76453f1d2685
+
+2015-10-24 23:53:24,284 INFO: - App: Removing intermediate container 2e6bd9021bf9
+
+2015-10-24 23:53:24,285 INFO: - App: Step 7 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-24 23:53:24,355 INFO: - App:  ---> Running in 322634e4b611
+
+2015-10-24 23:53:24,804 INFO: - App:  ---> 9f6d5565866e
+
+2015-10-24 23:53:24,816 INFO: - App: Removing intermediate container 322634e4b611
+
+2015-10-24 23:53:24,819 INFO: - App: Step 8 : USER main
+
+2015-10-24 23:53:24,911 INFO: - App:  ---> Running in 40197b9820d5
+
+2015-10-24 23:53:24,959 INFO: - App:  ---> 4f7c7b01c61b
+
+2015-10-24 23:53:24,969 INFO: - App: Removing intermediate container 40197b9820d5
+
+2015-10-24 23:53:24,974 INFO: - App: Step 9 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-24 23:53:25,048 INFO: - App:  ---> Running in 4d32e150f15e
+
+2015-10-24 23:53:25,504 INFO: - App:  ---> 49f3c1207c27
+
+2015-10-24 23:53:25,512 INFO: - App: Removing intermediate container 4d32e150f15e
+
+2015-10-24 23:53:25,515 INFO: - App: Step 10 : WORKDIR $HOME/notebooks
+
+2015-10-24 23:53:25,599 INFO: - App:  ---> Running in 29736b993769
+
+2015-10-24 23:53:25,679 INFO: - App:  ---> f186efd6d6e2
+
+2015-10-24 23:53:25,687 INFO: - App: Removing intermediate container 29736b993769
+
+2015-10-24 23:53:25,689 INFO: - App: Successfully built f186efd6d6e2
+
+2015-10-24 23:53:25,698 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/yongmi282-csharpprogramming to private registry...
+2015-10-24 23:53:37,160 INFO: - App: Preloading app image onto all nodes...
+2015-10-24 23:53:41,936 INFO: - App: Successfully built app yongmi282-csharpprogramming

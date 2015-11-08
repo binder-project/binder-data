@@ -1,0 +1,1 @@
+{"services": [], "repo": "https://www.github.com/psychemedia/docker-openrefine", "dependencies": ["Dockerfile"], "name": "psychemedia-docker-openrefine"}

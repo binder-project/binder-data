@@ -1,0 +1,374 @@
+2015-11-05 17:08:12,456 INFO: - App: Building service dependencies...
+2015-11-05 17:08:12,461 INFO: - App: Copying files and filling templates...
+2015-11-05 17:08:12,472 INFO: - App: Building app image without Dockerfile...
+2015-11-05 17:08:12,516 INFO: - App: Sending build context to Docker daemon 314.4 kBSending build context to Docker daemon 314.4 kB
+
+2015-11-05 17:08:12,523 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 17:08:12,526 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 17:08:12,532 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 17:08:12,705 INFO: - App:  ---> 446e5afd58b6
+
+2015-11-05 17:08:12,713 INFO: - App: Removing intermediate container b3ed29babae0
+
+2015-11-05 17:08:12,716 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 17:08:12,888 INFO: - App:  ---> 6e0fc4740768
+
+2015-11-05 17:08:12,897 INFO: - App: Removing intermediate container 40f7d517b4aa
+
+2015-11-05 17:08:12,899 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 17:08:12,983 INFO: - App:  ---> Running in 0d31592428d3
+
+2015-11-05 17:08:13,133 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 17:08:14,455 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 17:08:14,457 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 17:08:14,460 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): openpyxl in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-11-05 17:08:14,477 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 17:08:14,802 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 17:08:14,804 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 17:08:14,806 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): openpyxl in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-11-05 17:08:15,105 INFO: - App:  ---> 89b01680307f
+
+2015-11-05 17:08:15,113 INFO: - App: Removing intermediate container 0d31592428d3
+
+2015-11-05 17:08:15,121 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 17:08:15,306 INFO: - App:  ---> 94a1fe544400
+
+2015-11-05 17:08:15,319 INFO: - App: Removing intermediate container 65fe3f840c25
+
+2015-11-05 17:08:15,323 INFO: - App: Step 5 : USER root
+
+2015-11-05 17:08:15,399 INFO: - App:  ---> Running in 0f13d2408a3b
+
+2015-11-05 17:08:15,452 INFO: - App:  ---> 4f972d34bfaf
+
+2015-11-05 17:08:15,460 INFO: - App: Removing intermediate container 0f13d2408a3b
+
+2015-11-05 17:08:15,462 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 17:08:15,539 INFO: - App:  ---> Running in b64e75c7aa24
+
+2015-11-05 17:08:15,972 INFO: - App:  ---> 4939b28add1b
+
+2015-11-05 17:08:15,979 INFO: - App: Removing intermediate container b64e75c7aa24
+
+2015-11-05 17:08:15,981 INFO: - App: Step 7 : USER main
+
+2015-11-05 17:08:16,063 INFO: - App:  ---> Running in 81bc368f7018
+
+2015-11-05 17:08:16,125 INFO: - App:  ---> cbacd7cfdbf0
+
+2015-11-05 17:08:16,131 INFO: - App: Removing intermediate container 81bc368f7018
+
+2015-11-05 17:08:16,134 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 17:08:16,211 INFO: - App:  ---> Running in 6ccb1b966fbd
+
+2015-11-05 17:08:16,775 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 17:08:17,092 INFO: - App:  ---> 208a9344487f
+
+2015-11-05 17:08:17,100 INFO: - App: Removing intermediate container 6ccb1b966fbd
+
+2015-11-05 17:08:17,102 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 17:08:17,187 INFO: - App:  ---> Running in dac55a58535b
+
+2015-11-05 17:08:17,239 INFO: - App:  ---> 78eb03b50d19
+
+2015-11-05 17:08:17,254 INFO: - App: Removing intermediate container dac55a58535b
+
+2015-11-05 17:08:17,258 INFO: - App: Successfully built 78eb03b50d19
+
+2015-11-05 17:08:17,259 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/andrewosh-cs-ap-analysis to private registry...
+2015-11-05 17:08:28,880 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 17:08:30,915 INFO: - App: Successfully built app andrewosh-cs-ap-analysis
+2015-11-05 17:10:03,552 INFO: - App: Building service dependencies...
+2015-11-05 17:10:03,555 INFO: - App: Copying files and filling templates...
+2015-11-05 17:10:03,574 INFO: - App: Building app image without Dockerfile...
+2015-11-05 17:10:03,629 INFO: - App: Sending build context to Docker daemon   318 kBSending build context to Docker daemon   318 kB
+
+2015-11-05 17:10:03,641 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 17:10:03,675 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 17:10:03,708 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 17:10:03,820 INFO: - App:  ---> 9737f1f61237
+
+2015-11-05 17:10:03,835 INFO: - App: Removing intermediate container e5ae46ca4c7f
+
+2015-11-05 17:10:03,849 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 17:10:04,023 INFO: - App:  ---> 59cd473b34cf
+
+2015-11-05 17:10:04,034 INFO: - App: Removing intermediate container d320b7d1b5f1
+
+2015-11-05 17:10:04,041 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 17:10:04,111 INFO: - App:  ---> Running in 4ab7af2a5e9b
+
+2015-11-05 17:10:04,261 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 17:10:05,579 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 17:10:05,580 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 17:10:05,583 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): openpyxl in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-11-05 17:10:05,598 INFO: - App: Collecting metakernel (from -r requirements.txt (line 2))
+
+2015-11-05 17:10:05,807 INFO: - App:   Downloading metakernel-0.11.3-py2.py3-none-any.whl (119kB)
+
+2015-11-05 17:10:05,880 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): IPython>=3.0 in ./anaconda/lib/python2.7/site-packages (from metakernel->-r requirements.txt (line 2))
+
+2015-11-05 17:10:05,882 INFO: - App: Installing collected packages: metakernel
+
+2015-11-05 17:10:06,023 INFO: - App: Successfully installed metakernel-0.11.3
+
+2015-11-05 17:10:06,050 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 17:10:06,358 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 17:10:06,363 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 17:10:06,366 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): openpyxl in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-11-05 17:10:06,376 INFO: - App: Collecting metakernel (from -r requirements.txt (line 2))
+
+2015-11-05 17:10:06,432 INFO: - App:   Using cached metakernel-0.11.3-py2.py3-none-any.whl
+
+2015-11-05 17:10:06,471 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): IPython>=3.0 in ./anaconda/envs/python3/lib/python3.3/site-packages (from metakernel->-r requirements.txt (line 2))
+
+2015-11-05 17:10:06,474 INFO: - App: Installing collected packages: metakernel
+
+2015-11-05 17:10:06,656 INFO: - App: Successfully installed metakernel-0.11.3
+
+2015-11-05 17:10:07,025 INFO: - App:  ---> 4301b4d33d1c
+
+2015-11-05 17:10:07,035 INFO: - App: Removing intermediate container 4ab7af2a5e9b
+
+2015-11-05 17:10:07,039 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 17:10:07,234 INFO: - App:  ---> 7c5ab076cfd5
+
+2015-11-05 17:10:07,277 INFO: - App: Removing intermediate container 7014796d354b
+
+2015-11-05 17:10:07,280 INFO: - App: Step 5 : USER root
+
+2015-11-05 17:10:07,352 INFO: - App:  ---> Running in e0a2504d4d5d
+
+2015-11-05 17:10:07,399 INFO: - App:  ---> 1409afbab50b
+
+2015-11-05 17:10:07,407 INFO: - App: Removing intermediate container e0a2504d4d5d
+
+2015-11-05 17:10:07,411 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 17:10:07,483 INFO: - App:  ---> Running in 80cd96d7bd93
+
+2015-11-05 17:10:07,917 INFO: - App:  ---> 64cafb9f455f
+
+2015-11-05 17:10:07,927 INFO: - App: Removing intermediate container 80cd96d7bd93
+
+2015-11-05 17:10:07,929 INFO: - App: Step 7 : USER main
+
+2015-11-05 17:10:08,003 INFO: - App:  ---> Running in 82b5a8bb5aad
+
+2015-11-05 17:10:08,043 INFO: - App:  ---> 4249d9359255
+
+2015-11-05 17:10:08,051 INFO: - App: Removing intermediate container 82b5a8bb5aad
+
+2015-11-05 17:10:08,054 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 17:10:08,139 INFO: - App:  ---> Running in bedf7e94023c
+
+2015-11-05 17:10:08,723 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 17:10:09,010 INFO: - App:  ---> d555dd1b4cf9
+
+2015-11-05 17:10:09,020 INFO: - App: Removing intermediate container bedf7e94023c
+
+2015-11-05 17:10:09,023 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 17:10:09,105 INFO: - App:  ---> Running in 5701f7a08f4c
+
+2015-11-05 17:10:09,151 INFO: - App:  ---> 56179c0bb4fa
+
+2015-11-05 17:10:09,159 INFO: - App: Removing intermediate container 5701f7a08f4c
+
+2015-11-05 17:10:09,162 INFO: - App: Successfully built 56179c0bb4fa
+
+2015-11-05 17:10:09,172 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/andrewosh-cs-ap-analysis to private registry...
+2015-11-05 17:10:20,643 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 17:10:24,897 INFO: - App: Successfully built app andrewosh-cs-ap-analysis
+2015-11-05 17:53:12,447 INFO: - App: Building service dependencies...
+2015-11-05 17:53:12,451 INFO: - App: Copying files and filling templates...
+2015-11-05 17:53:12,464 INFO: - App: Building app image without Dockerfile...
+2015-11-05 17:53:12,514 INFO: - App: Sending build context to Docker daemon 322.6 kBSending build context to Docker daemon 322.6 kB
+
+2015-11-05 17:53:12,519 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 17:53:12,527 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 17:53:12,531 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 17:53:12,724 INFO: - App:  ---> 8bd02caf96a6
+
+2015-11-05 17:53:12,727 INFO: - App: Removing intermediate container 86fc4c3800ce
+
+2015-11-05 17:53:12,730 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 17:53:12,916 INFO: - App:  ---> c4613c480820
+
+2015-11-05 17:53:12,928 INFO: - App: Removing intermediate container 488d9f0c8cb6
+
+2015-11-05 17:53:12,930 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 17:53:13,003 INFO: - App:  ---> Running in 329da0f81719
+
+2015-11-05 17:53:13,153 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 17:53:14,469 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 17:53:14,471 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 17:53:14,476 INFO: - App: Collecting openpyxl==2.3.0 (from -r requirements.txt (line 1))
+
+2015-11-05 17:53:14,602 INFO: - App:   Downloading openpyxl-2.3.0.tar.gz (138kB)
+
+2015-11-05 17:53:14,968 INFO: - App: Collecting metakernel (from -r requirements.txt (line 2))
+
+2015-11-05 17:53:15,030 INFO: - App:   Downloading metakernel-0.11.3-py2.py3-none-any.whl (119kB)
+
+2015-11-05 17:53:15,088 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jdcal in ./anaconda/lib/python2.7/site-packages (from openpyxl==2.3.0->-r requirements.txt (line 1))
+
+2015-11-05 17:53:15,102 INFO: - App: Collecting et-xmlfile (from openpyxl==2.3.0->-r requirements.txt (line 1))
+
+2015-11-05 17:53:15,136 INFO: - App:   Downloading et_xmlfile-1.0.1.tar.gz
+
+2015-11-05 17:53:15,338 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): IPython>=3.0 in ./anaconda/lib/python2.7/site-packages (from metakernel->-r requirements.txt (line 2))
+
+2015-11-05 17:53:15,340 INFO: - App: Installing collected packages: et-xmlfile, openpyxl, metakernel
+
+2015-11-05 17:53:15,343 INFO: - App:   Running setup.py install for et-xmlfile
+
+2015-11-05 17:53:15,580 INFO: - App:   Found existing installation: openpyxl 1.8.5
+
+2015-11-05 17:53:15,581 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (openpyxl) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-05 17:53:15,584 INFO: - App:     Uninstalling openpyxl-1.8.5:
+
+2015-11-05 17:53:15,591 INFO: - App:       Successfully uninstalled openpyxl-1.8.5
+
+2015-11-05 17:53:15,594 INFO: - App:   Running setup.py install for openpyxl
+
+2015-11-05 17:53:16,329 INFO: - App: Successfully installed et-xmlfile-1.0.1 metakernel-0.11.3 openpyxl-2.3.0
+
+2015-11-05 17:53:16,358 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 17:53:16,664 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 17:53:16,667 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 17:53:16,670 INFO: - App: Collecting openpyxl==2.3.0 (from -r requirements.txt (line 1))
+
+2015-11-05 17:53:16,726 INFO: - App:   Using cached openpyxl-2.3.0.tar.gz
+
+2015-11-05 17:53:17,132 INFO: - App: Collecting metakernel (from -r requirements.txt (line 2))
+
+2015-11-05 17:53:17,166 INFO: - App:   Using cached metakernel-0.11.3-py2.py3-none-any.whl
+
+2015-11-05 17:53:17,203 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jdcal in ./anaconda/envs/python3/lib/python3.3/site-packages (from openpyxl==2.3.0->-r requirements.txt (line 1))
+
+2015-11-05 17:53:17,219 INFO: - App: Collecting et-xmlfile (from openpyxl==2.3.0->-r requirements.txt (line 1))
+
+2015-11-05 17:53:17,227 INFO: - App:   Using cached et_xmlfile-1.0.1.tar.gz
+
+2015-11-05 17:53:17,498 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): IPython>=3.0 in ./anaconda/envs/python3/lib/python3.3/site-packages (from metakernel->-r requirements.txt (line 2))
+
+2015-11-05 17:53:17,501 INFO: - App: Installing collected packages: et-xmlfile, openpyxl, metakernel
+
+2015-11-05 17:53:17,504 INFO: - App:   Running setup.py install for et-xmlfile
+
+2015-11-05 17:53:17,838 INFO: - App:   Found existing installation: openpyxl 1.8.5
+
+2015-11-05 17:53:17,841 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (openpyxl) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-05 17:53:17,844 INFO: - App:     Uninstalling openpyxl-1.8.5:
+
+2015-11-05 17:53:17,858 INFO: - App:       Successfully uninstalled openpyxl-1.8.5
+
+2015-11-05 17:53:17,868 INFO: - App:   Running setup.py install for openpyxl
+
+2015-11-05 17:53:18,789 INFO: - App: Successfully installed et-xmlfile-1.0.1 metakernel-0.11.3 openpyxl-2.3.0
+
+2015-11-05 17:53:20,828 INFO: - App:  ---> 7ef9a6037a53
+
+2015-11-05 17:53:20,861 INFO: - App: Removing intermediate container 329da0f81719
+
+2015-11-05 17:53:20,868 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 17:53:21,046 INFO: - App:  ---> 0dc56bfdb5e9
+
+2015-11-05 17:53:21,083 INFO: - App: Removing intermediate container 1035e1b2c79c
+
+2015-11-05 17:53:21,112 INFO: - App: Step 5 : USER root
+
+2015-11-05 17:53:21,131 INFO: - App:  ---> Running in d40a124643a7
+
+2015-11-05 17:53:21,188 INFO: - App:  ---> 7be674d74001
+
+2015-11-05 17:53:21,199 INFO: - App: Removing intermediate container d40a124643a7
+
+2015-11-05 17:53:21,212 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 17:53:21,311 INFO: - App:  ---> Running in 890aa0060a6c
+
+2015-11-05 17:53:21,710 INFO: - App:  ---> ac16a636df81
+
+2015-11-05 17:53:21,721 INFO: - App: Removing intermediate container 890aa0060a6c
+
+2015-11-05 17:53:21,723 INFO: - App: Step 7 : USER main
+
+2015-11-05 17:53:21,795 INFO: - App:  ---> Running in 63583856dd8a
+
+2015-11-05 17:53:21,847 INFO: - App:  ---> 92843aca6783
+
+2015-11-05 17:53:21,854 INFO: - App: Removing intermediate container 63583856dd8a
+
+2015-11-05 17:53:21,858 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 17:53:21,926 INFO: - App:  ---> Running in e84e0cd0d63f
+
+2015-11-05 17:53:22,340 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 17:53:22,626 INFO: - App:  ---> 0ec504522e0b
+
+2015-11-05 17:53:22,635 INFO: - App: Removing intermediate container e84e0cd0d63f
+
+2015-11-05 17:53:22,642 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 17:53:22,716 INFO: - App:  ---> Running in 533db4e1d811
+
+2015-11-05 17:53:22,763 INFO: - App:  ---> 233bbafcc1f5
+
+2015-11-05 17:53:22,771 INFO: - App: Removing intermediate container 533db4e1d811
+
+2015-11-05 17:53:22,774 INFO: - App: Successfully built 233bbafcc1f5
+
+2015-11-05 17:53:22,781 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/andrewosh-cs-ap-analysis to private registry...
+2015-11-05 17:53:34,982 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 17:53:40,004 INFO: - App: Successfully built app andrewosh-cs-ap-analysis

@@ -1,0 +1,1 @@
+{"services": [{"version": "1.4.1", "name": "spark"}], "repo": "https://www.github.com/binder-project/full-dockerfile-example", "dependencies": ["Dockerfile"], "name": "binder-project-full-dockerfile-example"}

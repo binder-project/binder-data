@@ -1,0 +1,1 @@
+{"services": [{"version": "1.4.1", "name": "spark"}], "repo": "https://www.github.com/pravj/Doga", "dependencies": ["requirements.txt"], "name": "pravj-doga"}

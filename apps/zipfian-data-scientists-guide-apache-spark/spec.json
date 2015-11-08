@@ -1,0 +1,1 @@
+{"services": [{"version": "1.4.1", "name": "spark"}], "repo": "https://www.github.com/zipfian/data-scientists-guide-apache-spark", "dependencies": [], "name": "zipfian-data-scientists-guide-apache-spark"}

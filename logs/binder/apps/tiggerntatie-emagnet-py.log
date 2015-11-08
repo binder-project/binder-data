@@ -1,0 +1,80 @@
+2015-11-01 03:11:37,800 INFO: - App: Building service dependencies...
+2015-11-01 03:11:37,802 INFO: - App: Copying files and filling templates...
+2015-11-01 03:11:37,810 INFO: - App: Building app image without Dockerfile...
+2015-11-01 03:11:37,865 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 816.6 kBSending build context to Docker daemon 816.6 kB
+
+2015-11-01 03:11:37,867 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 03:11:37,873 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 03:11:37,874 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-01 03:11:38,050 INFO: - App:  ---> 53f921393713
+
+2015-11-01 03:11:38,059 INFO: - App: Removing intermediate container 23160b944995
+
+2015-11-01 03:11:38,062 INFO: - App: Step 2 : USER root
+
+2015-11-01 03:11:38,146 INFO: - App:  ---> Running in 6d047de5a1dd
+
+2015-11-01 03:11:38,199 INFO: - App:  ---> f5b0196c9b83
+
+2015-11-01 03:11:38,214 INFO: - App: Removing intermediate container 6d047de5a1dd
+
+2015-11-01 03:11:38,216 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 03:11:38,288 INFO: - App:  ---> Running in aa1304c68d01
+
+2015-11-01 03:11:38,685 INFO: - App:  ---> 4b3bbf2e7cb3
+
+2015-11-01 03:11:38,694 INFO: - App: Removing intermediate container aa1304c68d01
+
+2015-11-01 03:11:38,696 INFO: - App: Step 4 : USER main
+
+2015-11-01 03:11:38,771 INFO: - App:  ---> Running in d66a4750a29b
+
+2015-11-01 03:11:38,823 INFO: - App:  ---> bd81df48b594
+
+2015-11-01 03:11:38,831 INFO: - App: Removing intermediate container d66a4750a29b
+
+2015-11-01 03:11:38,835 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 03:11:38,910 INFO: - App:  ---> Running in 44a07931ec17
+
+2015-11-01 03:11:39,413 INFO: - App: Signing notebook: /home/main/notebooks/offaxis/off_axis_loop.ipynb
+
+2015-11-01 03:11:39,633 INFO: - App: Signing notebook: /home/main/notebooks/solenoids/thin_solenoid.ipynb
+
+2015-11-01 03:11:39,858 INFO: - App: Signing notebook: /home/main/notebooks/solenoids/current_loop.ipynb
+
+2015-11-01 03:11:40,095 INFO: - App: Signing notebook: /home/main/notebooks/solenoids/solenoid.ipynb
+
+2015-11-01 03:11:40,313 INFO: - App: Signing notebook: /home/main/notebooks/solenoids/straightwire.ipynb
+
+2015-11-01 03:11:40,539 INFO: - App: Signing notebook: /home/main/notebooks/solenoids/toroid.ipynb
+
+2015-11-01 03:11:40,753 INFO: - App: Signing notebook: /home/main/notebooks/solenoids/infinite_solenoid.ipynb
+
+2015-11-01 03:11:40,967 INFO: - App: Signing notebook: /home/main/notebooks/basics/maxwell.ipynb
+
+2015-11-01 03:11:41,187 INFO: - App: Signing notebook: /home/main/notebooks/basics/biotsavart.ipynb
+
+2015-11-01 03:11:41,410 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 03:11:41,687 INFO: - App:  ---> 854ad3719fea
+
+2015-11-01 03:11:41,696 INFO: - App: Removing intermediate container 44a07931ec17
+
+2015-11-01 03:11:41,698 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-01 03:11:41,766 INFO: - App:  ---> Running in a881712be2e9
+
+2015-11-01 03:11:41,812 INFO: - App:  ---> 7ccedc68917d
+
+2015-11-01 03:11:41,827 INFO: - App: Removing intermediate container a881712be2e9
+
+2015-11-01 03:11:41,830 INFO: - App: Successfully built 7ccedc68917d
+
+2015-11-01 03:11:41,850 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/tiggerntatie-emagnet-py to private registry...
+2015-11-01 03:11:48,268 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 03:11:56,400 INFO: - App: Successfully built app tiggerntatie-emagnet-py

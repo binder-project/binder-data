@@ -1,0 +1,1 @@
+{"services": [{"version": "9.4", "name": "postgres"}, {"version": "1.4.1", "name": "spark"}], "repo": "https://www.github.com/thunder-project/thunder", "dependencies": ["Dockerfile"], "name": "thunder-project-thunder"}

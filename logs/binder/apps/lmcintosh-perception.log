@@ -1,0 +1,62 @@
+2015-10-29 17:50:24,295 INFO: - App: Building service dependencies...
+2015-10-29 17:50:24,301 INFO: - App: Copying files and filling templates...
+2015-10-29 17:50:24,303 INFO: - App: Building app image without Dockerfile...
+2015-10-29 17:50:24,361 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 1.746 MBSending build context to Docker daemon 1.746 MB
+
+2015-10-29 17:50:24,363 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-29 17:50:24,367 INFO: - App:  ---> 77377240dc83
+
+2015-10-29 17:50:24,375 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-29 17:50:24,553 INFO: - App:  ---> 61c1e3200014
+
+2015-10-29 17:50:24,566 INFO: - App: Removing intermediate container f5036375acb1
+
+2015-10-29 17:50:24,568 INFO: - App: Step 2 : USER root
+
+2015-10-29 17:50:24,639 INFO: - App:  ---> Running in 4b3d023d90b0
+
+2015-10-29 17:50:24,704 INFO: - App:  ---> 29139c6ca1c2
+
+2015-10-29 17:50:24,714 INFO: - App: Removing intermediate container 4b3d023d90b0
+
+2015-10-29 17:50:24,716 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-29 17:50:24,792 INFO: - App:  ---> Running in 9296c7eb67ff
+
+2015-10-29 17:50:25,210 INFO: - App:  ---> 97dc2a8b5f3d
+
+2015-10-29 17:50:25,221 INFO: - App: Removing intermediate container 9296c7eb67ff
+
+2015-10-29 17:50:25,223 INFO: - App: Step 4 : USER main
+
+2015-10-29 17:50:25,307 INFO: - App:  ---> Running in afc43629551c
+
+2015-10-29 17:50:25,375 INFO: - App:  ---> a834cf31c395
+
+2015-10-29 17:50:25,382 INFO: - App: Removing intermediate container afc43629551c
+
+2015-10-29 17:50:25,388 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-29 17:50:25,464 INFO: - App:  ---> Running in 499f189e735b
+
+2015-10-29 17:50:25,949 INFO: - App: Signing notebook: /home/main/notebooks/Random Dot Stereogram.ipynb
+
+2015-10-29 17:50:26,228 INFO: - App:  ---> dd1ba015169f
+
+2015-10-29 17:50:26,240 INFO: - App: Removing intermediate container 499f189e735b
+
+2015-10-29 17:50:26,253 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-29 17:50:26,306 INFO: - App:  ---> Running in 9723c1012cf5
+
+2015-10-29 17:50:26,379 INFO: - App:  ---> db76bc875b83
+
+2015-10-29 17:50:26,386 INFO: - App: Removing intermediate container 9723c1012cf5
+
+2015-10-29 17:50:26,388 INFO: - App: Successfully built db76bc875b83
+
+2015-10-29 17:50:26,394 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/lmcintosh-perception to private registry...
+2015-10-29 17:50:33,459 INFO: - App: Preloading app image onto all nodes...
+2015-10-29 17:50:38,683 INFO: - App: Successfully built app lmcintosh-perception

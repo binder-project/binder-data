@@ -1,0 +1,1104 @@
+2015-11-04 04:15:47,235 INFO: - App: Building service dependencies...
+2015-11-04 04:15:47,237 INFO: - App: Copying files and filling templates...
+2015-11-04 04:15:47,252 INFO: - App: Building the app image with Dockerfile...
+2015-11-04 04:15:47,306 INFO: - App: Sending build context to Docker daemon 302.1 kBSending build context to Docker daemon 302.1 kB
+
+2015-11-04 04:15:47,309 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 04:15:47,311 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 04:15:47,315 INFO: - App: Step 1 : MAINTAINER Raymond Yee  <raymond.yee@gmail.com>
+
+2015-11-04 04:15:47,407 INFO: - App:  ---> Running in 5c67483197f4
+
+2015-11-04 04:15:47,460 INFO: - App:  ---> b4756ad921e9
+
+2015-11-04 04:15:47,463 INFO: - App: Removing intermediate container 5c67483197f4
+
+2015-11-04 04:15:47,465 INFO: - App: Step 2 : USER root
+
+2015-11-04 04:15:47,547 INFO: - App:  ---> Running in 486e8a16c091
+
+2015-11-04 04:15:47,603 INFO: - App:  ---> 8e0df37539a2
+
+2015-11-04 04:15:47,611 INFO: - App: Removing intermediate container 486e8a16c091
+
+2015-11-04 04:15:47,616 INFO: - App: Step 3 : RUN apt-get -y install python-lxml libxml2-dev libxslt1-dev
+
+2015-11-04 04:15:47,695 INFO: - App:  ---> Running in d8c7ce0ba95c
+
+2015-11-04 04:15:47,980 INFO: - App: Reading package lists...
+
+2015-11-04 04:15:48,054 INFO: - App: Building dependency tree...
+
+2015-11-04 04:15:48,061 INFO: - App: Reading state information...
+
+2015-11-04 04:15:48,063 INFO: - App: Package python-lxml is not available, but is referred to by another package.
+
+2015-11-04 04:15:48,065 INFO: - App: This may mean that the package is missing, has been obsoleted, or
+
+2015-11-04 04:15:48,066 INFO: - App: is only available from another source
+
+2015-11-04 04:15:48,069 INFO: - App: 
+
+2015-11-04 04:15:48,071 INFO: - App: E[0m[91m: Package 'python-lxml' has no installation candidate
+
+2015-11-04 04:15:48,073 INFO: - App: E: Unable to locate package libxml2-dev
+
+2015-11-04 04:15:48,075 INFO: - App: E: Unable to locate package libxslt1-dev
+
+2015-11-04 04:15:48,306 ERROR: - App: The command '/bin/sh -c apt-get -y install python-lxml libxml2-dev libxslt1-dev' returned a non-zero code: 100
+
+2015-11-04 04:15:48,308 INFO: - App: 
+2015-11-04 04:15:48,310 ERROR: - App: could not build app rdhyee-wikimedia_data_learning: Command '['docker', 'build', '-t', u'gcr.io/generic-notebooks/rdhyee-wikimedia_data_learning', '--no-cache', u'/home/andrew/binder/apps/rdhyee-wikimedia_data_learning/build/app/repo']' returned non-zero exit status 1
+2015-11-04 04:20:21,183 INFO: - App: Building service dependencies...
+2015-11-04 04:20:21,186 INFO: - App: Copying files and filling templates...
+2015-11-04 04:20:21,201 INFO: - App: Building the app image with Dockerfile...
+2015-11-04 04:20:21,252 INFO: - App: Sending build context to Docker daemon 306.2 kBSending build context to Docker daemon 306.2 kB
+
+2015-11-04 04:20:21,253 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 04:20:21,258 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 04:20:21,260 INFO: - App: Step 1 : MAINTAINER Raymond Yee  <raymond.yee@gmail.com>
+
+2015-11-04 04:20:21,335 INFO: - App:  ---> Running in 3be8d0f4d54c
+
+2015-11-04 04:20:21,426 INFO: - App:  ---> 9446223db805
+
+2015-11-04 04:20:21,431 INFO: - App: Removing intermediate container 3be8d0f4d54c
+
+2015-11-04 04:20:21,433 INFO: - App: Step 2 : USER root
+
+2015-11-04 04:20:21,487 INFO: - App:  ---> Running in ba674632dcb1
+
+2015-11-04 04:20:21,535 INFO: - App:  ---> c36584830ebe
+
+2015-11-04 04:20:21,543 INFO: - App: Removing intermediate container ba674632dcb1
+
+2015-11-04 04:20:21,545 INFO: - App: Step 3 : RUN apt-get -y install libxml2-dev libxslt-dev python-dev
+
+2015-11-04 04:20:21,623 INFO: - App:  ---> Running in b59d88eeb1b2
+
+2015-11-04 04:20:21,916 INFO: - App: Reading package lists...
+
+2015-11-04 04:20:21,986 INFO: - App: Building dependency tree...
+
+2015-11-04 04:20:21,988 INFO: - App: Reading state information...
+
+2015-11-04 04:20:21,991 INFO: - App: E[0m[91m: Unable to locate package libxml2-dev
+
+2015-11-04 04:20:21,993 INFO: - App: E: Unable to locate package libxslt-dev
+
+2015-11-04 04:20:22,243 ERROR: - App: The command '/bin/sh -c apt-get -y install libxml2-dev libxslt-dev python-dev' returned a non-zero code: 100
+
+2015-11-04 04:20:22,246 INFO: - App: 
+2015-11-04 04:20:22,248 ERROR: - App: could not build app rdhyee-wikimedia_data_learning: Command '['docker', 'build', '-t', u'gcr.io/generic-notebooks/rdhyee-wikimedia_data_learning', '--no-cache', u'/home/andrew/binder/apps/rdhyee-wikimedia_data_learning/build/app/repo']' returned non-zero exit status 1
+2015-11-04 06:19:44,175 INFO: - App: Building service dependencies...
+2015-11-04 06:19:44,181 INFO: - App: Copying files and filling templates...
+2015-11-04 06:19:44,190 INFO: - App: Building the app image with Dockerfile...
+2015-11-04 06:19:44,242 INFO: - App: Sending build context to Docker daemon 306.2 kBSending build context to Docker daemon 306.2 kB
+
+2015-11-04 06:19:44,244 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 06:19:44,247 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 06:19:44,249 INFO: - App: Step 1 : MAINTAINER Raymond Yee  <raymond.yee@gmail.com>
+
+2015-11-04 06:19:44,339 INFO: - App:  ---> Running in 0d406493ed04
+
+2015-11-04 06:19:44,387 INFO: - App:  ---> 72ba557cfa5f
+
+2015-11-04 06:19:44,395 INFO: - App: Removing intermediate container 0d406493ed04
+
+2015-11-04 06:19:44,396 INFO: - App: Step 2 : USER root
+
+2015-11-04 06:19:44,488 INFO: - App:  ---> Running in bca70f6ae6bb
+
+2015-11-04 06:19:44,542 INFO: - App:  ---> fc7f5c4e347c
+
+2015-11-04 06:19:44,556 INFO: - App: Removing intermediate container bca70f6ae6bb
+
+2015-11-04 06:19:44,558 INFO: - App: Step 3 : RUN apt-get -y install libxml2-dev libxslt-dev python-dev
+
+2015-11-04 06:19:44,631 INFO: - App:  ---> Running in df6a2096d53a
+
+2015-11-04 06:19:44,913 INFO: - App: Reading package lists...
+
+2015-11-04 06:19:44,979 INFO: - App: Building dependency tree...
+
+2015-11-04 06:19:44,981 INFO: - App: Reading state information...
+
+2015-11-04 06:19:44,983 INFO: - App: E: Unable to locate package libxml2-dev
+
+2015-11-04 06:19:44,985 INFO: - App: E: Unable to locate package libxslt-dev
+
+2015-11-04 06:19:45,220 ERROR: - App: The command '/bin/sh -c apt-get -y install libxml2-dev libxslt-dev python-dev' returned a non-zero code: 100
+
+2015-11-04 06:19:45,222 INFO: - App: 
+2015-11-04 06:19:45,224 ERROR: - App: could not build app rdhyee-wikimedia_data_learning: Command '['docker', 'build', '-t', u'gcr.io/generic-notebooks/rdhyee-wikimedia_data_learning', '--no-cache', u'/home/andrew/binder/apps/rdhyee-wikimedia_data_learning/build/app/repo']' returned non-zero exit status 1
+2015-11-04 06:28:22,427 INFO: - App: Building service dependencies...
+2015-11-04 06:28:22,430 INFO: - App: Copying files and filling templates...
+2015-11-04 06:28:22,446 INFO: - App: Building the app image with Dockerfile...
+2015-11-04 06:28:22,500 INFO: - App: Sending build context to Docker daemon 310.8 kBSending build context to Docker daemon 310.8 kB
+
+2015-11-04 06:28:22,503 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 06:28:22,505 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 06:28:22,507 INFO: - App: Step 1 : MAINTAINER Raymond Yee  <raymond.yee@gmail.com>
+
+2015-11-04 06:28:22,607 INFO: - App:  ---> Running in 043e851d3e3b
+
+2015-11-04 06:28:22,667 INFO: - App:  ---> 9835019c3474
+
+2015-11-04 06:28:22,676 INFO: - App: Removing intermediate container 043e851d3e3b
+
+2015-11-04 06:28:22,678 INFO: - App: Step 2 : USER root
+
+2015-11-04 06:28:22,767 INFO: - App:  ---> Running in 260308eb263f
+
+2015-11-04 06:28:22,823 INFO: - App:  ---> 5811a410844b
+
+2015-11-04 06:28:22,831 INFO: - App: Removing intermediate container 260308eb263f
+
+2015-11-04 06:28:22,833 INFO: - App: Step 3 : RUN apt-get -y install libxml2 libxslt1.1 python-lxml
+
+2015-11-04 06:28:22,907 INFO: - App:  ---> Running in 78ac86c14834
+
+2015-11-04 06:28:23,202 INFO: - App: Reading package lists...
+
+2015-11-04 06:28:23,276 INFO: - App: Building dependency tree...
+
+2015-11-04 06:28:23,277 INFO: - App: Reading state information...
+
+2015-11-04 06:28:23,279 INFO: - App: Package python-lxml is not available, but is referred to by another package.
+
+2015-11-04 06:28:23,282 INFO: - App: This may mean that the package is missing, has been obsoleted, or
+
+2015-11-04 06:28:23,284 INFO: - App: is only available from another source
+
+2015-11-04 06:28:23,285 INFO: - App: 
+
+2015-11-04 06:28:23,287 INFO: - App: E: [0m[91mUnable to locate package libxslt1.1
+
+2015-11-04 06:28:23,291 INFO: - App: E: Couldn't find any package by regex 'libxslt1.1'
+
+2015-11-04 06:28:23,293 INFO: - App: E: Package 'python-lxml' has no installation candidate
+
+2015-11-04 06:28:23,526 ERROR: - App: The command '/bin/sh -c apt-get -y install libxml2 libxslt1.1 python-lxml' returned a non-zero code: 100
+
+2015-11-04 06:28:23,528 INFO: - App: 
+2015-11-04 06:28:23,529 ERROR: - App: could not build app rdhyee-wikimedia_data_learning: Command '['docker', 'build', '-t', u'gcr.io/generic-notebooks/rdhyee-wikimedia_data_learning', '--no-cache', u'/home/andrew/binder/apps/rdhyee-wikimedia_data_learning/build/app/repo']' returned non-zero exit status 1
+2015-11-04 06:30:43,800 INFO: - App: Building service dependencies...
+2015-11-04 06:30:43,803 INFO: - App: Copying files and filling templates...
+2015-11-04 06:30:43,818 INFO: - App: Building the app image with Dockerfile...
+2015-11-04 06:30:43,872 INFO: - App: Sending build context to Docker daemon 315.4 kBSending build context to Docker daemon 315.4 kB
+
+2015-11-04 06:30:43,875 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 06:30:43,878 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 06:30:43,880 INFO: - App: Step 1 : MAINTAINER Raymond Yee  <raymond.yee@gmail.com>
+
+2015-11-04 06:30:43,974 INFO: - App:  ---> Running in 1b707fd4e4cd
+
+2015-11-04 06:30:44,026 INFO: - App:  ---> 2268b6bd6709
+
+2015-11-04 06:30:44,030 INFO: - App: Removing intermediate container 1b707fd4e4cd
+
+2015-11-04 06:30:44,032 INFO: - App: Step 2 : USER main
+
+2015-11-04 06:30:44,119 INFO: - App:  ---> Running in 73de41c3097f
+
+2015-11-04 06:30:44,167 INFO: - App:  ---> 9d72096281d7
+
+2015-11-04 06:30:44,175 INFO: - App: Removing intermediate container 73de41c3097f
+
+2015-11-04 06:30:44,177 INFO: - App: Step 3 : RUN pip install lxml
+
+2015-11-04 06:30:44,259 INFO: - App:  ---> Running in 814397037c56
+
+2015-11-04 06:30:44,720 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:44,728 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:44,731 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): lxml in ./anaconda/lib/python2.7/site-packages
+
+2015-11-04 06:30:45,008 INFO: - App:  ---> 2c4f8c26f834
+
+2015-11-04 06:30:45,017 INFO: - App: Removing intermediate container 814397037c56
+
+2015-11-04 06:30:45,024 INFO: - App: Step 4 : RUN pip install mwclient
+
+2015-11-04 06:30:45,103 INFO: - App:  ---> Running in b19314d1f45c
+
+2015-11-04 06:30:45,670 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:45,673 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:45,689 INFO: - App: Collecting mwclient
+
+2015-11-04 06:30:45,867 INFO: - App:   Downloading mwclient-0.7.2.zip
+
+2015-11-04 06:30:46,156 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests in ./anaconda/lib/python2.7/site-packages (from mwclient)
+
+2015-11-04 06:30:46,158 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from mwclient)
+
+2015-11-04 06:30:46,162 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 06:30:46,164 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 06:30:46,444 INFO: - App: Successfully installed mwclient-0.7.2
+
+2015-11-04 06:30:46,730 INFO: - App:  ---> bbd9514bcde5
+
+2015-11-04 06:30:46,747 INFO: - App: Removing intermediate container b19314d1f45c
+
+2015-11-04 06:30:46,750 INFO: - App: Step 5 : RUN pip install git+git://github.com/mwclient/mwclient@v0.7.1
+
+2015-11-04 06:30:46,824 INFO: - App:  ---> Running in eab01f913ebd
+
+2015-11-04 06:30:47,427 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:47,432 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:47,434 INFO: - App: Collecting git+git://github.com/mwclient/mwclient@v0.7.1
+
+2015-11-04 06:30:47,436 INFO: - App:   Cloning git://github.com/mwclient/mwclient (to v0.7.1) to /tmp/pip-7zToBz-build
+
+2015-11-04 06:30:48,123 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests in ./anaconda/lib/python2.7/site-packages (from mwclient==0.7.1)
+
+2015-11-04 06:30:48,126 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 06:30:48,135 INFO: - App:   Found existing installation: mwclient 0.7.2
+
+2015-11-04 06:30:48,141 INFO: - App:     Uninstalling mwclient-0.7.2:
+
+2015-11-04 06:30:48,143 INFO: - App:       Successfully uninstalled mwclient-0.7.2
+
+2015-11-04 06:30:48,146 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 06:30:48,417 INFO: - App: Successfully installed mwclient-0.7.1
+
+2015-11-04 06:30:48,715 INFO: - App:  ---> deee635937b0
+
+2015-11-04 06:30:48,728 INFO: - App: Removing intermediate container eab01f913ebd
+
+2015-11-04 06:30:48,749 INFO: - App: Step 6 : RUN pip install https://bitbucket.org/rdhyee/mwclient/get/wpp.tar.bz2
+
+2015-11-04 06:30:48,796 INFO: - App:  ---> Running in d1597001d82b
+
+2015-11-04 06:30:49,398 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:49,403 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:49,430 INFO: - App: Collecting https://bitbucket.org/rdhyee/mwclient/get/wpp.tar.bz2
+
+2015-11-04 06:30:49,622 INFO: - App:   Downloading https://bitbucket.org/rdhyee/mwclient/get/wpp.tar.bz2 (53kB)
+
+2015-11-04 06:30:50,532 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 06:30:50,535 INFO: - App:   Found existing installation: mwclient 0.7.1
+
+2015-11-04 06:30:50,539 INFO: - App:     Uninstalling mwclient-0.7.1:
+
+2015-11-04 06:30:50,554 INFO: - App:       Successfully uninstalled mwclient-0.7.1
+
+2015-11-04 06:30:50,561 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 06:30:50,880 INFO: - App: Successfully installed mwclient-0.6.5.r97.wpp
+
+2015-11-04 06:30:51,238 INFO: - App:  ---> a6163760135f
+
+2015-11-04 06:30:51,258 INFO: - App: Removing intermediate container d1597001d82b
+
+2015-11-04 06:30:51,282 INFO: - App: Step 7 : RUN pip install git+git://github.com/rdhyee/mwclient@wpp_integrate
+
+2015-11-04 06:30:51,348 INFO: - App:  ---> Running in ff53674875f4
+
+2015-11-04 06:30:51,866 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:51,876 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:51,891 INFO: - App: Collecting git+git://github.com/rdhyee/mwclient@wpp_integrate
+
+2015-11-04 06:30:51,898 INFO: - App:   Cloning git://github.com/rdhyee/mwclient (to wpp_integrate) to /tmp/pip-1KcpTz-build
+
+2015-11-04 06:30:52,466 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests in ./anaconda/lib/python2.7/site-packages (from mwclient==0.7.2.dev1)
+
+2015-11-04 06:30:52,489 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from mwclient==0.7.2.dev1)
+
+2015-11-04 06:30:52,514 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 06:30:52,524 INFO: - App:   Found existing installation: mwclient 0.6.5.r97.wpp
+
+2015-11-04 06:30:52,545 INFO: - App:     Uninstalling mwclient-0.6.5.r97.wpp:
+
+2015-11-04 06:30:52,578 INFO: - App:       Successfully uninstalled mwclient-0.6.5.r97.wpp
+
+2015-11-04 06:30:52,585 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 06:30:52,763 INFO: - App: Successfully installed mwclient-0.7.2.dev1
+
+2015-11-04 06:30:53,101 INFO: - App:  ---> b1aac69cf8b8
+
+2015-11-04 06:30:53,116 INFO: - App: Removing intermediate container ff53674875f4
+
+2015-11-04 06:30:53,120 INFO: - App: Step 8 : RUN pip install responses &&     pip install pytest &&     pip install boltons &&     pip install pywikibot &&     pip install cssselect
+
+2015-11-04 06:30:53,202 INFO: - App:  ---> Running in b5823f8cd438
+
+2015-11-04 06:30:53,748 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:53,750 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:53,766 INFO: - App: Collecting responses
+
+2015-11-04 06:30:53,876 INFO: - App:   Downloading responses-0.5.0-py2.py3-none-any.whl
+
+2015-11-04 06:30:53,895 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests>=2.0 in ./anaconda/lib/python2.7/site-packages (from responses)
+
+2015-11-04 06:30:53,897 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from responses)
+
+2015-11-04 06:30:53,899 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from responses)
+
+2015-11-04 06:30:53,911 INFO: - App: Collecting cookies (from responses)
+
+2015-11-04 06:30:53,960 INFO: - App:   Downloading cookies-2.2.1-py2.py3-none-any.whl (44kB)
+
+2015-11-04 06:30:53,993 INFO: - App: Installing collected packages: cookies, responses
+
+2015-11-04 06:30:54,087 INFO: - App: Successfully installed cookies-2.2.1 responses-0.5.0
+
+2015-11-04 06:30:54,320 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:54,322 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:54,324 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytest in ./anaconda/lib/python2.7/site-packages
+
+2015-11-04 06:30:54,326 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): py>=1.4.25 in ./anaconda/lib/python2.7/site-packages (from pytest)
+
+2015-11-04 06:30:54,550 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:54,556 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:54,570 INFO: - App: Collecting boltons
+
+2015-11-04 06:30:54,697 INFO: - App:   Downloading boltons-15.1.0.tar.gz (82kB)
+
+2015-11-04 06:30:54,986 INFO: - App: Installing collected packages: boltons
+
+2015-11-04 06:30:54,989 INFO: - App:   Running setup.py install for boltons
+
+2015-11-04 06:30:55,306 INFO: - App: Successfully installed boltons-15.1.0
+
+2015-11-04 06:30:55,536 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:55,539 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:55,554 INFO: - App: Collecting pywikibot
+
+2015-11-04 06:30:55,701 INFO: - App:   Downloading pywikibot-2.0rc3.tar.gz (396kB)
+
+2015-11-04 06:30:56,114 INFO: - App: Collecting httplib2>=0.9 (from pywikibot)
+
+2015-11-04 06:30:56,164 INFO: - App:   Downloading httplib2-0.9.2.tar.gz (205kB)
+
+2015-11-04 06:30:56,406 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): ipaddress in ./anaconda/lib/python2.7/site-packages (from pywikibot)
+
+2015-11-04 06:30:56,408 INFO: - App: Installing collected packages: httplib2, pywikibot
+
+2015-11-04 06:30:56,412 INFO: - App:   Running setup.py install for httplib2
+
+2015-11-04 06:30:56,650 INFO: - App:   Running setup.py install for pywikibot
+
+2015-11-04 06:30:57,222 INFO: - App: Successfully installed httplib2-0.9.2 pywikibot-2.0rc3
+
+2015-11-04 06:30:57,461 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 06:30:57,478 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 06:30:57,482 INFO: - App: Collecting cssselect
+
+2015-11-04 06:30:57,588 INFO: - App:   Downloading cssselect-0.9.1.tar.gz
+
+2015-11-04 06:30:57,866 INFO: - App: Installing collected packages: cssselect
+
+2015-11-04 06:30:57,869 INFO: - App:   Running setup.py install for cssselect
+
+2015-11-04 06:30:58,139 INFO: - App: Successfully installed cssselect-0.9.1
+
+2015-11-04 06:30:58,496 INFO: - App:  ---> c57fd1a264dc
+
+2015-11-04 06:30:58,498 INFO: - App: Removing intermediate container b5823f8cd438
+
+2015-11-04 06:30:58,500 INFO: - App: Step 9 : USER main
+
+2015-11-04 06:30:58,587 INFO: - App:  ---> Running in 2ce103649e36
+
+2015-11-04 06:30:58,637 INFO: - App:  ---> cc58d8f0821e
+
+2015-11-04 06:30:58,643 INFO: - App: Removing intermediate container 2ce103649e36
+
+2015-11-04 06:30:58,647 INFO: - App: Step 10 : ADD . $HOME/notebooks
+
+2015-11-04 06:30:58,839 INFO: - App:  ---> 15e8e1dff173
+
+2015-11-04 06:30:58,860 INFO: - App: Removing intermediate container 4d4736bf2102
+
+2015-11-04 06:30:58,892 INFO: - App: Step 11 : USER root
+
+2015-11-04 06:30:58,930 INFO: - App:  ---> Running in 84c8ae313cab
+
+2015-11-04 06:30:58,971 INFO: - App:  ---> baeda2c76e58
+
+2015-11-04 06:30:58,979 INFO: - App: Removing intermediate container 84c8ae313cab
+
+2015-11-04 06:30:58,981 INFO: - App: Step 12 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 06:30:59,054 INFO: - App:  ---> Running in f03d7780ac63
+
+2015-11-04 06:30:59,466 INFO: - App:  ---> 245bd82a1380
+
+2015-11-04 06:30:59,478 INFO: - App: Removing intermediate container f03d7780ac63
+
+2015-11-04 06:30:59,483 INFO: - App: Step 13 : USER main
+
+2015-11-04 06:30:59,563 INFO: - App:  ---> Running in e127356c3446
+
+2015-11-04 06:30:59,640 INFO: - App:  ---> ede5f98f8eaa
+
+2015-11-04 06:30:59,650 INFO: - App: Removing intermediate container e127356c3446
+
+2015-11-04 06:30:59,652 INFO: - App: Step 14 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 06:30:59,739 INFO: - App:  ---> Running in 0e03cc2ae73d
+
+2015-11-04 06:31:00,423 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Exploring Quarry, a Service to Run SQL Queries against Wikipedia.ipynb
+
+2015-11-04 06:31:00,686 INFO: - App:  ---> fc1d3f523300
+
+2015-11-04 06:31:00,694 INFO: - App: Removing intermediate container 0e03cc2ae73d
+
+2015-11-04 06:31:00,697 INFO: - App: Step 15 : WORKDIR $HOME/notebooks
+
+2015-11-04 06:31:00,767 INFO: - App:  ---> Running in e5c7dd970bfb
+
+2015-11-04 06:31:00,823 INFO: - App:  ---> ab3abbe5d0c3
+
+2015-11-04 06:31:00,831 INFO: - App: Removing intermediate container e5c7dd970bfb
+
+2015-11-04 06:31:00,833 INFO: - App: Successfully built ab3abbe5d0c3
+
+2015-11-04 06:31:00,845 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/rdhyee-wikimedia_data_learning to private registry...
+2015-11-04 06:31:13,860 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 06:31:19,761 INFO: - App: Successfully built app rdhyee-wikimedia_data_learning
+2015-11-04 16:25:17,143 INFO: - App: Building service dependencies...
+2015-11-04 16:25:17,160 INFO: - App: Copying files and filling templates...
+2015-11-04 16:25:17,176 INFO: - App: Building the app image with Dockerfile...
+2015-11-04 16:25:17,225 INFO: - App: Sending build context to Docker daemon 315.4 kBSending build context to Docker daemon 315.4 kB
+
+2015-11-04 16:25:17,233 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 16:25:17,236 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 16:25:17,243 INFO: - App: Step 1 : MAINTAINER Raymond Yee  <raymond.yee@gmail.com>
+
+2015-11-04 16:25:17,339 INFO: - App:  ---> Running in 40d354ef5ead
+
+2015-11-04 16:25:17,391 INFO: - App:  ---> f3f19e4185ae
+
+2015-11-04 16:25:17,402 INFO: - App: Removing intermediate container 40d354ef5ead
+
+2015-11-04 16:25:17,408 INFO: - App: Step 2 : USER main
+
+2015-11-04 16:25:17,500 INFO: - App:  ---> Running in 26ecdee6cde3
+
+2015-11-04 16:25:17,557 INFO: - App:  ---> 83851a9f7922
+
+2015-11-04 16:25:17,562 INFO: - App: Removing intermediate container 26ecdee6cde3
+
+2015-11-04 16:25:17,564 INFO: - App: Step 3 : RUN pip install lxml
+
+2015-11-04 16:25:17,635 INFO: - App:  ---> Running in 342906eae2dc
+
+2015-11-04 16:25:19,163 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:19,166 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:19,169 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): lxml in ./anaconda/lib/python2.7/site-packages
+
+2015-11-04 16:25:19,449 INFO: - App:  ---> 22de1c5f286e
+
+2015-11-04 16:25:19,458 INFO: - App: Removing intermediate container 342906eae2dc
+
+2015-11-04 16:25:19,464 INFO: - App: Step 4 : RUN pip install mwclient
+
+2015-11-04 16:25:19,527 INFO: - App:  ---> Running in 5c36e403dd4c
+
+2015-11-04 16:25:20,161 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:20,163 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:20,181 INFO: - App: Collecting mwclient
+
+2015-11-04 16:25:20,314 INFO: - App:   Downloading mwclient-0.7.2.zip
+
+2015-11-04 16:25:20,589 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests in ./anaconda/lib/python2.7/site-packages (from mwclient)
+
+2015-11-04 16:25:20,590 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from mwclient)
+
+2015-11-04 16:25:20,596 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 16:25:20,599 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 16:25:20,856 INFO: - App: Successfully installed mwclient-0.7.2
+
+2015-11-04 16:25:21,189 INFO: - App:  ---> 29b824808f44
+
+2015-11-04 16:25:21,196 INFO: - App: Removing intermediate container 5c36e403dd4c
+
+2015-11-04 16:25:21,198 INFO: - App: Step 5 : RUN pip install git+git://github.com/mwclient/mwclient@v0.7.1
+
+2015-11-04 16:25:21,271 INFO: - App:  ---> Running in 735d2ed72a3c
+
+2015-11-04 16:25:21,908 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:21,910 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:21,914 INFO: - App: Collecting git+git://github.com/mwclient/mwclient@v0.7.1
+
+2015-11-04 16:25:21,916 INFO: - App:   Cloning git://github.com/mwclient/mwclient (to v0.7.1) to /tmp/pip-5quV7X-build
+
+2015-11-04 16:25:22,560 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests in ./anaconda/lib/python2.7/site-packages (from mwclient==0.7.1)
+
+2015-11-04 16:25:22,563 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 16:25:22,565 INFO: - App:   Found existing installation: mwclient 0.7.2
+
+2015-11-04 16:25:22,593 INFO: - App:     Uninstalling mwclient-0.7.2:
+
+2015-11-04 16:25:22,596 INFO: - App:       Successfully uninstalled mwclient-0.7.2
+
+2015-11-04 16:25:22,597 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 16:25:22,850 INFO: - App: Successfully installed mwclient-0.7.1
+
+2015-11-04 16:25:23,129 INFO: - App:  ---> 4cc80164e155
+
+2015-11-04 16:25:23,139 INFO: - App: Removing intermediate container 735d2ed72a3c
+
+2015-11-04 16:25:23,144 INFO: - App: Step 6 : RUN pip install https://bitbucket.org/rdhyee/mwclient/get/wpp.tar.bz2
+
+2015-11-04 16:25:23,209 INFO: - App:  ---> Running in 4adf3e087d87
+
+2015-11-04 16:25:23,819 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:23,824 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:23,827 INFO: - App: Collecting https://bitbucket.org/rdhyee/mwclient/get/wpp.tar.bz2
+
+2015-11-04 16:25:24,216 INFO: - App:   Downloading https://bitbucket.org/rdhyee/mwclient/get/wpp.tar.bz2 (53kB)
+
+2015-11-04 16:25:25,164 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 16:25:25,167 INFO: - App:   Found existing installation: mwclient 0.7.1
+
+2015-11-04 16:25:25,169 INFO: - App:     Uninstalling mwclient-0.7.1:
+
+2015-11-04 16:25:25,174 INFO: - App:       Successfully uninstalled mwclient-0.7.1
+
+2015-11-04 16:25:25,212 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 16:25:25,495 INFO: - App: Successfully installed mwclient-0.6.5.r97.wpp
+
+2015-11-04 16:25:25,815 INFO: - App:  ---> 83234ae31dc6
+
+2015-11-04 16:25:25,830 INFO: - App: Removing intermediate container 4adf3e087d87
+
+2015-11-04 16:25:25,831 INFO: - App: Step 7 : RUN pip install git+git://github.com/rdhyee/mwclient@wpp_integrate
+
+2015-11-04 16:25:25,906 INFO: - App:  ---> Running in c8efbfd74f18
+
+2015-11-04 16:25:26,454 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:26,460 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:26,463 INFO: - App: Collecting git+git://github.com/rdhyee/mwclient@wpp_integrate
+
+2015-11-04 16:25:26,485 INFO: - App:   Cloning git://github.com/rdhyee/mwclient (to wpp_integrate) to /tmp/pip-yL1tj9-build
+
+2015-11-04 16:25:27,061 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests in ./anaconda/lib/python2.7/site-packages (from mwclient==0.7.2.dev1)
+
+2015-11-04 16:25:27,064 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from mwclient==0.7.2.dev1)
+
+2015-11-04 16:25:27,066 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 16:25:27,068 INFO: - App:   Found existing installation: mwclient 0.6.5.r97.wpp
+
+2015-11-04 16:25:27,070 INFO: - App:     Uninstalling mwclient-0.6.5.r97.wpp:
+
+2015-11-04 16:25:27,096 INFO: - App:       Successfully uninstalled mwclient-0.6.5.r97.wpp
+
+2015-11-04 16:25:27,124 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 16:25:27,363 INFO: - App: Successfully installed mwclient-0.7.2.dev1
+
+2015-11-04 16:25:27,677 INFO: - App:  ---> c15583be55bf
+
+2015-11-04 16:25:27,685 INFO: - App: Removing intermediate container c8efbfd74f18
+
+2015-11-04 16:25:27,687 INFO: - App: Step 8 : RUN pip install responses &&     pip install pytest &&     pip install boltons &&     pip install pywikibot &&     pip install cssselect
+
+2015-11-04 16:25:27,763 INFO: - App:  ---> Running in 8a191b528aff
+
+2015-11-04 16:25:28,373 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:28,376 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:28,394 INFO: - App: Collecting responses
+
+2015-11-04 16:25:28,625 INFO: - App:   Downloading responses-0.5.0-py2.py3-none-any.whl
+
+2015-11-04 16:25:28,647 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests>=2.0 in ./anaconda/lib/python2.7/site-packages (from responses)
+
+2015-11-04 16:25:28,651 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from responses)
+
+2015-11-04 16:25:28,653 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from responses)
+
+2015-11-04 16:25:28,663 INFO: - App: Collecting cookies (from responses)
+
+2015-11-04 16:25:28,720 INFO: - App:   Downloading cookies-2.2.1-py2.py3-none-any.whl (44kB)
+
+2015-11-04 16:25:28,751 INFO: - App: Installing collected packages: cookies, responses
+
+2015-11-04 16:25:28,841 INFO: - App: Successfully installed cookies-2.2.1 responses-0.5.0
+
+2015-11-04 16:25:29,080 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:29,083 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:29,085 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytest in ./anaconda/lib/python2.7/site-packages
+
+2015-11-04 16:25:29,092 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): py>=1.4.25 in ./anaconda/lib/python2.7/site-packages (from pytest)
+
+2015-11-04 16:25:29,309 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:29,311 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:29,331 INFO: - App: Collecting boltons
+
+2015-11-04 16:25:29,498 INFO: - App:   Downloading boltons-15.1.0.tar.gz (82kB)
+
+2015-11-04 16:25:29,835 INFO: - App: Installing collected packages: boltons
+
+2015-11-04 16:25:29,837 INFO: - App:   Running setup.py install for boltons
+
+2015-11-04 16:25:30,155 INFO: - App: Successfully installed boltons-15.1.0
+
+2015-11-04 16:25:30,391 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:30,394 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:30,412 INFO: - App: Collecting pywikibot
+
+2015-11-04 16:25:30,555 INFO: - App:   Downloading pywikibot-2.0rc3.tar.gz (396kB)
+
+2015-11-04 16:25:30,981 INFO: - App: Collecting httplib2>=0.9 (from pywikibot)
+
+2015-11-04 16:25:31,035 INFO: - App:   Downloading httplib2-0.9.2.tar.gz (205kB)
+
+2015-11-04 16:25:31,278 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): ipaddress in ./anaconda/lib/python2.7/site-packages (from pywikibot)
+
+2015-11-04 16:25:31,281 INFO: - App: Installing collected packages: httplib2, pywikibot
+
+2015-11-04 16:25:31,286 INFO: - App:   Running setup.py install for httplib2
+
+2015-11-04 16:25:31,526 INFO: - App:   Running setup.py install for pywikibot
+
+2015-11-04 16:25:32,116 INFO: - App: Successfully installed httplib2-0.9.2 pywikibot-2.0rc3
+
+2015-11-04 16:25:32,352 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:25:32,357 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:25:32,366 INFO: - App: Collecting cssselect
+
+2015-11-04 16:25:32,480 INFO: - App:   Downloading cssselect-0.9.1.tar.gz
+
+2015-11-04 16:25:32,768 INFO: - App: Installing collected packages: cssselect
+
+2015-11-04 16:25:32,780 INFO: - App:   Running setup.py install for cssselect
+
+2015-11-04 16:25:33,055 INFO: - App: Successfully installed cssselect-0.9.1
+
+2015-11-04 16:25:33,395 INFO: - App:  ---> ac7d1177ec46
+
+2015-11-04 16:25:33,418 INFO: - App: Removing intermediate container 8a191b528aff
+
+2015-11-04 16:25:33,433 INFO: - App: Step 9 : USER main
+
+2015-11-04 16:25:33,493 INFO: - App:  ---> Running in ac8d9df60721
+
+2015-11-04 16:25:33,559 INFO: - App:  ---> 1d53528e0e28
+
+2015-11-04 16:25:33,567 INFO: - App: Removing intermediate container ac8d9df60721
+
+2015-11-04 16:25:33,573 INFO: - App: Step 10 : ADD . $HOME/notebooks
+
+2015-11-04 16:25:33,730 INFO: - App:  ---> f12a5f5b90d4
+
+2015-11-04 16:25:33,742 INFO: - App: Removing intermediate container 472a4b011755
+
+2015-11-04 16:25:33,745 INFO: - App: Step 11 : USER root
+
+2015-11-04 16:25:33,815 INFO: - App:  ---> Running in bd305ec99d17
+
+2015-11-04 16:25:33,871 INFO: - App:  ---> ecd9c15254ea
+
+2015-11-04 16:25:33,880 INFO: - App: Removing intermediate container bd305ec99d17
+
+2015-11-04 16:25:33,882 INFO: - App: Step 12 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 16:25:33,960 INFO: - App:  ---> Running in 14e880f4bfa2
+
+2015-11-04 16:25:34,362 INFO: - App:  ---> 8d1c92623d19
+
+2015-11-04 16:25:34,375 INFO: - App: Removing intermediate container 14e880f4bfa2
+
+2015-11-04 16:25:34,379 INFO: - App: Step 13 : USER main
+
+2015-11-04 16:25:34,466 INFO: - App:  ---> Running in f9b9ada6ee6a
+
+2015-11-04 16:25:34,536 INFO: - App:  ---> c283b0a5f02e
+
+2015-11-04 16:25:34,556 INFO: - App: Removing intermediate container f9b9ada6ee6a
+
+2015-11-04 16:25:34,587 INFO: - App: Step 14 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 16:25:34,644 INFO: - App:  ---> Running in 0cb5d1d192ea
+
+2015-11-04 16:25:35,323 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Exploring Quarry, a Service to Run SQL Queries against Wikipedia.ipynb
+
+2015-11-04 16:25:35,622 INFO: - App:  ---> a123c0e8d5f9
+
+2015-11-04 16:25:35,634 INFO: - App: Removing intermediate container 0cb5d1d192ea
+
+2015-11-04 16:25:35,638 INFO: - App: Step 15 : WORKDIR $HOME/notebooks
+
+2015-11-04 16:25:35,727 INFO: - App:  ---> Running in 60cea8851b5c
+
+2015-11-04 16:25:35,779 INFO: - App:  ---> 141ee0b53ef9
+
+2015-11-04 16:25:35,789 INFO: - App: Removing intermediate container 60cea8851b5c
+
+2015-11-04 16:25:35,790 INFO: - App: Successfully built 141ee0b53ef9
+
+2015-11-04 16:25:35,803 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/rdhyee-wikimedia_data_learning to private registry...
+2015-11-04 16:25:50,792 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 16:25:55,649 INFO: - App: Successfully built app rdhyee-wikimedia_data_learning
+2015-11-04 16:42:18,182 INFO: - App: Building service dependencies...
+2015-11-04 16:42:18,185 INFO: - App: Copying files and filling templates...
+2015-11-04 16:42:18,201 INFO: - App: Building the app image with Dockerfile...
+2015-11-04 16:42:18,263 INFO: - App: Sending build context to Docker daemon 315.4 kBSending build context to Docker daemon 315.4 kB
+
+2015-11-04 16:42:18,290 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 16:42:18,302 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 16:42:18,317 INFO: - App: Step 1 : MAINTAINER Raymond Yee  <raymond.yee@gmail.com>
+
+2015-11-04 16:42:18,386 INFO: - App:  ---> Running in aef66da8a06d
+
+2015-11-04 16:42:18,436 INFO: - App:  ---> bd7d95840273
+
+2015-11-04 16:42:18,454 INFO: - App: Removing intermediate container aef66da8a06d
+
+2015-11-04 16:42:18,471 INFO: - App: Step 2 : USER main
+
+2015-11-04 16:42:18,529 INFO: - App:  ---> Running in 71b51f191f2e
+
+2015-11-04 16:42:18,573 INFO: - App:  ---> 0e6fc9033b70
+
+2015-11-04 16:42:18,584 INFO: - App: Removing intermediate container 71b51f191f2e
+
+2015-11-04 16:42:18,591 INFO: - App: Step 3 : RUN pip install lxml
+
+2015-11-04 16:42:18,658 INFO: - App:  ---> Running in 3251ce4afa06
+
+2015-11-04 16:42:20,114 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:20,116 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:20,120 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): lxml in ./anaconda/lib/python2.7/site-packages
+
+2015-11-04 16:42:20,410 INFO: - App:  ---> 3ffb6518244a
+
+2015-11-04 16:42:20,420 INFO: - App: Removing intermediate container 3251ce4afa06
+
+2015-11-04 16:42:20,423 INFO: - App: Step 4 : RUN pip install mwclient
+
+2015-11-04 16:42:20,496 INFO: - App:  ---> Running in 7a0c62ed2d0c
+
+2015-11-04 16:42:21,144 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:21,148 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:21,163 INFO: - App: Collecting mwclient
+
+2015-11-04 16:42:21,271 INFO: - App:   Downloading mwclient-0.7.2.zip
+
+2015-11-04 16:42:21,562 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests in ./anaconda/lib/python2.7/site-packages (from mwclient)
+
+2015-11-04 16:42:21,565 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from mwclient)
+
+2015-11-04 16:42:21,567 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 16:42:21,571 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 16:42:21,835 INFO: - App: Successfully installed mwclient-0.7.2
+
+2015-11-04 16:42:22,119 INFO: - App:  ---> daedc5570817
+
+2015-11-04 16:42:22,130 INFO: - App: Removing intermediate container 7a0c62ed2d0c
+
+2015-11-04 16:42:22,133 INFO: - App: Step 5 : RUN pip install git+git://github.com/mwclient/mwclient@v0.7.1
+
+2015-11-04 16:42:22,207 INFO: - App:  ---> Running in 64d651668eab
+
+2015-11-04 16:42:22,862 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:22,865 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:22,867 INFO: - App: Collecting git+git://github.com/mwclient/mwclient@v0.7.1
+
+2015-11-04 16:42:22,870 INFO: - App:   Cloning git://github.com/mwclient/mwclient (to v0.7.1) to /tmp/pip-IqBklc-build
+
+2015-11-04 16:42:23,526 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests in ./anaconda/lib/python2.7/site-packages (from mwclient==0.7.1)
+
+2015-11-04 16:42:23,529 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 16:42:23,531 INFO: - App:   Found existing installation: mwclient 0.7.2
+
+2015-11-04 16:42:23,554 INFO: - App:     Uninstalling mwclient-0.7.2:
+
+2015-11-04 16:42:23,556 INFO: - App:       Successfully uninstalled mwclient-0.7.2
+
+2015-11-04 16:42:23,558 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 16:42:23,826 INFO: - App: Successfully installed mwclient-0.7.1
+
+2015-11-04 16:42:24,133 INFO: - App:  ---> 777cab44756b
+
+2015-11-04 16:42:24,136 INFO: - App: Removing intermediate container 64d651668eab
+
+2015-11-04 16:42:24,138 INFO: - App: Step 6 : RUN pip install https://bitbucket.org/rdhyee/mwclient/get/wpp.tar.bz2
+
+2015-11-04 16:42:24,227 INFO: - App:  ---> Running in e0d62caaeff8
+
+2015-11-04 16:42:24,853 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:24,855 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:24,859 INFO: - App: Collecting https://bitbucket.org/rdhyee/mwclient/get/wpp.tar.bz2
+
+2015-11-04 16:42:25,079 INFO: - App:   Downloading https://bitbucket.org/rdhyee/mwclient/get/wpp.tar.bz2 (53kB)
+
+2015-11-04 16:42:25,987 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 16:42:25,989 INFO: - App:   Found existing installation: mwclient 0.7.1
+
+2015-11-04 16:42:25,991 INFO: - App:     Uninstalling mwclient-0.7.1:
+
+2015-11-04 16:42:25,994 INFO: - App:       Successfully uninstalled mwclient-0.7.1
+
+2015-11-04 16:42:25,996 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 16:42:26,331 INFO: - App: Successfully installed mwclient-0.6.5.r97.wpp
+
+2015-11-04 16:42:26,677 INFO: - App:  ---> baa1a750eb2d
+
+2015-11-04 16:42:26,693 INFO: - App: Removing intermediate container e0d62caaeff8
+
+2015-11-04 16:42:26,696 INFO: - App: Step 7 : RUN pip install git+git://github.com/rdhyee/mwclient@wpp_integrate
+
+2015-11-04 16:42:26,775 INFO: - App:  ---> Running in 0ccff66d7dab
+
+2015-11-04 16:42:27,371 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:27,374 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:27,376 INFO: - App: Collecting git+git://github.com/rdhyee/mwclient@wpp_integrate
+
+2015-11-04 16:42:27,379 INFO: - App:   Cloning git://github.com/rdhyee/mwclient (to wpp_integrate) to /tmp/pip-04nMzA-build
+
+2015-11-04 16:42:28,000 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests in ./anaconda/lib/python2.7/site-packages (from mwclient==0.7.2.dev1)
+
+2015-11-04 16:42:28,004 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from mwclient==0.7.2.dev1)
+
+2015-11-04 16:42:28,008 INFO: - App: Installing collected packages: mwclient
+
+2015-11-04 16:42:28,010 INFO: - App:   Found existing installation: mwclient 0.6.5.r97.wpp
+
+2015-11-04 16:42:28,017 INFO: - App:     Uninstalling mwclient-0.6.5.r97.wpp:
+
+2015-11-04 16:42:28,020 INFO: - App:       Successfully uninstalled mwclient-0.6.5.r97.wpp
+
+2015-11-04 16:42:28,024 INFO: - App:   Running setup.py install for mwclient
+
+2015-11-04 16:42:28,307 INFO: - App: Successfully installed mwclient-0.7.2.dev1
+
+2015-11-04 16:42:28,625 INFO: - App:  ---> bac92db5059e
+
+2015-11-04 16:42:28,635 INFO: - App: Removing intermediate container 0ccff66d7dab
+
+2015-11-04 16:42:28,639 INFO: - App: Step 8 : RUN pip install responses &&     pip install pytest &&     pip install boltons &&     pip install pywikibot &&     pip install cssselect
+
+2015-11-04 16:42:28,731 INFO: - App:  ---> Running in 969ae2d705b7
+
+2015-11-04 16:42:29,317 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:29,319 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:29,336 INFO: - App: Collecting responses
+
+2015-11-04 16:42:29,559 INFO: - App:   Downloading responses-0.5.0-py2.py3-none-any.whl
+
+2015-11-04 16:42:29,582 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): requests>=2.0 in ./anaconda/lib/python2.7/site-packages (from responses)
+
+2015-11-04 16:42:29,605 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from responses)
+
+2015-11-04 16:42:29,617 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six in ./anaconda/lib/python2.7/site-packages (from responses)
+
+2015-11-04 16:42:29,628 INFO: - App: Collecting cookies (from responses)
+
+2015-11-04 16:42:29,644 INFO: - App:   Downloading cookies-2.2.1-py2.py3-none-any.whl (44kB)
+
+2015-11-04 16:42:29,688 INFO: - App: Installing collected packages: cookies, responses
+
+2015-11-04 16:42:29,777 INFO: - App: Successfully installed cookies-2.2.1 responses-0.5.0
+
+2015-11-04 16:42:30,009 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:30,018 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:30,021 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytest in ./anaconda/lib/python2.7/site-packages
+
+2015-11-04 16:42:30,023 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): py>=1.4.25 in ./anaconda/lib/python2.7/site-packages (from pytest)
+
+2015-11-04 16:42:30,244 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:30,250 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:30,264 INFO: - App: Collecting boltons
+
+2015-11-04 16:42:30,410 INFO: - App:   Downloading boltons-15.1.0.tar.gz (82kB)
+
+2015-11-04 16:42:30,727 INFO: - App: Installing collected packages: boltons
+
+2015-11-04 16:42:30,731 INFO: - App:   Running setup.py install for boltons
+
+2015-11-04 16:42:31,039 INFO: - App: Successfully installed boltons-15.1.0
+
+2015-11-04 16:42:31,283 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:31,286 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:31,303 INFO: - App: Collecting pywikibot
+
+2015-11-04 16:42:31,421 INFO: - App:   Downloading pywikibot-2.0rc3.tar.gz (396kB)
+
+2015-11-04 16:42:31,840 INFO: - App: Collecting httplib2>=0.9 (from pywikibot)
+
+2015-11-04 16:42:31,889 INFO: - App:   Downloading httplib2-0.9.2.tar.gz (205kB)
+
+2015-11-04 16:42:32,146 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): ipaddress in ./anaconda/lib/python2.7/site-packages (from pywikibot)
+
+2015-11-04 16:42:32,148 INFO: - App: Installing collected packages: httplib2, pywikibot
+
+2015-11-04 16:42:32,151 INFO: - App:   Running setup.py install for httplib2
+
+2015-11-04 16:42:32,401 INFO: - App:   Running setup.py install for pywikibot
+
+2015-11-04 16:42:32,987 INFO: - App: Successfully installed httplib2-0.9.2 pywikibot-2.0rc3
+
+2015-11-04 16:42:33,234 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 16:42:33,237 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 16:42:33,258 INFO: - App: Collecting cssselect
+
+2015-11-04 16:42:33,374 INFO: - App:   Downloading cssselect-0.9.1.tar.gz
+
+2015-11-04 16:42:33,661 INFO: - App: Installing collected packages: cssselect
+
+2015-11-04 16:42:33,664 INFO: - App:   Running setup.py install for cssselect
+
+2015-11-04 16:42:33,940 INFO: - App: Successfully installed cssselect-0.9.1
+
+2015-11-04 16:42:34,305 INFO: - App:  ---> 2b73c91394ed
+
+2015-11-04 16:42:34,320 INFO: - App: Removing intermediate container 969ae2d705b7
+
+2015-11-04 16:42:34,322 INFO: - App: Step 9 : USER main
+
+2015-11-04 16:42:34,396 INFO: - App:  ---> Running in 09b722121d6e
+
+2015-11-04 16:42:34,451 INFO: - App:  ---> f66e17034ff1
+
+2015-11-04 16:42:34,459 INFO: - App: Removing intermediate container 09b722121d6e
+
+2015-11-04 16:42:34,461 INFO: - App: Step 10 : ADD . $HOME/notebooks
+
+2015-11-04 16:42:34,633 INFO: - App:  ---> cc7971316519
+
+2015-11-04 16:42:34,638 INFO: - App: Removing intermediate container f2d1413ad3ed
+
+2015-11-04 16:42:34,653 INFO: - App: Step 11 : USER root
+
+2015-11-04 16:42:34,718 INFO: - App:  ---> Running in a0cf539392c3
+
+2015-11-04 16:42:34,773 INFO: - App:  ---> 005d5a94c13e
+
+2015-11-04 16:42:34,784 INFO: - App: Removing intermediate container a0cf539392c3
+
+2015-11-04 16:42:34,811 INFO: - App: Step 12 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 16:42:34,855 INFO: - App:  ---> Running in 0a66fab56bc9
+
+2015-11-04 16:42:35,286 INFO: - App:  ---> 35f2174cd072
+
+2015-11-04 16:42:35,304 INFO: - App: Removing intermediate container 0a66fab56bc9
+
+2015-11-04 16:42:35,318 INFO: - App: Step 13 : USER main
+
+2015-11-04 16:42:35,380 INFO: - App:  ---> Running in a4efafc4385c
+
+2015-11-04 16:42:35,447 INFO: - App:  ---> b4778902a853
+
+2015-11-04 16:42:35,473 INFO: - App: Removing intermediate container a4efafc4385c
+
+2015-11-04 16:42:35,484 INFO: - App: Step 14 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 16:42:35,535 INFO: - App:  ---> Running in 7eab437c95f7
+
+2015-11-04 16:42:36,266 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Exploring Quarry, a Service to Run SQL Queries against Wikipedia.ipynb
+
+2015-11-04 16:42:36,548 INFO: - App:  ---> 2f342f627afc
+
+2015-11-04 16:42:36,556 INFO: - App: Removing intermediate container 7eab437c95f7
+
+2015-11-04 16:42:36,559 INFO: - App: Step 15 : WORKDIR $HOME/notebooks
+
+2015-11-04 16:42:36,635 INFO: - App:  ---> Running in a40281984b95
+
+2015-11-04 16:42:36,683 INFO: - App:  ---> 1890a2177d63
+
+2015-11-04 16:42:36,701 INFO: - App: Removing intermediate container a40281984b95
+
+2015-11-04 16:42:36,704 INFO: - App: Successfully built 1890a2177d63
+
+2015-11-04 16:42:36,707 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/rdhyee-wikimedia_data_learning to private registry...
+2015-11-04 16:42:50,956 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 16:42:56,314 INFO: - App: Successfully built app rdhyee-wikimedia_data_learning

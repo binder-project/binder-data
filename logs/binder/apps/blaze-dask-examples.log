@@ -1,0 +1,780 @@
+2015-10-26 20:58:06,160 INFO: - App: Building service dependencies...
+2015-10-26 20:58:06,163 INFO: - App: Copying files and filling templates...
+2015-10-26 20:58:06,202 INFO: - App: Building app image without Dockerfile...
+2015-10-26 20:58:06,416 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.74 MBSending build context to Docker daemon 23.74 MB
+
+2015-10-26 20:58:06,419 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 20:58:06,422 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 20:58:06,424 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-26 20:58:06,612 INFO: - App:  ---> 9428d5992202
+
+2015-10-26 20:58:06,621 INFO: - App: Removing intermediate container 15a325397994
+
+2015-10-26 20:58:06,623 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-26 20:58:06,786 INFO: - App:  ---> 05dc2b1ca778
+
+2015-10-26 20:58:06,791 INFO: - App: Removing intermediate container 3e22ce9b020e
+
+2015-10-26 20:58:06,793 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-26 20:58:06,879 INFO: - App:  ---> Running in 53f7cc3e497f
+
+2015-10-26 20:58:07,025 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 20:58:08,332 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 20:58:08,334 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 20:58:08,344 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-10-26 20:58:08,358 INFO: - App: Collecting dask[complete] from git+https://github.com/blaze/dask.git#egg=dask[complete] (from -r requirements.txt (line 2))
+
+2015-10-26 20:58:08,359 INFO: - App:   Cloning https://github.com/blaze/dask.git to /tmp/pip-build-N9B6PN/dask
+
+2015-10-26 20:58:10,197 INFO: - App: Collecting castra from git+https://github.com/blaze/castra.git#egg=castra (from -r requirements.txt (line 3))
+
+2015-10-26 20:58:10,198 INFO: - App:   Cloning https://github.com/blaze/castra.git to /tmp/pip-build-N9B6PN/castra
+
+2015-10-26 20:58:10,757 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-10-26 20:58:10,758 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): toolz in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 5))
+
+2015-10-26 20:58:10,773 INFO: - App: Collecting dill (from -r requirements.txt (line 6))
+
+2015-10-26 20:58:10,894 INFO: - App:   Downloading dill-0.2.4.tgz (58kB)
+
+2015-10-26 20:58:11,136 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 7))
+
+2015-10-26 20:58:11,155 INFO: - App: Collecting partd (from -r requirements.txt (line 8))
+
+2015-10-26 20:58:11,299 INFO: - App:   Downloading partd-0.3.2.tar.gz
+
+2015-10-26 20:58:11,516 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): blaze in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 9))
+
+2015-10-26 20:58:11,518 INFO: - App: Collecting graphviz (from -r requirements.txt (line 10))
+
+2015-10-26 20:58:11,557 INFO: - App:   Downloading graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-26 20:58:11,577 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-image in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 11))
+
+2015-10-26 20:58:11,585 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): bokeh in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 12))
+
+2015-10-26 20:58:11,592 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyzmq in ./anaconda/lib/python2.7/site-packages (from dask[complete]->-r requirements.txt (line 2))
+
+2015-10-26 20:58:11,600 INFO: - App: Collecting bloscpack>=0.8.0 (from castra->-r requirements.txt (line 3))
+
+2015-10-26 20:58:11,711 INFO: - App:   Downloading bloscpack-0.9.0.tar.gz (89kB)
+
+2015-10-26 20:58:11,952 INFO: - App: Collecting blosc (from castra->-r requirements.txt (line 3))
+
+2015-10-26 20:58:12,015 INFO: - App:   Downloading blosc-1.2.8.tar.gz (259kB)
+
+2015-10-26 20:58:12,302 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 7))
+
+2015-10-26 20:58:12,306 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 7))
+
+2015-10-26 20:58:12,313 INFO: - App: Collecting locket (from partd->-r requirements.txt (line 8))
+
+2015-10-26 20:58:12,416 INFO: - App:   Downloading locket-0.2.0.tar.gz
+
+2015-10-26 20:58:12,604 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib>=1.1.0 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-26 20:58:12,612 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.3 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-26 20:58:12,615 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): networkx>=1.8 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-26 20:58:12,617 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pillow>=1.7.8 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-26 20:58:12,619 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/lib/python2.7/site-packages (from matplotlib>=1.1.0->scikit-image->-r requirements.txt (line 11))
+
+2015-10-26 20:58:12,621 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/lib/python2.7/site-packages (from matplotlib>=1.1.0->scikit-image->-r requirements.txt (line 11))
+
+2015-10-26 20:58:12,622 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from matplotlib>=1.1.0->scikit-image->-r requirements.txt (line 11))
+
+2015-10-26 20:58:12,624 INFO: - App: Installing collected packages: dill, locket, partd, dask, blosc, bloscpack, castra, graphviz
+
+2015-10-26 20:58:12,627 INFO: - App:   Running setup.py install for dill
+
+2015-10-26 20:58:12,882 INFO: - App:   Running setup.py install for locket
+
+2015-10-26 20:58:13,104 INFO: - App:   Running setup.py install for partd
+
+2015-10-26 20:58:13,344 INFO: - App:   Running setup.py install for dask
+
+2015-10-26 20:58:14,066 INFO: - App:   Running setup.py install for blosc
+
+2015-10-26 20:58:21,076 INFO: - App:   Running setup.py install for bloscpack
+
+2015-10-26 20:58:21,349 INFO: - App:   Running setup.py install for castra
+
+2015-10-26 20:58:21,840 INFO: - App: Successfully installed blosc-1.2.8 bloscpack-0.9.0 castra-0.1.6 dask-0.7.5 dill-0.2.4 graphviz-0.4.7 locket-0.2.0 partd-0.3.2
+
+2015-10-26 20:58:21,871 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 20:58:22,175 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 20:58:22,180 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 20:58:22,190 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-10-26 20:58:22,205 INFO: - App: Collecting dask[complete] from git+https://github.com/blaze/dask.git#egg=dask[complete] (from -r requirements.txt (line 2))
+
+2015-10-26 20:58:22,240 INFO: - App:   Cloning https://github.com/blaze/dask.git to /tmp/pip-build-1_yd2v/dask
+
+2015-10-26 20:58:24,008 INFO: - App: Collecting castra from git+https://github.com/blaze/castra.git#egg=castra (from -r requirements.txt (line 3))
+
+2015-10-26 20:58:24,011 INFO: - App:   Cloning https://github.com/blaze/castra.git to /tmp/pip-build-1_yd2v/castra
+
+2015-10-26 20:58:24,629 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-10-26 20:58:24,630 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): toolz in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 5))
+
+2015-10-26 20:58:24,643 INFO: - App: Collecting dill (from -r requirements.txt (line 6))
+
+2015-10-26 20:58:24,694 INFO: - App:   Using cached dill-0.2.4.tgz
+
+2015-10-26 20:58:25,001 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 7))
+
+2015-10-26 20:58:25,016 INFO: - App: Collecting partd (from -r requirements.txt (line 8))
+
+2015-10-26 20:58:25,028 INFO: - App:   Using cached partd-0.3.2.tar.gz
+
+2015-10-26 20:58:25,302 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): blaze in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 9))
+
+2015-10-26 20:58:25,316 INFO: - App: Collecting graphviz (from -r requirements.txt (line 10))
+
+2015-10-26 20:58:25,348 INFO: - App:   Using cached graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-26 20:58:25,354 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-image in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 11))
+
+2015-10-26 20:58:25,366 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): bokeh in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 12))
+
+2015-10-26 20:58:25,369 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyzmq in ./anaconda/envs/python3/lib/python3.3/site-packages (from dask[complete]->-r requirements.txt (line 2))
+
+2015-10-26 20:58:25,375 INFO: - App: Collecting bloscpack>=0.8.0 (from castra->-r requirements.txt (line 3))
+
+2015-10-26 20:58:25,390 INFO: - App:   Using cached bloscpack-0.9.0.tar.gz
+
+2015-10-26 20:58:25,606 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-10-26 20:58:25,608 INFO: - App:     Traceback (most recent call last):
+
+2015-10-26 20:58:25,610 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-10-26 20:58:25,632 INFO: - App:       File "/tmp/pip-build-1_yd2v/bloscpack/setup.py", line 9, in <module>
+
+2015-10-26 20:58:25,656 INFO: - App:         long_description = f.read()
+
+2015-10-26 20:58:25,667 INFO: - App:       File "/home/main/anaconda/envs/python3/lib/python3.3/encodings/ascii.py", line 26, in decode
+
+2015-10-26 20:58:25,698 INFO: - App:         return codecs.ascii_decode(input, self.errors)[0]
+
+2015-10-26 20:58:25,732 INFO: - App:     UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 40: ordinal not in range(128)
+
+2015-10-26 20:58:25,753 INFO: - App:     
+
+2015-10-26 20:58:25,766 INFO: - App:     ----------------------------------------
+
+2015-10-26 20:58:25,795 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-1_yd2v/bloscpack
+
+2015-10-26 20:58:25,798 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-26 20:58:25,982 INFO: - App:  ---> bc89bec180f6
+
+2015-10-26 20:58:25,999 INFO: - App: Removing intermediate container 53f7cc3e497f
+
+2015-10-26 20:58:26,001 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-26 20:58:26,310 INFO: - App:  ---> db4d4472c0f8
+
+2015-10-26 20:58:26,322 INFO: - App: Removing intermediate container 3a2eebb51678
+
+2015-10-26 20:58:26,330 INFO: - App: Step 5 : USER root
+
+2015-10-26 20:58:26,403 INFO: - App:  ---> Running in 70aa05fa2e0d
+
+2015-10-26 20:58:26,448 INFO: - App:  ---> 254dbb6d05cf
+
+2015-10-26 20:58:26,456 INFO: - App: Removing intermediate container 70aa05fa2e0d
+
+2015-10-26 20:58:26,458 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 20:58:26,544 INFO: - App:  ---> Running in 4e96e6838954
+
+2015-10-26 20:58:27,091 INFO: - App:  ---> 312f598c4fca
+
+2015-10-26 20:58:27,102 INFO: - App: Removing intermediate container 4e96e6838954
+
+2015-10-26 20:58:27,104 INFO: - App: Step 7 : USER main
+
+2015-10-26 20:58:27,179 INFO: - App:  ---> Running in 0006b611e4a6
+
+2015-10-26 20:58:27,227 INFO: - App:  ---> 5f3068249d32
+
+2015-10-26 20:58:27,235 INFO: - App: Removing intermediate container 0006b611e4a6
+
+2015-10-26 20:58:27,240 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 20:58:27,308 INFO: - App:  ---> Running in 5ca676089a12
+
+2015-10-26 20:58:27,790 INFO: - App: Signing notebook: /home/main/notebooks/image-filtering.ipynb
+
+2015-10-26 20:58:28,056 INFO: - App: Signing notebook: /home/main/notebooks/dask-dataframe-basics.ipynb
+
+2015-10-26 20:58:28,495 INFO: - App: Signing notebook: /home/main/notebooks/hubble.ipynb
+
+2015-10-26 20:58:28,777 INFO: - App: Signing notebook: /home/main/notebooks/do-and-profiler.ipynb
+
+2015-10-26 20:58:29,019 INFO: - App: Signing notebook: /home/main/notebooks/github-data.ipynb
+
+2015-10-26 20:58:29,316 INFO: - App: Signing notebook: /home/main/notebooks/time-series.ipynb
+
+2015-10-26 20:58:29,663 INFO: - App: Signing notebook: /home/main/notebooks/nyctaxi-storage.ipynb
+
+2015-10-26 20:58:29,918 INFO: - App: Signing notebook: /home/main/notebooks/dask-array-basics.ipynb
+
+2015-10-26 20:58:30,145 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-26 20:58:30,395 INFO: - App: Signing notebook: /home/main/notebooks/github-on-ec2.ipynb
+
+2015-10-26 20:58:30,632 INFO: - App: Signing notebook: /home/main/notebooks/nyctaxi-2013.ipynb
+
+2015-10-26 20:58:30,890 INFO: - App:  ---> a70e382084dc
+
+2015-10-26 20:58:30,898 INFO: - App: Removing intermediate container 5ca676089a12
+
+2015-10-26 20:58:30,900 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-26 20:58:30,972 INFO: - App:  ---> Running in 849f8434bebe
+
+2015-10-26 20:58:31,027 INFO: - App:  ---> fd958611228a
+
+2015-10-26 20:58:31,036 INFO: - App: Removing intermediate container 849f8434bebe
+
+2015-10-26 20:58:31,037 INFO: - App: Successfully built fd958611228a
+
+2015-10-26 20:58:31,046 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/blaze-dask-examples to private registry...
+2015-10-26 20:58:44,836 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 20:58:51,812 INFO: - App: Successfully built app blaze-dask-examples
+2015-10-27 20:32:07,672 INFO: - App: Building service dependencies...
+2015-10-27 20:32:07,674 INFO: - App: Copying files and filling templates...
+2015-10-27 20:32:07,709 INFO: - App: Building app image without Dockerfile...
+2015-10-27 20:32:07,923 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.74 MBSending build context to Docker daemon 23.74 MB
+
+2015-10-27 20:32:07,925 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-27 20:32:07,926 INFO: - App:  ---> 77377240dc83
+
+2015-10-27 20:32:07,928 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-27 20:32:08,100 INFO: - App:  ---> 81164f7cbd74
+
+2015-10-27 20:32:08,108 INFO: - App: Removing intermediate container 7ce77df17d0a
+
+2015-10-27 20:32:08,110 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-27 20:32:08,268 INFO: - App:  ---> 5c653aea1e9c
+
+2015-10-27 20:32:08,277 INFO: - App: Removing intermediate container f86ef9c26cbc
+
+2015-10-27 20:32:08,305 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-27 20:32:08,377 INFO: - App:  ---> Running in 3da2b2bbb24a
+
+2015-10-27 20:32:08,506 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-27 20:32:09,809 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-27 20:32:09,826 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-27 20:32:09,838 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-10-27 20:32:09,868 INFO: - App: Collecting dask[complete] from git+https://github.com/blaze/dask.git#egg=dask[complete] (from -r requirements.txt (line 2))
+
+2015-10-27 20:32:09,870 INFO: - App:   Cloning https://github.com/blaze/dask.git to /tmp/pip-build-5QiRV6/dask
+
+2015-10-27 20:32:11,527 INFO: - App: Collecting castra from git+https://github.com/blaze/castra.git#egg=castra (from -r requirements.txt (line 3))
+
+2015-10-27 20:32:11,529 INFO: - App:   Cloning https://github.com/blaze/castra.git to /tmp/pip-build-5QiRV6/castra
+
+2015-10-27 20:32:12,114 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-10-27 20:32:12,116 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): toolz in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 5))
+
+2015-10-27 20:32:12,128 INFO: - App: Collecting dill (from -r requirements.txt (line 6))
+
+2015-10-27 20:32:12,256 INFO: - App:   Downloading dill-0.2.4.tgz (58kB)
+
+2015-10-27 20:32:12,480 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 7))
+
+2015-10-27 20:32:12,494 INFO: - App: Collecting partd (from -r requirements.txt (line 8))
+
+2015-10-27 20:32:12,599 INFO: - App:   Downloading partd-0.3.2.tar.gz
+
+2015-10-27 20:32:12,798 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): blaze in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 9))
+
+2015-10-27 20:32:12,814 INFO: - App: Collecting graphviz (from -r requirements.txt (line 10))
+
+2015-10-27 20:32:12,857 INFO: - App:   Downloading graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-27 20:32:12,877 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-image in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 11))
+
+2015-10-27 20:32:12,892 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): bokeh in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 12))
+
+2015-10-27 20:32:12,911 INFO: - App: Collecting bloscpack>=0.8.0 (from castra->-r requirements.txt (line 3))
+
+2015-10-27 20:32:13,011 INFO: - App:   Downloading bloscpack-0.9.0.tar.gz (89kB)
+
+2015-10-27 20:32:13,241 INFO: - App: Collecting blosc (from castra->-r requirements.txt (line 3))
+
+2015-10-27 20:32:13,283 INFO: - App:   Downloading blosc-1.2.8.tar.gz (259kB)
+
+2015-10-27 20:32:13,567 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 7))
+
+2015-10-27 20:32:13,569 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 7))
+
+2015-10-27 20:32:13,587 INFO: - App: Collecting locket (from partd->-r requirements.txt (line 8))
+
+2015-10-27 20:32:13,757 INFO: - App:   Downloading locket-0.2.0.tar.gz
+
+2015-10-27 20:32:13,943 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib>=1.1.0 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-27 20:32:13,948 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.3 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-27 20:32:13,949 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): networkx>=1.8 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-27 20:32:13,951 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pillow>=1.7.8 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-27 20:32:13,953 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/lib/python2.7/site-packages (from matplotlib>=1.1.0->scikit-image->-r requirements.txt (line 11))
+
+2015-10-27 20:32:13,954 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/lib/python2.7/site-packages (from matplotlib>=1.1.0->scikit-image->-r requirements.txt (line 11))
+
+2015-10-27 20:32:13,956 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from matplotlib>=1.1.0->scikit-image->-r requirements.txt (line 11))
+
+2015-10-27 20:32:13,957 INFO: - App: Installing collected packages: dill, locket, partd, dask, blosc, bloscpack, castra, graphviz
+
+2015-10-27 20:32:13,958 INFO: - App:   Running setup.py install for dill
+
+2015-10-27 20:32:14,202 INFO: - App:   Running setup.py install for locket
+
+2015-10-27 20:32:14,416 INFO: - App:   Running setup.py install for partd
+
+2015-10-27 20:32:14,654 INFO: - App:   Running setup.py install for dask
+
+2015-10-27 20:32:15,259 INFO: - App:   Running setup.py install for blosc
+
+2015-10-27 20:32:22,085 INFO: - App:   Running setup.py install for bloscpack
+
+2015-10-27 20:32:22,344 INFO: - App:   Running setup.py install for castra
+
+2015-10-27 20:32:22,831 INFO: - App: Successfully installed blosc-1.2.8 bloscpack-0.9.0 castra-0.1.6 dask-0.7.5 dill-0.2.4 graphviz-0.4.7 locket-0.2.0 partd-0.3.2
+
+2015-10-27 20:32:22,859 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-27 20:32:23,146 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-27 20:32:23,148 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-27 20:32:23,155 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-10-27 20:32:23,168 INFO: - App: Collecting dask[complete] from git+https://github.com/blaze/dask.git#egg=dask[complete] (from -r requirements.txt (line 2))
+
+2015-10-27 20:32:23,176 INFO: - App:   Cloning https://github.com/blaze/dask.git to /tmp/pip-build-wt3g9d/dask
+
+2015-10-27 20:32:24,968 INFO: - App: Collecting castra from git+https://github.com/blaze/castra.git#egg=castra (from -r requirements.txt (line 3))
+
+2015-10-27 20:32:24,969 INFO: - App:   Cloning https://github.com/blaze/castra.git to /tmp/pip-build-wt3g9d/castra
+
+2015-10-27 20:32:25,615 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-10-27 20:32:25,617 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): toolz in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 5))
+
+2015-10-27 20:32:25,624 INFO: - App: Collecting dill (from -r requirements.txt (line 6))
+
+2015-10-27 20:32:25,676 INFO: - App:   Using cached dill-0.2.4.tgz
+
+2015-10-27 20:32:25,943 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 7))
+
+2015-10-27 20:32:25,955 INFO: - App: Collecting partd (from -r requirements.txt (line 8))
+
+2015-10-27 20:32:25,966 INFO: - App:   Using cached partd-0.3.2.tar.gz
+
+2015-10-27 20:32:26,240 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): blaze in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 9))
+
+2015-10-27 20:32:26,254 INFO: - App: Collecting graphviz (from -r requirements.txt (line 10))
+
+2015-10-27 20:32:26,272 INFO: - App:   Using cached graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-27 20:32:26,292 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-image in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 11))
+
+2015-10-27 20:32:26,295 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): bokeh in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 12))
+
+2015-10-27 20:32:26,308 INFO: - App: Collecting bloscpack>=0.8.0 (from castra->-r requirements.txt (line 3))
+
+2015-10-27 20:32:26,322 INFO: - App:   Using cached bloscpack-0.9.0.tar.gz
+
+2015-10-27 20:32:26,542 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-10-27 20:32:26,544 INFO: - App:     Traceback (most recent call last):
+
+2015-10-27 20:32:26,545 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-10-27 20:32:26,547 INFO: - App:       File "/tmp/pip-build-wt3g9d/bloscpack/setup.py", line 9, in <module>
+
+2015-10-27 20:32:26,552 INFO: - App:         long_description = f.read()
+
+2015-10-27 20:32:26,554 INFO: - App:       File "/home/main/anaconda/envs/python3/lib/python3.3/encodings/ascii.py", line 26, in decode
+
+2015-10-27 20:32:26,555 INFO: - App:         return codecs.ascii_decode(input, self.errors)[0]
+
+2015-10-27 20:32:26,564 INFO: - App:     UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 40: ordinal not in range(128)
+
+2015-10-27 20:32:26,565 INFO: - App:     
+
+2015-10-27 20:32:26,567 INFO: - App:     ----------------------------------------
+
+2015-10-27 20:32:26,568 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-wt3g9d/bloscpack
+
+2015-10-27 20:32:26,587 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-27 20:32:26,907 INFO: - App:  ---> f7b72c27b7ad
+
+2015-10-27 20:32:26,924 INFO: - App: Removing intermediate container 3da2b2bbb24a
+
+2015-10-27 20:32:26,935 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-27 20:32:27,258 INFO: - App:  ---> 04892b9844d7
+
+2015-10-27 20:32:27,265 INFO: - App: Removing intermediate container fc6792bcfaee
+
+2015-10-27 20:32:27,268 INFO: - App: Step 5 : USER root
+
+2015-10-27 20:32:27,347 INFO: - App:  ---> Running in 54dd1586fe68
+
+2015-10-27 20:32:27,399 INFO: - App:  ---> ee288ff802d3
+
+2015-10-27 20:32:27,407 INFO: - App: Removing intermediate container 54dd1586fe68
+
+2015-10-27 20:32:27,410 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-27 20:32:27,487 INFO: - App:  ---> Running in d6baa9a90f33
+
+2015-10-27 20:32:28,006 INFO: - App:  ---> 5fb40d207347
+
+2015-10-27 20:32:28,020 INFO: - App: Removing intermediate container d6baa9a90f33
+
+2015-10-27 20:32:28,022 INFO: - App: Step 7 : USER main
+
+2015-10-27 20:32:28,104 INFO: - App:  ---> Running in 59fec9301b87
+
+2015-10-27 20:32:28,151 INFO: - App:  ---> 00aadd3a8c5c
+
+2015-10-27 20:32:28,159 INFO: - App: Removing intermediate container 59fec9301b87
+
+2015-10-27 20:32:28,161 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-27 20:32:28,235 INFO: - App:  ---> Running in 7ecf6c78a0cf
+
+2015-10-27 20:32:28,674 INFO: - App: Signing notebook: /home/main/notebooks/image-filtering.ipynb
+
+2015-10-27 20:32:28,919 INFO: - App: Signing notebook: /home/main/notebooks/dask-dataframe-basics.ipynb
+
+2015-10-27 20:32:29,464 INFO: - App: Signing notebook: /home/main/notebooks/hubble.ipynb
+
+2015-10-27 20:32:29,746 INFO: - App: Signing notebook: /home/main/notebooks/do-and-profiler.ipynb
+
+2015-10-27 20:32:29,979 INFO: - App: Signing notebook: /home/main/notebooks/github-data.ipynb
+
+2015-10-27 20:32:30,271 INFO: - App: Signing notebook: /home/main/notebooks/time-series.ipynb
+
+2015-10-27 20:32:30,625 INFO: - App: Signing notebook: /home/main/notebooks/nyctaxi-storage.ipynb
+
+2015-10-27 20:32:30,875 INFO: - App: Signing notebook: /home/main/notebooks/dask-array-basics.ipynb
+
+2015-10-27 20:32:31,095 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-27 20:32:31,352 INFO: - App: Signing notebook: /home/main/notebooks/github-on-ec2.ipynb
+
+2015-10-27 20:32:31,586 INFO: - App: Signing notebook: /home/main/notebooks/nyctaxi-2013.ipynb
+
+2015-10-27 20:32:31,849 INFO: - App:  ---> 37ac04492e32
+
+2015-10-27 20:32:31,855 INFO: - App: Removing intermediate container 7ecf6c78a0cf
+
+2015-10-27 20:32:31,857 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-27 20:32:31,927 INFO: - App:  ---> Running in 471a99b5ea85
+
+2015-10-27 20:32:31,975 INFO: - App:  ---> 0db8f4f7db80
+
+2015-10-27 20:32:31,983 INFO: - App: Removing intermediate container 471a99b5ea85
+
+2015-10-27 20:32:31,986 INFO: - App: Successfully built 0db8f4f7db80
+
+2015-10-27 20:32:31,998 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/blaze-dask-examples to private registry...
+2015-10-27 20:32:46,202 INFO: - App: Preloading app image onto all nodes...
+2015-10-27 20:33:00,686 INFO: - App: Successfully built app blaze-dask-examples
+2015-10-30 19:44:10,841 INFO: - App: Building service dependencies...
+2015-10-30 19:44:10,844 INFO: - App: Copying files and filling templates...
+2015-10-30 19:44:10,878 INFO: - App: Building app image without Dockerfile...
+2015-10-30 19:44:11,102 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.79 MBSending build context to Docker daemon 23.79 MB
+
+2015-10-30 19:44:11,105 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-30 19:44:11,108 INFO: - App:  ---> 77377240dc83
+
+2015-10-30 19:44:11,110 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-30 19:44:11,312 INFO: - App:  ---> bb1ee2e2d05b
+
+2015-10-30 19:44:11,318 INFO: - App: Removing intermediate container 12296576e192
+
+2015-10-30 19:44:11,324 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-30 19:44:11,511 INFO: - App:  ---> ff9d05d819b4
+
+2015-10-30 19:44:11,520 INFO: - App: Removing intermediate container dd389ce10bb2
+
+2015-10-30 19:44:11,522 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-30 19:44:11,591 INFO: - App:  ---> Running in 424db8313208
+
+2015-10-30 19:44:11,743 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-30 19:44:12,104 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-30 19:44:12,106 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-30 19:44:12,113 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-10-30 19:44:12,129 INFO: - App: Collecting dask[complete] from git+https://github.com/blaze/dask.git#egg=dask[complete] (from -r requirements.txt (line 2))
+
+2015-10-30 19:44:12,148 INFO: - App:   Cloning https://github.com/blaze/dask.git to /tmp/pip-build-nnkmSZ/dask
+
+2015-10-30 19:44:13,877 INFO: - App: Collecting castra from git+https://github.com/blaze/castra.git#egg=castra (from -r requirements.txt (line 3))
+
+2015-10-30 19:44:13,880 INFO: - App:   Cloning https://github.com/blaze/castra.git to /tmp/pip-build-nnkmSZ/castra
+
+2015-10-30 19:44:14,457 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-10-30 19:44:14,460 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): toolz in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 5))
+
+2015-10-30 19:44:14,473 INFO: - App: Collecting dill (from -r requirements.txt (line 6))
+
+2015-10-30 19:44:14,598 INFO: - App:   Downloading dill-0.2.4.tgz (58kB)
+
+2015-10-30 19:44:14,852 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 7))
+
+2015-10-30 19:44:14,871 INFO: - App: Collecting partd (from -r requirements.txt (line 8))
+
+2015-10-30 19:44:14,981 INFO: - App:   Downloading partd-0.3.2.tar.gz
+
+2015-10-30 19:44:15,198 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): blaze in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 9))
+
+2015-10-30 19:44:15,215 INFO: - App: Collecting graphviz (from -r requirements.txt (line 10))
+
+2015-10-30 19:44:15,264 INFO: - App:   Downloading graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-30 19:44:15,286 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-image in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 11))
+
+2015-10-30 19:44:15,288 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): bokeh in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 12))
+
+2015-10-30 19:44:15,301 INFO: - App: Collecting bloscpack>=0.8.0 (from castra->-r requirements.txt (line 3))
+
+2015-10-30 19:44:15,565 INFO: - App:   Downloading bloscpack-0.9.0.tar.gz (89kB)
+
+2015-10-30 19:44:15,819 INFO: - App: Collecting blosc (from castra->-r requirements.txt (line 3))
+
+2015-10-30 19:44:15,865 INFO: - App:   Downloading blosc-1.2.8.tar.gz (259kB)
+
+2015-10-30 19:44:16,170 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 7))
+
+2015-10-30 19:44:16,182 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 7))
+
+2015-10-30 19:44:16,189 INFO: - App: Collecting locket (from partd->-r requirements.txt (line 8))
+
+2015-10-30 19:44:16,299 INFO: - App:   Downloading locket-0.2.0.tar.gz
+
+2015-10-30 19:44:16,497 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib>=1.1.0 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-30 19:44:16,499 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.3 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-30 19:44:16,505 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): networkx>=1.8 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-30 19:44:16,507 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pillow>=1.7.8 in ./anaconda/lib/python2.7/site-packages (from scikit-image->-r requirements.txt (line 11))
+
+2015-10-30 19:44:16,509 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/lib/python2.7/site-packages (from matplotlib>=1.1.0->scikit-image->-r requirements.txt (line 11))
+
+2015-10-30 19:44:16,511 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/lib/python2.7/site-packages (from matplotlib>=1.1.0->scikit-image->-r requirements.txt (line 11))
+
+2015-10-30 19:44:16,514 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from matplotlib>=1.1.0->scikit-image->-r requirements.txt (line 11))
+
+2015-10-30 19:44:16,516 INFO: - App: Installing collected packages: dill, locket, partd, dask, blosc, bloscpack, castra, graphviz
+
+2015-10-30 19:44:16,519 INFO: - App:   Running setup.py install for dill
+
+2015-10-30 19:44:16,767 INFO: - App:   Running setup.py install for locket
+
+2015-10-30 19:44:16,995 INFO: - App:   Running setup.py install for partd
+
+2015-10-30 19:44:17,253 INFO: - App:   Running setup.py install for dask
+
+2015-10-30 19:44:18,014 INFO: - App:   Running setup.py install for blosc
+
+2015-10-30 19:44:25,250 INFO: - App:   Running setup.py install for bloscpack
+
+2015-10-30 19:44:25,522 INFO: - App:   Running setup.py install for castra
+
+2015-10-30 19:44:26,036 INFO: - App: Successfully installed blosc-1.2.8 bloscpack-0.9.0 castra-0.1.6 dask-0.7.5 dill-0.2.4 graphviz-0.4.7 locket-0.2.0 partd-0.3.2
+
+2015-10-30 19:44:26,057 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-30 19:44:26,379 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-30 19:44:26,383 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-30 19:44:26,388 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-10-30 19:44:26,403 INFO: - App: Collecting dask[complete] from git+https://github.com/blaze/dask.git#egg=dask[complete] (from -r requirements.txt (line 2))
+
+2015-10-30 19:44:26,407 INFO: - App:   Cloning https://github.com/blaze/dask.git to /tmp/pip-build-zijrwm/dask
+
+2015-10-30 19:44:28,203 INFO: - App: Collecting castra from git+https://github.com/blaze/castra.git#egg=castra (from -r requirements.txt (line 3))
+
+2015-10-30 19:44:28,216 INFO: - App:   Cloning https://github.com/blaze/castra.git to /tmp/pip-build-zijrwm/castra
+
+2015-10-30 19:44:28,833 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-10-30 19:44:28,836 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): toolz in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 5))
+
+2015-10-30 19:44:28,847 INFO: - App: Collecting dill (from -r requirements.txt (line 6))
+
+2015-10-30 19:44:28,905 INFO: - App:   Using cached dill-0.2.4.tgz
+
+2015-10-30 19:44:29,199 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 7))
+
+2015-10-30 19:44:29,214 INFO: - App: Collecting partd (from -r requirements.txt (line 8))
+
+2015-10-30 19:44:29,225 INFO: - App:   Using cached partd-0.3.2.tar.gz
+
+2015-10-30 19:44:29,505 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): blaze in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 9))
+
+2015-10-30 19:44:29,524 INFO: - App: Collecting graphviz (from -r requirements.txt (line 10))
+
+2015-10-30 19:44:29,541 INFO: - App:   Using cached graphviz-0.4.7-py2.py3-none-any.whl
+
+2015-10-30 19:44:29,563 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-image in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 11))
+
+2015-10-30 19:44:29,572 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): bokeh in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 12))
+
+2015-10-30 19:44:29,577 INFO: - App: Collecting bloscpack>=0.8.0 (from castra->-r requirements.txt (line 3))
+
+2015-10-30 19:44:29,593 INFO: - App:   Using cached bloscpack-0.9.0.tar.gz
+
+2015-10-30 19:44:29,814 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-10-30 19:44:29,816 INFO: - App:     Traceback (most recent call last):
+
+2015-10-30 19:44:29,820 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-10-30 19:44:29,822 INFO: - App:       File "/tmp/pip-build-zijrwm/bloscpack/setup.py", line 9, in <module>
+
+2015-10-30 19:44:29,826 INFO: - App:         long_description = f.read()
+
+2015-10-30 19:44:29,829 INFO: - App:       File "/home/main/anaconda/envs/python3/lib/python3.3/encodings/ascii.py", line 26, in decode
+
+2015-10-30 19:44:29,832 INFO: - App:         return codecs.ascii_decode(input, self.errors)[0]
+
+2015-10-30 19:44:29,835 INFO: - App:     UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 40: ordinal not in range(128)
+
+2015-10-30 19:44:29,839 INFO: - App:     
+
+2015-10-30 19:44:29,842 INFO: - App:     ----------------------------------------
+
+2015-10-30 19:44:29,847 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-zijrwm/bloscpack
+
+2015-10-30 19:44:29,864 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-10-30 19:44:30,184 INFO: - App:  ---> 03e982e63bd0
+
+2015-10-30 19:44:30,203 INFO: - App: Removing intermediate container 424db8313208
+
+2015-10-30 19:44:30,205 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-30 19:44:30,514 INFO: - App:  ---> d1a99d7245f1
+
+2015-10-30 19:44:30,523 INFO: - App: Removing intermediate container 3c9b2da29ae7
+
+2015-10-30 19:44:30,526 INFO: - App: Step 5 : USER root
+
+2015-10-30 19:44:30,599 INFO: - App:  ---> Running in feb0da66c0d3
+
+2015-10-30 19:44:30,652 INFO: - App:  ---> dc798bc7f8e2
+
+2015-10-30 19:44:30,655 INFO: - App: Removing intermediate container feb0da66c0d3
+
+2015-10-30 19:44:30,667 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-30 19:44:30,739 INFO: - App:  ---> Running in 12d0373ab223
+
+2015-10-30 19:44:31,318 INFO: - App:  ---> 2932f280fc9e
+
+2015-10-30 19:44:31,329 INFO: - App: Removing intermediate container 12d0373ab223
+
+2015-10-30 19:44:31,335 INFO: - App: Step 7 : USER main
+
+2015-10-30 19:44:31,400 INFO: - App:  ---> Running in e62a98cf46fc
+
+2015-10-30 19:44:31,447 INFO: - App:  ---> b7fe98699028
+
+2015-10-30 19:44:31,456 INFO: - App: Removing intermediate container e62a98cf46fc
+
+2015-10-30 19:44:31,458 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-30 19:44:31,543 INFO: - App:  ---> Running in bdbd1ec43627
+
+2015-10-30 19:44:31,988 INFO: - App: Signing notebook: /home/main/notebooks/image-filtering.ipynb
+
+2015-10-30 19:44:32,255 INFO: - App: Signing notebook: /home/main/notebooks/dask-dataframe-basics.ipynb
+
+2015-10-30 19:44:32,958 INFO: - App: Signing notebook: /home/main/notebooks/hubble.ipynb
+
+2015-10-30 19:44:33,268 INFO: - App: Signing notebook: /home/main/notebooks/do-and-profiler.ipynb
+
+2015-10-30 19:44:33,516 INFO: - App: Signing notebook: /home/main/notebooks/github-data.ipynb
+
+2015-10-30 19:44:33,758 INFO: - App: Signing notebook: /home/main/notebooks/time-series-binder.ipynb
+
+2015-10-30 19:44:34,056 INFO: - App: Signing notebook: /home/main/notebooks/time-series.ipynb
+
+2015-10-30 19:44:34,434 INFO: - App: Signing notebook: /home/main/notebooks/nyctaxi-storage.ipynb
+
+2015-10-30 19:44:34,694 INFO: - App: Signing notebook: /home/main/notebooks/dask-array-basics.ipynb
+
+2015-10-30 19:44:34,915 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-30 19:44:35,184 INFO: - App: Signing notebook: /home/main/notebooks/github-on-ec2.ipynb
+
+2015-10-30 19:44:35,427 INFO: - App: Signing notebook: /home/main/notebooks/nyctaxi-2013.ipynb
+
+2015-10-30 19:44:35,738 INFO: - App:  ---> e7ca08b247f8
+
+2015-10-30 19:44:35,747 INFO: - App: Removing intermediate container bdbd1ec43627
+
+2015-10-30 19:44:35,755 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-30 19:44:35,850 INFO: - App:  ---> Running in a868ffeb1c4d
+
+2015-10-30 19:44:35,912 INFO: - App:  ---> 161437b198c2
+
+2015-10-30 19:44:35,926 INFO: - App: Removing intermediate container a868ffeb1c4d
+
+2015-10-30 19:44:35,948 INFO: - App: Successfully built 161437b198c2
+
+2015-10-30 19:44:35,961 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/blaze-dask-examples to private registry...
+2015-10-30 19:44:49,917 INFO: - App: Preloading app image onto all nodes...
+2015-10-30 19:44:56,118 INFO: - App: Successfully built app blaze-dask-examples

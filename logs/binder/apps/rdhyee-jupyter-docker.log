@@ -1,0 +1,53 @@
+2015-11-02 01:21:32,850 INFO: - App: Building service dependencies...
+2015-11-02 01:21:32,853 INFO: - App: Copying files and filling templates...
+2015-11-02 01:21:32,862 INFO: - App: Building the app image with Dockerfile...
+2015-11-02 01:21:32,865 WARNING: - App: Dockerfile base image is not binder-base. Building may fail.
+2015-11-02 01:21:32,952 INFO: - App: Sending build context to Docker daemon 84.48 kBSending build context to Docker daemon 84.48 kB
+
+2015-11-02 01:21:32,972 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base# learned a lot from https://github.com/krischer/seismo_live/blob/master/Dockerfile
+
+2015-11-02 01:21:32,975 ERROR: - App: Invalid repository name (ex: "registry.domain.tld/myrepos")
+
+2015-11-02 01:21:32,977 ERROR: - App: could not build app rdhyee-jupyter-docker: Command '['docker', 'build', '-t', u'gcr.io/generic-notebooks/rdhyee-jupyter-docker', '--no-cache', u'/home/andrew/binder/apps/rdhyee-jupyter-docker/build/app/repo']' returned non-zero exit status 1
+2015-11-02 01:26:28,479 INFO: - App: Building service dependencies...
+2015-11-02 01:26:28,482 INFO: - App: Copying files and filling templates...
+2015-11-02 01:26:28,491 INFO: - App: Building the app image with Dockerfile...
+2015-11-02 01:26:28,494 WARNING: - App: Dockerfile base image is not binder-base. Building may fail.
+2015-11-02 01:26:28,526 INFO: - App: Sending build context to Docker daemon 88.58 kBSending build context to Docker daemon 88.58 kB
+
+2015-11-02 01:26:28,548 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-02 01:26:28,550 INFO: - App:  ---> 77377240dc83
+
+2015-11-02 01:26:28,551 INFO: - App: Step 1 : MAINTAINER raymond.yee@gmail.com
+
+2015-11-02 01:26:28,634 INFO: - App:  ---> Running in e06bdfceb996
+
+2015-11-02 01:26:28,739 INFO: - App:  ---> 4c7ab0d89f45
+
+2015-11-02 01:26:28,747 INFO: - App: Removing intermediate container e06bdfceb996
+
+2015-11-02 01:26:28,749 INFO: - App: Step 2 : COPY notebooks/ /home/jovyan/work/
+
+2015-11-02 01:26:28,912 INFO: - App:  ---> 3d1b203d0d46
+
+2015-11-02 01:26:28,923 INFO: - App: Removing intermediate container 8e7d16905213
+
+2015-11-02 01:26:28,926 INFO: - App: Step 3 : USER root
+
+2015-11-02 01:26:28,978 INFO: - App:  ---> Running in 9ea83fb93562
+
+2015-11-02 01:26:29,035 INFO: - App:  ---> fda85dec85d3
+
+2015-11-02 01:26:29,043 INFO: - App: Removing intermediate container 9ea83fb93562
+
+2015-11-02 01:26:29,048 INFO: - App: Step 4 : RUN chown -R jovyan:users /home/jovyan/work
+
+2015-11-02 01:26:29,121 INFO: - App:  ---> Running in 90d1f523abd4
+
+2015-11-02 01:26:29,256 INFO: - App: chown: invalid user: 'jovyan:users'
+
+2015-11-02 01:26:29,481 ERROR: - App: The command '/bin/sh -c chown -R jovyan:users /home/jovyan/work' returned a non-zero code: 1
+
+2015-11-02 01:26:29,483 INFO: - App: 
+2015-11-02 01:26:29,486 ERROR: - App: could not build app rdhyee-jupyter-docker: Command '['docker', 'build', '-t', u'gcr.io/generic-notebooks/rdhyee-jupyter-docker', '--no-cache', u'/home/andrew/binder/apps/rdhyee-jupyter-docker/build/app/repo']' returned non-zero exit status 1

@@ -1,0 +1,460 @@
+2015-11-01 14:55:57,304 INFO: - App: Building service dependencies...
+2015-11-01 14:55:57,307 INFO: - App: Copying files and filling templates...
+2015-11-01 14:55:57,315 INFO: - App: Building app image without Dockerfile...
+2015-11-01 14:55:57,367 INFO: - App: Sending build context to Docker daemon 454.1 kBSending build context to Docker daemon 454.1 kB
+
+2015-11-01 14:55:57,371 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 14:55:57,374 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 14:55:57,379 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-01 14:55:57,549 INFO: - App:  ---> 0ec391b27173
+
+2015-11-01 14:55:57,558 INFO: - App: Removing intermediate container 1e20515688a6
+
+2015-11-01 14:55:57,560 INFO: - App: Step 2 : USER root
+
+2015-11-01 14:55:57,639 INFO: - App:  ---> Running in fe85007d6059
+
+2015-11-01 14:55:57,700 INFO: - App:  ---> 782cdbe9ac82
+
+2015-11-01 14:55:57,703 INFO: - App: Removing intermediate container fe85007d6059
+
+2015-11-01 14:55:57,706 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 14:55:57,774 INFO: - App:  ---> Running in b9df089ee432
+
+2015-11-01 14:55:58,172 INFO: - App:  ---> 752dd937bfbf
+
+2015-11-01 14:55:58,177 INFO: - App: Removing intermediate container b9df089ee432
+
+2015-11-01 14:55:58,180 INFO: - App: Step 4 : USER main
+
+2015-11-01 14:55:58,247 INFO: - App:  ---> Running in 97c84f8ca306
+
+2015-11-01 14:55:58,295 INFO: - App:  ---> ce99f810fd35
+
+2015-11-01 14:55:58,303 INFO: - App: Removing intermediate container 97c84f8ca306
+
+2015-11-01 14:55:58,305 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 14:55:58,379 INFO: - App:  ---> Running in 01fabb3f505e
+
+2015-11-01 14:55:58,918 INFO: - App: Signing notebook: /home/main/notebooks/barriere-capillaire.ipynb
+
+2015-11-01 14:55:59,164 INFO: - App: Signing notebook: /home/main/notebooks/isothermes.ipynb
+
+2015-11-01 14:55:59,442 INFO: - App:  ---> 94a762711be1
+
+2015-11-01 14:55:59,453 INFO: - App: Removing intermediate container 01fabb3f505e
+
+2015-11-01 14:55:59,455 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-01 14:55:59,550 INFO: - App:  ---> Running in 65afac7a5e1e
+
+2015-11-01 14:55:59,591 INFO: - App:  ---> 8e16029f07df
+
+2015-11-01 14:55:59,603 INFO: - App: Removing intermediate container 65afac7a5e1e
+
+2015-11-01 14:55:59,607 INFO: - App: Successfully built 8e16029f07df
+
+2015-11-01 14:55:59,610 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/sergeetiparent-gci733-a2015 to private registry...
+2015-11-01 14:56:05,638 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 14:56:09,642 INFO: - App: Successfully built app sergeetiparent-gci733-a2015
+2015-11-01 19:07:37,937 INFO: - App: Building service dependencies...
+2015-11-01 19:07:37,939 INFO: - App: Copying files and filling templates...
+2015-11-01 19:07:37,950 INFO: - App: Building app image without Dockerfile...
+2015-11-01 19:07:38,039 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 728.6 kBSending build context to Docker daemon 728.6 kB
+
+2015-11-01 19:07:38,082 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 19:07:38,084 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 19:07:38,085 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-01 19:07:38,273 INFO: - App:  ---> b90fbf29cf6e
+
+2015-11-01 19:07:38,283 INFO: - App: Removing intermediate container 72b2155784d5
+
+2015-11-01 19:07:38,286 INFO: - App: Step 2 : USER root
+
+2015-11-01 19:07:38,360 INFO: - App:  ---> Running in b4cb269a9ac5
+
+2015-11-01 19:07:38,411 INFO: - App:  ---> fd6f67ce8373
+
+2015-11-01 19:07:38,418 INFO: - App: Removing intermediate container b4cb269a9ac5
+
+2015-11-01 19:07:38,420 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 19:07:38,507 INFO: - App:  ---> Running in bcbde7c510bb
+
+2015-11-01 19:07:38,936 INFO: - App:  ---> a86f9170662f
+
+2015-11-01 19:07:38,947 INFO: - App: Removing intermediate container bcbde7c510bb
+
+2015-11-01 19:07:38,949 INFO: - App: Step 4 : USER main
+
+2015-11-01 19:07:39,027 INFO: - App:  ---> Running in dade8eb03418
+
+2015-11-01 19:07:39,079 INFO: - App:  ---> fc46ff0c47d3
+
+2015-11-01 19:07:39,087 INFO: - App: Removing intermediate container dade8eb03418
+
+2015-11-01 19:07:39,090 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 19:07:39,155 INFO: - App:  ---> Running in 903ab51e863c
+
+2015-11-01 19:07:39,684 INFO: - App: Signing notebook: /home/main/notebooks/.ipynb_checkpoints/barriere-capillaire-checkpoint.ipynb
+
+2015-11-01 19:07:39,927 INFO: - App: Notebook already signed: /home/main/notebooks/barriere-capillaire.ipynb
+
+2015-11-01 19:07:40,171 INFO: - App: Signing notebook: /home/main/notebooks/isothermes.ipynb
+
+2015-11-01 19:07:40,458 INFO: - App:  ---> f1bb1d13362f
+
+2015-11-01 19:07:40,480 INFO: - App: Removing intermediate container 903ab51e863c
+
+2015-11-01 19:07:40,483 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-01 19:07:40,544 INFO: - App:  ---> Running in 73eae7e7a07d
+
+2015-11-01 19:07:40,591 INFO: - App:  ---> d74335e875ca
+
+2015-11-01 19:07:40,601 INFO: - App: Removing intermediate container 73eae7e7a07d
+
+2015-11-01 19:07:40,605 INFO: - App: Successfully built d74335e875ca
+
+2015-11-01 19:07:40,612 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/sergeetiparent-gci733-a2015 to private registry...
+2015-11-01 19:07:47,259 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 19:07:50,868 INFO: - App: Successfully built app sergeetiparent-gci733-a2015
+2015-11-03 00:24:41,488 INFO: - App: Building service dependencies...
+2015-11-03 00:24:41,491 INFO: - App: Copying files and filling templates...
+2015-11-03 00:24:41,508 INFO: - App: Building app image without Dockerfile...
+2015-11-03 00:24:41,556 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 837.6 kBSending build context to Docker daemon 837.6 kB
+
+2015-11-03 00:24:41,559 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 00:24:41,561 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 00:24:41,564 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 00:24:41,742 INFO: - App:  ---> 2cf41954659b
+
+2015-11-03 00:24:41,753 INFO: - App: Removing intermediate container 47dbfb6198c5
+
+2015-11-03 00:24:41,755 INFO: - App: Step 2 : USER root
+
+2015-11-03 00:24:41,835 INFO: - App:  ---> Running in 0690a8bc074c
+
+2015-11-03 00:24:41,904 INFO: - App:  ---> 2cbc3126aba4
+
+2015-11-03 00:24:41,920 INFO: - App: Removing intermediate container 0690a8bc074c
+
+2015-11-03 00:24:41,966 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 00:24:42,001 INFO: - App:  ---> Running in 93105d0c4cb1
+
+2015-11-03 00:24:42,412 INFO: - App:  ---> 50680455cdb7
+
+2015-11-03 00:24:42,422 INFO: - App: Removing intermediate container 93105d0c4cb1
+
+2015-11-03 00:24:42,424 INFO: - App: Step 4 : USER main
+
+2015-11-03 00:24:42,496 INFO: - App:  ---> Running in 5d2aa19f1dd5
+
+2015-11-03 00:24:42,553 INFO: - App:  ---> 5b32b1c62982
+
+2015-11-03 00:24:42,561 INFO: - App: Removing intermediate container 5d2aa19f1dd5
+
+2015-11-03 00:24:42,571 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 00:24:42,647 INFO: - App:  ---> Running in 781dd1570f52
+
+2015-11-03 00:24:43,149 INFO: - App: Signing notebook: /home/main/notebooks/.ipynb_checkpoints/barriere-capillaire-checkpoint.ipynb
+
+2015-11-03 00:24:43,404 INFO: - App: Signing notebook: /home/main/notebooks/barriere-capillaire.ipynb
+
+2015-11-03 00:24:43,652 INFO: - App: Signing notebook: /home/main/notebooks/isothermes.ipynb
+
+2015-11-03 00:24:43,894 INFO: - App:  ---> 6e1a91785264
+
+2015-11-03 00:24:43,902 INFO: - App: Removing intermediate container 781dd1570f52
+
+2015-11-03 00:24:43,921 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 00:24:43,975 INFO: - App:  ---> Running in 9f4b2999ee24
+
+2015-11-03 00:24:44,024 INFO: - App:  ---> 4e2f85935438
+
+2015-11-03 00:24:44,032 INFO: - App: Removing intermediate container 9f4b2999ee24
+
+2015-11-03 00:24:44,034 INFO: - App: Successfully built 4e2f85935438
+
+2015-11-03 00:24:44,051 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/sergeetiparent-gci733-a2015 to private registry...
+2015-11-03 00:24:50,888 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 00:24:54,351 INFO: - App: Successfully built app sergeetiparent-gci733-a2015
+2015-11-03 02:15:36,561 INFO: - App: Building service dependencies...
+2015-11-03 02:15:36,567 INFO: - App: Copying files and filling templates...
+2015-11-03 02:15:36,575 INFO: - App: Building app image without Dockerfile...
+2015-11-03 02:15:36,630 INFO: - App: Sending build context to Docker daemon   532 kBSending build context to Docker daemon   958 kBSending build context to Docker daemon   958 kB
+
+2015-11-03 02:15:36,632 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 02:15:36,634 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 02:15:36,636 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 02:15:36,850 INFO: - App:  ---> 575888c09371
+
+2015-11-03 02:15:36,860 INFO: - App: Removing intermediate container 9d4b539b2472
+
+2015-11-03 02:15:36,863 INFO: - App: Step 2 : USER root
+
+2015-11-03 02:15:36,935 INFO: - App:  ---> Running in 1848e360a743
+
+2015-11-03 02:15:36,992 INFO: - App:  ---> 04117cb044b9
+
+2015-11-03 02:15:36,999 INFO: - App: Removing intermediate container 1848e360a743
+
+2015-11-03 02:15:37,001 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 02:15:37,079 INFO: - App:  ---> Running in 9a302f30150c
+
+2015-11-03 02:15:37,482 INFO: - App:  ---> dfdfe290ed33
+
+2015-11-03 02:15:37,492 INFO: - App: Removing intermediate container 9a302f30150c
+
+2015-11-03 02:15:37,494 INFO: - App: Step 4 : USER main
+
+2015-11-03 02:15:37,574 INFO: - App:  ---> Running in 94ea1518070e
+
+2015-11-03 02:15:37,631 INFO: - App:  ---> 1bfb6637dceb
+
+2015-11-03 02:15:37,647 INFO: - App: Removing intermediate container 94ea1518070e
+
+2015-11-03 02:15:37,654 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 02:15:37,745 INFO: - App:  ---> Running in 018537118c74
+
+2015-11-03 02:15:38,255 INFO: - App: Signing notebook: /home/main/notebooks/.ipynb_checkpoints/barriere-capillaire-checkpoint.ipynb
+
+2015-11-03 02:15:38,520 INFO: - App: Signing notebook: /home/main/notebooks/barriere-capillaire.ipynb
+
+2015-11-03 02:15:38,773 INFO: - App: Signing notebook: /home/main/notebooks/isothermes.ipynb
+
+2015-11-03 02:15:39,051 INFO: - App:  ---> cc6d82394744
+
+2015-11-03 02:15:39,059 INFO: - App: Removing intermediate container 018537118c74
+
+2015-11-03 02:15:39,066 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 02:15:39,147 INFO: - App:  ---> Running in fe6e0dbd6242
+
+2015-11-03 02:15:39,203 INFO: - App:  ---> b8f75ccc6e49
+
+2015-11-03 02:15:39,211 INFO: - App: Removing intermediate container fe6e0dbd6242
+
+2015-11-03 02:15:39,214 INFO: - App: Successfully built b8f75ccc6e49
+
+2015-11-03 02:15:39,220 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/sergeetiparent-gci733-a2015 to private registry...
+2015-11-03 02:15:45,803 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 02:15:49,423 INFO: - App: Successfully built app sergeetiparent-gci733-a2015
+2015-11-03 02:17:21,227 INFO: - App: Building service dependencies...
+2015-11-03 02:17:21,235 INFO: - App: Copying files and filling templates...
+2015-11-03 02:17:21,255 INFO: - App: Building app image without Dockerfile...
+2015-11-03 02:17:21,300 INFO: - App: Sending build context to Docker daemon   532 kBSending build context to Docker daemon   958 kBSending build context to Docker daemon   958 kB
+
+2015-11-03 02:17:21,324 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 02:17:21,373 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 02:17:21,391 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 02:17:21,528 INFO: - App:  ---> 6317d6a031cb
+
+2015-11-03 02:17:21,550 INFO: - App: Removing intermediate container d15c2970cd61
+
+2015-11-03 02:17:21,552 INFO: - App: Step 2 : USER root
+
+2015-11-03 02:17:21,607 INFO: - App:  ---> Running in 6e62a5efd92e
+
+2015-11-03 02:17:21,668 INFO: - App:  ---> 08d66b4030fa
+
+2015-11-03 02:17:21,675 INFO: - App: Removing intermediate container 6e62a5efd92e
+
+2015-11-03 02:17:21,681 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 02:17:21,766 INFO: - App:  ---> Running in 3cfecc71feab
+
+2015-11-03 02:17:22,202 INFO: - App:  ---> a61d7e7c4a2b
+
+2015-11-03 02:17:22,215 INFO: - App: Removing intermediate container 3cfecc71feab
+
+2015-11-03 02:17:22,219 INFO: - App: Step 4 : USER main
+
+2015-11-03 02:17:22,295 INFO: - App:  ---> Running in 35782a2d1910
+
+2015-11-03 02:17:22,342 INFO: - App:  ---> 7a7f39737b3a
+
+2015-11-03 02:17:22,350 INFO: - App: Removing intermediate container 35782a2d1910
+
+2015-11-03 02:17:22,355 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 02:17:22,431 INFO: - App:  ---> Running in dde21978d210
+
+2015-11-03 02:17:22,982 INFO: - App: Signing notebook: /home/main/notebooks/.ipynb_checkpoints/barriere-capillaire-checkpoint.ipynb
+
+2015-11-03 02:17:23,245 INFO: - App: Signing notebook: /home/main/notebooks/barriere-capillaire.ipynb
+
+2015-11-03 02:17:23,496 INFO: - App: Signing notebook: /home/main/notebooks/isothermes.ipynb
+
+2015-11-03 02:17:23,780 INFO: - App:  ---> 486a2b5193a0
+
+2015-11-03 02:17:23,788 INFO: - App: Removing intermediate container dde21978d210
+
+2015-11-03 02:17:23,804 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 02:17:23,874 INFO: - App:  ---> Running in 74aefd087282
+
+2015-11-03 02:17:23,940 INFO: - App:  ---> 024cc5715272
+
+2015-11-03 02:17:23,956 INFO: - App: Removing intermediate container 74aefd087282
+
+2015-11-03 02:17:23,958 INFO: - App: Successfully built 024cc5715272
+
+2015-11-03 02:17:23,961 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/sergeetiparent-gci733-a2015 to private registry...
+2015-11-03 02:17:30,233 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 02:17:34,981 INFO: - App: Successfully built app sergeetiparent-gci733-a2015
+2015-11-03 06:14:38,197 INFO: - App: Building service dependencies...
+2015-11-03 06:14:38,200 INFO: - App: Copying files and filling templates...
+2015-11-03 06:14:38,214 INFO: - App: Building app image without Dockerfile...
+2015-11-03 06:14:38,271 INFO: - App: Sending build context to Docker daemon 535.1 kBSending build context to Docker daemon 1.081 MBSending build context to Docker daemon 1.083 MBSending build context to Docker daemon 1.083 MB
+
+2015-11-03 06:14:38,275 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 06:14:38,280 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 06:14:38,288 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 06:14:38,473 INFO: - App:  ---> d7e63801f362
+
+2015-11-03 06:14:38,483 INFO: - App: Removing intermediate container 4bc2e3773468
+
+2015-11-03 06:14:38,485 INFO: - App: Step 2 : USER root
+
+2015-11-03 06:14:38,570 INFO: - App:  ---> Running in f318bb7232de
+
+2015-11-03 06:14:38,619 INFO: - App:  ---> b127be61d33c
+
+2015-11-03 06:14:38,630 INFO: - App: Removing intermediate container f318bb7232de
+
+2015-11-03 06:14:38,633 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 06:14:38,695 INFO: - App:  ---> Running in 3d4452800e30
+
+2015-11-03 06:14:39,121 INFO: - App:  ---> b5ece41ab152
+
+2015-11-03 06:14:39,139 INFO: - App: Removing intermediate container 3d4452800e30
+
+2015-11-03 06:14:39,151 INFO: - App: Step 4 : USER main
+
+2015-11-03 06:14:39,212 INFO: - App:  ---> Running in dc298579a820
+
+2015-11-03 06:14:39,255 INFO: - App:  ---> df94b8bd133c
+
+2015-11-03 06:14:39,264 INFO: - App: Removing intermediate container dc298579a820
+
+2015-11-03 06:14:39,269 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 06:14:39,342 INFO: - App:  ---> Running in 013652fe38e3
+
+2015-11-03 06:14:39,882 INFO: - App: Signing notebook: /home/main/notebooks/.ipynb_checkpoints/barriere-capillaire-checkpoint.ipynb
+
+2015-11-03 06:14:40,140 INFO: - App: Notebook already signed: /home/main/notebooks/barriere-capillaire.ipynb
+
+2015-11-03 06:14:40,396 INFO: - App: Signing notebook: /home/main/notebooks/isothermes.ipynb
+
+2015-11-03 06:14:40,666 INFO: - App:  ---> bd637328ff9b
+
+2015-11-03 06:14:40,675 INFO: - App: Removing intermediate container 013652fe38e3
+
+2015-11-03 06:14:40,678 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 06:14:40,770 INFO: - App:  ---> Running in 721f907a99ba
+
+2015-11-03 06:14:40,819 INFO: - App:  ---> 458964b65f93
+
+2015-11-03 06:14:40,828 INFO: - App: Removing intermediate container 721f907a99ba
+
+2015-11-03 06:14:40,831 INFO: - App: Successfully built 458964b65f93
+
+2015-11-03 06:14:40,845 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/sergeetiparent-gci733-a2015 to private registry...
+2015-11-03 06:14:47,178 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 06:14:50,249 INFO: - App: Successfully built app sergeetiparent-gci733-a2015
+2015-11-04 13:37:36,670 INFO: - App: Building service dependencies...
+2015-11-04 13:37:36,672 INFO: - App: Copying files and filling templates...
+2015-11-04 13:37:36,686 INFO: - App: Building app image without Dockerfile...
+2015-11-04 13:37:36,742 INFO: - App: Sending build context to Docker daemon 535.1 kBSending build context to Docker daemon 1.081 MBSending build context to Docker daemon 1.083 MBSending build context to Docker daemon 1.083 MB
+
+2015-11-04 13:37:36,747 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 13:37:36,752 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 13:37:36,754 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-04 13:37:36,946 INFO: - App:  ---> 15abf73f6e83
+
+2015-11-04 13:37:36,956 INFO: - App: Removing intermediate container 0d356e7b6217
+
+2015-11-04 13:37:36,958 INFO: - App: Step 2 : USER root
+
+2015-11-04 13:37:37,047 INFO: - App:  ---> Running in aa216ccbd9d7
+
+2015-11-04 13:37:37,095 INFO: - App:  ---> 1e14f29c578d
+
+2015-11-04 13:37:37,103 INFO: - App: Removing intermediate container aa216ccbd9d7
+
+2015-11-04 13:37:37,105 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 13:37:37,175 INFO: - App:  ---> Running in 84d92700c4ea
+
+2015-11-04 13:37:37,585 INFO: - App:  ---> 63485b86022b
+
+2015-11-04 13:37:37,599 INFO: - App: Removing intermediate container 84d92700c4ea
+
+2015-11-04 13:37:37,607 INFO: - App: Step 4 : USER main
+
+2015-11-04 13:37:37,667 INFO: - App:  ---> Running in a30e38a08007
+
+2015-11-04 13:37:37,714 INFO: - App:  ---> 45558fd9f2c5
+
+2015-11-04 13:37:37,723 INFO: - App: Removing intermediate container a30e38a08007
+
+2015-11-04 13:37:37,725 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 13:37:37,798 INFO: - App:  ---> Running in 1a2eaac9c1e1
+
+2015-11-04 13:37:38,213 INFO: - App: Signing notebook: /home/main/notebooks/.ipynb_checkpoints/barriere-capillaire-checkpoint.ipynb
+
+2015-11-04 13:37:38,466 INFO: - App: Notebook already signed: /home/main/notebooks/barriere-capillaire.ipynb
+
+2015-11-04 13:37:38,716 INFO: - App: Signing notebook: /home/main/notebooks/isothermes.ipynb
+
+2015-11-04 13:37:38,998 INFO: - App:  ---> 319c013d753b
+
+2015-11-04 13:37:39,007 INFO: - App: Removing intermediate container 1a2eaac9c1e1
+
+2015-11-04 13:37:39,012 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-04 13:37:39,092 INFO: - App:  ---> Running in c5f51adfd21c
+
+2015-11-04 13:37:39,144 INFO: - App:  ---> 3f0aa651c60a
+
+2015-11-04 13:37:39,151 INFO: - App: Removing intermediate container c5f51adfd21c
+
+2015-11-04 13:37:39,154 INFO: - App: Successfully built 3f0aa651c60a
+
+2015-11-04 13:37:39,162 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/sergeetiparent-gci733-a2015 to private registry...
+2015-11-04 13:37:45,543 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 13:38:01,549 INFO: - App: Successfully built app sergeetiparent-gci733-a2015

@@ -1,0 +1,1462 @@
+2015-11-01 04:25:02,276 INFO: - App: Building service dependencies...
+2015-11-01 04:25:02,278 INFO: - App: Copying files and filling templates...
+2015-11-01 04:25:02,316 INFO: - App: Building app image without Dockerfile...
+2015-11-01 04:25:02,513 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon 15.59 MBSending build context to Docker daemon 16.12 MBSending build context to Docker daemon 16.68 MBSending build context to Docker daemon 17.24 MBSending build context to Docker daemon 17.79 MBSending build context to Docker daemon 18.32 MBSending build context to Docker daemon 18.87 MBSending build context to Docker daemon 19.43 MBSending build context to Docker daemon  19.9 MBSending build context to Docker daemon  19.9 MB
+
+2015-11-01 04:25:02,516 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 04:25:02,518 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 04:25:02,523 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 04:25:02,716 INFO: - App:  ---> f5a0aa9e6cb6
+
+2015-11-01 04:25:02,732 INFO: - App: Removing intermediate container b6bfed898f24
+
+2015-11-01 04:25:02,738 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 04:25:02,879 INFO: - App:  ---> 2a7b6fc4f43e
+
+2015-11-01 04:25:02,895 INFO: - App: Removing intermediate container f78aa0e27805
+
+2015-11-01 04:25:02,904 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 04:25:02,979 INFO: - App:  ---> Running in 08061ce25358
+
+2015-11-01 04:25:03,136 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 04:25:04,435 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 04:25:04,439 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 04:25:04,443 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 04:25:04,610 INFO: - App:   Downloading ipython-3.1.0-py2-none-any.whl (3.4MB)
+
+2015-11-01 04:25:05,273 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 04:25:05,308 INFO: - App:   Downloading numpydoc-0.5.tar.gz
+
+2015-11-01 04:25:05,578 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 04:25:05,583 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 04:25:05,587 INFO: - App: Installing collected packages: ipython, numpydoc
+
+2015-11-01 04:25:05,592 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 04:25:05,594 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 04:25:05,598 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 04:25:05,600 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 04:25:07,157 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 04:25:07,465 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5
+
+2015-11-01 04:25:07,565 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 04:25:07,871 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 04:25:07,874 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 04:25:07,876 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 04:25:08,046 INFO: - App:   Downloading ipython-3.1.0-py3-none-any.whl (3.4MB)
+
+2015-11-01 04:25:08,706 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 04:25:08,711 INFO: - App:   Using cached numpydoc-0.5.tar.gz
+
+2015-11-01 04:25:09,037 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 04:25:09,040 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 04:25:09,042 INFO: - App: Installing collected packages: ipython, numpydoc
+
+2015-11-01 04:25:09,045 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 04:25:09,047 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 04:25:09,049 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 04:25:09,062 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 04:25:11,072 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 04:25:11,483 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5
+
+2015-11-01 04:25:14,743 INFO: - App:  ---> 5600a9aa1df5
+
+2015-11-01 04:25:14,928 INFO: - App: Removing intermediate container 08061ce25358
+
+2015-11-01 04:25:14,932 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 04:25:15,234 INFO: - App:  ---> cc953ec98261
+
+2015-11-01 04:25:15,248 INFO: - App: Removing intermediate container a85e63cf948e
+
+2015-11-01 04:25:15,250 INFO: - App: Step 5 : USER root
+
+2015-11-01 04:25:15,322 INFO: - App:  ---> Running in 96f8442ab435
+
+2015-11-01 04:25:15,370 INFO: - App:  ---> 7dbc4271372d
+
+2015-11-01 04:25:15,378 INFO: - App: Removing intermediate container 96f8442ab435
+
+2015-11-01 04:25:15,380 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 04:25:15,463 INFO: - App:  ---> Running in 9c43c524bd60
+
+2015-11-01 04:25:15,998 INFO: - App:  ---> af2d09df3af1
+
+2015-11-01 04:25:16,013 INFO: - App: Removing intermediate container 9c43c524bd60
+
+2015-11-01 04:25:16,017 INFO: - App: Step 7 : USER main
+
+2015-11-01 04:25:16,104 INFO: - App:  ---> Running in 64a45b1d1114
+
+2015-11-01 04:25:16,180 INFO: - App:  ---> 2885d7289dad
+
+2015-11-01 04:25:16,187 INFO: - App: Removing intermediate container 64a45b1d1114
+
+2015-11-01 04:25:16,192 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 04:25:16,267 INFO: - App:  ---> Running in 8a7ec8c3d87d
+
+2015-11-01 04:25:16,688 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_pyqg.ipynb
+
+2015-11-01 04:25:16,932 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_fft_sverdrup.ipynb
+
+2015-11-01 04:25:17,167 INFO: - App: Signing notebook: /home/main/notebooks/examples/pyqg_example.ipynb
+
+2015-11-01 04:25:17,391 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 04:25:17,649 INFO: - App: Signing notebook: /home/main/notebooks/examples/vis_particles.ipynb
+
+2015-11-01 04:25:17,908 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/sqg.ipynb
+
+2015-11-01 04:25:18,155 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/two-layer.ipynb
+
+2015-11-01 04:25:18,414 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/layered.ipynb
+
+2015-11-01 04:25:18,670 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/barotropic.ipynb
+
+2015-11-01 04:25:18,890 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_sqg_model.ipynb
+
+2015-11-01 04:25:19,117 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_twolayer_model.ipynb
+
+2015-11-01 04:25:19,340 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_equivalent_barotropic.ipynb
+
+2015-11-01 04:25:19,615 INFO: - App:  ---> 48e9249ea2c3
+
+2015-11-01 04:25:19,624 INFO: - App: Removing intermediate container 8a7ec8c3d87d
+
+2015-11-01 04:25:19,627 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 04:25:19,704 INFO: - App:  ---> Running in 7739587d8a6e
+
+2015-11-01 04:25:19,770 INFO: - App:  ---> f8930c852bec
+
+2015-11-01 04:25:19,815 INFO: - App: Removing intermediate container 7739587d8a6e
+
+2015-11-01 04:25:19,830 INFO: - App: Successfully built f8930c852bec
+
+2015-11-01 04:25:19,860 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/crocha700-pyqg to private registry...
+2015-11-01 04:25:36,010 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 04:25:42,762 INFO: - App: Successfully built app crocha700-pyqg
+2015-11-01 04:27:02,975 INFO: - App: Building service dependencies...
+2015-11-01 04:27:02,978 INFO: - App: Copying files and filling templates...
+2015-11-01 04:27:03,018 INFO: - App: Building app image without Dockerfile...
+2015-11-01 04:27:03,211 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon 15.59 MBSending build context to Docker daemon 16.12 MBSending build context to Docker daemon 16.68 MBSending build context to Docker daemon 17.24 MBSending build context to Docker daemon 17.79 MBSending build context to Docker daemon 18.32 MBSending build context to Docker daemon 18.87 MBSending build context to Docker daemon 19.43 MBSending build context to Docker daemon  19.9 MBSending build context to Docker daemon  19.9 MB
+
+2015-11-01 04:27:03,214 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 04:27:03,220 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 04:27:03,223 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 04:27:03,419 INFO: - App:  ---> 4ae920fbd303
+
+2015-11-01 04:27:03,427 INFO: - App: Removing intermediate container cb0c55b6ee2b
+
+2015-11-01 04:27:03,429 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 04:27:03,596 INFO: - App:  ---> fef8c33fc21e
+
+2015-11-01 04:27:03,609 INFO: - App: Removing intermediate container ad698cbcb651
+
+2015-11-01 04:27:03,611 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 04:27:03,724 INFO: - App:  ---> Running in cf8d612909a0
+
+2015-11-01 04:27:03,873 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 04:27:05,220 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 04:27:05,222 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 04:27:05,226 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 04:27:05,414 INFO: - App:   Downloading ipython-3.1.0-py2-none-any.whl (3.4MB)
+
+2015-11-01 04:27:06,083 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 04:27:06,112 INFO: - App:   Downloading numpydoc-0.5.tar.gz
+
+2015-11-01 04:27:06,383 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 04:27:06,385 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 04:27:06,388 INFO: - App: Installing collected packages: ipython, numpydoc
+
+2015-11-01 04:27:06,390 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 04:27:06,395 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 04:27:06,397 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 04:27:06,399 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 04:27:07,970 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 04:27:08,291 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5
+
+2015-11-01 04:27:08,393 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 04:27:08,707 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 04:27:08,729 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 04:27:08,757 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 04:27:08,881 INFO: - App:   Downloading ipython-3.1.0-py3-none-any.whl (3.4MB)
+
+2015-11-01 04:27:09,524 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 04:27:09,548 INFO: - App:   Using cached numpydoc-0.5.tar.gz
+
+2015-11-01 04:27:09,848 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 04:27:09,852 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 04:27:09,853 INFO: - App: Installing collected packages: ipython, numpydoc
+
+2015-11-01 04:27:09,855 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 04:27:09,859 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 04:27:09,862 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 04:27:09,866 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 04:27:11,812 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 04:27:12,228 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5
+
+2015-11-01 04:27:15,424 INFO: - App:  ---> aa3f05fe1431
+
+2015-11-01 04:27:15,609 INFO: - App: Removing intermediate container cf8d612909a0
+
+2015-11-01 04:27:15,611 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 04:27:15,906 INFO: - App:  ---> adc70e3b84b6
+
+2015-11-01 04:27:15,921 INFO: - App: Removing intermediate container 5260c2c50ca6
+
+2015-11-01 04:27:15,923 INFO: - App: Step 5 : USER root
+
+2015-11-01 04:27:15,991 INFO: - App:  ---> Running in 96fac1866a16
+
+2015-11-01 04:27:16,039 INFO: - App:  ---> 768e13f54baa
+
+2015-11-01 04:27:16,047 INFO: - App: Removing intermediate container 96fac1866a16
+
+2015-11-01 04:27:16,049 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 04:27:16,139 INFO: - App:  ---> Running in 10e030c12257
+
+2015-11-01 04:27:16,666 INFO: - App:  ---> 053c44a7dae7
+
+2015-11-01 04:27:16,691 INFO: - App: Removing intermediate container 10e030c12257
+
+2015-11-01 04:27:16,698 INFO: - App: Step 7 : USER main
+
+2015-11-01 04:27:16,779 INFO: - App:  ---> Running in 3b2f41f79f14
+
+2015-11-01 04:27:16,835 INFO: - App:  ---> a64f4eb81a50
+
+2015-11-01 04:27:16,852 INFO: - App: Removing intermediate container 3b2f41f79f14
+
+2015-11-01 04:27:16,855 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 04:27:16,903 INFO: - App:  ---> Running in 91fafef4906a
+
+2015-11-01 04:27:17,323 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_pyqg.ipynb
+
+2015-11-01 04:27:17,574 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_fft_sverdrup.ipynb
+
+2015-11-01 04:27:17,809 INFO: - App: Signing notebook: /home/main/notebooks/examples/pyqg_example.ipynb
+
+2015-11-01 04:27:18,044 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 04:27:18,306 INFO: - App: Signing notebook: /home/main/notebooks/examples/vis_particles.ipynb
+
+2015-11-01 04:27:18,550 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/sqg.ipynb
+
+2015-11-01 04:27:18,800 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/two-layer.ipynb
+
+2015-11-01 04:27:19,047 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/layered.ipynb
+
+2015-11-01 04:27:19,311 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/barotropic.ipynb
+
+2015-11-01 04:27:19,539 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_sqg_model.ipynb
+
+2015-11-01 04:27:19,764 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_twolayer_model.ipynb
+
+2015-11-01 04:27:19,979 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_equivalent_barotropic.ipynb
+
+2015-11-01 04:27:20,256 INFO: - App:  ---> c23765656820
+
+2015-11-01 04:27:20,262 INFO: - App: Removing intermediate container 91fafef4906a
+
+2015-11-01 04:27:20,265 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 04:27:20,350 INFO: - App:  ---> Running in 301d0859ccff
+
+2015-11-01 04:27:20,409 INFO: - App:  ---> 4f7267b3ae19
+
+2015-11-01 04:27:20,426 INFO: - App: Removing intermediate container 301d0859ccff
+
+2015-11-01 04:27:20,430 INFO: - App: Successfully built 4f7267b3ae19
+
+2015-11-01 04:27:20,440 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/crocha700-pyqg to private registry...
+2015-11-01 04:27:36,588 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 04:27:46,305 INFO: - App: Successfully built app crocha700-pyqg
+2015-11-01 04:32:39,462 INFO: - App: Building service dependencies...
+2015-11-01 04:32:39,465 INFO: - App: Copying files and filling templates...
+2015-11-01 04:32:39,504 INFO: - App: Building app image without Dockerfile...
+2015-11-01 04:32:39,704 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.12 MBSending build context to Docker daemon 16.68 MBSending build context to Docker daemon 17.24 MBSending build context to Docker daemon 17.79 MBSending build context to Docker daemon 18.32 MBSending build context to Docker daemon 18.87 MBSending build context to Docker daemon 19.43 MBSending build context to Docker daemon  19.9 MBSending build context to Docker daemon  19.9 MB
+
+2015-11-01 04:32:39,708 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 04:32:39,711 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 04:32:39,713 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 04:32:39,899 INFO: - App:  ---> 70914bd8ce26
+
+2015-11-01 04:32:39,907 INFO: - App: Removing intermediate container 672d0467b383
+
+2015-11-01 04:32:39,909 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 04:32:40,091 INFO: - App:  ---> bdfbfd4de3f2
+
+2015-11-01 04:32:40,099 INFO: - App: Removing intermediate container d72e6f4fae32
+
+2015-11-01 04:32:40,101 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 04:32:40,173 INFO: - App:  ---> Running in f318410ecb7f
+
+2015-11-01 04:32:40,315 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 04:32:41,623 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 04:32:41,625 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 04:32:41,629 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 04:32:41,787 INFO: - App:   Downloading ipython-3.1.0-py2-none-any.whl (3.4MB)
+
+2015-11-01 04:32:42,453 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 04:32:42,487 INFO: - App:   Downloading numpydoc-0.5.tar.gz
+
+2015-11-01 04:32:42,756 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 04:32:42,758 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 04:32:42,771 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 04:32:42,874 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 04:32:44,788 INFO: - App: Installing collected packages: ipython, numpydoc, pyqg
+
+2015-11-01 04:32:44,791 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 04:32:44,793 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 04:32:44,795 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 04:32:44,799 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 04:32:46,414 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 04:32:46,675 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 04:32:55,459 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5 pyqg-0.1.4
+
+2015-11-01 04:32:55,567 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 04:32:55,864 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 04:32:55,866 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 04:32:55,869 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 04:32:56,042 INFO: - App:   Downloading ipython-3.1.0-py3-none-any.whl (3.4MB)
+
+2015-11-01 04:32:56,707 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 04:32:56,718 INFO: - App:   Using cached numpydoc-0.5.tar.gz
+
+2015-11-01 04:32:57,038 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 04:32:57,041 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 04:32:57,052 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 04:32:57,063 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 04:32:57,264 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 04:32:57,266 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 04:32:57,288 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 04:32:57,290 INFO: - App:       File "/tmp/pip-build-d1_lc_/pyqg/setup.py", line 102
+
+2015-11-01 04:32:57,292 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 04:32:57,295 INFO: - App:                                           ^
+
+2015-11-01 04:32:57,297 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 04:32:57,299 INFO: - App:     
+
+2015-11-01 04:32:57,300 INFO: - App:     ----------------------------------------
+
+2015-11-01 04:32:57,333 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-d1_lc_/pyqg
+
+2015-11-01 04:32:57,355 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 04:32:59,824 INFO: - App:  ---> f53ee559dbeb
+
+2015-11-01 04:32:59,904 INFO: - App: Removing intermediate container f318410ecb7f
+
+2015-11-01 04:32:59,915 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 04:33:00,201 INFO: - App:  ---> 87c4daeab9a9
+
+2015-11-01 04:33:00,216 INFO: - App: Removing intermediate container 6d5a4a85ce59
+
+2015-11-01 04:33:00,219 INFO: - App: Step 5 : USER root
+
+2015-11-01 04:33:00,313 INFO: - App:  ---> Running in 5d862485a8fc
+
+2015-11-01 04:33:00,360 INFO: - App:  ---> 46e1dc861500
+
+2015-11-01 04:33:00,363 INFO: - App: Removing intermediate container 5d862485a8fc
+
+2015-11-01 04:33:00,367 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 04:33:00,455 INFO: - App:  ---> Running in ee72d9fc3106
+
+2015-11-01 04:33:00,983 INFO: - App:  ---> e8adb73e1ac5
+
+2015-11-01 04:33:00,997 INFO: - App: Removing intermediate container ee72d9fc3106
+
+2015-11-01 04:33:00,999 INFO: - App: Step 7 : USER main
+
+2015-11-01 04:33:01,075 INFO: - App:  ---> Running in f3afbed95d51
+
+2015-11-01 04:33:01,131 INFO: - App:  ---> 1ab862e05bac
+
+2015-11-01 04:33:01,138 INFO: - App: Removing intermediate container f3afbed95d51
+
+2015-11-01 04:33:01,140 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 04:33:01,206 INFO: - App:  ---> Running in b38fc379a219
+
+2015-11-01 04:33:01,663 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_pyqg.ipynb
+
+2015-11-01 04:33:01,905 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_fft_sverdrup.ipynb
+
+2015-11-01 04:33:02,143 INFO: - App: Signing notebook: /home/main/notebooks/examples/pyqg_example.ipynb
+
+2015-11-01 04:33:02,375 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 04:33:02,627 INFO: - App: Signing notebook: /home/main/notebooks/examples/vis_particles.ipynb
+
+2015-11-01 04:33:02,884 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/sqg.ipynb
+
+2015-11-01 04:33:03,116 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/two-layer.ipynb
+
+2015-11-01 04:33:03,356 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/layered.ipynb
+
+2015-11-01 04:33:03,615 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/barotropic.ipynb
+
+2015-11-01 04:33:03,841 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_sqg_model.ipynb
+
+2015-11-01 04:33:04,076 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_twolayer_model.ipynb
+
+2015-11-01 04:33:04,299 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_equivalent_barotropic.ipynb
+
+2015-11-01 04:33:04,586 INFO: - App:  ---> 497bdc2cbd49
+
+2015-11-01 04:33:04,594 INFO: - App: Removing intermediate container b38fc379a219
+
+2015-11-01 04:33:04,601 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 04:33:04,683 INFO: - App:  ---> Running in 0811111426a5
+
+2015-11-01 04:33:04,732 INFO: - App:  ---> ad6bcd4c70a7
+
+2015-11-01 04:33:04,740 INFO: - App: Removing intermediate container 0811111426a5
+
+2015-11-01 04:33:04,742 INFO: - App: Successfully built ad6bcd4c70a7
+
+2015-11-01 04:33:04,756 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/crocha700-pyqg to private registry...
+2015-11-01 04:33:18,818 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 04:33:30,590 INFO: - App: Successfully built app crocha700-pyqg
+2015-11-01 04:57:32,832 INFO: - App: Building service dependencies...
+2015-11-01 04:57:32,852 INFO: - App: Copying files and filling templates...
+2015-11-01 04:57:32,877 INFO: - App: Building app image without Dockerfile...
+2015-11-01 04:57:33,063 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.25 MBSending build context to Docker daemon 17.79 MBSending build context to Docker daemon 18.32 MBSending build context to Docker daemon 18.87 MBSending build context to Docker daemon 19.43 MBSending build context to Docker daemon 19.91 MBSending build context to Docker daemon 19.91 MB
+
+2015-11-01 04:57:33,066 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 04:57:33,071 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 04:57:33,075 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 04:57:33,259 INFO: - App:  ---> 5cb61bbe868c
+
+2015-11-01 04:57:33,267 INFO: - App: Removing intermediate container 8ac98eb181ea
+
+2015-11-01 04:57:33,269 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 04:57:33,445 INFO: - App:  ---> 35326d682ae8
+
+2015-11-01 04:57:33,459 INFO: - App: Removing intermediate container 1dca609d5d18
+
+2015-11-01 04:57:33,468 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 04:57:33,536 INFO: - App:  ---> Running in 6e7192071f4b
+
+2015-11-01 04:57:33,684 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 04:57:34,990 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 04:57:34,993 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 04:57:34,998 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 04:57:35,165 INFO: - App:   Downloading ipython-3.1.0-py2-none-any.whl (3.4MB)
+
+2015-11-01 04:57:35,826 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 04:57:35,860 INFO: - App:   Downloading numpydoc-0.5.tar.gz
+
+2015-11-01 04:57:36,145 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 04:57:36,152 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 04:57:36,158 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 04:57:36,196 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 04:57:38,094 INFO: - App: Installing collected packages: ipython, numpydoc, pyqg
+
+2015-11-01 04:57:38,097 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 04:57:38,099 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 04:57:38,101 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 04:57:38,103 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 04:57:39,686 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 04:57:39,935 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 04:57:48,829 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5 pyqg-0.1.4
+
+2015-11-01 04:57:48,932 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 04:57:49,259 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 04:57:49,268 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 04:57:49,270 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 04:57:49,425 INFO: - App:   Downloading ipython-3.1.0-py3-none-any.whl (3.4MB)
+
+2015-11-01 04:57:50,121 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 04:57:50,134 INFO: - App:   Using cached numpydoc-0.5.tar.gz
+
+2015-11-01 04:57:50,469 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 04:57:50,472 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 04:57:50,485 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 04:57:50,500 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 04:57:50,703 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 04:57:50,705 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 04:57:50,707 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 04:57:50,710 INFO: - App:       File "/tmp/pip-build-swn8in/pyqg/setup.py", line 102
+
+2015-11-01 04:57:50,713 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 04:57:50,715 INFO: - App:                                           ^
+
+2015-11-01 04:57:50,718 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 04:57:50,720 INFO: - App:     
+
+2015-11-01 04:57:50,723 INFO: - App:     ----------------------------------------
+
+2015-11-01 04:57:50,773 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-swn8in/pyqg
+
+2015-11-01 04:57:50,797 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 04:57:53,358 INFO: - App:  ---> 73275e556a42
+
+2015-11-01 04:57:53,430 INFO: - App: Removing intermediate container 6e7192071f4b
+
+2015-11-01 04:57:53,432 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 04:57:53,727 INFO: - App:  ---> c73e3d1eb9d1
+
+2015-11-01 04:57:53,742 INFO: - App: Removing intermediate container 5b4b25ca9372
+
+2015-11-01 04:57:53,744 INFO: - App: Step 5 : USER root
+
+2015-11-01 04:57:53,820 INFO: - App:  ---> Running in b2147011925f
+
+2015-11-01 04:57:53,874 INFO: - App:  ---> 5a5d6f9a6e6c
+
+2015-11-01 04:57:53,886 INFO: - App: Removing intermediate container b2147011925f
+
+2015-11-01 04:57:53,890 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 04:57:53,968 INFO: - App:  ---> Running in d50bfcfe6a39
+
+2015-11-01 04:57:54,500 INFO: - App:  ---> 3559fae2b239
+
+2015-11-01 04:57:54,521 INFO: - App: Removing intermediate container d50bfcfe6a39
+
+2015-11-01 04:57:54,543 INFO: - App: Step 7 : USER main
+
+2015-11-01 04:57:54,588 INFO: - App:  ---> Running in 8db840e676bf
+
+2015-11-01 04:57:54,635 INFO: - App:  ---> e84f5da2d494
+
+2015-11-01 04:57:54,664 INFO: - App: Removing intermediate container 8db840e676bf
+
+2015-11-01 04:57:54,674 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 04:57:54,714 INFO: - App:  ---> Running in 668c75f8a025
+
+2015-11-01 04:57:55,226 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_pyqg.ipynb
+
+2015-11-01 04:57:55,467 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_fft_sverdrup.ipynb
+
+2015-11-01 04:57:55,700 INFO: - App: Signing notebook: /home/main/notebooks/examples/pyqg_example.ipynb
+
+2015-11-01 04:57:55,923 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 04:57:56,179 INFO: - App: Signing notebook: /home/main/notebooks/examples/vis_particles.ipynb
+
+2015-11-01 04:57:56,442 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/sqg.ipynb
+
+2015-11-01 04:57:56,685 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/two-layer.ipynb
+
+2015-11-01 04:57:56,939 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/layered.ipynb
+
+2015-11-01 04:57:57,187 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/barotropic.ipynb
+
+2015-11-01 04:57:57,407 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_sqg_model.ipynb
+
+2015-11-01 04:57:57,627 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_twolayer_model.ipynb
+
+2015-11-01 04:57:57,850 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_equivalent_barotropic.ipynb
+
+2015-11-01 04:57:58,068 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 04:57:58,353 INFO: - App:  ---> ab7943dee4c9
+
+2015-11-01 04:57:58,372 INFO: - App: Removing intermediate container 668c75f8a025
+
+2015-11-01 04:57:58,376 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 04:57:58,414 INFO: - App:  ---> Running in 0bfdfc927f1b
+
+2015-11-01 04:57:58,479 INFO: - App:  ---> effc3d20624f
+
+2015-11-01 04:57:58,482 INFO: - App: Removing intermediate container 0bfdfc927f1b
+
+2015-11-01 04:57:58,489 INFO: - App: Successfully built effc3d20624f
+
+2015-11-01 04:57:58,495 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/crocha700-pyqg to private registry...
+2015-11-01 04:58:12,742 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 04:58:19,617 INFO: - App: Successfully built app crocha700-pyqg
+2015-11-01 05:13:36,023 INFO: - App: Building service dependencies...
+2015-11-01 05:13:36,030 INFO: - App: Copying files and filling templates...
+2015-11-01 05:13:36,057 INFO: - App: Building app image without Dockerfile...
+2015-11-01 05:13:36,251 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.25 MBSending build context to Docker daemon 17.79 MBSending build context to Docker daemon 18.32 MBSending build context to Docker daemon 18.87 MBSending build context to Docker daemon 19.43 MBSending build context to Docker daemon 19.91 MBSending build context to Docker daemon 19.91 MB
+
+2015-11-01 05:13:36,253 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 05:13:36,255 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 05:13:36,258 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 05:13:36,431 INFO: - App:  ---> 8b6062ee7b85
+
+2015-11-01 05:13:36,439 INFO: - App: Removing intermediate container 21bdc2dba3d6
+
+2015-11-01 05:13:36,442 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 05:13:36,599 INFO: - App:  ---> 6a67fb4153b7
+
+2015-11-01 05:13:36,607 INFO: - App: Removing intermediate container ae69dea27bac
+
+2015-11-01 05:13:36,614 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 05:13:36,699 INFO: - App:  ---> Running in 84caa5eb3c8f
+
+2015-11-01 05:13:36,849 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 05:13:38,162 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 05:13:38,165 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 05:13:38,171 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 05:13:38,334 INFO: - App:   Downloading ipython-3.1.0-py2-none-any.whl (3.4MB)
+
+2015-11-01 05:13:38,998 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 05:13:39,040 INFO: - App:   Downloading numpydoc-0.5.tar.gz
+
+2015-11-01 05:13:39,307 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 05:13:39,310 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 05:13:39,322 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 05:13:39,356 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 05:13:41,255 INFO: - App: Installing collected packages: ipython, numpydoc, pyqg
+
+2015-11-01 05:13:41,257 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 05:13:41,259 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 05:13:41,264 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 05:13:41,266 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 05:13:42,833 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 05:13:43,095 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 05:13:51,952 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5 pyqg-0.1.4
+
+2015-11-01 05:13:52,056 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 05:13:52,353 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 05:13:52,357 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 05:13:52,361 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 05:13:52,557 INFO: - App:   Downloading ipython-3.1.0-py3-none-any.whl (3.4MB)
+
+2015-11-01 05:13:53,211 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 05:13:53,221 INFO: - App:   Using cached numpydoc-0.5.tar.gz
+
+2015-11-01 05:13:53,550 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 05:13:53,555 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 05:13:53,564 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 05:13:53,574 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 05:13:53,788 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 05:13:53,791 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 05:13:53,795 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 05:13:53,801 INFO: - App:       File "/tmp/pip-build-hpjebx/pyqg/setup.py", line 102
+
+2015-11-01 05:13:53,803 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 05:13:53,819 INFO: - App:                                           ^
+
+2015-11-01 05:13:53,830 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 05:13:53,839 INFO: - App:     
+
+2015-11-01 05:13:53,857 INFO: - App:     ----------------------------------------
+
+2015-11-01 05:13:53,859 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-hpjebx/pyqg
+
+2015-11-01 05:13:53,880 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 05:13:56,367 INFO: - App:  ---> 85b6170da6b0
+
+2015-11-01 05:13:56,435 INFO: - App: Removing intermediate container 84caa5eb3c8f
+
+2015-11-01 05:13:56,438 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 05:13:56,730 INFO: - App:  ---> 3dd19b05fd1f
+
+2015-11-01 05:13:56,747 INFO: - App: Removing intermediate container 0313a6b06050
+
+2015-11-01 05:13:56,750 INFO: - App: Step 5 : USER root
+
+2015-11-01 05:13:56,834 INFO: - App:  ---> Running in 79724ee5440d
+
+2015-11-01 05:13:56,915 INFO: - App:  ---> 06ef30f83dea
+
+2015-11-01 05:13:56,928 INFO: - App: Removing intermediate container 79724ee5440d
+
+2015-11-01 05:13:56,930 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 05:13:57,000 INFO: - App:  ---> Running in a444868fd73e
+
+2015-11-01 05:13:57,538 INFO: - App:  ---> dce117f0f5c4
+
+2015-11-01 05:13:57,551 INFO: - App: Removing intermediate container a444868fd73e
+
+2015-11-01 05:13:57,557 INFO: - App: Step 7 : USER main
+
+2015-11-01 05:13:57,623 INFO: - App:  ---> Running in 881b5aac84f4
+
+2015-11-01 05:13:57,700 INFO: - App:  ---> 7a9c42a80fd0
+
+2015-11-01 05:13:57,707 INFO: - App: Removing intermediate container 881b5aac84f4
+
+2015-11-01 05:13:57,712 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 05:13:57,780 INFO: - App:  ---> Running in 07ea50e5fc63
+
+2015-11-01 05:13:58,234 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_pyqg.ipynb
+
+2015-11-01 05:13:58,482 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_fft_sverdrup.ipynb
+
+2015-11-01 05:13:58,718 INFO: - App: Signing notebook: /home/main/notebooks/examples/pyqg_example.ipynb
+
+2015-11-01 05:13:58,954 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 05:13:59,208 INFO: - App: Signing notebook: /home/main/notebooks/examples/vis_particles.ipynb
+
+2015-11-01 05:13:59,457 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/sqg.ipynb
+
+2015-11-01 05:13:59,704 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/two-layer.ipynb
+
+2015-11-01 05:13:59,946 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/layered.ipynb
+
+2015-11-01 05:14:00,216 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/barotropic.ipynb
+
+2015-11-01 05:14:00,436 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_sqg_model.ipynb
+
+2015-11-01 05:14:00,658 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_twolayer_model.ipynb
+
+2015-11-01 05:14:00,876 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_equivalent_barotropic.ipynb
+
+2015-11-01 05:14:01,100 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 05:14:01,386 INFO: - App:  ---> 6919e4365b3a
+
+2015-11-01 05:14:01,394 INFO: - App: Removing intermediate container 07ea50e5fc63
+
+2015-11-01 05:14:01,395 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 05:14:01,459 INFO: - App:  ---> Running in 8fec77105c06
+
+2015-11-01 05:14:01,516 INFO: - App:  ---> c53b9dae77f1
+
+2015-11-01 05:14:01,518 INFO: - App: Removing intermediate container 8fec77105c06
+
+2015-11-01 05:14:01,520 INFO: - App: Successfully built c53b9dae77f1
+
+2015-11-01 05:14:01,528 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/crocha700-pyqg to private registry...
+2015-11-01 05:14:15,700 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 05:14:25,126 INFO: - App: Successfully built app crocha700-pyqg
+2015-11-01 05:17:14,980 INFO: - App: Building service dependencies...
+2015-11-01 05:17:14,983 INFO: - App: Copying files and filling templates...
+2015-11-01 05:17:15,024 INFO: - App: Building app image without Dockerfile...
+2015-11-01 05:17:15,224 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.25 MBSending build context to Docker daemon 17.79 MBSending build context to Docker daemon 18.33 MBSending build context to Docker daemon 18.87 MBSending build context to Docker daemon 19.43 MBSending build context to Docker daemon 19.91 MBSending build context to Docker daemon 19.91 MB
+
+2015-11-01 05:17:15,228 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 05:17:15,231 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 05:17:15,235 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 05:17:15,443 INFO: - App:  ---> c898cba4282a
+
+2015-11-01 05:17:15,453 INFO: - App: Removing intermediate container 4d5edc988171
+
+2015-11-01 05:17:15,455 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 05:17:15,653 INFO: - App:  ---> e241a820d223
+
+2015-11-01 05:17:15,666 INFO: - App: Removing intermediate container e316e9904ca0
+
+2015-11-01 05:17:15,690 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 05:17:15,741 INFO: - App:  ---> Running in f905866e349c
+
+2015-11-01 05:17:15,891 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 05:17:17,227 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 05:17:17,230 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 05:17:17,235 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 05:17:17,390 INFO: - App:   Downloading ipython-3.1.0-py2-none-any.whl (3.4MB)
+
+2015-11-01 05:17:18,063 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 05:17:18,103 INFO: - App:   Downloading numpydoc-0.5.tar.gz
+
+2015-11-01 05:17:18,362 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 05:17:18,364 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 05:17:18,376 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 05:17:18,414 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 05:17:20,284 INFO: - App: Installing collected packages: ipython, numpydoc, pyqg
+
+2015-11-01 05:17:20,286 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 05:17:20,289 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 05:17:20,293 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 05:17:20,295 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 05:17:21,864 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 05:17:22,122 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 05:17:30,928 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5 pyqg-0.1.4
+
+2015-11-01 05:17:31,024 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 05:17:31,328 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 05:17:31,330 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 05:17:31,332 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 05:17:31,523 INFO: - App:   Downloading ipython-3.1.0-py3-none-any.whl (3.4MB)
+
+2015-11-01 05:17:32,191 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 05:17:32,202 INFO: - App:   Using cached numpydoc-0.5.tar.gz
+
+2015-11-01 05:17:32,532 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 05:17:32,534 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 05:17:32,545 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 05:17:32,556 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 05:17:32,777 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 05:17:32,830 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 05:17:32,850 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 05:17:32,869 INFO: - App:       File "/tmp/pip-build-srmaw2/pyqg/setup.py", line 102
+
+2015-11-01 05:17:32,901 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 05:17:32,924 INFO: - App:                                           ^
+
+2015-11-01 05:17:32,940 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 05:17:32,960 INFO: - App:     
+
+2015-11-01 05:17:33,048 INFO: - App:     ----------------------------------------
+
+2015-11-01 05:17:33,053 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-srmaw2/pyqg
+
+2015-11-01 05:17:33,056 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 05:17:35,402 INFO: - App:  ---> 2e545ee6793b
+
+2015-11-01 05:17:35,477 INFO: - App: Removing intermediate container f905866e349c
+
+2015-11-01 05:17:35,480 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 05:17:35,759 INFO: - App:  ---> f9f29d93eb1b
+
+2015-11-01 05:17:35,775 INFO: - App: Removing intermediate container 1393798a7a1a
+
+2015-11-01 05:17:35,779 INFO: - App: Step 5 : USER root
+
+2015-11-01 05:17:35,871 INFO: - App:  ---> Running in 99c759c643e8
+
+2015-11-01 05:17:35,923 INFO: - App:  ---> 8ec6f0bffd43
+
+2015-11-01 05:17:35,931 INFO: - App: Removing intermediate container 99c759c643e8
+
+2015-11-01 05:17:35,935 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 05:17:36,003 INFO: - App:  ---> Running in 5aa4526d3008
+
+2015-11-01 05:17:36,534 INFO: - App:  ---> d6a6039745d2
+
+2015-11-01 05:17:36,550 INFO: - App: Removing intermediate container 5aa4526d3008
+
+2015-11-01 05:17:36,553 INFO: - App: Step 7 : USER main
+
+2015-11-01 05:17:36,623 INFO: - App:  ---> Running in 75f01aca8eb8
+
+2015-11-01 05:17:36,672 INFO: - App:  ---> 59958b6874ad
+
+2015-11-01 05:17:36,683 INFO: - App: Removing intermediate container 75f01aca8eb8
+
+2015-11-01 05:17:36,693 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 05:17:36,751 INFO: - App:  ---> Running in 5bffe41261c9
+
+2015-11-01 05:17:37,228 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_pyqg.ipynb
+
+2015-11-01 05:17:37,477 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_fft_sverdrup.ipynb
+
+2015-11-01 05:17:37,719 INFO: - App: Signing notebook: /home/main/notebooks/examples/pyqg_example.ipynb
+
+2015-11-01 05:17:37,956 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 05:17:38,215 INFO: - App: Signing notebook: /home/main/notebooks/examples/vis_particles.ipynb
+
+2015-11-01 05:17:38,470 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/sqg.ipynb
+
+2015-11-01 05:17:38,703 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/two-layer.ipynb
+
+2015-11-01 05:17:38,945 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/layered.ipynb
+
+2015-11-01 05:17:39,211 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/barotropic.ipynb
+
+2015-11-01 05:17:39,432 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_sqg_model.ipynb
+
+2015-11-01 05:17:39,658 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_twolayer_model.ipynb
+
+2015-11-01 05:17:39,882 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_equivalent_barotropic.ipynb
+
+2015-11-01 05:17:40,107 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 05:17:40,406 INFO: - App:  ---> a75143945f4c
+
+2015-11-01 05:17:40,416 INFO: - App: Removing intermediate container 5bffe41261c9
+
+2015-11-01 05:17:40,419 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 05:17:40,503 INFO: - App:  ---> Running in 5a306c7e25c9
+
+2015-11-01 05:17:40,551 INFO: - App:  ---> eb38ef24a833
+
+2015-11-01 05:17:40,560 INFO: - App: Removing intermediate container 5a306c7e25c9
+
+2015-11-01 05:17:40,562 INFO: - App: Successfully built eb38ef24a833
+
+2015-11-01 05:17:40,572 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/crocha700-pyqg to private registry...
+2015-11-01 05:17:54,541 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 05:18:06,283 INFO: - App: Successfully built app crocha700-pyqg
+2015-11-01 05:20:07,040 INFO: - App: Building service dependencies...
+2015-11-01 05:20:07,044 INFO: - App: Copying files and filling templates...
+2015-11-01 05:20:07,081 INFO: - App: Building app image without Dockerfile...
+2015-11-01 05:20:07,278 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.25 MBSending build context to Docker daemon 17.79 MBSending build context to Docker daemon 18.33 MBSending build context to Docker daemon 18.87 MBSending build context to Docker daemon 19.43 MBSending build context to Docker daemon 19.91 MBSending build context to Docker daemon 19.91 MB
+
+2015-11-01 05:20:07,281 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 05:20:07,283 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 05:20:07,285 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 05:20:07,471 INFO: - App:  ---> 5d07c07912c8
+
+2015-11-01 05:20:07,482 INFO: - App: Removing intermediate container 4dadfc27f959
+
+2015-11-01 05:20:07,485 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 05:20:07,679 INFO: - App:  ---> 55190a5dc3f3
+
+2015-11-01 05:20:07,688 INFO: - App: Removing intermediate container 263dfda6e761
+
+2015-11-01 05:20:07,689 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 05:20:07,759 INFO: - App:  ---> Running in 0c8bcf6bcffd
+
+2015-11-01 05:20:07,920 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 05:20:09,273 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 05:20:09,275 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 05:20:09,280 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 05:20:09,438 INFO: - App:   Downloading ipython-3.1.0-py2-none-any.whl (3.4MB)
+
+2015-11-01 05:20:10,114 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 05:20:10,145 INFO: - App:   Downloading numpydoc-0.5.tar.gz
+
+2015-11-01 05:20:10,415 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 05:20:10,417 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 05:20:10,430 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 05:20:10,464 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 05:20:12,355 INFO: - App: Installing collected packages: ipython, numpydoc, pyqg
+
+2015-11-01 05:20:12,359 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 05:20:12,361 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 05:20:12,363 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 05:20:12,365 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 05:20:13,937 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 05:20:14,195 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 05:20:22,933 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5 pyqg-0.1.4
+
+2015-11-01 05:20:23,039 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 05:20:23,363 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 05:20:23,366 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 05:20:23,372 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 05:20:23,532 INFO: - App:   Downloading ipython-3.1.0-py3-none-any.whl (3.4MB)
+
+2015-11-01 05:20:24,210 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 05:20:24,220 INFO: - App:   Using cached numpydoc-0.5.tar.gz
+
+2015-11-01 05:20:24,551 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 05:20:24,555 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 05:20:24,567 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 05:20:24,577 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 05:20:24,781 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 05:20:24,783 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 05:20:24,785 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 05:20:24,791 INFO: - App:       File "/tmp/pip-build-vzqvh0/pyqg/setup.py", line 102
+
+2015-11-01 05:20:24,814 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 05:20:24,847 INFO: - App:                                           ^
+
+2015-11-01 05:20:24,866 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 05:20:24,884 INFO: - App:     
+
+2015-11-01 05:20:24,892 INFO: - App:     ----------------------------------------
+
+2015-11-01 05:20:24,912 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-vzqvh0/pyqg
+
+2015-11-01 05:20:24,916 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 05:20:27,380 INFO: - App:  ---> 403e61b1df9f
+
+2015-11-01 05:20:27,455 INFO: - App: Removing intermediate container 0c8bcf6bcffd
+
+2015-11-01 05:20:27,457 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 05:20:27,770 INFO: - App:  ---> 90ec79276e34
+
+2015-11-01 05:20:27,784 INFO: - App: Removing intermediate container cb22f16213b9
+
+2015-11-01 05:20:27,786 INFO: - App: Step 5 : USER root
+
+2015-11-01 05:20:27,862 INFO: - App:  ---> Running in 5f20aefed566
+
+2015-11-01 05:20:27,911 INFO: - App:  ---> 68e7b0b5eca4
+
+2015-11-01 05:20:27,919 INFO: - App: Removing intermediate container 5f20aefed566
+
+2015-11-01 05:20:27,921 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 05:20:27,991 INFO: - App:  ---> Running in edc695da65de
+
+2015-11-01 05:20:28,514 INFO: - App:  ---> 99295c53ad9e
+
+2015-11-01 05:20:28,532 INFO: - App: Removing intermediate container edc695da65de
+
+2015-11-01 05:20:28,538 INFO: - App: Step 7 : USER main
+
+2015-11-01 05:20:28,606 INFO: - App:  ---> Running in ed1dfa4fdfe2
+
+2015-11-01 05:20:28,656 INFO: - App:  ---> fc73cc2b3a11
+
+2015-11-01 05:20:28,667 INFO: - App: Removing intermediate container ed1dfa4fdfe2
+
+2015-11-01 05:20:28,669 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 05:20:28,735 INFO: - App:  ---> Running in 8fab90fc6879
+
+2015-11-01 05:20:29,251 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_pyqg.ipynb
+
+2015-11-01 05:20:29,493 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_fft_sverdrup.ipynb
+
+2015-11-01 05:20:29,731 INFO: - App: Signing notebook: /home/main/notebooks/examples/pyqg_example.ipynb
+
+2015-11-01 05:20:29,958 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 05:20:30,222 INFO: - App: Signing notebook: /home/main/notebooks/examples/vis_particles.ipynb
+
+2015-11-01 05:20:30,474 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/sqg.ipynb
+
+2015-11-01 05:20:30,706 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/two-layer.ipynb
+
+2015-11-01 05:20:30,938 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/layered.ipynb
+
+2015-11-01 05:20:31,214 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/barotropic.ipynb
+
+2015-11-01 05:20:31,432 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_sqg_model.ipynb
+
+2015-11-01 05:20:31,662 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_twolayer_model.ipynb
+
+2015-11-01 05:20:31,867 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_equivalent_barotropic.ipynb
+
+2015-11-01 05:20:32,089 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 05:20:32,366 INFO: - App:  ---> b99a608b792e
+
+2015-11-01 05:20:32,375 INFO: - App: Removing intermediate container 8fab90fc6879
+
+2015-11-01 05:20:32,377 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 05:20:32,465 INFO: - App:  ---> Running in 4cdaedf3d5a9
+
+2015-11-01 05:20:32,523 INFO: - App:  ---> e97f51ebdf4d
+
+2015-11-01 05:20:32,530 INFO: - App: Removing intermediate container 4cdaedf3d5a9
+
+2015-11-01 05:20:32,533 INFO: - App: Successfully built e97f51ebdf4d
+
+2015-11-01 05:20:32,544 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/crocha700-pyqg to private registry...
+2015-11-01 05:20:47,127 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 05:20:53,170 INFO: - App: Successfully built app crocha700-pyqg
+2015-11-01 05:21:24,146 INFO: - App: Building service dependencies...
+2015-11-01 05:21:24,148 INFO: - App: Copying files and filling templates...
+2015-11-01 05:21:24,182 INFO: - App: Building app image without Dockerfile...
+2015-11-01 05:21:24,407 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.25 MBSending build context to Docker daemon 17.79 MBSending build context to Docker daemon 18.33 MBSending build context to Docker daemon 18.87 MBSending build context to Docker daemon 19.43 MBSending build context to Docker daemon 19.91 MBSending build context to Docker daemon 19.91 MB
+
+2015-11-01 05:21:24,410 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 05:21:24,413 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 05:21:24,414 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 05:21:24,607 INFO: - App:  ---> 2d506e4b9a22
+
+2015-11-01 05:21:24,617 INFO: - App: Removing intermediate container 0b74ef734905
+
+2015-11-01 05:21:24,619 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 05:21:24,771 INFO: - App:  ---> 9aa9c0ea9b05
+
+2015-11-01 05:21:24,779 INFO: - App: Removing intermediate container c5130e5e5bbc
+
+2015-11-01 05:21:24,781 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 05:21:24,859 INFO: - App:  ---> Running in afd6efc48499
+
+2015-11-01 05:21:25,004 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 05:21:26,344 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 05:21:26,346 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 05:21:26,352 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 05:21:26,543 INFO: - App:   Downloading ipython-3.1.0-py2-none-any.whl (3.4MB)
+
+2015-11-01 05:21:27,220 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 05:21:27,255 INFO: - App:   Downloading numpydoc-0.5.tar.gz
+
+2015-11-01 05:21:27,525 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 05:21:27,527 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 05:21:27,540 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 05:21:27,574 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 05:21:29,450 INFO: - App: Installing collected packages: ipython, numpydoc, pyqg
+
+2015-11-01 05:21:29,453 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-01 05:21:29,455 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-01 05:21:29,458 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-01 05:21:29,460 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-01 05:21:31,101 INFO: - App:   Running setup.py install for numpydoc
+
+2015-11-01 05:21:31,354 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 05:21:40,165 INFO: - App: Successfully installed ipython-3.1.0 numpydoc-0.5 pyqg-0.1.4
+
+2015-11-01 05:21:40,270 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 05:21:40,564 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 05:21:40,568 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 05:21:40,578 INFO: - App: Collecting ipython==3.1.0 (from -r requirements.txt (line 1))
+
+2015-11-01 05:21:40,718 INFO: - App:   Downloading ipython-3.1.0-py3-none-any.whl (3.4MB)
+
+2015-11-01 05:21:41,380 INFO: - App: Collecting numpydoc==0.5 (from -r requirements.txt (line 2))
+
+2015-11-01 05:21:41,389 INFO: - App:   Using cached numpydoc-0.5.tar.gz
+
+2015-11-01 05:21:41,716 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython>=0.20 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 3))
+
+2015-11-01 05:21:41,719 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-11-01 05:21:41,731 INFO: - App: Collecting pyqg (from -r requirements.txt (line 5))
+
+2015-11-01 05:21:41,742 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 05:21:41,948 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 05:21:41,958 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 05:21:41,960 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 05:21:41,962 INFO: - App:       File "/tmp/pip-build-g_7kze/pyqg/setup.py", line 102
+
+2015-11-01 05:21:41,965 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 05:21:41,966 INFO: - App:                                           ^
+
+2015-11-01 05:21:41,969 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 05:21:41,971 INFO: - App:     
+
+2015-11-01 05:21:41,973 INFO: - App:     ----------------------------------------
+
+2015-11-01 05:21:42,013 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-g_7kze/pyqg
+
+2015-11-01 05:21:42,037 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 05:21:44,580 INFO: - App:  ---> 1916a80c1aa5
+
+2015-11-01 05:21:44,658 INFO: - App: Removing intermediate container afd6efc48499
+
+2015-11-01 05:21:44,660 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 05:21:44,987 INFO: - App:  ---> 2629b704c8f9
+
+2015-11-01 05:21:45,001 INFO: - App: Removing intermediate container 7c83a2738d82
+
+2015-11-01 05:21:45,004 INFO: - App: Step 5 : USER root
+
+2015-11-01 05:21:45,079 INFO: - App:  ---> Running in 16864b30df1d
+
+2015-11-01 05:21:45,144 INFO: - App:  ---> 11c2ce9e09b6
+
+2015-11-01 05:21:45,156 INFO: - App: Removing intermediate container 16864b30df1d
+
+2015-11-01 05:21:45,180 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 05:21:45,222 INFO: - App:  ---> Running in 60b1d66648bd
+
+2015-11-01 05:21:45,768 INFO: - App:  ---> e6cab858676d
+
+2015-11-01 05:21:45,777 INFO: - App: Removing intermediate container 60b1d66648bd
+
+2015-11-01 05:21:45,779 INFO: - App: Step 7 : USER main
+
+2015-11-01 05:21:45,860 INFO: - App:  ---> Running in 4dfc6bd88830
+
+2015-11-01 05:21:45,920 INFO: - App:  ---> 8d2de278927e
+
+2015-11-01 05:21:45,952 INFO: - App: Removing intermediate container 4dfc6bd88830
+
+2015-11-01 05:21:45,964 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 05:21:46,012 INFO: - App:  ---> Running in f195f76d3609
+
+2015-11-01 05:21:46,423 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_pyqg.ipynb
+
+2015-11-01 05:21:46,674 INFO: - App: Signing notebook: /home/main/notebooks/benchmark/profile_fft_sverdrup.ipynb
+
+2015-11-01 05:21:46,907 INFO: - App: Signing notebook: /home/main/notebooks/examples/pyqg_example.ipynb
+
+2015-11-01 05:21:47,143 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 05:21:47,404 INFO: - App: Signing notebook: /home/main/notebooks/examples/vis_particles.ipynb
+
+2015-11-01 05:21:47,659 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/sqg.ipynb
+
+2015-11-01 05:21:47,894 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/two-layer.ipynb
+
+2015-11-01 05:21:48,142 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/layered.ipynb
+
+2015-11-01 05:21:48,407 INFO: - App: Signing notebook: /home/main/notebooks/docs/examples/barotropic.ipynb
+
+2015-11-01 05:21:48,632 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_sqg_model.ipynb
+
+2015-11-01 05:21:48,874 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_twolayer_model.ipynb
+
+2015-11-01 05:21:49,108 INFO: - App: Signing notebook: /home/main/notebooks/docs/equations/notation_equivalent_barotropic.ipynb
+
+2015-11-01 05:21:49,334 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 05:21:49,636 INFO: - App:  ---> 42667afe599a
+
+2015-11-01 05:21:49,645 INFO: - App: Removing intermediate container f195f76d3609
+
+2015-11-01 05:21:49,647 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 05:21:49,739 INFO: - App:  ---> Running in 1eed50e8b6b7
+
+2015-11-01 05:21:49,795 INFO: - App:  ---> 9dda661efd67
+
+2015-11-01 05:21:49,802 INFO: - App: Removing intermediate container 1eed50e8b6b7
+
+2015-11-01 05:21:49,804 INFO: - App: Successfully built 9dda661efd67
+
+2015-11-01 05:21:49,816 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/crocha700-pyqg to private registry...
+2015-11-01 05:22:04,097 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 05:22:11,125 INFO: - App: Successfully built app crocha700-pyqg

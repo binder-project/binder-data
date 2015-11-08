@@ -1,0 +1,570 @@
+2015-11-01 06:36:45,209 INFO: - App: Building service dependencies...
+2015-11-01 06:36:45,213 INFO: - App: Copying files and filling templates...
+2015-11-01 06:36:45,223 INFO: - App: Building app image without Dockerfile...
+2015-11-01 06:36:45,255 INFO: - App: Sending build context to Docker daemon 240.6 kBSending build context to Docker daemon 240.6 kB
+
+2015-11-01 06:36:45,275 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 06:36:45,277 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 06:36:45,279 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 06:36:45,475 INFO: - App:  ---> daffa2494a1d
+
+2015-11-01 06:36:45,483 INFO: - App: Removing intermediate container bc8edcc0179d
+
+2015-11-01 06:36:45,486 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 06:36:45,655 INFO: - App:  ---> 0c5d4641964d
+
+2015-11-01 06:36:45,663 INFO: - App: Removing intermediate container 7799ade4eb9c
+
+2015-11-01 06:36:45,665 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 06:36:45,743 INFO: - App:  ---> Running in 8b54263214c5
+
+2015-11-01 06:36:45,886 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 06:36:47,196 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 06:36:47,199 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 06:36:47,203 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-11-01 06:36:47,204 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-11-01 06:36:47,218 INFO: - App: Collecting pyqg (from -r requirements.txt (line 3))
+
+2015-11-01 06:36:47,321 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 06:36:49,325 INFO: - App: Installing collected packages: pyqg
+
+2015-11-01 06:36:49,327 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 06:36:58,150 INFO: - App: Successfully installed pyqg-0.1.4
+
+2015-11-01 06:36:58,172 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 06:36:58,472 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 06:36:58,474 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 06:36:58,477 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-11-01 06:36:58,481 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-11-01 06:36:58,487 INFO: - App: Collecting pyqg (from -r requirements.txt (line 3))
+
+2015-11-01 06:36:58,520 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 06:36:58,789 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 06:36:58,791 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 06:36:58,793 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 06:36:58,794 INFO: - App:       File "/tmp/pip-build-2bape2/pyqg/setup.py", line 102
+
+2015-11-01 06:36:58,797 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 06:36:58,798 INFO: - App:                                           ^
+
+2015-11-01 06:36:58,803 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 06:36:58,805 INFO: - App:     
+
+2015-11-01 06:36:58,806 INFO: - App:     ----------------------------------------
+
+2015-11-01 06:36:58,808 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-2bape2/pyqg
+
+2015-11-01 06:36:58,812 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 06:36:59,112 INFO: - App:  ---> 687f6e3536e0
+
+2015-11-01 06:36:59,123 INFO: - App: Removing intermediate container 8b54263214c5
+
+2015-11-01 06:36:59,126 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 06:36:59,305 INFO: - App:  ---> f88d20cf5744
+
+2015-11-01 06:36:59,315 INFO: - App: Removing intermediate container 65a44314e61d
+
+2015-11-01 06:36:59,318 INFO: - App: Step 5 : USER root
+
+2015-11-01 06:36:59,409 INFO: - App:  ---> Running in 2ca94a588afe
+
+2015-11-01 06:36:59,451 INFO: - App:  ---> bcc56adcd2b5
+
+2015-11-01 06:36:59,458 INFO: - App: Removing intermediate container 2ca94a588afe
+
+2015-11-01 06:36:59,460 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 06:36:59,539 INFO: - App:  ---> Running in b979f3d9ddd1
+
+2015-11-01 06:36:59,956 INFO: - App:  ---> e9fa299e2c9a
+
+2015-11-01 06:36:59,961 INFO: - App: Removing intermediate container b979f3d9ddd1
+
+2015-11-01 06:36:59,963 INFO: - App: Step 7 : USER main
+
+2015-11-01 06:37:00,043 INFO: - App:  ---> Running in 7effcc44ea46
+
+2015-11-01 06:37:00,108 INFO: - App:  ---> 77da87fce7a2
+
+2015-11-01 06:37:00,116 INFO: - App: Removing intermediate container 7effcc44ea46
+
+2015-11-01 06:37:00,117 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 06:37:00,203 INFO: - App:  ---> Running in b377ec6b8c3d
+
+2015-11-01 06:37:00,686 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 06:37:00,923 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/two-layer.ipynb
+
+2015-11-01 06:37:01,183 INFO: - App:  ---> a190e8d314ff
+
+2015-11-01 06:37:01,192 INFO: - App: Removing intermediate container b377ec6b8c3d
+
+2015-11-01 06:37:01,197 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 06:37:01,271 INFO: - App:  ---> Running in 3e19714bf9d5
+
+2015-11-01 06:37:01,327 INFO: - App:  ---> e94f58e1329d
+
+2015-11-01 06:37:01,335 INFO: - App: Removing intermediate container 3e19714bf9d5
+
+2015-11-01 06:37:01,338 INFO: - App: Successfully built e94f58e1329d
+
+2015-11-01 06:37:01,345 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/pyqg-pyqg_gallery to private registry...
+2015-11-01 06:37:10,954 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 06:37:19,997 INFO: - App: Successfully built app pyqg-pyqg_gallery
+2015-11-01 07:36:26,212 INFO: - App: Building service dependencies...
+2015-11-01 07:36:26,214 INFO: - App: Copying files and filling templates...
+2015-11-01 07:36:26,236 INFO: - App: Building app image without Dockerfile...
+2015-11-01 07:36:26,283 INFO: - App: Sending build context to Docker daemon 273.4 kBSending build context to Docker daemon 273.4 kB
+
+2015-11-01 07:36:26,288 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 07:36:26,290 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 07:36:26,296 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 07:36:26,483 INFO: - App:  ---> c5d351fda2e3
+
+2015-11-01 07:36:26,492 INFO: - App: Removing intermediate container f9d46eb9f83d
+
+2015-11-01 07:36:26,494 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 07:36:26,669 INFO: - App:  ---> 922d1dd6b1da
+
+2015-11-01 07:36:26,675 INFO: - App: Removing intermediate container 653429291f6d
+
+2015-11-01 07:36:26,677 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 07:36:26,767 INFO: - App:  ---> Running in ebeb9bab3354
+
+2015-11-01 07:36:26,913 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 07:36:28,231 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 07:36:28,234 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 07:36:28,238 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-11-01 07:36:28,240 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-11-01 07:36:28,253 INFO: - App: Collecting pyqg (from -r requirements.txt (line 3))
+
+2015-11-01 07:36:28,348 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 07:36:30,352 INFO: - App: Installing collected packages: pyqg
+
+2015-11-01 07:36:30,354 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 07:36:39,032 INFO: - App: Successfully installed pyqg-0.1.4
+
+2015-11-01 07:36:39,055 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 07:36:39,364 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 07:36:39,382 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 07:36:39,390 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-11-01 07:36:39,400 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-11-01 07:36:39,417 INFO: - App: Collecting pyqg (from -r requirements.txt (line 3))
+
+2015-11-01 07:36:39,446 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 07:36:39,708 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 07:36:39,725 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 07:36:39,762 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 07:36:39,784 INFO: - App:       File "/tmp/pip-build-b8i5mf/pyqg/setup.py", line 102
+
+2015-11-01 07:36:39,799 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 07:36:39,817 INFO: - App:                                           ^
+
+2015-11-01 07:36:39,831 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 07:36:39,908 INFO: - App:     
+
+2015-11-01 07:36:39,924 INFO: - App:     ----------------------------------------
+
+2015-11-01 07:36:39,932 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-b8i5mf/pyqg
+
+2015-11-01 07:36:39,934 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 07:36:40,037 INFO: - App:  ---> b3223e97d136
+
+2015-11-01 07:36:40,046 INFO: - App: Removing intermediate container ebeb9bab3354
+
+2015-11-01 07:36:40,049 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 07:36:40,218 INFO: - App:  ---> 2bea3707c622
+
+2015-11-01 07:36:40,229 INFO: - App: Removing intermediate container 75a5f86f541c
+
+2015-11-01 07:36:40,231 INFO: - App: Step 5 : USER root
+
+2015-11-01 07:36:40,315 INFO: - App:  ---> Running in 07f008213a1a
+
+2015-11-01 07:36:40,366 INFO: - App:  ---> 6af2bab55d73
+
+2015-11-01 07:36:40,374 INFO: - App: Removing intermediate container 07f008213a1a
+
+2015-11-01 07:36:40,377 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 07:36:40,454 INFO: - App:  ---> Running in 70a086f06927
+
+2015-11-01 07:36:40,879 INFO: - App:  ---> 954c3c451147
+
+2015-11-01 07:36:40,890 INFO: - App: Removing intermediate container 70a086f06927
+
+2015-11-01 07:36:40,893 INFO: - App: Step 7 : USER main
+
+2015-11-01 07:36:40,979 INFO: - App:  ---> Running in 9a6e8916b430
+
+2015-11-01 07:36:41,044 INFO: - App:  ---> 5f9972afa715
+
+2015-11-01 07:36:41,055 INFO: - App: Removing intermediate container 9a6e8916b430
+
+2015-11-01 07:36:41,063 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 07:36:41,127 INFO: - App:  ---> Running in 1f3be7caf988
+
+2015-11-01 07:36:41,532 INFO: - App: Signing notebook: /home/main/notebooks/examples/two-layer.ipynb
+
+2015-11-01 07:36:41,766 INFO: - App: Signing notebook: /home/main/notebooks/examples/LarichevHeld1995/LH95.ipynb
+
+2015-11-01 07:36:41,988 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 07:36:42,266 INFO: - App:  ---> c9121543ebed
+
+2015-11-01 07:36:42,275 INFO: - App: Removing intermediate container 1f3be7caf988
+
+2015-11-01 07:36:42,277 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 07:36:42,343 INFO: - App:  ---> Running in fc3b5eb7afa6
+
+2015-11-01 07:36:42,395 INFO: - App:  ---> f6ec06ddcda5
+
+2015-11-01 07:36:42,403 INFO: - App: Removing intermediate container fc3b5eb7afa6
+
+2015-11-01 07:36:42,405 INFO: - App: Successfully built f6ec06ddcda5
+
+2015-11-01 07:36:42,414 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/pyqg-pyqg_gallery to private registry...
+2015-11-01 07:36:50,636 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 07:36:54,641 INFO: - App: Successfully built app pyqg-pyqg_gallery
+2015-11-01 08:06:35,175 INFO: - App: Building service dependencies...
+2015-11-01 08:06:35,180 INFO: - App: Copying files and filling templates...
+2015-11-01 08:06:35,193 INFO: - App: Building app image without Dockerfile...
+2015-11-01 08:06:35,246 INFO: - App: Sending build context to Docker daemon 397.8 kBSending build context to Docker daemon 397.8 kB
+
+2015-11-01 08:06:35,249 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 08:06:35,251 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 08:06:35,253 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 08:06:35,439 INFO: - App:  ---> f2d3c568c0c3
+
+2015-11-01 08:06:35,448 INFO: - App: Removing intermediate container 674515583f74
+
+2015-11-01 08:06:35,451 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 08:06:35,620 INFO: - App:  ---> 6371ae3bf325
+
+2015-11-01 08:06:35,629 INFO: - App: Removing intermediate container 7ec6d35c5687
+
+2015-11-01 08:06:35,634 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 08:06:35,707 INFO: - App:  ---> Running in 5b9d18a7a00f
+
+2015-11-01 08:06:35,860 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 08:06:37,260 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 08:06:37,263 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 08:06:37,266 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-11-01 08:06:37,267 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-11-01 08:06:37,282 INFO: - App: Collecting pyqg (from -r requirements.txt (line 3))
+
+2015-11-01 08:06:37,381 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 08:06:39,360 INFO: - App: Installing collected packages: pyqg
+
+2015-11-01 08:06:39,362 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 08:06:48,149 INFO: - App: Successfully installed pyqg-0.1.4
+
+2015-11-01 08:06:48,170 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 08:06:48,472 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 08:06:48,475 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 08:06:48,477 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-11-01 08:06:48,479 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-11-01 08:06:48,491 INFO: - App: Collecting pyqg (from -r requirements.txt (line 3))
+
+2015-11-01 08:06:48,532 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 08:06:48,805 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 08:06:48,832 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 08:06:48,854 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 08:06:48,882 INFO: - App:       File "/tmp/pip-build-cbo6p6/pyqg/setup.py", line 102
+
+2015-11-01 08:06:48,905 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 08:06:48,957 INFO: - App:                                           ^
+
+2015-11-01 08:06:48,959 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 08:06:48,963 INFO: - App:     
+
+2015-11-01 08:06:48,966 INFO: - App:     ----------------------------------------
+
+2015-11-01 08:06:48,974 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-cbo6p6/pyqg
+
+2015-11-01 08:06:48,977 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 08:06:49,100 INFO: - App:  ---> 23a40784ba4a
+
+2015-11-01 08:06:49,110 INFO: - App: Removing intermediate container 5b9d18a7a00f
+
+2015-11-01 08:06:49,112 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 08:06:49,298 INFO: - App:  ---> e0f84a03302a
+
+2015-11-01 08:06:49,309 INFO: - App: Removing intermediate container 9556abe307aa
+
+2015-11-01 08:06:49,311 INFO: - App: Step 5 : USER root
+
+2015-11-01 08:06:49,388 INFO: - App:  ---> Running in f70b1718286a
+
+2015-11-01 08:06:49,444 INFO: - App:  ---> 53820915c280
+
+2015-11-01 08:06:49,447 INFO: - App: Removing intermediate container f70b1718286a
+
+2015-11-01 08:06:49,452 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 08:06:49,535 INFO: - App:  ---> Running in b7e16185196f
+
+2015-11-01 08:06:49,934 INFO: - App:  ---> 80d87df8bfcc
+
+2015-11-01 08:06:49,941 INFO: - App: Removing intermediate container b7e16185196f
+
+2015-11-01 08:06:49,944 INFO: - App: Step 7 : USER main
+
+2015-11-01 08:06:50,073 INFO: - App:  ---> Running in 2b16617e61e6
+
+2015-11-01 08:06:50,116 INFO: - App:  ---> 06afce579149
+
+2015-11-01 08:06:50,125 INFO: - App: Removing intermediate container 2b16617e61e6
+
+2015-11-01 08:06:50,127 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 08:06:50,203 INFO: - App:  ---> Running in 77d106e1fe5e
+
+2015-11-01 08:06:50,677 INFO: - App: Signing notebook: /home/main/notebooks/examples/two-layer.ipynb
+
+2015-11-01 08:06:50,914 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 08:06:51,152 INFO: - App: Signing notebook: /home/main/notebooks/examples/LarichevHeld1995/LH95.ipynb
+
+2015-11-01 08:06:51,372 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 08:06:51,650 INFO: - App:  ---> 1a8dcdae16df
+
+2015-11-01 08:06:51,658 INFO: - App: Removing intermediate container 77d106e1fe5e
+
+2015-11-01 08:06:51,660 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 08:06:51,738 INFO: - App:  ---> Running in 1ce46a53652f
+
+2015-11-01 08:06:51,787 INFO: - App:  ---> 8eb626176555
+
+2015-11-01 08:06:51,796 INFO: - App: Removing intermediate container 1ce46a53652f
+
+2015-11-01 08:06:51,797 INFO: - App: Successfully built 8eb626176555
+
+2015-11-01 08:06:51,805 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/pyqg-pyqg_gallery to private registry...
+2015-11-01 08:07:02,570 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 08:07:06,865 INFO: - App: Successfully built app pyqg-pyqg_gallery
+2015-11-01 08:09:25,977 INFO: - App: Building service dependencies...
+2015-11-01 08:09:25,979 INFO: - App: Copying files and filling templates...
+2015-11-01 08:09:26,003 INFO: - App: Building app image without Dockerfile...
+2015-11-01 08:09:26,054 INFO: - App: Sending build context to Docker daemon 401.9 kBSending build context to Docker daemon 401.9 kB
+
+2015-11-01 08:09:26,063 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-01 08:09:26,065 INFO: - App:  ---> 77377240dc83
+
+2015-11-01 08:09:26,070 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-01 08:09:26,256 INFO: - App:  ---> d9a954b148fc
+
+2015-11-01 08:09:26,264 INFO: - App: Removing intermediate container e4a06ed6857b
+
+2015-11-01 08:09:26,267 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-01 08:09:26,432 INFO: - App:  ---> 2fcdc304eda3
+
+2015-11-01 08:09:26,440 INFO: - App: Removing intermediate container a7e9259f99e5
+
+2015-11-01 08:09:26,442 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-01 08:09:26,512 INFO: - App:  ---> Running in b32221d6916e
+
+2015-11-01 08:09:26,656 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 08:09:28,013 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 08:09:28,015 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 08:09:28,020 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-11-01 08:09:28,022 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-11-01 08:09:28,040 INFO: - App: Collecting pyqg (from -r requirements.txt (line 3))
+
+2015-11-01 08:09:28,141 INFO: - App:   Downloading pyqg-0.1.4.tar.gz
+
+2015-11-01 08:09:30,137 INFO: - App: Installing collected packages: pyqg
+
+2015-11-01 08:09:30,150 INFO: - App:   Running setup.py install for pyqg
+
+2015-11-01 08:09:38,805 INFO: - App: Successfully installed pyqg-0.1.4
+
+2015-11-01 08:09:38,824 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-01 08:09:39,125 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-01 08:09:39,129 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-01 08:09:39,133 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-11-01 08:09:39,136 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): cython in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-11-01 08:09:39,148 INFO: - App: Collecting pyqg (from -r requirements.txt (line 3))
+
+2015-11-01 08:09:39,178 INFO: - App:   Using cached pyqg-0.1.4.tar.gz
+
+2015-11-01 08:09:39,446 INFO: - App:     Complete output from command python setup.py egg_info:
+
+2015-11-01 08:09:39,451 INFO: - App:     Traceback (most recent call last):
+
+2015-11-01 08:09:39,455 INFO: - App:       File "<string>", line 20, in <module>
+
+2015-11-01 08:09:39,457 INFO: - App:       File "/tmp/pip-build-6lt27g/pyqg/setup.py", line 102
+
+2015-11-01 08:09:39,463 INFO: - App:         print 'check_for_openmp() result: ', result
+
+2015-11-01 08:09:39,467 INFO: - App:                                           ^
+
+2015-11-01 08:09:39,469 INFO: - App:     SyntaxError: invalid syntax
+
+2015-11-01 08:09:39,476 INFO: - App:     
+
+2015-11-01 08:09:39,480 INFO: - App:     ----------------------------------------
+
+2015-11-01 08:09:39,482 INFO: - App: Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-6lt27g/pyqg
+
+2015-11-01 08:09:39,485 INFO: - App: installation command failed: Command '['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']' returned non-zero exit status 1
+
+2015-11-01 08:09:39,759 INFO: - App:  ---> d60c3b54b5ca
+
+2015-11-01 08:09:39,765 INFO: - App: Removing intermediate container b32221d6916e
+
+2015-11-01 08:09:39,767 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-01 08:09:39,953 INFO: - App:  ---> bcb5340bd7d3
+
+2015-11-01 08:09:39,964 INFO: - App: Removing intermediate container e1a8894d3449
+
+2015-11-01 08:09:39,966 INFO: - App: Step 5 : USER root
+
+2015-11-01 08:09:40,052 INFO: - App:  ---> Running in 23e0712bbd69
+
+2015-11-01 08:09:40,099 INFO: - App:  ---> 9df02d34277a
+
+2015-11-01 08:09:40,107 INFO: - App: Removing intermediate container 23e0712bbd69
+
+2015-11-01 08:09:40,110 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-01 08:09:40,195 INFO: - App:  ---> Running in ec29625540a0
+
+2015-11-01 08:09:40,590 INFO: - App:  ---> 7c179bf6aa80
+
+2015-11-01 08:09:40,602 INFO: - App: Removing intermediate container ec29625540a0
+
+2015-11-01 08:09:40,603 INFO: - App: Step 7 : USER main
+
+2015-11-01 08:09:40,719 INFO: - App:  ---> Running in 83f8e26f0515
+
+2015-11-01 08:09:40,775 INFO: - App:  ---> a9af6ae4c406
+
+2015-11-01 08:09:40,783 INFO: - App: Removing intermediate container 83f8e26f0515
+
+2015-11-01 08:09:40,789 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-01 08:09:40,875 INFO: - App:  ---> Running in 6f07ab27aa4f
+
+2015-11-01 08:09:41,354 INFO: - App: Signing notebook: /home/main/notebooks/examples/two-layer.ipynb
+
+2015-11-01 08:09:41,603 INFO: - App: Signing notebook: /home/main/notebooks/examples/LambDipole.ipynb
+
+2015-11-01 08:09:41,823 INFO: - App: Signing notebook: /home/main/notebooks/examples/LarichevHeld1995/LH95.ipynb
+
+2015-11-01 08:09:42,042 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-01 08:09:42,314 INFO: - App:  ---> 4146aeccf31e
+
+2015-11-01 08:09:42,322 INFO: - App: Removing intermediate container 6f07ab27aa4f
+
+2015-11-01 08:09:42,324 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-01 08:09:42,395 INFO: - App:  ---> Running in 6d345cae4b2d
+
+2015-11-01 08:09:42,444 INFO: - App:  ---> dde52b8d5154
+
+2015-11-01 08:09:42,453 INFO: - App: Removing intermediate container 6d345cae4b2d
+
+2015-11-01 08:09:42,459 INFO: - App: Successfully built dde52b8d5154
+
+2015-11-01 08:09:42,462 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/pyqg-pyqg_gallery to private registry...
+2015-11-01 08:09:50,594 INFO: - App: Preloading app image onto all nodes...
+2015-11-01 08:09:54,075 INFO: - App: Successfully built app pyqg-pyqg_gallery

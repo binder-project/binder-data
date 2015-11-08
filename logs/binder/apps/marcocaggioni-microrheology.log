@@ -1,0 +1,1098 @@
+2015-11-04 21:55:46,140 INFO: - App: Building service dependencies...
+2015-11-04 21:55:46,143 INFO: - App: Copying files and filling templates...
+2015-11-04 21:55:46,155 INFO: - App: Building app image without Dockerfile...
+2015-11-04 21:55:46,185 INFO: - App: Sending build context to Docker daemon 225.3 kBSending build context to Docker daemon 225.3 kB
+
+2015-11-04 21:55:46,206 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 21:55:46,208 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 21:55:46,211 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-04 21:55:46,384 INFO: - App:  ---> 231e8be3451e
+
+2015-11-04 21:55:46,392 INFO: - App: Removing intermediate container 0e2a056fe541
+
+2015-11-04 21:55:46,394 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-04 21:55:46,571 INFO: - App:  ---> 7e79c9fce92a
+
+2015-11-04 21:55:46,580 INFO: - App: Removing intermediate container f54f54d3ca8f
+
+2015-11-04 21:55:46,582 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-04 21:55:46,651 INFO: - App:  ---> Running in fc340dff4bc9
+
+2015-11-04 21:55:46,805 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-04 21:55:48,136 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 21:55:48,142 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 21:55:48,158 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-04 21:55:48,752 INFO: - App:   Downloading pymongo-3.1.tar.gz (462kB)
+
+2015-11-04 21:55:49,203 INFO: - App: Installing collected packages: pymongo
+
+2015-11-04 21:55:49,208 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-04 21:55:51,175 INFO: - App: Successfully installed pymongo-3.1
+
+2015-11-04 21:55:51,192 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-04 21:55:51,515 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 21:55:51,518 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 21:55:51,532 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-04 21:55:52,047 INFO: - App:   Using cached pymongo-3.1.tar.gz
+
+2015-11-04 21:55:52,504 INFO: - App: Installing collected packages: pymongo
+
+2015-11-04 21:55:52,517 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-04 21:55:54,573 INFO: - App: Successfully installed pymongo-3.1
+
+2015-11-04 21:55:54,947 INFO: - App:  ---> e0ce0a27f168
+
+2015-11-04 21:55:54,957 INFO: - App: Removing intermediate container fc340dff4bc9
+
+2015-11-04 21:55:54,959 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-04 21:55:55,128 INFO: - App:  ---> 8f01efc438b8
+
+2015-11-04 21:55:55,143 INFO: - App: Removing intermediate container d4002cdff8cf
+
+2015-11-04 21:55:55,147 INFO: - App: Step 5 : USER root
+
+2015-11-04 21:55:55,215 INFO: - App:  ---> Running in 61e674ee8927
+
+2015-11-04 21:55:55,264 INFO: - App:  ---> 65feee849e3f
+
+2015-11-04 21:55:55,273 INFO: - App: Removing intermediate container 61e674ee8927
+
+2015-11-04 21:55:55,281 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 21:55:55,340 INFO: - App:  ---> Running in d4e75f56515c
+
+2015-11-04 21:55:55,749 INFO: - App:  ---> 0a23b7384ff6
+
+2015-11-04 21:55:55,759 INFO: - App: Removing intermediate container d4e75f56515c
+
+2015-11-04 21:55:55,768 INFO: - App: Step 7 : USER main
+
+2015-11-04 21:55:55,860 INFO: - App:  ---> Running in b31d3c3521e0
+
+2015-11-04 21:55:55,915 INFO: - App:  ---> af847e2a06fe
+
+2015-11-04 21:55:55,923 INFO: - App: Removing intermediate container b31d3c3521e0
+
+2015-11-04 21:55:55,930 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 21:55:56,048 INFO: - App:  ---> Running in ffb392587c85
+
+2015-11-04 21:55:56,498 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-04 21:55:56,784 INFO: - App:  ---> 3a7cafe5e241
+
+2015-11-04 21:55:56,811 INFO: - App: Removing intermediate container ffb392587c85
+
+2015-11-04 21:55:56,819 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-04 21:55:56,871 INFO: - App:  ---> Running in a0fb5bef425a
+
+2015-11-04 21:55:56,917 INFO: - App:  ---> e5411e7e9f2e
+
+2015-11-04 21:55:56,927 INFO: - App: Removing intermediate container a0fb5bef425a
+
+2015-11-04 21:55:56,946 INFO: - App: Successfully built e5411e7e9f2e
+
+2015-11-04 21:55:56,955 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology to private registry...
+2015-11-04 21:56:10,096 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 21:56:12,435 INFO: - App: Successfully built app marcocaggioni-microrheology
+2015-11-04 21:57:52,329 INFO: - App: Building service dependencies...
+2015-11-04 21:57:52,331 INFO: - App: Copying files and filling templates...
+2015-11-04 21:57:52,349 INFO: - App: Building app image without Dockerfile...
+2015-11-04 21:57:52,372 INFO: - App: Sending build context to Docker daemon 229.9 kBSending build context to Docker daemon 229.9 kB
+
+2015-11-04 21:57:52,424 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 21:57:52,427 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 21:57:52,429 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-04 21:57:52,633 INFO: - App:  ---> 1a3d979e063f
+
+2015-11-04 21:57:52,641 INFO: - App: Removing intermediate container 80e49636d1a9
+
+2015-11-04 21:57:52,644 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-04 21:57:52,851 INFO: - App:  ---> f88b35afd93b
+
+2015-11-04 21:57:52,869 INFO: - App: Removing intermediate container 91d59c05127a
+
+2015-11-04 21:57:52,878 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-04 21:57:52,934 INFO: - App:  ---> Running in 1894f967f9d0
+
+2015-11-04 21:57:53,082 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-04 21:57:54,459 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 21:57:54,479 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 21:57:54,516 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-04 21:57:55,130 INFO: - App:   Downloading pymongo-3.1.tar.gz (462kB)
+
+2015-11-04 21:57:55,590 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-04 21:57:55,664 INFO: - App:   Downloading PIMS-0.3.1.tar.gz (70kB)
+
+2015-11-04 21:57:55,904 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-04 21:57:55,938 INFO: - App:   Downloading slicerator-0.9.4.tar.gz
+
+2015-11-04 21:57:56,149 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-04 21:57:56,152 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-04 21:57:56,155 INFO: - App: Installing collected packages: pymongo, slicerator, pims
+
+2015-11-04 21:57:56,158 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-04 21:57:58,069 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-04 21:57:58,308 INFO: - App:   Running setup.py install for pims
+
+2015-11-04 21:57:58,672 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4
+
+2015-11-04 21:57:58,694 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-04 21:57:58,999 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-04 21:57:59,001 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-04 21:57:59,018 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-04 21:57:59,534 INFO: - App:   Using cached pymongo-3.1.tar.gz
+
+2015-11-04 21:58:00,007 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-04 21:58:00,018 INFO: - App:   Using cached PIMS-0.3.1.tar.gz
+
+2015-11-04 21:58:00,301 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-04 21:58:00,312 INFO: - App:   Using cached slicerator-0.9.4.tar.gz
+
+2015-11-04 21:58:00,567 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-04 21:58:00,570 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-04 21:58:00,571 INFO: - App: Installing collected packages: pymongo, slicerator, pims
+
+2015-11-04 21:58:00,574 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-04 21:58:02,596 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-04 21:58:02,901 INFO: - App:   Running setup.py install for pims
+
+2015-11-04 21:58:03,380 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4
+
+2015-11-04 21:58:03,713 INFO: - App:  ---> ca182fdd9502
+
+2015-11-04 21:58:03,733 INFO: - App: Removing intermediate container 1894f967f9d0
+
+2015-11-04 21:58:03,736 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-04 21:58:03,916 INFO: - App:  ---> bc99b00fe2ba
+
+2015-11-04 21:58:03,928 INFO: - App: Removing intermediate container dcd4ef84e872
+
+2015-11-04 21:58:03,931 INFO: - App: Step 5 : USER root
+
+2015-11-04 21:58:04,009 INFO: - App:  ---> Running in 422a7d1f49b3
+
+2015-11-04 21:58:04,057 INFO: - App:  ---> 324107140fa8
+
+2015-11-04 21:58:04,073 INFO: - App: Removing intermediate container 422a7d1f49b3
+
+2015-11-04 21:58:04,079 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 21:58:04,151 INFO: - App:  ---> Running in 3d038dc30496
+
+2015-11-04 21:58:04,565 INFO: - App:  ---> 910ee3fc5422
+
+2015-11-04 21:58:04,575 INFO: - App: Removing intermediate container 3d038dc30496
+
+2015-11-04 21:58:04,577 INFO: - App: Step 7 : USER main
+
+2015-11-04 21:58:04,672 INFO: - App:  ---> Running in b1c0302dd219
+
+2015-11-04 21:58:04,717 INFO: - App:  ---> be493d25e0c5
+
+2015-11-04 21:58:04,728 INFO: - App: Removing intermediate container b1c0302dd219
+
+2015-11-04 21:58:04,737 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 21:58:04,795 INFO: - App:  ---> Running in 1cfc5b51a92a
+
+2015-11-04 21:58:05,326 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-04 21:58:05,646 INFO: - App:  ---> 426d5ca5eb65
+
+2015-11-04 21:58:05,655 INFO: - App: Removing intermediate container 1cfc5b51a92a
+
+2015-11-04 21:58:05,657 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-04 21:58:05,746 INFO: - App:  ---> Running in 6cebb5f9e682
+
+2015-11-04 21:58:05,795 INFO: - App:  ---> 746b1e53ded5
+
+2015-11-04 21:58:05,803 INFO: - App: Removing intermediate container 6cebb5f9e682
+
+2015-11-04 21:58:05,805 INFO: - App: Successfully built 746b1e53ded5
+
+2015-11-04 21:58:05,812 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology to private registry...
+2015-11-04 21:58:18,744 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 21:58:21,619 INFO: - App: Successfully built app marcocaggioni-microrheology
+2015-11-05 04:12:38,028 INFO: - App: Building service dependencies...
+2015-11-05 04:12:38,033 INFO: - App: Copying files and filling templates...
+2015-11-05 04:12:38,064 INFO: - App: Building app image without Dockerfile...
+2015-11-05 04:12:38,107 INFO: - App: Sending build context to Docker daemon 239.1 kBSending build context to Docker daemon 239.1 kB
+
+2015-11-05 04:12:38,141 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 04:12:38,144 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 04:12:38,147 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 04:12:38,308 INFO: - App:  ---> d22161e51d3b
+
+2015-11-05 04:12:38,317 INFO: - App: Removing intermediate container 3fc63caec3b9
+
+2015-11-05 04:12:38,319 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 04:12:38,499 INFO: - App:  ---> 43811ba5f737
+
+2015-11-05 04:12:38,508 INFO: - App: Removing intermediate container ac262707b398
+
+2015-11-05 04:12:38,511 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 04:12:38,579 INFO: - App:  ---> Running in 7a151979afa9
+
+2015-11-05 04:12:38,728 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 04:12:40,042 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 04:12:40,044 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 04:12:40,066 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-05 04:12:40,667 INFO: - App:   Downloading pymongo-3.1.tar.gz (462kB)
+
+2015-11-05 04:12:41,128 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-05 04:12:41,180 INFO: - App:   Downloading PIMS-0.3.1.tar.gz (70kB)
+
+2015-11-05 04:12:41,421 INFO: - App: Collecting trackpy (from -r requirements.txt (line 3))
+
+2015-11-05 04:12:41,484 INFO: - App:   Downloading trackpy-0.2.4.tar.gz (59kB)
+
+2015-11-05 04:12:41,762 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-05 04:12:41,869 INFO: - App:   Downloading slicerator-0.9.4.tar.gz
+
+2015-11-05 04:12:42,084 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 04:12:42,100 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 04:12:42,102 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:42,104 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:42,107 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:42,110 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:42,114 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:42,117 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:42,120 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:42,122 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:42,124 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:42,127 INFO: - App: Installing collected packages: pymongo, slicerator, pims, trackpy
+
+2015-11-05 04:12:42,130 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-05 04:12:44,072 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-05 04:12:44,310 INFO: - App:   Running setup.py install for pims
+
+2015-11-05 04:12:44,588 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-05 04:12:45,001 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-05 04:12:45,023 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 04:12:45,338 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 04:12:45,341 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 04:12:45,356 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-05 04:12:45,868 INFO: - App:   Using cached pymongo-3.1.tar.gz
+
+2015-11-05 04:12:46,328 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-05 04:12:46,342 INFO: - App:   Using cached PIMS-0.3.1.tar.gz
+
+2015-11-05 04:12:46,622 INFO: - App: Collecting trackpy (from -r requirements.txt (line 3))
+
+2015-11-05 04:12:46,635 INFO: - App:   Using cached trackpy-0.2.4.tar.gz
+
+2015-11-05 04:12:46,988 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-05 04:12:46,992 INFO: - App:   Using cached slicerator-0.9.4.tar.gz
+
+2015-11-05 04:12:47,249 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 04:12:47,252 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 04:12:47,254 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:47,255 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:47,258 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:47,259 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:47,262 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:47,268 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:47,270 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:47,273 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 04:12:47,275 INFO: - App: Installing collected packages: pymongo, slicerator, pims, trackpy
+
+2015-11-05 04:12:47,279 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-05 04:12:49,278 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-05 04:12:49,588 INFO: - App:   Running setup.py install for pims
+
+2015-11-05 04:12:49,958 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-05 04:12:50,485 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-05 04:12:50,864 INFO: - App:  ---> 1e98f731ae28
+
+2015-11-05 04:12:50,887 INFO: - App: Removing intermediate container 7a151979afa9
+
+2015-11-05 04:12:50,890 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 04:12:51,067 INFO: - App:  ---> 0d92e5035f62
+
+2015-11-05 04:12:51,084 INFO: - App: Removing intermediate container 38fc3e7a4ec7
+
+2015-11-05 04:12:51,086 INFO: - App: Step 5 : USER root
+
+2015-11-05 04:12:51,155 INFO: - App:  ---> Running in 4e9c1be46903
+
+2015-11-05 04:12:51,216 INFO: - App:  ---> 0c3a9569d748
+
+2015-11-05 04:12:51,225 INFO: - App: Removing intermediate container 4e9c1be46903
+
+2015-11-05 04:12:51,228 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 04:12:51,302 INFO: - App:  ---> Running in 80e6020c5c87
+
+2015-11-05 04:12:51,720 INFO: - App:  ---> ca90fd34e98d
+
+2015-11-05 04:12:51,764 INFO: - App: Removing intermediate container 80e6020c5c87
+
+2015-11-05 04:12:51,775 INFO: - App: Step 7 : USER main
+
+2015-11-05 04:12:51,851 INFO: - App:  ---> Running in cdaf2ee20fdf
+
+2015-11-05 04:12:51,903 INFO: - App:  ---> d686cfc30772
+
+2015-11-05 04:12:51,910 INFO: - App: Removing intermediate container cdaf2ee20fdf
+
+2015-11-05 04:12:51,913 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 04:12:51,998 INFO: - App:  ---> Running in 81ed5100d4ae
+
+2015-11-05 04:12:52,482 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-05 04:12:52,795 INFO: - App:  ---> 3ea3a711c57c
+
+2015-11-05 04:12:52,814 INFO: - App: Removing intermediate container 81ed5100d4ae
+
+2015-11-05 04:12:52,840 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 04:12:52,889 INFO: - App:  ---> Running in 3cb5cfd5f686
+
+2015-11-05 04:12:52,939 INFO: - App:  ---> a66e5070b9eb
+
+2015-11-05 04:12:52,947 INFO: - App: Removing intermediate container 3cb5cfd5f686
+
+2015-11-05 04:12:52,950 INFO: - App: Successfully built a66e5070b9eb
+
+2015-11-05 04:12:52,952 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology to private registry...
+2015-11-05 04:13:07,412 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 04:13:11,078 INFO: - App: Successfully built app marcocaggioni-microrheology
+2015-11-05 13:42:48,395 INFO: - App: Building service dependencies...
+2015-11-05 13:42:48,397 INFO: - App: Copying files and filling templates...
+2015-11-05 13:42:48,409 INFO: - App: Building app image without Dockerfile...
+2015-11-05 13:42:48,443 INFO: - App: Sending build context to Docker daemon 269.3 kBSending build context to Docker daemon 269.3 kB
+
+2015-11-05 13:42:48,465 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 13:42:48,468 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 13:42:48,472 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 13:42:48,667 INFO: - App:  ---> ca43012b5b29
+
+2015-11-05 13:42:48,676 INFO: - App: Removing intermediate container 45d3a8ba463b
+
+2015-11-05 13:42:48,684 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 13:42:48,836 INFO: - App:  ---> 642f7077ada1
+
+2015-11-05 13:42:48,843 INFO: - App: Removing intermediate container 438a11d1f4eb
+
+2015-11-05 13:42:48,848 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 13:42:48,911 INFO: - App:  ---> Running in 98b30c532a09
+
+2015-11-05 13:42:49,061 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 13:42:49,379 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 13:42:49,402 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 13:42:49,415 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-05 13:42:49,992 INFO: - App:   Downloading pymongo-3.1.tar.gz (462kB)
+
+2015-11-05 13:42:50,453 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-05 13:42:50,531 INFO: - App:   Downloading PIMS-0.3.1.tar.gz (70kB)
+
+2015-11-05 13:42:50,770 INFO: - App: Collecting trackpy (from -r requirements.txt (line 3))
+
+2015-11-05 13:42:50,829 INFO: - App:   Downloading trackpy-0.2.4.tar.gz (59kB)
+
+2015-11-05 13:42:51,128 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:42:51,155 INFO: - App:   Downloading slicerator-0.9.4.tar.gz
+
+2015-11-05 13:42:51,436 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:42:51,448 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:42:51,453 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:51,456 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:51,459 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:51,480 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:51,492 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:51,507 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:51,516 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:51,520 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:51,523 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:51,527 INFO: - App: Installing collected packages: pymongo, slicerator, pims, trackpy
+
+2015-11-05 13:42:51,533 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-05 13:42:53,400 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-05 13:42:53,638 INFO: - App:   Running setup.py install for pims
+
+2015-11-05 13:42:53,923 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-05 13:42:54,345 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-05 13:42:54,369 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 13:42:54,690 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 13:42:54,694 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 13:42:54,707 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-05 13:42:55,223 INFO: - App:   Using cached pymongo-3.1.tar.gz
+
+2015-11-05 13:42:55,685 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-05 13:42:55,703 INFO: - App:   Using cached PIMS-0.3.1.tar.gz
+
+2015-11-05 13:42:55,992 INFO: - App: Collecting trackpy (from -r requirements.txt (line 3))
+
+2015-11-05 13:42:56,006 INFO: - App:   Using cached trackpy-0.2.4.tar.gz
+
+2015-11-05 13:42:56,375 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:42:56,386 INFO: - App:   Using cached slicerator-0.9.4.tar.gz
+
+2015-11-05 13:42:56,649 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:42:56,651 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:42:56,657 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:56,660 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:56,662 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:56,664 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:56,666 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:56,669 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:56,672 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:56,674 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:42:56,675 INFO: - App: Installing collected packages: pymongo, slicerator, pims, trackpy
+
+2015-11-05 13:42:56,679 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-05 13:42:58,698 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-05 13:42:59,012 INFO: - App:   Running setup.py install for pims
+
+2015-11-05 13:42:59,388 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-05 13:42:59,919 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-05 13:43:00,316 INFO: - App:  ---> 9c68adad391b
+
+2015-11-05 13:43:00,334 INFO: - App: Removing intermediate container 98b30c532a09
+
+2015-11-05 13:43:00,341 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 13:43:00,495 INFO: - App:  ---> 5aa4d04ebb11
+
+2015-11-05 13:43:00,502 INFO: - App: Removing intermediate container 38e9e9d779ff
+
+2015-11-05 13:43:00,505 INFO: - App: Step 5 : USER root
+
+2015-11-05 13:43:00,579 INFO: - App:  ---> Running in 40b393628fd8
+
+2015-11-05 13:43:00,627 INFO: - App:  ---> b3f63815bc2f
+
+2015-11-05 13:43:00,636 INFO: - App: Removing intermediate container 40b393628fd8
+
+2015-11-05 13:43:00,638 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 13:43:00,715 INFO: - App:  ---> Running in 468ef821c4a0
+
+2015-11-05 13:43:01,150 INFO: - App:  ---> f1ff1c90829c
+
+2015-11-05 13:43:01,165 INFO: - App: Removing intermediate container 468ef821c4a0
+
+2015-11-05 13:43:01,168 INFO: - App: Step 7 : USER main
+
+2015-11-05 13:43:01,287 INFO: - App:  ---> Running in 198f1ea68949
+
+2015-11-05 13:43:01,355 INFO: - App:  ---> 3c70294372f2
+
+2015-11-05 13:43:01,364 INFO: - App: Removing intermediate container 198f1ea68949
+
+2015-11-05 13:43:01,367 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 13:43:01,443 INFO: - App:  ---> Running in 0d27f9e4e7f3
+
+2015-11-05 13:43:01,838 INFO: - App: Traceback (most recent call last):
+
+2015-11-05 13:43:01,842 INFO: - App:   File "/home/main/anaconda/bin/ipython", line 6, in <module>
+
+2015-11-05 13:43:01,847 INFO: - App: [91m    sys.exit(start_ipython())
+
+2015-11-05 13:43:01,851 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/__init__.py", line 120, in start_ipython
+
+2015-11-05 13:43:01,853 INFO: - App:     return launch_new_instance(argv=argv, **kwargs)
+
+2015-11-05 13:43:01,855 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/config/application.py", line 574, in launch_instance
+
+2015-11-05 13:43:01,860 INFO: - App: [91m    app.start()
+
+2015-11-05 13:43:01,862 INFO: - App: [91m  File "/home/main/anaconda/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 367, in start
+
+2015-11-05 13:43:01,864 INFO: - App: [91m    return self.subapp.start()
+
+2015-11-05 13:43:01,866 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/sign.py", line 423, in start
+
+2015-11-05 13:43:01,867 INFO: - App: [91m    self.sign_notebook(notebook_path)
+
+2015-11-05 13:43:01,870 INFO: - App: [91m  File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/sign.py", line 399, in sign_notebook
+
+2015-11-05 13:43:01,875 INFO: - App:     nb = read(f, NO_CONVERT)
+
+2015-11-05 13:43:01,880 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/__init__.py", line 133, in read
+
+2015-11-05 13:43:01,882 INFO: - App: [91m    return reads(fp.read(), as_version, **kwargs)
+
+2015-11-05 13:43:01,884 INFO: - App: [91m  File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/__init__.py", line 67, in reads
+
+2015-11-05 13:43:01,887 INFO: - App:     nb = reader.reads(s, **kwargs)
+
+2015-11-05 13:43:01,889 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/reader.py", line 58, in reads
+
+2015-11-05 13:43:01,891 INFO: - App: [91m    nb_dict = parse_json(s, **kwargs)
+
+2015-11-05 13:43:01,893 INFO: - App: [91m  File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/reader.py", line 17, in parse_json
+
+2015-11-05 13:43:01,895 INFO: - App:     raise NotJSONError(("Notebook does not appear to be JSON: %r" % s)[:77] + "...")
+
+2015-11-05 13:43:01,897 INFO: - App: [91mNotJSONError: Notebook does not appear to be JSON: u'<!DOCTYPE HTML>\n<html>\n\n<head>\n   ...
+
+2015-11-05 13:43:01,899 INFO: - App: [91m
+
+2015-11-05 13:43:01,901 INFO: - App: If you suspect this is an IPython bug, please report it at:
+
+2015-11-05 13:43:01,904 INFO: - App:     https://github.com/ipython/ipython/issues
+
+2015-11-05 13:43:01,906 INFO: - App: or send an email to the mailing list at ipython-dev@scipy.org
+
+2015-11-05 13:43:01,908 INFO: - App: 
+
+2015-11-05 13:43:01,911 INFO: - App: You can print a more detailed traceback right now with "%tb", or use "%debug"
+
+2015-11-05 13:43:01,914 INFO: - App: to interactively debug it.
+
+2015-11-05 13:43:01,916 INFO: - App: 
+
+2015-11-05 13:43:01,919 INFO: - App: Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+
+2015-11-05 13:43:01,921 INFO: - App:     c.Application.verbose_crash=True
+
+2015-11-05 13:43:01,924 INFO: - App: 
+
+2015-11-05 13:43:02,089 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-05 13:43:02,398 INFO: - App:  ---> 0226ffb8567f
+
+2015-11-05 13:43:02,407 INFO: - App: Removing intermediate container 0d27f9e4e7f3
+
+2015-11-05 13:43:02,409 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 13:43:02,474 INFO: - App:  ---> Running in dfaaf1c40d86
+
+2015-11-05 13:43:02,523 INFO: - App:  ---> c879cc700be7
+
+2015-11-05 13:43:02,531 INFO: - App: Removing intermediate container dfaaf1c40d86
+
+2015-11-05 13:43:02,534 INFO: - App: Successfully built c879cc700be7
+
+2015-11-05 13:43:02,540 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology to private registry...
+2015-11-05 13:43:16,139 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 13:43:19,274 INFO: - App: Successfully built app marcocaggioni-microrheology
+2015-11-05 13:46:21,986 INFO: - App: Building service dependencies...
+2015-11-05 13:46:21,990 INFO: - App: Copying files and filling templates...
+2015-11-05 13:46:22,001 INFO: - App: Building app image without Dockerfile...
+2015-11-05 13:46:22,062 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 876.5 kBSending build context to Docker daemon 876.5 kB
+
+2015-11-05 13:46:22,065 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 13:46:22,067 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 13:46:22,071 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 13:46:22,243 INFO: - App:  ---> b0ec13dadbe0
+
+2015-11-05 13:46:22,252 INFO: - App: Removing intermediate container 98e1aeaf5fd4
+
+2015-11-05 13:46:22,257 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 13:46:22,444 INFO: - App:  ---> 90242ba42f1d
+
+2015-11-05 13:46:22,449 INFO: - App: Removing intermediate container ec280147bf87
+
+2015-11-05 13:46:22,451 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 13:46:22,551 INFO: - App:  ---> Running in 7e3b4adb02f5
+
+2015-11-05 13:46:22,698 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 13:46:24,057 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 13:46:24,059 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 13:46:24,080 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-05 13:46:24,676 INFO: - App:   Downloading pymongo-3.1.tar.gz (462kB)
+
+2015-11-05 13:46:25,155 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-05 13:46:25,211 INFO: - App:   Downloading PIMS-0.3.1.tar.gz (70kB)
+
+2015-11-05 13:46:25,450 INFO: - App: Collecting trackpy (from -r requirements.txt (line 3))
+
+2015-11-05 13:46:25,483 INFO: - App:   Downloading trackpy-0.2.4.tar.gz (59kB)
+
+2015-11-05 13:46:25,762 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:46:25,800 INFO: - App:   Downloading slicerator-0.9.4.tar.gz
+
+2015-11-05 13:46:26,013 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:46:26,015 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:46:26,052 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:26,069 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:26,100 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:26,110 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:26,118 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:26,135 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:26,160 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:26,172 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:26,200 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:26,210 INFO: - App: Installing collected packages: pymongo, slicerator, pims, trackpy
+
+2015-11-05 13:46:26,230 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-05 13:46:27,975 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-05 13:46:28,218 INFO: - App:   Running setup.py install for pims
+
+2015-11-05 13:46:28,507 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-05 13:46:28,926 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-05 13:46:28,952 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 13:46:29,270 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 13:46:29,273 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 13:46:29,287 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-05 13:46:29,813 INFO: - App:   Using cached pymongo-3.1.tar.gz
+
+2015-11-05 13:46:30,291 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-05 13:46:30,302 INFO: - App:   Using cached PIMS-0.3.1.tar.gz
+
+2015-11-05 13:46:30,577 INFO: - App: Collecting trackpy (from -r requirements.txt (line 3))
+
+2015-11-05 13:46:30,599 INFO: - App:   Using cached trackpy-0.2.4.tar.gz
+
+2015-11-05 13:46:30,957 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:46:30,979 INFO: - App:   Using cached slicerator-0.9.4.tar.gz
+
+2015-11-05 13:46:31,220 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:46:31,222 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 13:46:31,246 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:31,270 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:31,280 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:31,297 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:31,301 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:31,303 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:31,304 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:31,307 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 13:46:31,327 INFO: - App: Installing collected packages: pymongo, slicerator, pims, trackpy
+
+2015-11-05 13:46:31,329 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-05 13:46:33,305 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-05 13:46:33,612 INFO: - App:   Running setup.py install for pims
+
+2015-11-05 13:46:33,992 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-05 13:46:34,515 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-05 13:46:34,879 INFO: - App:  ---> 37d124f5472b
+
+2015-11-05 13:46:34,894 INFO: - App: Removing intermediate container 7e3b4adb02f5
+
+2015-11-05 13:46:34,899 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 13:46:35,111 INFO: - App:  ---> 1d77493be058
+
+2015-11-05 13:46:35,115 INFO: - App: Removing intermediate container d6608c6ce5e6
+
+2015-11-05 13:46:35,118 INFO: - App: Step 5 : USER root
+
+2015-11-05 13:46:35,179 INFO: - App:  ---> Running in 5ccdc791383d
+
+2015-11-05 13:46:35,235 INFO: - App:  ---> 4b1a89027808
+
+2015-11-05 13:46:35,246 INFO: - App: Removing intermediate container 5ccdc791383d
+
+2015-11-05 13:46:35,249 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 13:46:35,323 INFO: - App:  ---> Running in 19ffd5fb89d8
+
+2015-11-05 13:46:35,762 INFO: - App:  ---> b3264f14d11a
+
+2015-11-05 13:46:35,812 INFO: - App: Removing intermediate container 19ffd5fb89d8
+
+2015-11-05 13:46:35,814 INFO: - App: Step 7 : USER main
+
+2015-11-05 13:46:35,911 INFO: - App:  ---> Running in ae627393eecc
+
+2015-11-05 13:46:35,964 INFO: - App:  ---> 07ca051f3978
+
+2015-11-05 13:46:35,972 INFO: - App: Removing intermediate container ae627393eecc
+
+2015-11-05 13:46:35,975 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 13:46:36,051 INFO: - App:  ---> Running in f78cc4aa890a
+
+2015-11-05 13:46:36,537 INFO: - App: Signing notebook: /home/main/notebooks/particle_tracking.ipynb
+
+2015-11-05 13:46:36,777 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-05 13:46:37,050 INFO: - App:  ---> 6e67ef1a4ba5
+
+2015-11-05 13:46:37,058 INFO: - App: Removing intermediate container f78cc4aa890a
+
+2015-11-05 13:46:37,060 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 13:46:37,140 INFO: - App:  ---> Running in b3eb8711fc24
+
+2015-11-05 13:46:37,192 INFO: - App:  ---> e023ff05a8cd
+
+2015-11-05 13:46:37,200 INFO: - App: Removing intermediate container b3eb8711fc24
+
+2015-11-05 13:46:37,203 INFO: - App: Successfully built e023ff05a8cd
+
+2015-11-05 13:46:37,211 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology to private registry...
+2015-11-05 13:46:50,526 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 13:46:56,062 INFO: - App: Successfully built app marcocaggioni-microrheology
+2015-11-05 18:22:19,559 INFO: - App: Building service dependencies...
+2015-11-05 18:22:19,573 INFO: - App: Copying files and filling templates...
+2015-11-05 18:22:19,580 INFO: - App: Building app image without Dockerfile...
+2015-11-05 18:22:19,636 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 876.5 kBSending build context to Docker daemon 876.5 kB
+
+2015-11-05 18:22:19,639 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 18:22:19,645 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 18:22:19,649 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 18:22:19,828 INFO: - App:  ---> f2abb2e01726
+
+2015-11-05 18:22:19,842 INFO: - App: Removing intermediate container 4db954e20e01
+
+2015-11-05 18:22:19,845 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 18:22:20,039 INFO: - App:  ---> d8c180569b62
+
+2015-11-05 18:22:20,048 INFO: - App: Removing intermediate container 69ac650888eb
+
+2015-11-05 18:22:20,050 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 18:22:20,128 INFO: - App:  ---> Running in 2b2b7acef017
+
+2015-11-05 18:22:20,281 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 18:22:21,656 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 18:22:21,676 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 18:22:21,694 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-05 18:22:22,264 INFO: - App:   Downloading pymongo-3.1.tar.gz (462kB)
+
+2015-11-05 18:22:22,733 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-05 18:22:22,788 INFO: - App:   Downloading PIMS-0.3.1.tar.gz (70kB)
+
+2015-11-05 18:22:23,036 INFO: - App: Collecting trackpy (from -r requirements.txt (line 3))
+
+2015-11-05 18:22:23,074 INFO: - App:   Downloading trackpy-0.2.4.tar.gz (59kB)
+
+2015-11-05 18:22:23,349 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-05 18:22:23,434 INFO: - App:   Downloading slicerator-0.9.4.tar.gz
+
+2015-11-05 18:22:23,648 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 18:22:23,672 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/lib/python2.7/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 18:22:23,675 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:23,679 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:23,681 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:23,683 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/lib/python2.7/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:23,686 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:23,689 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:23,691 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:23,694 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:23,696 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mock in ./anaconda/lib/python2.7/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:23,699 INFO: - App: Installing collected packages: pymongo, slicerator, pims, trackpy
+
+2015-11-05 18:22:23,701 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-05 18:22:25,612 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-05 18:22:25,842 INFO: - App:   Running setup.py install for pims
+
+2015-11-05 18:22:26,143 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-05 18:22:26,576 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-05 18:22:26,602 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 18:22:26,904 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 18:22:26,906 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 18:22:26,924 INFO: - App: Collecting pymongo (from -r requirements.txt (line 1))
+
+2015-11-05 18:22:27,452 INFO: - App:   Using cached pymongo-3.1.tar.gz
+
+2015-11-05 18:22:27,921 INFO: - App: Collecting pims (from -r requirements.txt (line 2))
+
+2015-11-05 18:22:27,935 INFO: - App:   Using cached PIMS-0.3.1.tar.gz
+
+2015-11-05 18:22:28,235 INFO: - App: Collecting trackpy (from -r requirements.txt (line 3))
+
+2015-11-05 18:22:28,252 INFO: - App:   Using cached trackpy-0.2.4.tar.gz
+
+2015-11-05 18:22:28,609 INFO: - App: Collecting slicerator>=0.9.3 (from pims->-r requirements.txt (line 2))
+
+2015-11-05 18:22:28,619 INFO: - App:   Using cached slicerator-0.9.4.tar.gz
+
+2015-11-05 18:22:28,882 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.8 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 18:22:28,886 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pims->-r requirements.txt (line 2))
+
+2015-11-05 18:22:28,888 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scipy in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:28,891 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:28,894 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyyaml in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:28,896 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): matplotlib in ./anaconda/envs/python3/lib/python3.3/site-packages (from trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:28,899 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:28,901 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:28,903 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyparsing>=1.5.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:28,906 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): nose>=0.11.1 in ./anaconda/envs/python3/lib/python3.3/site-packages (from matplotlib->trackpy->-r requirements.txt (line 3))
+
+2015-11-05 18:22:28,909 INFO: - App: Installing collected packages: pymongo, slicerator, pims, trackpy
+
+2015-11-05 18:22:28,913 INFO: - App:   Running setup.py install for pymongo
+
+2015-11-05 18:22:30,982 INFO: - App:   Running setup.py install for slicerator
+
+2015-11-05 18:22:31,300 INFO: - App:   Running setup.py install for pims
+
+2015-11-05 18:22:31,674 INFO: - App:   Running setup.py install for trackpy
+
+2015-11-05 18:22:32,223 INFO: - App: Successfully installed pims-0.3.1 pymongo-3.1 slicerator-0.9.4 trackpy-0.2.4
+
+2015-11-05 18:22:32,616 INFO: - App:  ---> 9a9af5715a57
+
+2015-11-05 18:22:32,635 INFO: - App: Removing intermediate container 2b2b7acef017
+
+2015-11-05 18:22:32,656 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 18:22:32,831 INFO: - App:  ---> f0a13979455b
+
+2015-11-05 18:22:32,839 INFO: - App: Removing intermediate container a3aed9c5c747
+
+2015-11-05 18:22:32,842 INFO: - App: Step 5 : USER root
+
+2015-11-05 18:22:32,924 INFO: - App:  ---> Running in ca37eef1b16a
+
+2015-11-05 18:22:32,971 INFO: - App:  ---> bfd94c470496
+
+2015-11-05 18:22:32,978 INFO: - App: Removing intermediate container ca37eef1b16a
+
+2015-11-05 18:22:32,980 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 18:22:33,067 INFO: - App:  ---> Running in d809d62e26d7
+
+2015-11-05 18:22:33,497 INFO: - App:  ---> 1a02178ed992
+
+2015-11-05 18:22:33,507 INFO: - App: Removing intermediate container d809d62e26d7
+
+2015-11-05 18:22:33,508 INFO: - App: Step 7 : USER main
+
+2015-11-05 18:22:33,629 INFO: - App:  ---> Running in 07f27df93f02
+
+2015-11-05 18:22:33,675 INFO: - App:  ---> 6ce331d407b4
+
+2015-11-05 18:22:33,685 INFO: - App: Removing intermediate container 07f27df93f02
+
+2015-11-05 18:22:33,691 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 18:22:33,768 INFO: - App:  ---> Running in b0c60ab80805
+
+2015-11-05 18:22:34,268 INFO: - App: Signing notebook: /home/main/notebooks/particle_tracking.ipynb
+
+2015-11-05 18:22:34,513 INFO: - App: Signing notebook: /home/main/notebooks/Upload_video.ipynb
+
+2015-11-05 18:22:34,802 INFO: - App:  ---> 8f75f1d454e8
+
+2015-11-05 18:22:34,821 INFO: - App: Removing intermediate container b0c60ab80805
+
+2015-11-05 18:22:34,824 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 18:22:34,872 INFO: - App:  ---> Running in 1f5239e8ffef
+
+2015-11-05 18:22:34,919 INFO: - App:  ---> e9dfbb5df3e4
+
+2015-11-05 18:22:34,928 INFO: - App: Removing intermediate container 1f5239e8ffef
+
+2015-11-05 18:22:34,930 INFO: - App: Successfully built e9dfbb5df3e4
+
+2015-11-05 18:22:34,944 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/marcocaggioni-microrheology to private registry...
+2015-11-05 18:22:48,102 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 18:22:50,393 INFO: - App: Successfully built app marcocaggioni-microrheology

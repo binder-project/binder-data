@@ -1,0 +1,126 @@
+2015-11-03 13:33:29,833 INFO: - App: Building service dependencies...
+2015-11-03 13:33:29,837 INFO: - App: Copying files and filling templates...
+2015-11-03 13:33:29,982 INFO: - App: Building app image without Dockerfile...
+2015-11-03 13:33:30,928 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon  71.3 MBSending build context to Docker daemon 71.86 MBSending build context to Docker daemon 72.42 MBSending build context to Docker daemon 72.97 MBSending build context to Docker daemon 73.53 MBSending build context to Docker daemon 74.09 MBSending build context to Docker daemon 74.65 MBSending build context to Docker daemon  75.2 MBSending build context to Docker daemon 75.76 MBSending build context to Docker daemon 76.32 MBSending build context to Docker daemon 76.87 MBSending build context to Docker daemon 77.43 MBSending build context to Docker daemon 77.99 MBSending build context to Docker daemon 78.54 MBSending build context to Docker daemon  79.1 MBSending build context to Docker daemon 79.66 MBSending build context to Docker daemon 80.22 MBSending build context to Docker daemon 80.77 MBSending build context to Docker daemon 81.33 MBSending build context to Docker daemon 81.89 MBSending build context to Docker daemon 82.44 MBSending build context to Docker daemon    83 MBSending build context to Docker daemon 83.56 MBSending build context to Docker daemon 84.12 MBSending build context to Docker daemon 84.67 MBSending build context to Docker daemon 85.23 MBSending build context to Docker daemon 85.79 MBSending build context to Docker daemon 86.34 MBSending build context to Docker daemon  86.9 MBSending build context to Docker daemon 87.46 MBSending build context to Docker daemon 88.01 MBSending build context to Docker daemon 88.57 MBSending build context to Docker daemon 89.13 MBSending build context to Docker daemon 89.69 MBSending build context to Docker daemon 90.24 MBSending build context to Docker daemon  90.8 MBSending build context to Docker daemon 91.36 MBSending build context to Docker daemon 91.91 MBSending build context to Docker daemon 92.47 MBSending build context to Docker daemon 93.03 MBSending build context to Docker daemon 93.59 MBSending build context to Docker daemon 94.14 MBSending build context to Docker daemon  94.7 MBSending build context to Docker daemon 95.26 MBSending build context to Docker daemon 95.81 MBSending build context to Docker daemon 96.37 MBSending build context to Docker daemon 96.93 MBSending build context to Docker daemon 97.48 MBSending build context to Docker daemon 98.04 MBSending build context to Docker daemon  98.6 MBSending build context to Docker daemon 99.16 MBSending build context to Docker daemon 99.71 MBSending build context to Docker daemon 100.3 MBSending build context to Docker daemon 100.8 MBSending build context to Docker daemon 101.4 MBSending build context to Docker daemon 101.9 MBSending build context to Docker daemon 102.5 MBSending build context to Docker daemon 103.1 MBSending build context to Docker daemon 103.6 MBSending build context to Docker daemon 104.1 MBSending build context to Docker daemon 104.7 MBSending build context to Docker daemon 105.2 MBSending build context to Docker daemon 105.8 MBSending build context to Docker daemon 106.3 MBSending build context to Docker daemon 106.9 MBSending build context to Docker daemon 107.4 MBSending build context to Docker daemon   108 MBSending build context to Docker daemon 108.6 MBSending build context to Docker daemon 109.1 MBSending build context to Docker daemon 109.7 MBSending build context to Docker daemon 110.2 MBSending build context to Docker daemon 110.8 MBSending build context to Docker daemon 111.3 MBSending build context to Docker daemon 111.9 MBSending build context to Docker daemon 112.5 MBSending build context to Docker daemon   113 MBSending build context to Docker daemon 113.6 MBSending build context to Docker daemon 114.1 MBSending build context to Docker daemon 114.7 MBSending build context to Docker daemon 115.2 MBSending build context to Docker daemon 115.8 MBSending build context to Docker daemon 116.3 MBSending build context to Docker daemon 116.9 MBSending build context to Docker daemon 117.4 MBSending build context to Docker daemon   118 MBSending build context to Docker daemon 118.6 MBSending build context to Docker daemon 119.1 MBSending build context to Docker daemon 119.7 MBSending build context to Docker daemon 120.2 MBSending build context to Docker daemon 120.8 MBSending build context to Docker daemon 121.3 MBSending build context to Docker daemon 121.9 MBSending build context to Docker daemon 122.2 MBSending build context to Docker daemon 122.2 MB
+
+2015-11-03 13:33:30,930 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 13:33:30,932 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 13:33:30,935 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 13:33:31,855 INFO: - App:  ---> 0a73a04a9170
+
+2015-11-03 13:33:31,885 INFO: - App: Removing intermediate container 4d5f48c866d8
+
+2015-11-03 13:33:31,887 INFO: - App: Step 2 : USER root
+
+2015-11-03 13:33:31,975 INFO: - App:  ---> Running in df3b3773af48
+
+2015-11-03 13:33:32,023 INFO: - App:  ---> a4e7ab471236
+
+2015-11-03 13:33:32,032 INFO: - App: Removing intermediate container df3b3773af48
+
+2015-11-03 13:33:32,034 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 13:33:32,108 INFO: - App:  ---> Running in 3c34bae74480
+
+2015-11-03 13:33:33,146 INFO: - App:  ---> c40953ad3a07
+
+2015-11-03 13:33:33,178 INFO: - App: Removing intermediate container 3c34bae74480
+
+2015-11-03 13:33:33,182 INFO: - App: Step 4 : USER main
+
+2015-11-03 13:33:33,276 INFO: - App:  ---> Running in bbc74049276f
+
+2015-11-03 13:33:33,331 INFO: - App:  ---> 143a3e71abc3
+
+2015-11-03 13:33:33,340 INFO: - App: Removing intermediate container bbc74049276f
+
+2015-11-03 13:33:33,344 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 13:33:33,423 INFO: - App:  ---> Running in cd20f329034c
+
+2015-11-03 13:33:33,781 INFO: - App: Traceback (most recent call last):
+
+2015-11-03 13:33:33,784 INFO: - App:   File "/home/main/anaconda/bin/ipython", line 6, in <module>
+
+2015-11-03 13:33:33,787 INFO: - App: [91m    sys.exit(start_ipython())
+
+2015-11-03 13:33:33,790 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/__init__.py", line 120, in start_ipython
+
+2015-11-03 13:33:33,794 INFO: - App: [91m    return launch_new_instance(argv=argv, **kwargs)
+
+2015-11-03 13:33:33,799 INFO: - App: [91m  File "/home/main/anaconda/lib/python2.7/site-packages/IPython/config/application.py", line 574, in launch_instance
+
+2015-11-03 13:33:33,804 INFO: - App: [91m    app.start()
+
+2015-11-03 13:33:33,809 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 367, in start
+
+2015-11-03 13:33:33,826 INFO: - App: [91m    return self.subapp.start()
+
+2015-11-03 13:33:33,829 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/sign.py", line 423, in start
+
+2015-11-03 13:33:33,840 INFO: - App: [91m    self.sign_notebook(notebook_path)
+
+2015-11-03 13:33:33,842 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/sign.py", line 399, in sign_notebook
+
+2015-11-03 13:33:33,844 INFO: - App: [91m    nb = read(f, NO_CONVERT)
+
+2015-11-03 13:33:33,848 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/__init__.py", line 133, in read
+
+2015-11-03 13:33:33,852 INFO: - App: [91m    return reads(fp.read(), as_version, **kwargs)
+
+2015-11-03 13:33:33,865 INFO: - App: [91m  File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/__init__.py", line 67, in reads
+
+2015-11-03 13:33:33,892 INFO: - App:     nb = reader.reads(s, **kwargs)
+
+2015-11-03 13:33:33,902 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/reader.py", line 58, in reads
+
+2015-11-03 13:33:33,909 INFO: - App: [91m    nb_dict = parse_json(s, **kwargs)
+
+2015-11-03 13:33:33,922 INFO: - App:   File "/home/main/anaconda/lib/python2.7/site-packages/IPython/nbformat/reader.py", line 17, in parse_json
+
+2015-11-03 13:33:33,932 INFO: - App: [91m    raise NotJSONError(("Notebook does not appear to be JSON: %r" % s)[:77] + "...")
+
+2015-11-03 13:33:33,951 INFO: - App: [91mNotJSONError: Notebook does not appear to be JSON: u'# must be run in ipython\n\nimport num...
+
+2015-11-03 13:33:33,955 INFO: - App: [91m
+
+2015-11-03 13:33:33,965 INFO: - App: If you suspect this is an IPython bug, please report it at:
+
+2015-11-03 13:33:33,980 INFO: - App:     https://github.com/ipython/ipython/issues
+
+2015-11-03 13:33:33,984 INFO: - App: or send an email to the mailing list at ipython-dev@scipy.org
+
+2015-11-03 13:33:33,989 INFO: - App: 
+
+2015-11-03 13:33:33,993 INFO: - App: You can print a more detailed traceback right now with "%tb", or use "%debug"
+
+2015-11-03 13:33:33,995 INFO: - App: to interactively debug it.
+
+2015-11-03 13:33:34,000 INFO: - App: 
+
+2015-11-03 13:33:34,004 INFO: - App: Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+
+2015-11-03 13:33:34,007 INFO: - App:     c.Application.verbose_crash=True
+
+2015-11-03 13:33:34,010 INFO: - App: 
+
+2015-11-03 13:33:34,146 INFO: - App:  ---> 5b15ea3232ee
+
+2015-11-03 13:33:34,157 INFO: - App: Removing intermediate container cd20f329034c
+
+2015-11-03 13:33:34,161 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 13:33:34,247 INFO: - App:  ---> Running in d7d027184ab3
+
+2015-11-03 13:33:34,291 INFO: - App:  ---> 84f15f64ec4d
+
+2015-11-03 13:33:34,301 INFO: - App: Removing intermediate container d7d027184ab3
+
+2015-11-03 13:33:34,304 INFO: - App: Successfully built 84f15f64ec4d
+
+2015-11-03 13:33:34,336 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/soft-matter-trackpy to private registry...
+2015-11-03 13:34:05,691 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 13:34:15,988 INFO: - App: Successfully built app soft-matter-trackpy

@@ -1,0 +1,88 @@
+2015-11-03 01:17:07,176 INFO: - App: Building service dependencies...
+2015-11-03 01:17:07,181 INFO: - App: Copying files and filling templates...
+2015-11-03 01:17:07,196 INFO: - App: Building app image without Dockerfile...
+2015-11-03 01:17:07,274 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.754 MBSending build context to Docker daemon   3.3 MBSending build context to Docker daemon 3.834 MBSending build context to Docker daemon 3.923 MBSending build context to Docker daemon 3.923 MB
+
+2015-11-03 01:17:07,279 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 01:17:07,282 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 01:17:07,290 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 01:17:07,490 INFO: - App:  ---> f8324fdb18f3
+
+2015-11-03 01:17:07,504 INFO: - App: Removing intermediate container 93a93f617099
+
+2015-11-03 01:17:07,509 INFO: - App: Step 2 : USER root
+
+2015-11-03 01:17:07,599 INFO: - App:  ---> Running in 5aaa4a29432d
+
+2015-11-03 01:17:07,654 INFO: - App:  ---> 47b23a06915a
+
+2015-11-03 01:17:07,662 INFO: - App: Removing intermediate container 5aaa4a29432d
+
+2015-11-03 01:17:07,664 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 01:17:07,731 INFO: - App:  ---> Running in 44522cc0cf5d
+
+2015-11-03 01:17:08,154 INFO: - App:  ---> 9b883dbee5c9
+
+2015-11-03 01:17:08,167 INFO: - App: Removing intermediate container 44522cc0cf5d
+
+2015-11-03 01:17:08,170 INFO: - App: Step 4 : USER main
+
+2015-11-03 01:17:08,239 INFO: - App:  ---> Running in 0b6c1797db01
+
+2015-11-03 01:17:08,287 INFO: - App:  ---> 06b8cc63a1c3
+
+2015-11-03 01:17:08,295 INFO: - App: Removing intermediate container 0b6c1797db01
+
+2015-11-03 01:17:08,298 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 01:17:08,379 INFO: - App:  ---> Running in 460a44148ec7
+
+2015-11-03 01:17:08,773 INFO: - App: Signing notebook: /home/main/notebooks/graphs/Graph2_SuccessThresholdParameter.ipynb
+
+2015-11-03 01:17:09,015 INFO: - App: Signing notebook: /home/main/notebooks/graphs/Graph4_ComparingStrategies.ipynb
+
+2015-11-03 01:17:09,255 INFO: - App: Signing notebook: /home/main/notebooks/graphs/Graph3_GeometricalDecisionVector.ipynb
+
+2015-11-03 01:17:09,492 INFO: - App: Signing notebook: /home/main/notebooks/graphs/Graph5_SynonymyAndHomonymy.ipynb
+
+2015-11-03 01:17:09,762 INFO: - App: Signing notebook: /home/main/notebooks/graphs/Graph1_ComparingMeasures.ipynb
+
+2015-11-03 01:17:09,984 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/8_Design_newStrategy.ipynb
+
+2015-11-03 01:17:10,239 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/2_Intro_Strategy.ipynb
+
+2015-11-03 01:17:10,491 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/5_Intro_Experiment.ipynb
+
+2015-11-03 01:17:10,739 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/6_Intro_Experiment_Database.ipynb
+
+2015-11-03 01:17:10,980 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/4_Intro_Population.ipynb
+
+2015-11-03 01:17:11,238 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/1_Intro_Vocabulary.ipynb
+
+2015-11-03 01:17:11,482 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/7_Design_newVocabulary.ipynb
+
+2015-11-03 01:17:11,699 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/9_Design_newMeasures.ipynb
+
+2015-11-03 01:17:11,942 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/3_Intro_Agent.ipynb
+
+2015-11-03 01:17:12,241 INFO: - App:  ---> 9672c4003117
+
+2015-11-03 01:17:12,247 INFO: - App: Removing intermediate container 460a44148ec7
+
+2015-11-03 01:17:12,251 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 01:17:12,319 INFO: - App:  ---> Running in 3248be5580f7
+
+2015-11-03 01:17:12,368 INFO: - App:  ---> edcad8d65f67
+
+2015-11-03 01:17:12,376 INFO: - App: Removing intermediate container 3248be5580f7
+
+2015-11-03 01:17:12,379 INFO: - App: Successfully built edcad8d65f67
+
+2015-11-03 01:17:12,385 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/flowersteam-naminggamesal to private registry...
+2015-11-03 01:17:18,840 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 01:17:22,219 INFO: - App: Successfully built app flowersteam-naminggamesal

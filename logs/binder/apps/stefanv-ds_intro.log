@@ -1,0 +1,840 @@
+2015-10-25 08:55:56,106 INFO: - App: Building service dependencies...
+2015-10-25 08:55:56,111 INFO: - App: Copying files and filling templates...
+2015-10-25 08:55:56,131 INFO: - App: Building app image without Dockerfile...
+2015-10-25 08:55:56,233 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon  3.32 MBSending build context to Docker daemon 3.867 MBSending build context to Docker daemon 4.424 MBSending build context to Docker daemon 4.981 MBSending build context to Docker daemon 5.538 MBSending build context to Docker daemon 6.095 MBSending build context to Docker daemon  6.62 MBSending build context to Docker daemon 7.176 MBSending build context to Docker daemon  7.59 MBSending build context to Docker daemon  7.59 MB
+
+2015-10-25 08:55:56,235 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-25 08:55:56,237 INFO: - App:  ---> 77377240dc83
+
+2015-10-25 08:55:56,238 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-25 08:55:56,448 INFO: - App:  ---> 1a101825a2fd
+
+2015-10-25 08:55:56,459 INFO: - App: Removing intermediate container 5b1000afe1d4
+
+2015-10-25 08:55:56,468 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-25 08:55:56,627 INFO: - App:  ---> 63e0bdf86828
+
+2015-10-25 08:55:56,631 INFO: - App: Removing intermediate container dfb862dbe7b3
+
+2015-10-25 08:55:56,636 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-25 08:55:56,711 INFO: - App:  ---> Running in d0247012f0d8
+
+2015-10-25 08:55:56,867 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 08:55:58,199 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 08:55:58,201 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 08:55:58,206 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 08:55:58,208 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 08:55:58,232 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 08:55:58,337 INFO: - App:   Downloading seaborn-0.6.0.tar.gz (145kB)
+
+2015-10-25 08:55:58,889 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 08:55:58,900 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 08:55:58,923 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 08:55:58,930 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/lib/python2.7/site-packages (from python-dateutil->pandas->-r requirements.txt (line 2))
+
+2015-10-25 08:55:58,966 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 08:55:58,994 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 08:55:59,469 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 08:55:59,483 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 08:55:59,788 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 08:55:59,790 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 08:55:59,793 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 08:55:59,795 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 08:55:59,808 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 08:55:59,844 INFO: - App:   Using cached seaborn-0.6.0.tar.gz
+
+2015-10-25 08:56:00,483 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 08:56:00,485 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 08:56:00,487 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 08:56:00,489 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/envs/python3/lib/python3.3/site-packages (from python-dateutil>=2->pandas->-r requirements.txt (line 2))
+
+2015-10-25 08:56:00,490 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 08:56:00,492 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 08:56:01,220 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 08:56:01,539 INFO: - App:  ---> c5127fad804a
+
+2015-10-25 08:56:01,558 INFO: - App: Removing intermediate container d0247012f0d8
+
+2015-10-25 08:56:01,560 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-25 08:56:01,780 INFO: - App:  ---> dcbf2c06b287
+
+2015-10-25 08:56:01,788 INFO: - App: Removing intermediate container 5fc841bfbd2c
+
+2015-10-25 08:56:01,790 INFO: - App: Step 5 : USER root
+
+2015-10-25 08:56:01,867 INFO: - App:  ---> Running in 7485af49311c
+
+2015-10-25 08:56:01,915 INFO: - App:  ---> 909b336cd7e1
+
+2015-10-25 08:56:01,923 INFO: - App: Removing intermediate container 7485af49311c
+
+2015-10-25 08:56:01,929 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-25 08:56:02,000 INFO: - App:  ---> Running in 4650ce88faed
+
+2015-10-25 08:56:02,481 INFO: - App:  ---> 2d8cbd1ae664
+
+2015-10-25 08:56:02,540 INFO: - App: Removing intermediate container 4650ce88faed
+
+2015-10-25 08:56:02,564 INFO: - App: Step 7 : USER main
+
+2015-10-25 08:56:02,610 INFO: - App:  ---> Running in 4eada37b2c9e
+
+2015-10-25 08:56:02,660 INFO: - App:  ---> 99dd943beb6f
+
+2015-10-25 08:56:02,665 INFO: - App: Removing intermediate container 4eada37b2c9e
+
+2015-10-25 08:56:02,670 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-25 08:56:02,740 INFO: - App:  ---> Running in dc603562758c
+
+2015-10-25 08:56:03,257 INFO: - App: Signing notebook: /home/main/notebooks/03_exercise_scikit_learn.ipynb
+
+2015-10-25 08:56:03,555 INFO: - App: Signing notebook: /home/main/notebooks/03_intro_scikit_learn.ipynb
+
+2015-10-25 08:56:03,767 INFO: - App: Signing notebook: /home/main/notebooks/00_introduction.ipynb
+
+2015-10-25 08:56:03,976 INFO: - App: Signing notebook: /home/main/notebooks/02_intro_seaborn.ipynb
+
+2015-10-25 08:56:04,326 INFO: - App: Signing notebook: /home/main/notebooks/01_intro_numpy_pandas.ipynb
+
+2015-10-25 08:56:04,547 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-25 08:56:04,828 INFO: - App: Signing notebook: /home/main/notebooks/01_exercise_pandas.ipynb
+
+2015-10-25 08:56:05,111 INFO: - App:  ---> 82c5f747bb09
+
+2015-10-25 08:56:05,120 INFO: - App: Removing intermediate container dc603562758c
+
+2015-10-25 08:56:05,122 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-25 08:56:05,203 INFO: - App:  ---> Running in 003ed5f1ade3
+
+2015-10-25 08:56:05,254 INFO: - App:  ---> 6a8b084a4fe5
+
+2015-10-25 08:56:05,276 INFO: - App: Removing intermediate container 003ed5f1ade3
+
+2015-10-25 08:56:05,292 INFO: - App: Successfully built 6a8b084a4fe5
+
+2015-10-25 08:56:05,313 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/stefanv-ds_intro to private registry...
+2015-10-25 08:56:16,548 INFO: - App: Preloading app image onto all nodes...
+2015-10-25 08:56:21,789 INFO: - App: Successfully built app stefanv-ds_intro
+2015-10-25 09:03:55,211 INFO: - App: Building service dependencies...
+2015-10-25 09:03:55,228 INFO: - App: Copying files and filling templates...
+2015-10-25 09:03:55,238 INFO: - App: Building app image without Dockerfile...
+2015-10-25 09:03:55,353 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.326 MBSending build context to Docker daemon 3.867 MBSending build context to Docker daemon 4.424 MBSending build context to Docker daemon 4.981 MBSending build context to Docker daemon 5.538 MBSending build context to Docker daemon 6.095 MBSending build context to Docker daemon 6.626 MBSending build context to Docker daemon 7.176 MBSending build context to Docker daemon 7.597 MBSending build context to Docker daemon 7.597 MB
+
+2015-10-25 09:03:55,376 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-25 09:03:55,392 INFO: - App:  ---> 77377240dc83
+
+2015-10-25 09:03:55,399 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-25 09:03:55,524 INFO: - App:  ---> 54e2a973c055
+
+2015-10-25 09:03:55,534 INFO: - App: Removing intermediate container 7f6b8c00be93
+
+2015-10-25 09:03:55,535 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-25 09:03:55,688 INFO: - App:  ---> 9b4ccec1514c
+
+2015-10-25 09:03:55,697 INFO: - App: Removing intermediate container 2f703012a92e
+
+2015-10-25 09:03:55,698 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-25 09:03:55,759 INFO: - App:  ---> Running in 19c20bf407b1
+
+2015-10-25 09:03:55,930 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 09:03:57,276 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 09:03:57,277 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 09:03:57,283 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 09:03:57,284 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 09:03:57,300 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 09:03:57,431 INFO: - App:   Downloading seaborn-0.6.0.tar.gz (145kB)
+
+2015-10-25 09:03:57,986 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 09:03:57,988 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 09:03:57,993 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 09:03:57,995 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/lib/python2.7/site-packages (from python-dateutil->pandas->-r requirements.txt (line 2))
+
+2015-10-25 09:03:57,997 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 09:03:57,998 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 09:03:58,571 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 09:03:58,605 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 09:03:58,890 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 09:03:58,923 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 09:03:58,934 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 09:03:58,941 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 09:03:58,945 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 09:03:58,975 INFO: - App:   Using cached seaborn-0.6.0.tar.gz
+
+2015-10-25 09:03:59,593 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 09:03:59,595 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 09:03:59,598 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 09:03:59,600 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/envs/python3/lib/python3.3/site-packages (from python-dateutil>=2->pandas->-r requirements.txt (line 2))
+
+2015-10-25 09:03:59,601 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 09:03:59,603 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 09:04:00,339 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 09:04:00,660 INFO: - App:  ---> 7cc61c6da2f5
+
+2015-10-25 09:04:00,677 INFO: - App: Removing intermediate container 19c20bf407b1
+
+2015-10-25 09:04:00,699 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-25 09:04:00,914 INFO: - App:  ---> e23a7b9c0899
+
+2015-10-25 09:04:00,926 INFO: - App: Removing intermediate container 0de3653dcc18
+
+2015-10-25 09:04:00,928 INFO: - App: Step 5 : USER root
+
+2015-10-25 09:04:00,995 INFO: - App:  ---> Running in 3546eb7ad64d
+
+2015-10-25 09:04:01,045 INFO: - App:  ---> e39d1a8160ef
+
+2015-10-25 09:04:01,052 INFO: - App: Removing intermediate container 3546eb7ad64d
+
+2015-10-25 09:04:01,054 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-25 09:04:01,139 INFO: - App:  ---> Running in bc1ec50c8a41
+
+2015-10-25 09:04:01,578 INFO: - App:  ---> e839df242097
+
+2015-10-25 09:04:01,593 INFO: - App: Removing intermediate container bc1ec50c8a41
+
+2015-10-25 09:04:01,595 INFO: - App: Step 7 : USER main
+
+2015-10-25 09:04:01,675 INFO: - App:  ---> Running in e37274bb1392
+
+2015-10-25 09:04:01,731 INFO: - App:  ---> b0b18a45ba45
+
+2015-10-25 09:04:01,740 INFO: - App: Removing intermediate container e37274bb1392
+
+2015-10-25 09:04:01,743 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-25 09:04:01,808 INFO: - App:  ---> Running in 4a118a1e1968
+
+2015-10-25 09:04:02,235 INFO: - App: Signing notebook: /home/main/notebooks/03_exercise_scikit_learn.ipynb
+
+2015-10-25 09:04:02,538 INFO: - App: Signing notebook: /home/main/notebooks/03_intro_scikit_learn.ipynb
+
+2015-10-25 09:04:02,758 INFO: - App: Signing notebook: /home/main/notebooks/00_introduction.ipynb
+
+2015-10-25 09:04:02,984 INFO: - App: Signing notebook: /home/main/notebooks/02_intro_seaborn.ipynb
+
+2015-10-25 09:04:03,328 INFO: - App: Signing notebook: /home/main/notebooks/01_intro_numpy_pandas.ipynb
+
+2015-10-25 09:04:03,539 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-25 09:04:03,823 INFO: - App: Signing notebook: /home/main/notebooks/01_exercise_pandas.ipynb
+
+2015-10-25 09:04:04,132 INFO: - App:  ---> 64aaa5e62684
+
+2015-10-25 09:04:04,136 INFO: - App: Removing intermediate container 4a118a1e1968
+
+2015-10-25 09:04:04,138 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-25 09:04:04,215 INFO: - App:  ---> Running in 8dc155d66433
+
+2015-10-25 09:04:04,268 INFO: - App:  ---> 55a7facfaf95
+
+2015-10-25 09:04:04,276 INFO: - App: Removing intermediate container 8dc155d66433
+
+2015-10-25 09:04:04,278 INFO: - App: Successfully built 55a7facfaf95
+
+2015-10-25 09:04:04,305 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/stefanv-ds_intro to private registry...
+2015-10-25 09:04:16,335 INFO: - App: Preloading app image onto all nodes...
+2015-10-25 09:04:21,465 INFO: - App: Successfully built app stefanv-ds_intro
+2015-10-25 16:28:18,203 INFO: - App: Building service dependencies...
+2015-10-25 16:28:18,209 INFO: - App: Copying files and filling templates...
+2015-10-25 16:28:18,235 INFO: - App: Building app image without Dockerfile...
+2015-10-25 16:28:18,346 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.425 MBSending build context to Docker daemon 4.981 MBSending build context to Docker daemon 5.538 MBSending build context to Docker daemon 6.095 MBSending build context to Docker daemon 6.652 MBSending build context to Docker daemon 7.209 MBSending build context to Docker daemon 7.766 MBSending build context to Docker daemon 8.323 MBSending build context to Docker daemon 8.427 MBSending build context to Docker daemon 8.427 MB
+
+2015-10-25 16:28:18,351 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-25 16:28:18,358 INFO: - App:  ---> 77377240dc83
+
+2015-10-25 16:28:18,377 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-25 16:28:18,541 INFO: - App:  ---> f00574e44487
+
+2015-10-25 16:28:18,549 INFO: - App: Removing intermediate container 2541a15ae1ba
+
+2015-10-25 16:28:18,551 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-25 16:28:18,691 INFO: - App:  ---> b304c0773e71
+
+2015-10-25 16:28:18,699 INFO: - App: Removing intermediate container a368b1a49745
+
+2015-10-25 16:28:18,701 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-25 16:28:18,763 INFO: - App:  ---> Running in 3cc0af4de67c
+
+2015-10-25 16:28:18,909 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 16:28:20,221 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 16:28:20,222 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 16:28:20,228 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 16:28:20,230 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 16:28:20,248 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 16:28:20,350 INFO: - App:   Downloading seaborn-0.6.0.tar.gz (145kB)
+
+2015-10-25 16:28:20,910 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 16:28:20,912 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 16:28:20,917 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 16:28:20,918 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/lib/python2.7/site-packages (from python-dateutil->pandas->-r requirements.txt (line 2))
+
+2015-10-25 16:28:20,920 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 16:28:20,921 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 16:28:21,500 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 16:28:21,519 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 16:28:21,836 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 16:28:21,838 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 16:28:21,840 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 16:28:21,844 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 16:28:21,847 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 16:28:21,882 INFO: - App:   Using cached seaborn-0.6.0.tar.gz
+
+2015-10-25 16:28:22,521 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 16:28:22,523 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 16:28:22,524 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 16:28:22,526 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/envs/python3/lib/python3.3/site-packages (from python-dateutil>=2->pandas->-r requirements.txt (line 2))
+
+2015-10-25 16:28:22,527 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 16:28:22,542 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 16:28:23,283 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 16:28:23,610 INFO: - App:  ---> b54e12325343
+
+2015-10-25 16:28:23,624 INFO: - App: Removing intermediate container 3cc0af4de67c
+
+2015-10-25 16:28:23,626 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-25 16:28:23,866 INFO: - App:  ---> 5f99bd2605f6
+
+2015-10-25 16:28:23,879 INFO: - App: Removing intermediate container c91a0c264b20
+
+2015-10-25 16:28:23,881 INFO: - App: Step 5 : USER root
+
+2015-10-25 16:28:23,967 INFO: - App:  ---> Running in e1b9031190d7
+
+2015-10-25 16:28:24,015 INFO: - App:  ---> 2d7b8e36ab05
+
+2015-10-25 16:28:24,024 INFO: - App: Removing intermediate container e1b9031190d7
+
+2015-10-25 16:28:24,027 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-25 16:28:24,116 INFO: - App:  ---> Running in 19e13b79996b
+
+2015-10-25 16:28:24,586 INFO: - App:  ---> 07c6db9960b1
+
+2015-10-25 16:28:24,604 INFO: - App: Removing intermediate container 19e13b79996b
+
+2015-10-25 16:28:24,612 INFO: - App: Step 7 : USER main
+
+2015-10-25 16:28:24,683 INFO: - App:  ---> Running in bf2666232233
+
+2015-10-25 16:28:24,732 INFO: - App:  ---> 7d224f874431
+
+2015-10-25 16:28:24,740 INFO: - App: Removing intermediate container bf2666232233
+
+2015-10-25 16:28:24,742 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-25 16:28:24,820 INFO: - App:  ---> Running in 20c915ddaacb
+
+2015-10-25 16:28:25,322 INFO: - App: Signing notebook: /home/main/notebooks/03_solutions_scikit_learn.ipynb
+
+2015-10-25 16:28:25,564 INFO: - App: Signing notebook: /home/main/notebooks/03_exercise_scikit_learn.ipynb
+
+2015-10-25 16:28:25,824 INFO: - App: Signing notebook: /home/main/notebooks/01_solutions_pandas.ipynb
+
+2015-10-25 16:28:26,120 INFO: - App: Signing notebook: /home/main/notebooks/03_intro_scikit_learn.ipynb
+
+2015-10-25 16:28:26,347 INFO: - App: Signing notebook: /home/main/notebooks/00_introduction.ipynb
+
+2015-10-25 16:28:26,626 INFO: - App: Signing notebook: /home/main/notebooks/02_intro_seaborn.ipynb
+
+2015-10-25 16:28:26,980 INFO: - App: Signing notebook: /home/main/notebooks/01_intro_numpy_pandas.ipynb
+
+2015-10-25 16:28:27,203 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-25 16:28:27,451 INFO: - App: Signing notebook: /home/main/notebooks/01_exercise_pandas.ipynb
+
+2015-10-25 16:28:27,755 INFO: - App:  ---> 01659cafa909
+
+2015-10-25 16:28:27,776 INFO: - App: Removing intermediate container 20c915ddaacb
+
+2015-10-25 16:28:27,780 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-25 16:28:27,843 INFO: - App:  ---> Running in b9ca739b3828
+
+2015-10-25 16:28:27,900 INFO: - App:  ---> 0cec09822f82
+
+2015-10-25 16:28:27,909 INFO: - App: Removing intermediate container b9ca739b3828
+
+2015-10-25 16:28:27,910 INFO: - App: Successfully built 0cec09822f82
+
+2015-10-25 16:28:27,918 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/stefanv-ds_intro to private registry...
+2015-10-25 16:28:38,166 INFO: - App: Preloading app image onto all nodes...
+2015-10-25 16:28:48,591 INFO: - App: Successfully built app stefanv-ds_intro
+2015-10-25 16:33:18,120 INFO: - App: Building service dependencies...
+2015-10-25 16:33:18,123 INFO: - App: Copying files and filling templates...
+2015-10-25 16:33:18,159 INFO: - App: Building app image without Dockerfile...
+2015-10-25 16:33:18,263 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.436 MBSending build context to Docker daemon 4.981 MBSending build context to Docker daemon 5.538 MBSending build context to Docker daemon 6.095 MBSending build context to Docker daemon 6.652 MBSending build context to Docker daemon 7.209 MBSending build context to Docker daemon 7.766 MBSending build context to Docker daemon 8.323 MBSending build context to Docker daemon 8.438 MBSending build context to Docker daemon 8.438 MB
+
+2015-10-25 16:33:18,267 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-25 16:33:18,269 INFO: - App:  ---> 77377240dc83
+
+2015-10-25 16:33:18,272 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-25 16:33:18,550 INFO: - App:  ---> 90105b714c2c
+
+2015-10-25 16:33:18,553 INFO: - App: Removing intermediate container ecf907f3c633
+
+2015-10-25 16:33:18,556 INFO: - App: Step 2 : USER root
+
+2015-10-25 16:33:18,619 INFO: - App:  ---> Running in 080f9fe7b644
+
+2015-10-25 16:33:18,683 INFO: - App:  ---> 38d9975fc91c
+
+2015-10-25 16:33:18,692 INFO: - App: Removing intermediate container 080f9fe7b644
+
+2015-10-25 16:33:18,694 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-25 16:33:18,787 INFO: - App:  ---> Running in 70df1c2e9b6e
+
+2015-10-25 16:33:19,231 INFO: - App:  ---> 6be5901f0705
+
+2015-10-25 16:33:19,244 INFO: - App: Removing intermediate container 70df1c2e9b6e
+
+2015-10-25 16:33:19,246 INFO: - App: Step 4 : USER main
+
+2015-10-25 16:33:19,343 INFO: - App:  ---> Running in 6f6318d4c756
+
+2015-10-25 16:33:19,395 INFO: - App:  ---> 987a23795c7c
+
+2015-10-25 16:33:19,404 INFO: - App: Removing intermediate container 6f6318d4c756
+
+2015-10-25 16:33:19,417 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-25 16:33:19,471 INFO: - App:  ---> Running in 6cfb418bac46
+
+2015-10-25 16:33:19,946 INFO: - App: Signing notebook: /home/main/notebooks/03_solutions_scikit_learn.ipynb
+
+2015-10-25 16:33:20,187 INFO: - App: Signing notebook: /home/main/notebooks/03_exercise_scikit_learn.ipynb
+
+2015-10-25 16:33:20,460 INFO: - App: Signing notebook: /home/main/notebooks/01_solutions_pandas.ipynb
+
+2015-10-25 16:33:20,760 INFO: - App: Signing notebook: /home/main/notebooks/03_intro_scikit_learn.ipynb
+
+2015-10-25 16:33:20,981 INFO: - App: Signing notebook: /home/main/notebooks/00_introduction.ipynb
+
+2015-10-25 16:33:21,267 INFO: - App: Signing notebook: /home/main/notebooks/02_intro_seaborn.ipynb
+
+2015-10-25 16:33:21,626 INFO: - App: Signing notebook: /home/main/notebooks/01_intro_numpy_pandas.ipynb
+
+2015-10-25 16:33:21,842 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-25 16:33:22,086 INFO: - App: Signing notebook: /home/main/notebooks/01_exercise_pandas.ipynb
+
+2015-10-25 16:33:22,374 INFO: - App:  ---> 627410fc80fa
+
+2015-10-25 16:33:22,383 INFO: - App: Removing intermediate container 6cfb418bac46
+
+2015-10-25 16:33:22,384 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-25 16:33:22,470 INFO: - App:  ---> Running in bc61c1c03c4e
+
+2015-10-25 16:33:22,519 INFO: - App:  ---> 1f849e861375
+
+2015-10-25 16:33:22,528 INFO: - App: Removing intermediate container bc61c1c03c4e
+
+2015-10-25 16:33:22,532 INFO: - App: Successfully built 1f849e861375
+
+2015-10-25 16:33:22,539 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/stefanv-ds_intro to private registry...
+2015-10-25 16:33:29,713 INFO: - App: Preloading app image onto all nodes...
+2015-10-25 16:33:33,408 INFO: - App: Successfully built app stefanv-ds_intro
+2015-10-25 20:08:26,950 INFO: - App: Building service dependencies...
+2015-10-25 20:08:26,952 INFO: - App: Copying files and filling templates...
+2015-10-25 20:08:26,986 INFO: - App: Building app image without Dockerfile...
+2015-10-25 20:08:27,104 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.878 MBSending build context to Docker daemon 4.424 MBSending build context to Docker daemon 4.981 MBSending build context to Docker daemon 5.533 MBSending build context to Docker daemon 6.062 MBSending build context to Docker daemon 6.619 MBSending build context to Docker daemon 7.176 MBSending build context to Docker daemon 7.733 MBSending build context to Docker daemon  8.29 MBSending build context to Docker daemon 8.847 MBSending build context to Docker daemon 8.954 MBSending build context to Docker daemon 8.954 MB
+
+2015-10-25 20:08:27,109 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-25 20:08:27,116 INFO: - App:  ---> 77377240dc83
+
+2015-10-25 20:08:27,119 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-25 20:08:27,308 INFO: - App:  ---> 90df538788dc
+
+2015-10-25 20:08:27,319 INFO: - App: Removing intermediate container 0a1d469db8d6
+
+2015-10-25 20:08:27,323 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-25 20:08:27,492 INFO: - App:  ---> 2e5324d0c26b
+
+2015-10-25 20:08:27,502 INFO: - App: Removing intermediate container 1807476929d0
+
+2015-10-25 20:08:27,504 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-25 20:08:27,567 INFO: - App:  ---> Running in 27e8da3e7b50
+
+2015-10-25 20:08:27,707 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 20:08:28,007 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 20:08:28,010 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 20:08:28,015 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 20:08:28,024 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 20:08:28,031 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 20:08:28,137 INFO: - App:   Downloading seaborn-0.6.0.tar.gz (145kB)
+
+2015-10-25 20:08:28,683 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 20:08:28,685 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:08:28,687 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:08:28,689 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/lib/python2.7/site-packages (from python-dateutil->pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:08:28,691 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 20:08:28,693 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 20:08:29,272 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 20:08:29,291 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 20:08:29,584 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 20:08:29,586 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 20:08:29,589 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 20:08:29,591 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 20:08:29,603 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 20:08:29,640 INFO: - App:   Using cached seaborn-0.6.0.tar.gz
+
+2015-10-25 20:08:30,286 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 20:08:30,288 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:08:30,290 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:08:30,292 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/envs/python3/lib/python3.3/site-packages (from python-dateutil>=2->pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:08:30,294 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 20:08:30,295 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 20:08:31,024 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 20:08:31,324 INFO: - App:  ---> 785a33ca172a
+
+2015-10-25 20:08:31,336 INFO: - App: Removing intermediate container 27e8da3e7b50
+
+2015-10-25 20:08:31,339 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-25 20:08:31,591 INFO: - App:  ---> 33c00f1fa114
+
+2015-10-25 20:08:31,605 INFO: - App: Removing intermediate container 9b583b46c457
+
+2015-10-25 20:08:31,607 INFO: - App: Step 5 : USER root
+
+2015-10-25 20:08:31,683 INFO: - App:  ---> Running in 0a0c881d3727
+
+2015-10-25 20:08:31,731 INFO: - App:  ---> a598295d5d0c
+
+2015-10-25 20:08:31,739 INFO: - App: Removing intermediate container 0a0c881d3727
+
+2015-10-25 20:08:31,740 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-25 20:08:31,814 INFO: - App:  ---> Running in aa97483dc5ab
+
+2015-10-25 20:08:32,282 INFO: - App:  ---> 1fcd8748e7d2
+
+2015-10-25 20:08:32,295 INFO: - App: Removing intermediate container aa97483dc5ab
+
+2015-10-25 20:08:32,297 INFO: - App: Step 7 : USER main
+
+2015-10-25 20:08:32,375 INFO: - App:  ---> Running in 15cd3a8b61c0
+
+2015-10-25 20:08:32,434 INFO: - App:  ---> 03108d44d371
+
+2015-10-25 20:08:32,442 INFO: - App: Removing intermediate container 15cd3a8b61c0
+
+2015-10-25 20:08:32,444 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-25 20:08:32,523 INFO: - App:  ---> Running in 5dd61e75e083
+
+2015-10-25 20:08:33,027 INFO: - App: Signing notebook: /home/main/notebooks/03_solutions_scikit_learn.ipynb
+
+2015-10-25 20:08:33,285 INFO: - App: Signing notebook: /home/main/notebooks/03_exercise_scikit_learn.ipynb
+
+2015-10-25 20:08:33,552 INFO: - App: Signing notebook: /home/main/notebooks/01_solutions_pandas.ipynb
+
+2015-10-25 20:08:33,847 INFO: - App: Signing notebook: /home/main/notebooks/03_intro_scikit_learn.ipynb
+
+2015-10-25 20:08:34,066 INFO: - App: Signing notebook: /home/main/notebooks/00_introduction.ipynb
+
+2015-10-25 20:08:34,363 INFO: - App: Signing notebook: /home/main/notebooks/02_intro_seaborn.ipynb
+
+2015-10-25 20:08:34,715 INFO: - App: Signing notebook: /home/main/notebooks/01_intro_numpy_pandas.ipynb
+
+2015-10-25 20:08:34,932 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-25 20:08:35,187 INFO: - App: Signing notebook: /home/main/notebooks/01_exercise_pandas.ipynb
+
+2015-10-25 20:08:35,428 INFO: - App:  ---> 41ff59daf72c
+
+2015-10-25 20:08:35,437 INFO: - App: Removing intermediate container 5dd61e75e083
+
+2015-10-25 20:08:35,439 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-25 20:08:35,535 INFO: - App:  ---> Running in 3c726ba61fdc
+
+2015-10-25 20:08:35,583 INFO: - App:  ---> f2569c1d27ee
+
+2015-10-25 20:08:35,591 INFO: - App: Removing intermediate container 3c726ba61fdc
+
+2015-10-25 20:08:35,593 INFO: - App: Successfully built f2569c1d27ee
+
+2015-10-25 20:08:35,604 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/stefanv-ds_intro to private registry...
+2015-10-25 20:08:45,477 INFO: - App: Preloading app image onto all nodes...
+2015-10-25 20:08:50,277 INFO: - App: Successfully built app stefanv-ds_intro
+2015-10-25 20:11:02,124 INFO: - App: Building service dependencies...
+2015-10-25 20:11:02,126 INFO: - App: Copying files and filling templates...
+2015-10-25 20:11:02,160 INFO: - App: Building app image without Dockerfile...
+2015-10-25 20:11:02,273 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.878 MBSending build context to Docker daemon 4.424 MBSending build context to Docker daemon 4.981 MBSending build context to Docker daemon 5.533 MBSending build context to Docker daemon 6.062 MBSending build context to Docker daemon 6.619 MBSending build context to Docker daemon 7.176 MBSending build context to Docker daemon 7.733 MBSending build context to Docker daemon  8.29 MBSending build context to Docker daemon 8.847 MBSending build context to Docker daemon 8.954 MBSending build context to Docker daemon 8.954 MB
+
+2015-10-25 20:11:02,276 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-25 20:11:02,285 INFO: - App:  ---> 77377240dc83
+
+2015-10-25 20:11:02,294 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-25 20:11:02,459 INFO: - App:  ---> 7998452d3fa7
+
+2015-10-25 20:11:02,469 INFO: - App: Removing intermediate container b9b422caf71e
+
+2015-10-25 20:11:02,471 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-25 20:11:02,627 INFO: - App:  ---> bdc07f707817
+
+2015-10-25 20:11:02,635 INFO: - App: Removing intermediate container af5aadb5c9dd
+
+2015-10-25 20:11:02,638 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-25 20:11:02,715 INFO: - App:  ---> Running in 6e47b0fdec66
+
+2015-10-25 20:11:02,860 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 20:11:04,209 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 20:11:04,214 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 20:11:04,223 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 20:11:04,225 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 20:11:04,232 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 20:11:04,361 INFO: - App:   Downloading seaborn-0.6.0.tar.gz (145kB)
+
+2015-10-25 20:11:04,898 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 20:11:04,900 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:11:04,901 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/lib/python2.7/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:11:04,903 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/lib/python2.7/site-packages (from python-dateutil->pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:11:04,905 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 20:11:04,906 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 20:11:05,474 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 20:11:05,494 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-25 20:11:05,797 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-25 20:11:05,800 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-25 20:11:05,802 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): numpy in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-10-25 20:11:05,804 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pandas in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 2))
+
+2015-10-25 20:11:05,817 INFO: - App: Collecting seaborn (from -r requirements.txt (line 3))
+
+2015-10-25 20:11:05,854 INFO: - App:   Using cached seaborn-0.6.0.tar.gz
+
+2015-10-25 20:11:06,516 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): scikit-learn in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 4))
+
+2015-10-25 20:11:06,522 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): python-dateutil>=2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:11:06,527 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in ./anaconda/envs/python3/lib/python3.3/site-packages (from pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:11:06,540 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in ./anaconda/envs/python3/lib/python3.3/site-packages (from python-dateutil>=2->pandas->-r requirements.txt (line 2))
+
+2015-10-25 20:11:06,574 INFO: - App: Installing collected packages: seaborn
+
+2015-10-25 20:11:06,584 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-25 20:11:07,274 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-25 20:11:07,576 INFO: - App:  ---> 3d26f474c672
+
+2015-10-25 20:11:07,589 INFO: - App: Removing intermediate container 6e47b0fdec66
+
+2015-10-25 20:11:07,590 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-25 20:11:07,846 INFO: - App:  ---> 52db4738d1e4
+
+2015-10-25 20:11:07,859 INFO: - App: Removing intermediate container 7a8e1c35c76d
+
+2015-10-25 20:11:07,860 INFO: - App: Step 5 : USER root
+
+2015-10-25 20:11:07,944 INFO: - App:  ---> Running in dc2b390250c9
+
+2015-10-25 20:11:08,007 INFO: - App:  ---> cf98d32ef0f6
+
+2015-10-25 20:11:08,013 INFO: - App: Removing intermediate container dc2b390250c9
+
+2015-10-25 20:11:08,020 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-25 20:11:08,084 INFO: - App:  ---> Running in 7a2642fec399
+
+2015-10-25 20:11:08,517 INFO: - App:  ---> 504adaf2c554
+
+2015-10-25 20:11:08,536 INFO: - App: Removing intermediate container 7a2642fec399
+
+2015-10-25 20:11:08,539 INFO: - App: Step 7 : USER main
+
+2015-10-25 20:11:08,612 INFO: - App:  ---> Running in c0142a1d2f88
+
+2015-10-25 20:11:08,668 INFO: - App:  ---> 19a7a2bf253f
+
+2015-10-25 20:11:08,676 INFO: - App: Removing intermediate container c0142a1d2f88
+
+2015-10-25 20:11:08,688 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-25 20:11:08,760 INFO: - App:  ---> Running in e689cc56e99a
+
+2015-10-25 20:11:09,267 INFO: - App: Signing notebook: /home/main/notebooks/03_solutions_scikit_learn.ipynb
+
+2015-10-25 20:11:09,529 INFO: - App: Signing notebook: /home/main/notebooks/03_exercise_scikit_learn.ipynb
+
+2015-10-25 20:11:09,787 INFO: - App: Signing notebook: /home/main/notebooks/01_solutions_pandas.ipynb
+
+2015-10-25 20:11:10,092 INFO: - App: Signing notebook: /home/main/notebooks/03_intro_scikit_learn.ipynb
+
+2015-10-25 20:11:10,319 INFO: - App: Signing notebook: /home/main/notebooks/00_introduction.ipynb
+
+2015-10-25 20:11:10,616 INFO: - App: Signing notebook: /home/main/notebooks/02_intro_seaborn.ipynb
+
+2015-10-25 20:11:10,961 INFO: - App: Signing notebook: /home/main/notebooks/01_intro_numpy_pandas.ipynb
+
+2015-10-25 20:11:11,191 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-10-25 20:11:11,428 INFO: - App: Signing notebook: /home/main/notebooks/01_exercise_pandas.ipynb
+
+2015-10-25 20:11:11,728 INFO: - App:  ---> 57a09dd6c01e
+
+2015-10-25 20:11:11,737 INFO: - App: Removing intermediate container e689cc56e99a
+
+2015-10-25 20:11:11,739 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-25 20:11:11,840 INFO: - App:  ---> Running in 4bd689e145f0
+
+2015-10-25 20:11:11,900 INFO: - App:  ---> db8b30951f10
+
+2015-10-25 20:11:11,909 INFO: - App: Removing intermediate container 4bd689e145f0
+
+2015-10-25 20:11:11,910 INFO: - App: Successfully built db8b30951f10
+
+2015-10-25 20:11:11,923 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/stefanv-ds_intro to private registry...
+2015-10-25 20:11:21,007 INFO: - App: Preloading app image onto all nodes...
+2015-10-25 20:11:27,470 INFO: - App: Successfully built app stefanv-ds_intro

@@ -1,0 +1,100 @@
+2015-11-02 21:41:59,259 INFO: - App: Building service dependencies...
+2015-11-02 21:41:59,264 INFO: - App: Copying files and filling templates...
+2015-11-02 21:41:59,299 INFO: - App: Building app image without Dockerfile...
+2015-11-02 21:41:59,431 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.01 MBSending build context to Docker daemon 10.54 MBSending build context to Docker daemon 10.78 MBSending build context to Docker daemon 10.78 MB
+
+2015-11-02 21:41:59,443 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-02 21:41:59,447 INFO: - App:  ---> 77377240dc83
+
+2015-11-02 21:41:59,449 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-02 21:41:59,719 INFO: - App:  ---> 29cbb27e6eea
+
+2015-11-02 21:41:59,735 INFO: - App: Removing intermediate container 2a189c1b6149
+
+2015-11-02 21:41:59,748 INFO: - App: Step 2 : USER root
+
+2015-11-02 21:41:59,832 INFO: - App:  ---> Running in 7291392d3bd4
+
+2015-11-02 21:41:59,891 INFO: - App:  ---> b49d4a0556f9
+
+2015-11-02 21:41:59,900 INFO: - App: Removing intermediate container 7291392d3bd4
+
+2015-11-02 21:41:59,903 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-02 21:41:59,983 INFO: - App:  ---> Running in fe3d0e95799c
+
+2015-11-02 21:42:00,467 INFO: - App:  ---> d1dd79a3ae34
+
+2015-11-02 21:42:00,483 INFO: - App: Removing intermediate container fe3d0e95799c
+
+2015-11-02 21:42:00,486 INFO: - App: Step 4 : USER main
+
+2015-11-02 21:42:00,568 INFO: - App:  ---> Running in e5f6c6966483
+
+2015-11-02 21:42:00,623 INFO: - App:  ---> bdd1fc32d32a
+
+2015-11-02 21:42:00,633 INFO: - App: Removing intermediate container e5f6c6966483
+
+2015-11-02 21:42:00,635 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-02 21:42:00,703 INFO: - App:  ---> Running in 162bafcd6a74
+
+2015-11-02 21:42:01,154 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Variable Inspector.ipynb
+
+2015-11-02 21:42:01,410 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget Styling.ipynb
+
+2015-11-02 21:42:01,635 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Exploring Graphs.ipynb
+
+2015-11-02 21:42:01,868 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Image Browser.ipynb
+
+2015-11-02 21:42:02,110 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Factoring.ipynb
+
+2015-11-02 21:42:02,351 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget Low Level.ipynb
+
+2015-11-02 21:42:02,587 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/File Upload Widget.ipynb
+
+2015-11-02 21:42:02,854 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Using Interact.ipynb
+
+2015-11-02 21:42:03,088 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Nonblocking Console.ipynb
+
+2015-11-02 21:42:03,323 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Index.ipynb
+
+2015-11-02 21:42:03,571 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Lorenz Differential Equations.ipynb
+
+2015-11-02 21:42:03,804 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Controller.ipynb
+
+2015-11-02 21:42:04,033 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Beat Frequencies.ipynb
+
+2015-11-02 21:42:04,299 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Date Picker Widget.ipynb
+
+2015-11-02 21:42:04,534 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Export As (nbconvert).ipynb
+
+2015-11-02 21:42:04,811 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Custom Widget - Hello World.ipynb
+
+2015-11-02 21:42:05,075 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget List.ipynb
+
+2015-11-02 21:42:05,327 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget Basics.ipynb
+
+2015-11-02 21:42:05,567 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Image Processing.ipynb
+
+2015-11-02 21:42:05,811 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget Events.ipynb
+
+2015-11-02 21:42:06,092 INFO: - App:  ---> d53be1af28ca
+
+2015-11-02 21:42:06,097 INFO: - App: Removing intermediate container 162bafcd6a74
+
+2015-11-02 21:42:06,100 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-02 21:42:06,176 INFO: - App:  ---> Running in 9ad99d2cb62e
+
+2015-11-02 21:42:06,223 INFO: - App:  ---> ed7c361ef3bb
+
+2015-11-02 21:42:06,232 INFO: - App: Removing intermediate container 9ad99d2cb62e
+
+2015-11-02 21:42:06,234 INFO: - App: Successfully built ed7c361ef3bb
+
+2015-11-02 21:42:06,245 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/ipython-ipywidgets to private registry...
+2015-11-02 21:42:14,124 INFO: - App: Preloading app image onto all nodes...
+2015-11-02 21:42:23,726 INFO: - App: Successfully built app ipython-ipywidgets

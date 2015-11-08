@@ -1,0 +1,524 @@
+2015-11-05 15:48:25,614 INFO: - App: Building service dependencies...
+2015-11-05 15:48:25,616 INFO: - App: Copying files and filling templates...
+2015-11-05 15:48:25,629 INFO: - App: Building app image without Dockerfile...
+2015-11-05 15:48:25,664 INFO: - App: Sending build context to Docker daemon 122.9 kBSending build context to Docker daemon 122.9 kB
+
+2015-11-05 15:48:25,679 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 15:48:25,682 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 15:48:25,684 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-05 15:48:25,857 INFO: - App:  ---> a04b6ae9222d
+
+2015-11-05 15:48:25,867 INFO: - App: Removing intermediate container a46ad8799004
+
+2015-11-05 15:48:25,870 INFO: - App: Step 2 : USER root
+
+2015-11-05 15:48:25,947 INFO: - App:  ---> Running in bed027582b48
+
+2015-11-05 15:48:26,002 INFO: - App:  ---> 950067f10dff
+
+2015-11-05 15:48:26,011 INFO: - App: Removing intermediate container bed027582b48
+
+2015-11-05 15:48:26,014 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 15:48:26,103 INFO: - App:  ---> Running in 016d1c7f2990
+
+2015-11-05 15:48:26,483 INFO: - App:  ---> 45b358e53678
+
+2015-11-05 15:48:26,492 INFO: - App: Removing intermediate container 016d1c7f2990
+
+2015-11-05 15:48:26,498 INFO: - App: Step 4 : USER main
+
+2015-11-05 15:48:26,567 INFO: - App:  ---> Running in 195dd8c6a7a5
+
+2015-11-05 15:48:26,616 INFO: - App:  ---> 3dfcd47e6680
+
+2015-11-05 15:48:26,627 INFO: - App: Removing intermediate container 195dd8c6a7a5
+
+2015-11-05 15:48:26,641 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 15:48:26,703 INFO: - App:  ---> Running in 06abec686230
+
+2015-11-05 15:48:27,262 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 15:48:27,558 INFO: - App:  ---> de5d1080e8c5
+
+2015-11-05 15:48:27,567 INFO: - App: Removing intermediate container 06abec686230
+
+2015-11-05 15:48:27,573 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-05 15:48:27,643 INFO: - App:  ---> Running in 1ba111f0a017
+
+2015-11-05 15:48:27,691 INFO: - App:  ---> 37caab6c1d20
+
+2015-11-05 15:48:27,700 INFO: - App: Removing intermediate container 1ba111f0a017
+
+2015-11-05 15:48:27,703 INFO: - App: Successfully built 37caab6c1d20
+
+2015-11-05 15:48:27,709 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/dsblank-cs-ap-analysis to private registry...
+2015-11-05 15:48:37,132 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 15:48:38,986 INFO: - App: Successfully built app dsblank-cs-ap-analysis
+2015-11-05 16:18:04,951 INFO: - App: Building service dependencies...
+2015-11-05 16:18:04,963 INFO: - App: Copying files and filling templates...
+2015-11-05 16:18:04,966 INFO: - App: Building app image without Dockerfile...
+2015-11-05 16:18:04,995 INFO: - App: Sending build context to Docker daemon 161.3 kBSending build context to Docker daemon 161.3 kB
+
+2015-11-05 16:18:05,032 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 16:18:05,040 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 16:18:05,042 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-05 16:18:05,205 INFO: - App:  ---> ae2730af28f4
+
+2015-11-05 16:18:05,214 INFO: - App: Removing intermediate container 25fe8728a42d
+
+2015-11-05 16:18:05,216 INFO: - App: Step 2 : USER root
+
+2015-11-05 16:18:05,299 INFO: - App:  ---> Running in cd41ffb3d740
+
+2015-11-05 16:18:05,348 INFO: - App:  ---> eb563050bbbc
+
+2015-11-05 16:18:05,355 INFO: - App: Removing intermediate container cd41ffb3d740
+
+2015-11-05 16:18:05,359 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 16:18:05,440 INFO: - App:  ---> Running in 257bf7ac21a3
+
+2015-11-05 16:18:05,869 INFO: - App:  ---> e57a81778d3f
+
+2015-11-05 16:18:05,884 INFO: - App: Removing intermediate container 257bf7ac21a3
+
+2015-11-05 16:18:05,886 INFO: - App: Step 4 : USER main
+
+2015-11-05 16:18:05,982 INFO: - App:  ---> Running in 98170c60128a
+
+2015-11-05 16:18:06,030 INFO: - App:  ---> 06da3f77b0c1
+
+2015-11-05 16:18:06,037 INFO: - App: Removing intermediate container 98170c60128a
+
+2015-11-05 16:18:06,049 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 16:18:06,119 INFO: - App:  ---> Running in 85d2e768f4d5
+
+2015-11-05 16:18:06,627 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 16:18:06,920 INFO: - App:  ---> 09c26475e45c
+
+2015-11-05 16:18:06,926 INFO: - App: Removing intermediate container 85d2e768f4d5
+
+2015-11-05 16:18:06,930 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-05 16:18:07,008 INFO: - App:  ---> Running in 5abb85428bf7
+
+2015-11-05 16:18:07,072 INFO: - App:  ---> 00802b9d2167
+
+2015-11-05 16:18:07,076 INFO: - App: Removing intermediate container 5abb85428bf7
+
+2015-11-05 16:18:07,077 INFO: - App: Successfully built 00802b9d2167
+
+2015-11-05 16:18:07,085 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/dsblank-cs-ap-analysis to private registry...
+2015-11-05 16:18:15,964 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 16:18:17,955 INFO: - App: Successfully built app dsblank-cs-ap-analysis
+2015-11-05 17:22:34,326 INFO: - App: Building service dependencies...
+2015-11-05 17:22:34,328 INFO: - App: Copying files and filling templates...
+2015-11-05 17:22:34,339 INFO: - App: Building app image without Dockerfile...
+2015-11-05 17:22:34,380 INFO: - App: Sending build context to Docker daemon 251.4 kBSending build context to Docker daemon 251.4 kB
+
+2015-11-05 17:22:34,392 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 17:22:34,395 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 17:22:34,398 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-05 17:22:34,610 INFO: - App:  ---> e1b7a362dfe3
+
+2015-11-05 17:22:34,614 INFO: - App: Removing intermediate container ada65d44c2aa
+
+2015-11-05 17:22:34,617 INFO: - App: Step 2 : USER root
+
+2015-11-05 17:22:34,699 INFO: - App:  ---> Running in f49ea2294d89
+
+2015-11-05 17:22:34,751 INFO: - App:  ---> 2a072b79984f
+
+2015-11-05 17:22:34,759 INFO: - App: Removing intermediate container f49ea2294d89
+
+2015-11-05 17:22:34,762 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 17:22:34,823 INFO: - App:  ---> Running in 1c646f4a28f4
+
+2015-11-05 17:22:35,229 INFO: - App:  ---> c2b088028641
+
+2015-11-05 17:22:35,240 INFO: - App: Removing intermediate container 1c646f4a28f4
+
+2015-11-05 17:22:35,244 INFO: - App: Step 4 : USER main
+
+2015-11-05 17:22:35,315 INFO: - App:  ---> Running in 33d9f313f798
+
+2015-11-05 17:22:35,372 INFO: - App:  ---> 68d1cb1fcfa4
+
+2015-11-05 17:22:35,376 INFO: - App: Removing intermediate container 33d9f313f798
+
+2015-11-05 17:22:35,378 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 17:22:35,448 INFO: - App:  ---> Running in 4dcdd700de75
+
+2015-11-05 17:22:36,002 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 17:22:36,276 INFO: - App:  ---> e44d9bfeb621
+
+2015-11-05 17:22:36,282 INFO: - App: Removing intermediate container 4dcdd700de75
+
+2015-11-05 17:22:36,284 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-05 17:22:36,356 INFO: - App:  ---> Running in 573e9428ae34
+
+2015-11-05 17:22:36,412 INFO: - App:  ---> b0b1c1b923ad
+
+2015-11-05 17:22:36,421 INFO: - App: Removing intermediate container 573e9428ae34
+
+2015-11-05 17:22:36,424 INFO: - App: Successfully built b0b1c1b923ad
+
+2015-11-05 17:22:36,428 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/dsblank-cs-ap-analysis to private registry...
+2015-11-05 17:22:45,256 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 17:22:47,181 INFO: - App: Successfully built app dsblank-cs-ap-analysis
+2015-11-05 17:25:48,423 INFO: - App: Building service dependencies...
+2015-11-05 17:25:48,426 INFO: - App: Copying files and filling templates...
+2015-11-05 17:25:48,439 INFO: - App: Building app image without Dockerfile...
+2015-11-05 17:25:48,472 INFO: - App: Sending build context to Docker daemon 252.9 kBSending build context to Docker daemon 252.9 kB
+
+2015-11-05 17:25:48,491 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 17:25:48,494 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 17:25:48,497 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 17:25:48,675 INFO: - App:  ---> ecdcf9c69003
+
+2015-11-05 17:25:48,685 INFO: - App: Removing intermediate container 0c4bc3c249b5
+
+2015-11-05 17:25:48,688 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 17:25:48,848 INFO: - App:  ---> 55606205ddf2
+
+2015-11-05 17:25:48,855 INFO: - App: Removing intermediate container 1740de2aca1e
+
+2015-11-05 17:25:48,861 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 17:25:48,935 INFO: - App:  ---> Running in f1a5f4c3c039
+
+2015-11-05 17:25:49,092 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 17:25:49,427 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 17:25:49,455 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 17:25:49,457 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): openpyxl in ./anaconda/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+
+2015-11-05 17:25:49,460 INFO: - App: Collecting metakernel (from -r requirements.txt (line 2))
+
+2015-11-05 17:25:49,565 INFO: - App:   Downloading metakernel-0.11.3-py2.py3-none-any.whl (119kB)
+
+2015-11-05 17:25:49,644 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): IPython>=3.0 in ./anaconda/lib/python2.7/site-packages (from metakernel->-r requirements.txt (line 2))
+
+2015-11-05 17:25:49,647 INFO: - App: Installing collected packages: metakernel
+
+2015-11-05 17:25:49,798 INFO: - App: Successfully installed metakernel-0.11.3
+
+2015-11-05 17:25:49,824 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 17:25:50,152 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 17:25:50,155 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 17:25:50,161 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): openpyxl in ./anaconda/envs/python3/lib/python3.3/site-packages (from -r requirements.txt (line 1))
+
+2015-11-05 17:25:50,172 INFO: - App: Collecting metakernel (from -r requirements.txt (line 2))
+
+2015-11-05 17:25:50,233 INFO: - App:   Using cached metakernel-0.11.3-py2.py3-none-any.whl
+
+2015-11-05 17:25:50,275 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): IPython>=3.0 in ./anaconda/envs/python3/lib/python3.3/site-packages (from metakernel->-r requirements.txt (line 2))
+
+2015-11-05 17:25:50,276 INFO: - App: Installing collected packages: metakernel
+
+2015-11-05 17:25:50,464 INFO: - App: Successfully installed metakernel-0.11.3
+
+2015-11-05 17:25:50,830 INFO: - App:  ---> 1b81f04acba8
+
+2015-11-05 17:25:50,846 INFO: - App: Removing intermediate container f1a5f4c3c039
+
+2015-11-05 17:25:50,867 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 17:25:50,997 INFO: - App:  ---> ed8b02f2291e
+
+2015-11-05 17:25:51,005 INFO: - App: Removing intermediate container ef744008d6f8
+
+2015-11-05 17:25:51,007 INFO: - App: Step 5 : USER root
+
+2015-11-05 17:25:51,091 INFO: - App:  ---> Running in 4d2828c5d7d4
+
+2015-11-05 17:25:51,139 INFO: - App:  ---> f0e4e582e823
+
+2015-11-05 17:25:51,147 INFO: - App: Removing intermediate container 4d2828c5d7d4
+
+2015-11-05 17:25:51,149 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 17:25:51,223 INFO: - App:  ---> Running in f71d7921f00d
+
+2015-11-05 17:25:51,641 INFO: - App:  ---> 106d7b18435a
+
+2015-11-05 17:25:51,651 INFO: - App: Removing intermediate container f71d7921f00d
+
+2015-11-05 17:25:51,669 INFO: - App: Step 7 : USER main
+
+2015-11-05 17:25:51,731 INFO: - App:  ---> Running in 538280b43cf9
+
+2015-11-05 17:25:51,808 INFO: - App:  ---> 5e1ee0d53cf1
+
+2015-11-05 17:25:51,820 INFO: - App: Removing intermediate container 538280b43cf9
+
+2015-11-05 17:25:51,822 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 17:25:51,891 INFO: - App:  ---> Running in 017804518dcb
+
+2015-11-05 17:25:52,382 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 17:25:52,642 INFO: - App:  ---> c48bb18c539a
+
+2015-11-05 17:25:52,651 INFO: - App: Removing intermediate container 017804518dcb
+
+2015-11-05 17:25:52,653 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 17:25:52,727 INFO: - App:  ---> Running in 7295bb3f16a7
+
+2015-11-05 17:25:52,775 INFO: - App:  ---> 113ddffbf9a1
+
+2015-11-05 17:25:52,784 INFO: - App: Removing intermediate container 7295bb3f16a7
+
+2015-11-05 17:25:52,811 INFO: - App: Successfully built 113ddffbf9a1
+
+2015-11-05 17:25:52,824 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/dsblank-cs-ap-analysis to private registry...
+2015-11-05 17:26:04,087 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 17:26:10,998 INFO: - App: Successfully built app dsblank-cs-ap-analysis
+2015-11-05 17:35:41,370 INFO: - App: Building service dependencies...
+2015-11-05 17:35:41,375 INFO: - App: Copying files and filling templates...
+2015-11-05 17:35:41,385 INFO: - App: Building app image without Dockerfile...
+2015-11-05 17:35:41,419 INFO: - App: Sending build context to Docker daemon 229.4 kBSending build context to Docker daemon 229.4 kB
+
+2015-11-05 17:35:41,448 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 17:35:41,456 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 17:35:41,461 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-05 17:35:41,651 INFO: - App:  ---> 6c004ac9175b
+
+2015-11-05 17:35:41,654 INFO: - App: Removing intermediate container 8eb5d9d6cd33
+
+2015-11-05 17:35:41,656 INFO: - App: Step 2 : USER root
+
+2015-11-05 17:35:41,747 INFO: - App:  ---> Running in a3dbe6ba5639
+
+2015-11-05 17:35:41,795 INFO: - App:  ---> 88281f8b4c2a
+
+2015-11-05 17:35:41,806 INFO: - App: Removing intermediate container a3dbe6ba5639
+
+2015-11-05 17:35:41,810 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 17:35:41,895 INFO: - App:  ---> Running in dc77e8fdba8c
+
+2015-11-05 17:35:42,338 INFO: - App:  ---> 7194f4835d6c
+
+2015-11-05 17:35:42,349 INFO: - App: Removing intermediate container dc77e8fdba8c
+
+2015-11-05 17:35:42,351 INFO: - App: Step 4 : USER main
+
+2015-11-05 17:35:42,423 INFO: - App:  ---> Running in 3dcca37662e4
+
+2015-11-05 17:35:42,471 INFO: - App:  ---> 103c0464b1b4
+
+2015-11-05 17:35:42,492 INFO: - App: Removing intermediate container 3dcca37662e4
+
+2015-11-05 17:35:42,507 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 17:35:42,558 INFO: - App:  ---> Running in 9b2e1756953f
+
+2015-11-05 17:35:43,072 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 17:35:43,347 INFO: - App:  ---> baee431f1799
+
+2015-11-05 17:35:43,356 INFO: - App: Removing intermediate container 9b2e1756953f
+
+2015-11-05 17:35:43,359 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-05 17:35:43,443 INFO: - App:  ---> Running in 3f73f63a39f1
+
+2015-11-05 17:35:43,500 INFO: - App:  ---> 751ced239bad
+
+2015-11-05 17:35:43,510 INFO: - App: Removing intermediate container 3f73f63a39f1
+
+2015-11-05 17:35:43,513 INFO: - App: Successfully built 751ced239bad
+
+2015-11-05 17:35:43,519 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/dsblank-cs-ap-analysis to private registry...
+2015-11-05 17:35:51,065 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 17:35:52,772 INFO: - App: Successfully built app dsblank-cs-ap-analysis
+2015-11-05 18:04:37,176 INFO: - App: Building service dependencies...
+2015-11-05 18:04:37,191 INFO: - App: Copying files and filling templates...
+2015-11-05 18:04:37,196 INFO: - App: Building app image without Dockerfile...
+2015-11-05 18:04:37,246 INFO: - App: Sending build context to Docker daemon 468.5 kBSending build context to Docker daemon 468.5 kB
+
+2015-11-05 18:04:37,251 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-05 18:04:37,254 INFO: - App:  ---> 77377240dc83
+
+2015-11-05 18:04:37,259 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-05 18:04:37,443 INFO: - App:  ---> f597c3096bc0
+
+2015-11-05 18:04:37,452 INFO: - App: Removing intermediate container d3ae68596459
+
+2015-11-05 18:04:37,455 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-05 18:04:37,656 INFO: - App:  ---> 391c4739d416
+
+2015-11-05 18:04:37,668 INFO: - App: Removing intermediate container 0661413e4f5d
+
+2015-11-05 18:04:37,692 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-05 18:04:37,747 INFO: - App:  ---> Running in f4ecde2aca7b
+
+2015-11-05 18:04:37,907 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 18:04:39,252 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 18:04:39,254 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 18:04:39,259 INFO: - App: Collecting openpyxl==2.3.0 (from -r requirements.txt (line 1))
+
+2015-11-05 18:04:39,393 INFO: - App:   Downloading openpyxl-2.3.0.tar.gz (138kB)
+
+2015-11-05 18:04:39,760 INFO: - App: Collecting metakernel (from -r requirements.txt (line 2))
+
+2015-11-05 18:04:39,825 INFO: - App:   Downloading metakernel-0.11.3-py2.py3-none-any.whl (119kB)
+
+2015-11-05 18:04:39,884 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jdcal in ./anaconda/lib/python2.7/site-packages (from openpyxl==2.3.0->-r requirements.txt (line 1))
+
+2015-11-05 18:04:39,908 INFO: - App: Collecting et-xmlfile (from openpyxl==2.3.0->-r requirements.txt (line 1))
+
+2015-11-05 18:04:39,938 INFO: - App:   Downloading et_xmlfile-1.0.1.tar.gz
+
+2015-11-05 18:04:40,152 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): IPython>=3.0 in ./anaconda/lib/python2.7/site-packages (from metakernel->-r requirements.txt (line 2))
+
+2015-11-05 18:04:40,157 INFO: - App: Installing collected packages: et-xmlfile, openpyxl, metakernel
+
+2015-11-05 18:04:40,159 INFO: - App:   Running setup.py install for et-xmlfile
+
+2015-11-05 18:04:40,402 INFO: - App:   Found existing installation: openpyxl 1.8.5
+
+2015-11-05 18:04:40,417 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (openpyxl) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-05 18:04:40,420 INFO: - App:     Uninstalling openpyxl-1.8.5:
+
+2015-11-05 18:04:40,422 INFO: - App:       Successfully uninstalled openpyxl-1.8.5
+
+2015-11-05 18:04:40,425 INFO: - App:   Running setup.py install for openpyxl
+
+2015-11-05 18:04:41,143 INFO: - App: Successfully installed et-xmlfile-1.0.1 metakernel-0.11.3 openpyxl-2.3.0
+
+2015-11-05 18:04:41,174 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-05 18:04:41,483 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-05 18:04:41,486 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-05 18:04:41,499 INFO: - App: Collecting openpyxl==2.3.0 (from -r requirements.txt (line 1))
+
+2015-11-05 18:04:41,545 INFO: - App:   Using cached openpyxl-2.3.0.tar.gz
+
+2015-11-05 18:04:41,952 INFO: - App: Collecting metakernel (from -r requirements.txt (line 2))
+
+2015-11-05 18:04:41,987 INFO: - App:   Using cached metakernel-0.11.3-py2.py3-none-any.whl
+
+2015-11-05 18:04:42,024 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jdcal in ./anaconda/envs/python3/lib/python3.3/site-packages (from openpyxl==2.3.0->-r requirements.txt (line 1))
+
+2015-11-05 18:04:42,040 INFO: - App: Collecting et-xmlfile (from openpyxl==2.3.0->-r requirements.txt (line 1))
+
+2015-11-05 18:04:42,048 INFO: - App:   Using cached et_xmlfile-1.0.1.tar.gz
+
+2015-11-05 18:04:42,335 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): IPython>=3.0 in ./anaconda/envs/python3/lib/python3.3/site-packages (from metakernel->-r requirements.txt (line 2))
+
+2015-11-05 18:04:42,343 INFO: - App: Installing collected packages: et-xmlfile, openpyxl, metakernel
+
+2015-11-05 18:04:42,348 INFO: - App:   Running setup.py install for et-xmlfile
+
+2015-11-05 18:04:42,679 INFO: - App:   Found existing installation: openpyxl 1.8.5
+
+2015-11-05 18:04:42,688 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (openpyxl) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-05 18:04:42,696 INFO: - App:     Uninstalling openpyxl-1.8.5:
+
+2015-11-05 18:04:42,698 INFO: - App:       Successfully uninstalled openpyxl-1.8.5
+
+2015-11-05 18:04:42,702 INFO: - App:   Running setup.py install for openpyxl
+
+2015-11-05 18:04:43,624 INFO: - App: Successfully installed et-xmlfile-1.0.1 metakernel-0.11.3 openpyxl-2.3.0
+
+2015-11-05 18:04:45,687 INFO: - App:  ---> c8a1a128e77c
+
+2015-11-05 18:04:45,725 INFO: - App: Removing intermediate container f4ecde2aca7b
+
+2015-11-05 18:04:45,730 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-05 18:04:45,886 INFO: - App:  ---> 2be5b6e0bea9
+
+2015-11-05 18:04:45,895 INFO: - App: Removing intermediate container 3ad5d3c5b338
+
+2015-11-05 18:04:45,897 INFO: - App: Step 5 : USER root
+
+2015-11-05 18:04:45,983 INFO: - App:  ---> Running in cf790782ba27
+
+2015-11-05 18:04:46,027 INFO: - App:  ---> ddd4f29d7463
+
+2015-11-05 18:04:46,076 INFO: - App: Removing intermediate container cf790782ba27
+
+2015-11-05 18:04:46,078 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-05 18:04:46,163 INFO: - App:  ---> Running in bd97ca79f93f
+
+2015-11-05 18:04:46,590 INFO: - App:  ---> d854c8686322
+
+2015-11-05 18:04:46,601 INFO: - App: Removing intermediate container bd97ca79f93f
+
+2015-11-05 18:04:46,604 INFO: - App: Step 7 : USER main
+
+2015-11-05 18:04:46,675 INFO: - App:  ---> Running in 639864932b8d
+
+2015-11-05 18:04:46,724 INFO: - App:  ---> beac8cee1954
+
+2015-11-05 18:04:46,732 INFO: - App: Removing intermediate container 639864932b8d
+
+2015-11-05 18:04:46,735 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-05 18:04:46,817 INFO: - App:  ---> Running in 6d871e0a979b
+
+2015-11-05 18:04:47,350 INFO: - App: Signing notebook: /home/main/notebooks/index.ipynb
+
+2015-11-05 18:04:47,634 INFO: - App:  ---> def9e980b399
+
+2015-11-05 18:04:47,649 INFO: - App: Removing intermediate container 6d871e0a979b
+
+2015-11-05 18:04:47,652 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-05 18:04:47,751 INFO: - App:  ---> Running in 4593b4589d18
+
+2015-11-05 18:04:47,807 INFO: - App:  ---> 33b3867da41c
+
+2015-11-05 18:04:47,814 INFO: - App: Removing intermediate container 4593b4589d18
+
+2015-11-05 18:04:47,817 INFO: - App: Successfully built 33b3867da41c
+
+2015-11-05 18:04:47,824 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/dsblank-cs-ap-analysis to private registry...
+2015-11-05 18:04:59,759 INFO: - App: Preloading app image onto all nodes...
+2015-11-05 18:05:02,724 INFO: - App: Successfully built app dsblank-cs-ap-analysis

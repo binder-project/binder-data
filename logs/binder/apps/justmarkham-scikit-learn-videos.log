@@ -1,0 +1,130 @@
+2015-10-26 14:09:59,334 INFO: - App: Building service dependencies...
+2015-10-26 14:09:59,336 INFO: - App: Copying files and filling templates...
+2015-10-26 14:09:59,350 INFO: - App: Building app image without Dockerfile...
+2015-10-26 14:09:59,412 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon  2.11 MBSending build context to Docker daemon  2.11 MB
+
+2015-10-26 14:09:59,414 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 14:09:59,417 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 14:09:59,419 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-10-26 14:09:59,575 INFO: - App:  ---> fbbf38123046
+
+2015-10-26 14:09:59,583 INFO: - App: Removing intermediate container 33f9e3f033cd
+
+2015-10-26 14:09:59,584 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-10-26 14:09:59,755 INFO: - App:  ---> 652786be67de
+
+2015-10-26 14:09:59,763 INFO: - App: Removing intermediate container 5c6b45d1f801
+
+2015-10-26 14:09:59,765 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-10-26 14:09:59,851 INFO: - App:  ---> Running in 489ee10f85f6
+
+2015-10-26 14:10:00,007 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 14:10:01,370 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 14:10:01,372 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 14:10:01,393 INFO: - App: Collecting seaborn (from -r requirements.txt (line 1))
+
+2015-10-26 14:10:01,529 INFO: - App:   Downloading seaborn-0.6.0.tar.gz (145kB)
+
+2015-10-26 14:10:02,071 INFO: - App: Installing collected packages: seaborn
+
+2015-10-26 14:10:02,073 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-26 14:10:02,654 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-26 14:10:02,673 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-10-26 14:10:02,987 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-10-26 14:10:03,012 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-10-26 14:10:03,038 INFO: - App: Collecting seaborn (from -r requirements.txt (line 1))
+
+2015-10-26 14:10:03,048 INFO: - App:   Using cached seaborn-0.6.0.tar.gz
+
+2015-10-26 14:10:03,674 INFO: - App: Installing collected packages: seaborn
+
+2015-10-26 14:10:03,675 INFO: - App:   Running setup.py install for seaborn
+
+2015-10-26 14:10:04,427 INFO: - App: Successfully installed seaborn-0.6.0
+
+2015-10-26 14:10:04,767 INFO: - App:  ---> 9168571aa958
+
+2015-10-26 14:10:04,781 INFO: - App: Removing intermediate container 489ee10f85f6
+
+2015-10-26 14:10:04,782 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-10-26 14:10:04,950 INFO: - App:  ---> 959fd438f205
+
+2015-10-26 14:10:04,961 INFO: - App: Removing intermediate container 7a7288f52fe1
+
+2015-10-26 14:10:04,965 INFO: - App: Step 5 : USER root
+
+2015-10-26 14:10:05,052 INFO: - App:  ---> Running in a35e099a6986
+
+2015-10-26 14:10:05,129 INFO: - App:  ---> 97d045e87992
+
+2015-10-26 14:10:05,137 INFO: - App: Removing intermediate container a35e099a6986
+
+2015-10-26 14:10:05,139 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 14:10:05,207 INFO: - App:  ---> Running in 26ab03a6d80a
+
+2015-10-26 14:10:05,621 INFO: - App:  ---> 70b8480c5ff3
+
+2015-10-26 14:10:05,628 INFO: - App: Removing intermediate container 26ab03a6d80a
+
+2015-10-26 14:10:05,630 INFO: - App: Step 7 : USER main
+
+2015-10-26 14:10:05,699 INFO: - App:  ---> Running in b573d13c78be
+
+2015-10-26 14:10:05,747 INFO: - App:  ---> 45217ea81ab1
+
+2015-10-26 14:10:05,759 INFO: - App: Removing intermediate container b573d13c78be
+
+2015-10-26 14:10:05,763 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 14:10:05,831 INFO: - App:  ---> Running in 89ce3e8f903c
+
+2015-10-26 14:10:06,403 INFO: - App: Signing notebook: /home/main/notebooks/06_linear_regression.ipynb
+
+2015-10-26 14:10:06,652 INFO: - App: Signing notebook: /home/main/notebooks/03_getting_started_with_iris.ipynb
+
+2015-10-26 14:10:06,875 INFO: - App: Signing notebook: /home/main/notebooks/02_machine_learning_setup.ipynb
+
+2015-10-26 14:10:07,137 INFO: - App: Signing notebook: /home/main/notebooks/07_cross_validation.ipynb
+
+2015-10-26 14:10:07,443 INFO: - App: Signing notebook: /home/main/notebooks/09_classification_metrics.ipynb
+
+2015-10-26 14:10:07,704 INFO: - App: Signing notebook: /home/main/notebooks/08_grid_search.ipynb
+
+2015-10-26 14:10:07,939 INFO: - App: Signing notebook: /home/main/notebooks/01_machine_learning_intro.ipynb
+
+2015-10-26 14:10:08,201 INFO: - App: Signing notebook: /home/main/notebooks/05_model_evaluation.ipynb
+
+2015-10-26 14:10:08,456 INFO: - App: Signing notebook: /home/main/notebooks/04_model_training.ipynb
+
+2015-10-26 14:10:08,727 INFO: - App:  ---> fd81cabf638b
+
+2015-10-26 14:10:08,732 INFO: - App: Removing intermediate container 89ce3e8f903c
+
+2015-10-26 14:10:08,735 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-10-26 14:10:08,815 INFO: - App:  ---> Running in 9d87f1ce0819
+
+2015-10-26 14:10:08,876 INFO: - App:  ---> c912cff3fc31
+
+2015-10-26 14:10:08,884 INFO: - App: Removing intermediate container 9d87f1ce0819
+
+2015-10-26 14:10:08,886 INFO: - App: Successfully built c912cff3fc31
+
+2015-10-26 14:10:08,895 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/justmarkham-scikit-learn-videos to private registry...
+2015-10-26 14:10:17,967 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 14:10:22,352 INFO: - App: Successfully built app justmarkham-scikit-learn-videos

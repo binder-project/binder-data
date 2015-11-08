@@ -1,0 +1,344 @@
+2015-11-02 21:46:40,830 INFO: - App: Building service dependencies...
+2015-11-02 21:46:40,833 INFO: - App: Copying files and filling templates...
+2015-11-02 21:46:40,872 INFO: - App: Building app image without Dockerfile...
+2015-11-02 21:46:41,007 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.01 MBSending build context to Docker daemon 10.54 MBSending build context to Docker daemon 10.79 MBSending build context to Docker daemon 10.79 MB
+
+2015-11-02 21:46:41,009 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-02 21:46:41,014 INFO: - App:  ---> 77377240dc83
+
+2015-11-02 21:46:41,048 INFO: - App: Step 1 : ADD repo/requirements.txt requirements.txt
+
+2015-11-02 21:46:41,188 INFO: - App:  ---> acd083e5454f
+
+2015-11-02 21:46:41,197 INFO: - App: Removing intermediate container afe046024e78
+
+2015-11-02 21:46:41,199 INFO: - App: Step 2 : ADD handle-requirements.py handle-requirements.py
+
+2015-11-02 21:46:41,371 INFO: - App:  ---> badecb65bd81
+
+2015-11-02 21:46:41,379 INFO: - App: Removing intermediate container 010d182716fc
+
+2015-11-02 21:46:41,381 INFO: - App: Step 3 : RUN python handle-requirements.py
+
+2015-11-02 21:46:41,463 INFO: - App:  ---> Running in c843afa4f107
+
+2015-11-02 21:46:41,625 INFO: - App: Executing: ['pip', 'install', '-r', 'requirements.txt']
+
+2015-11-02 21:46:41,952 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-02 21:46:41,982 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-02 21:46:41,992 INFO: - App: Collecting ipywidgets (from -r requirements.txt (line 1))
+
+2015-11-02 21:46:42,078 INFO: - App:   Downloading ipywidgets-4.1.1-py2.py3-none-any.whl (117kB)
+
+2015-11-02 21:46:42,155 INFO: - App: Collecting traitlets (from ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:42,263 INFO: - App:   Downloading traitlets-4.0.0-py2.py3-none-any.whl (56kB)
+
+2015-11-02 21:46:42,307 INFO: - App: Collecting ipykernel (from ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:42,344 INFO: - App:   Downloading ipykernel-4.1.1-py2.py3-none-any.whl (90kB)
+
+2015-11-02 21:46:42,408 INFO: - App: Collecting notebook (from ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:42,447 INFO: - App:   Downloading notebook-4.0.6-py2.py3-none-any.whl (5.6MB)
+
+2015-11-02 21:46:43,346 INFO: - App: Collecting ipython>=4.0.0dev0 (from ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,423 INFO: - App:   Downloading ipython-4.0.0-py2-none-any.whl (730kB)
+
+2015-11-02 21:46:43,577 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): decorator in ./anaconda/lib/python2.7/site-packages (from traitlets->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,592 INFO: - App: Collecting ipython-genutils (from traitlets->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,627 INFO: - App:   Downloading ipython_genutils-0.1.0-py2.py3-none-any.whl
+
+2015-11-02 21:46:43,667 INFO: - App: Collecting jupyter-client (from ipykernel->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,704 INFO: - App:   Downloading jupyter_client-4.1.1-py2.py3-none-any.whl (70kB)
+
+2015-11-02 21:46:43,739 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): tornado>=4 in ./anaconda/lib/python2.7/site-packages (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,755 INFO: - App: Collecting nbformat (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,790 INFO: - App:   Downloading nbformat-4.0.1-py2.py3-none-any.whl (138kB)
+
+2015-11-02 21:46:43,853 INFO: - App: Collecting jupyter-core (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,893 INFO: - App:   Downloading jupyter_core-4.0.6-py2.py3-none-any.whl (74kB)
+
+2015-11-02 21:46:43,927 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jinja2 in ./anaconda/lib/python2.7/site-packages (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,931 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): terminado>=0.3.3 in ./anaconda/lib/python2.7/site-packages (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,943 INFO: - App: Collecting nbconvert (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:43,996 INFO: - App:   Downloading nbconvert-4.1.0-py2.py3-none-any.whl (281kB)
+
+2015-11-02 21:46:44,095 INFO: - App: Collecting simplegeneric>0.8 (from ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:44,133 INFO: - App:   Downloading simplegeneric-0.8.1.zip
+
+2015-11-02 21:46:44,427 INFO: - App: Collecting pexpect (from ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:44,469 INFO: - App:   Downloading pexpect-4.0.1.tar.gz (143kB)
+
+2015-11-02 21:46:44,738 INFO: - App: Collecting pickleshare (from ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:44,775 INFO: - App:   Downloading pickleshare-0.5.tar.gz
+
+2015-11-02 21:46:44,979 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyzmq>=13 in ./anaconda/lib/python2.7/site-packages (from jupyter-client->ipykernel->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:44,999 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jsonschema!=2.5.0,>=2.0 in ./anaconda/lib/python2.7/site-packages (from nbformat->notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:45,001 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pygments in ./anaconda/lib/python2.7/site-packages (from nbconvert->notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:45,003 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mistune!=0.6 in ./anaconda/lib/python2.7/site-packages (from nbconvert->notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:45,007 INFO: - App: Collecting ptyprocess>=0.5 (from pexpect->ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:45,015 INFO: - App:   Downloading ptyprocess-0.5.tar.gz
+
+2015-11-02 21:46:45,222 INFO: - App: Collecting path.py (from pickleshare->ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:45,285 INFO: - App:   Downloading path.py-8.1.2-py2.py3-none-any.whl
+
+2015-11-02 21:46:45,310 INFO: - App: Installing collected packages: ipython-genutils, traitlets, simplegeneric, ptyprocess, pexpect, path.py, pickleshare, ipython, jupyter-core, jupyter-client, ipykernel, nbformat, nbconvert, notebook, ipywidgets
+
+2015-11-02 21:46:45,404 INFO: - App:   Running setup.py install for simplegeneric
+
+2015-11-02 21:46:45,640 INFO: - App:   Found existing installation: ptyprocess 0.4
+
+2015-11-02 21:46:45,642 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ptyprocess) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-02 21:46:45,657 INFO: - App:     Uninstalling ptyprocess-0.4:
+
+2015-11-02 21:46:45,659 INFO: - App:       Successfully uninstalled ptyprocess-0.4
+
+2015-11-02 21:46:45,662 INFO: - App:   Running setup.py install for ptyprocess
+
+2015-11-02 21:46:45,892 INFO: - App:   Running setup.py install for pexpect
+
+2015-11-02 21:46:46,175 INFO: - App:   Running setup.py install for pickleshare
+
+2015-11-02 21:46:46,407 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-02 21:46:46,409 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-02 21:46:46,414 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-02 21:46:46,417 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-02 21:46:48,330 INFO: - App: Successfully installed ipykernel-4.1.1 ipython-4.0.0 ipython-genutils-0.1.0 ipywidgets-4.1.1 jupyter-client-4.1.1 jupyter-core-4.0.6 nbconvert-4.1.0 nbformat-4.0.1 notebook-4.0.6 path.py-8.1.2 pexpect-4.0.1 pickleshare-0.5 ptyprocess-0.5 simplegeneric-0.8.1 traitlets-4.0.0
+
+2015-11-02 21:46:48,469 INFO: - App: Executing: ['/home/main/anaconda/envs/python3/bin/pip', 'install', '-r', 'requirements.txt']
+
+2015-11-02 21:46:48,770 INFO: - App: You are using pip version 7.0.3, however version 7.1.2 is available.
+
+2015-11-02 21:46:48,773 INFO: - App: You should consider upgrading via the 'pip install --upgrade pip' command.
+
+2015-11-02 21:46:48,788 INFO: - App: Collecting ipywidgets (from -r requirements.txt (line 1))
+
+2015-11-02 21:46:48,825 INFO: - App:   Using cached ipywidgets-4.1.1-py2.py3-none-any.whl
+
+2015-11-02 21:46:48,859 INFO: - App: Collecting ipython>=4.0.0dev0 (from ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:48,986 INFO: - App:   Downloading ipython-4.0.0-py3-none-any.whl (730kB)
+
+2015-11-02 21:46:49,197 INFO: - App: Collecting traitlets (from ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:49,208 INFO: - App:   Using cached traitlets-4.0.0-py2.py3-none-any.whl
+
+2015-11-02 21:46:49,245 INFO: - App: Collecting ipykernel (from ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:49,260 INFO: - App:   Using cached ipykernel-4.1.1-py2.py3-none-any.whl
+
+2015-11-02 21:46:49,303 INFO: - App: Collecting notebook (from ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:49,403 INFO: - App:   Using cached notebook-4.0.6-py2.py3-none-any.whl
+
+2015-11-02 21:46:49,743 INFO: - App: Collecting pickleshare (from ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:49,755 INFO: - App:   Using cached pickleshare-0.5.tar.gz
+
+2015-11-02 21:46:50,091 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): decorator in ./anaconda/envs/python3/lib/python3.3/site-packages (from ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,108 INFO: - App: Collecting simplegeneric>0.8 (from ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,120 INFO: - App:   Using cached simplegeneric-0.8.1.zip
+
+2015-11-02 21:46:50,408 INFO: - App: Collecting pexpect (from ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,427 INFO: - App:   Using cached pexpect-4.0.1.tar.gz
+
+2015-11-02 21:46:50,740 INFO: - App: Collecting ipython-genutils (from traitlets->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,748 INFO: - App:   Using cached ipython_genutils-0.1.0-py2.py3-none-any.whl
+
+2015-11-02 21:46:50,789 INFO: - App: Collecting jupyter-client (from ipykernel->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,792 INFO: - App:   Using cached jupyter_client-4.1.1-py2.py3-none-any.whl
+
+2015-11-02 21:46:50,818 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jinja2 in ./anaconda/envs/python3/lib/python3.3/site-packages (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,820 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): tornado>=4 in ./anaconda/envs/python3/lib/python3.3/site-packages (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,835 INFO: - App: Collecting jupyter-core (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,854 INFO: - App:   Using cached jupyter_core-4.0.6-py2.py3-none-any.whl
+
+2015-11-02 21:46:50,897 INFO: - App: Collecting nbformat (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,909 INFO: - App:   Using cached nbformat-4.0.1-py2.py3-none-any.whl
+
+2015-11-02 21:46:50,955 INFO: - App: Collecting nbconvert (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:50,967 INFO: - App:   Using cached nbconvert-4.1.0-py2.py3-none-any.whl
+
+2015-11-02 21:46:51,017 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): terminado>=0.3.3 in ./anaconda/envs/python3/lib/python3.3/site-packages (from notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:51,031 INFO: - App: Collecting path.py (from pickleshare->ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:51,071 INFO: - App:   Using cached path.py-8.1.2-py2.py3-none-any.whl
+
+2015-11-02 21:46:51,087 INFO: - App: Collecting ptyprocess>=0.5 (from pexpect->ipython>=4.0.0dev0->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:51,097 INFO: - App:   Using cached ptyprocess-0.5.tar.gz
+
+2015-11-02 21:46:51,354 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pyzmq>=13 in ./anaconda/envs/python3/lib/python3.3/site-packages (from jupyter-client->ipykernel->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:51,357 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): jsonschema!=2.5.0,>=2.0 in ./anaconda/envs/python3/lib/python3.3/site-packages (from nbformat->notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:51,358 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): pygments in ./anaconda/envs/python3/lib/python3.3/site-packages (from nbconvert->notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:51,360 INFO: - App: Requirement already satisfied (use --upgrade to upgrade): mistune!=0.6 in ./anaconda/envs/python3/lib/python3.3/site-packages (from nbconvert->notebook->ipywidgets->-r requirements.txt (line 1))
+
+2015-11-02 21:46:51,363 INFO: - App: Installing collected packages: path.py, pickleshare, ipython-genutils, traitlets, simplegeneric, ptyprocess, pexpect, ipython, jupyter-core, jupyter-client, ipykernel, nbformat, nbconvert, notebook, ipywidgets
+
+2015-11-02 21:46:51,408 INFO: - App:   Running setup.py install for pickleshare
+
+2015-11-02 21:46:51,841 INFO: - App:   Running setup.py install for simplegeneric
+
+2015-11-02 21:46:52,162 INFO: - App:   Found existing installation: ptyprocess 0.4
+
+2015-11-02 21:46:52,164 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ptyprocess) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-02 21:46:52,166 INFO: - App:     Uninstalling ptyprocess-0.4:
+
+2015-11-02 21:46:52,171 INFO: - App:       Successfully uninstalled ptyprocess-0.4
+
+2015-11-02 21:46:52,175 INFO: - App:   Running setup.py install for ptyprocess
+
+2015-11-02 21:46:52,516 INFO: - App:   Running setup.py install for pexpect
+
+2015-11-02 21:46:52,892 INFO: - App:   Found existing installation: ipython 3.2.0
+
+2015-11-02 21:46:52,899 INFO: - App:     DEPRECATION: Uninstalling a distutils installed project (ipython) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
+
+2015-11-02 21:46:52,904 INFO: - App:     Uninstalling ipython-3.2.0:
+
+2015-11-02 21:46:52,906 INFO: - App:       Successfully uninstalled ipython-3.2.0
+
+2015-11-02 21:46:55,143 INFO: - App: Successfully installed ipykernel-4.1.1 ipython-4.0.0 ipython-genutils-0.1.0 ipywidgets-4.1.1 jupyter-client-4.1.1 jupyter-core-4.0.6 nbconvert-4.1.0 nbformat-4.0.1 notebook-4.0.6 path.py-8.1.2 pexpect-4.0.1 pickleshare-0.5 ptyprocess-0.5 simplegeneric-0.8.1 traitlets-4.0.0
+
+2015-11-02 21:46:58,556 INFO: - App:  ---> 31eee8c0dd6d
+
+2015-11-02 21:46:58,695 INFO: - App: Removing intermediate container c843afa4f107
+
+2015-11-02 21:46:58,697 INFO: - App: Step 4 : ADD repo $HOME/notebooks
+
+2015-11-02 21:46:58,957 INFO: - App:  ---> a9cb02c1a927
+
+2015-11-02 21:46:58,967 INFO: - App: Removing intermediate container 7fa15fc28586
+
+2015-11-02 21:46:58,974 INFO: - App: Step 5 : USER root
+
+2015-11-02 21:46:59,051 INFO: - App:  ---> Running in 8ad161582e07
+
+2015-11-02 21:46:59,124 INFO: - App:  ---> 82b6c64f4ff5
+
+2015-11-02 21:46:59,129 INFO: - App: Removing intermediate container 8ad161582e07
+
+2015-11-02 21:46:59,133 INFO: - App: Step 6 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-02 21:46:59,199 INFO: - App:  ---> Running in 435f6b593b60
+
+2015-11-02 21:46:59,674 INFO: - App:  ---> cda0f8b6a36d
+
+2015-11-02 21:46:59,688 INFO: - App: Removing intermediate container 435f6b593b60
+
+2015-11-02 21:46:59,690 INFO: - App: Step 7 : USER main
+
+2015-11-02 21:46:59,771 INFO: - App:  ---> Running in 3bdf257baf72
+
+2015-11-02 21:46:59,811 INFO: - App:  ---> 5e2b8b395d61
+
+2015-11-02 21:46:59,819 INFO: - App: Removing intermediate container 3bdf257baf72
+
+2015-11-02 21:46:59,821 INFO: - App: Step 8 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-02 21:46:59,900 INFO: - App:  ---> Running in 00444cfd2e9e
+
+2015-11-02 21:47:00,351 INFO: - App: [TrustNotebookApp] Copying /home/main/.ipython/kernels -> /home/main/.local/share/jupyter/kernels
+
+2015-11-02 21:47:00,378 INFO: - App: [91m[TrustNotebookApp] Writing notebook-signing key to /home/main/.local/share/jupyter/notebook_secret
+
+2015-11-02 21:47:00,385 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Variable Inspector.ipynb
+
+2015-11-02 21:47:00,720 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget Styling.ipynb
+
+2015-11-02 21:47:01,032 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Exploring Graphs.ipynb
+
+2015-11-02 21:47:01,354 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Image Browser.ipynb
+
+2015-11-02 21:47:01,665 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Factoring.ipynb
+
+2015-11-02 21:47:02,016 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget Low Level.ipynb
+
+2015-11-02 21:47:02,328 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/File Upload Widget.ipynb
+
+2015-11-02 21:47:02,676 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Using Interact.ipynb
+
+2015-11-02 21:47:02,985 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Nonblocking Console.ipynb
+
+2015-11-02 21:47:03,303 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Index.ipynb
+
+2015-11-02 21:47:03,629 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Lorenz Differential Equations.ipynb
+
+2015-11-02 21:47:03,928 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Controller.ipynb
+
+2015-11-02 21:47:04,224 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Beat Frequencies.ipynb
+
+2015-11-02 21:47:04,570 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Date Picker Widget.ipynb
+
+2015-11-02 21:47:04,879 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Export As (nbconvert).ipynb
+
+2015-11-02 21:47:05,237 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Custom Widget - Hello World.ipynb
+
+2015-11-02 21:47:05,575 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget List.ipynb
+
+2015-11-02 21:47:05,910 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget Basics.ipynb
+
+2015-11-02 21:47:06,239 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Image Processing.ipynb
+
+2015-11-02 21:47:06,574 INFO: - App: Signing notebook: /home/main/notebooks/examples/notebooks/Widget Events.ipynb
+
+2015-11-02 21:47:06,853 INFO: - App:  ---> a8f850b6f439
+
+2015-11-02 21:47:06,861 INFO: - App: Removing intermediate container 00444cfd2e9e
+
+2015-11-02 21:47:06,864 INFO: - App: Step 9 : WORKDIR $HOME/notebooks
+
+2015-11-02 21:47:06,935 INFO: - App:  ---> Running in 81db69df114b
+
+2015-11-02 21:47:06,991 INFO: - App:  ---> ea78ff4e36de
+
+2015-11-02 21:47:07,003 INFO: - App: Removing intermediate container 81db69df114b
+
+2015-11-02 21:47:07,015 INFO: - App: Successfully built ea78ff4e36de
+
+2015-11-02 21:47:07,021 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/andrewosh-ipywidgets to private registry...
+2015-11-02 21:47:25,054 INFO: - App: Preloading app image onto all nodes...
+2015-11-02 21:47:35,499 INFO: - App: Successfully built app andrewosh-ipywidgets

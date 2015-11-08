@@ -1,0 +1,90 @@
+2015-11-03 09:45:16,535 INFO: - App: Building service dependencies...
+2015-11-03 09:45:16,538 INFO: - App: Copying files and filling templates...
+2015-11-03 09:45:16,684 INFO: - App: Building app image without Dockerfile...
+2015-11-03 09:45:17,447 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon  71.3 MBSending build context to Docker daemon 71.86 MBSending build context to Docker daemon 72.42 MBSending build context to Docker daemon 72.97 MBSending build context to Docker daemon 73.53 MBSending build context to Docker daemon 74.09 MBSending build context to Docker daemon 74.65 MBSending build context to Docker daemon  75.2 MBSending build context to Docker daemon 75.76 MBSending build context to Docker daemon 76.32 MBSending build context to Docker daemon 76.87 MBSending build context to Docker daemon 77.43 MBSending build context to Docker daemon 77.99 MBSending build context to Docker daemon 78.54 MBSending build context to Docker daemon  79.1 MBSending build context to Docker daemon 79.66 MBSending build context to Docker daemon 80.22 MBSending build context to Docker daemon 80.77 MBSending build context to Docker daemon 81.33 MBSending build context to Docker daemon 81.89 MBSending build context to Docker daemon 82.44 MBSending build context to Docker daemon    83 MBSending build context to Docker daemon 83.56 MBSending build context to Docker daemon 84.12 MBSending build context to Docker daemon 84.67 MBSending build context to Docker daemon 85.23 MBSending build context to Docker daemon 85.79 MBSending build context to Docker daemon 86.34 MBSending build context to Docker daemon 86.89 MBSending build context to Docker daemon 87.42 MBSending build context to Docker daemon 87.95 MBSending build context to Docker daemon 88.49 MBSending build context to Docker daemon 89.03 MBSending build context to Docker daemon 89.56 MBSending build context to Docker daemon 90.09 MBSending build context to Docker daemon 90.63 MBSending build context to Docker daemon 91.15 MBSending build context to Docker daemon 91.68 MBSending build context to Docker daemon 92.22 MBSending build context to Docker daemon 92.77 MBSending build context to Docker daemon 93.29 MBSending build context to Docker daemon 93.82 MBSending build context to Docker daemon 94.37 MBSending build context to Docker daemon 94.93 MBSending build context to Docker daemon 95.49 MBSending build context to Docker daemon 96.03 MBSending build context to Docker daemon 96.47 MBSending build context to Docker daemon 96.47 MB
+
+2015-11-03 09:45:17,460 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 09:45:17,464 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 09:45:17,466 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 09:45:18,230 INFO: - App:  ---> 3cbb7e285763
+
+2015-11-03 09:45:18,261 INFO: - App: Removing intermediate container 429d49634cc7
+
+2015-11-03 09:45:18,263 INFO: - App: Step 2 : USER root
+
+2015-11-03 09:45:18,351 INFO: - App:  ---> Running in e7ff922ac8f4
+
+2015-11-03 09:45:18,407 INFO: - App:  ---> 6701e53e5c54
+
+2015-11-03 09:45:18,416 INFO: - App: Removing intermediate container e7ff922ac8f4
+
+2015-11-03 09:45:18,418 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 09:45:18,486 INFO: - App:  ---> Running in ef7634731f9f
+
+2015-11-03 09:45:19,496 INFO: - App:  ---> 5f5a0fd7ba75
+
+2015-11-03 09:45:19,523 INFO: - App: Removing intermediate container ef7634731f9f
+
+2015-11-03 09:45:19,526 INFO: - App: Step 4 : USER main
+
+2015-11-03 09:45:19,608 INFO: - App:  ---> Running in fa1e99ff43e3
+
+2015-11-03 09:45:19,664 INFO: - App:  ---> 02ea4d1e2e38
+
+2015-11-03 09:45:19,673 INFO: - App: Removing intermediate container fa1e99ff43e3
+
+2015-11-03 09:45:19,675 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 09:45:19,747 INFO: - App:  ---> Running in f9a5b0bf9d79
+
+2015-11-03 09:45:20,289 INFO: - App: Signing notebook: /home/main/notebooks/Chapter2_MorePyMC/Chapter2.ipynb
+
+2015-11-03 09:45:20,528 INFO: - App: Signing notebook: /home/main/notebooks/sandbox/CommitDataForChapter1.ipynb
+
+2015-11-03 09:45:20,808 INFO: - App: Signing notebook: /home/main/notebooks/sandbox/Chapter10_/More hacking with PyMC.ipynb
+
+2015-11-03 09:45:21,036 INFO: - App: Signing notebook: /home/main/notebooks/sandbox/GithubUsers.ipynb
+
+2015-11-03 09:45:21,287 INFO: - App: Signing notebook: /home/main/notebooks/sandbox/Sum of Gaussian Distributions + noise.ipynb
+
+2015-11-03 09:45:21,523 INFO: - App: Signing notebook: /home/main/notebooks/sandbox/ABCtests.ipynb
+
+2015-11-03 09:45:21,751 INFO: - App: Signing notebook: /home/main/notebooks/sandbox/SpaceShuttleBayesFactor.ipynb
+
+2015-11-03 09:45:22,585 INFO: - App: Signing notebook: /home/main/notebooks/Chapter6_Priorities/Chapter6.ipynb
+
+2015-11-03 09:45:22,859 INFO: - App: Signing notebook: /home/main/notebooks/Chapter7_BayesianMachineLearning/DontOverfit.ipynb
+
+2015-11-03 09:45:23,091 INFO: - App: Signing notebook: /home/main/notebooks/Chapter7_BayesianMachineLearning/MachineLearning.ipynb
+
+2015-11-03 09:45:27,058 INFO: - App: Signing notebook: /home/main/notebooks/Chapter5_LossFunctions/Chapter5.ipynb
+
+2015-11-03 09:45:27,341 INFO: - App: Signing notebook: /home/main/notebooks/Chapter1_Introduction/Chapter1.ipynb
+
+2015-11-03 09:45:27,665 INFO: - App: Signing notebook: /home/main/notebooks/Chapter3_MCMC/Chapter3.ipynb
+
+2015-11-03 09:45:27,894 INFO: - App: Signing notebook: /home/main/notebooks/Prologue/Prologue.ipynb
+
+2015-11-03 09:45:28,183 INFO: - App: Signing notebook: /home/main/notebooks/Chapter4_TheGreatestTheoremNeverTold/Chapter4.ipynb
+
+2015-11-03 09:45:28,478 INFO: - App:  ---> 968628212a83
+
+2015-11-03 09:45:28,487 INFO: - App: Removing intermediate container f9a5b0bf9d79
+
+2015-11-03 09:45:28,493 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 09:45:28,563 INFO: - App:  ---> Running in e135140d26be
+
+2015-11-03 09:45:28,611 INFO: - App:  ---> b1a615ab2211
+
+2015-11-03 09:45:28,619 INFO: - App: Removing intermediate container e135140d26be
+
+2015-11-03 09:45:28,622 INFO: - App: Successfully built b1a615ab2211
+
+2015-11-03 09:45:28,647 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/camdavidsonpilon-probabilistic-programming-and-bayesian-methods-for-hackers to private registry...
+2015-11-03 09:45:55,207 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 09:46:03,512 INFO: - App: Successfully built app camdavidsonpilon-probabilistic-programming-and-bayesian-methods-for-hackers

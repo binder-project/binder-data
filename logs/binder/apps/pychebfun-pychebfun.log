@@ -1,0 +1,62 @@
+2015-10-26 13:07:35,452 INFO: - App: Building service dependencies...
+2015-10-26 13:07:35,458 INFO: - App: Copying files and filling templates...
+2015-10-26 13:07:35,504 INFO: - App: Building app image without Dockerfile...
+2015-10-26 13:07:35,871 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon  24.5 MBSending build context to Docker daemon 25.03 MBSending build context to Docker daemon 25.59 MBSending build context to Docker daemon 26.15 MBSending build context to Docker daemon 26.71 MBSending build context to Docker daemon 27.26 MBSending build context to Docker daemon 27.82 MBSending build context to Docker daemon 28.38 MBSending build context to Docker daemon 28.93 MBSending build context to Docker daemon 29.49 MBSending build context to Docker daemon 30.05 MBSending build context to Docker daemon 30.61 MBSending build context to Docker daemon 31.16 MBSending build context to Docker daemon 31.72 MBSending build context to Docker daemon 32.28 MBSending build context to Docker daemon 32.83 MBSending build context to Docker daemon 33.39 MBSending build context to Docker daemon 33.95 MBSending build context to Docker daemon  34.5 MBSending build context to Docker daemon 35.06 MBSending build context to Docker daemon 35.62 MBSending build context to Docker daemon 36.18 MBSending build context to Docker daemon 36.73 MBSending build context to Docker daemon 37.29 MBSending build context to Docker daemon 37.85 MBSending build context to Docker daemon  38.4 MBSending build context to Docker daemon 38.96 MBSending build context to Docker daemon 39.52 MBSending build context to Docker daemon 40.08 MBSending build context to Docker daemon 40.63 MBSending build context to Docker daemon 41.19 MBSending build context to Docker daemon 41.75 MBSending build context to Docker daemon  42.3 MBSending build context to Docker daemon 42.86 MBSending build context to Docker daemon 43.42 MBSending build context to Docker daemon 43.97 MBSending build context to Docker daemon 44.53 MBSending build context to Docker daemon 45.09 MBSending build context to Docker daemon 45.65 MBSending build context to Docker daemon  46.2 MBSending build context to Docker daemon 46.31 MBSending build context to Docker daemon 46.31 MB
+
+2015-10-26 13:07:35,873 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 13:07:35,875 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 13:07:35,877 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-26 13:07:36,313 INFO: - App:  ---> 1e53fc84cfa3
+
+2015-10-26 13:07:36,331 INFO: - App: Removing intermediate container 7d15f1eda37a
+
+2015-10-26 13:07:36,345 INFO: - App: Step 2 : USER root
+
+2015-10-26 13:07:36,417 INFO: - App:  ---> Running in 0e539fb509ea
+
+2015-10-26 13:07:36,464 INFO: - App:  ---> 4445341cc9e9
+
+2015-10-26 13:07:36,480 INFO: - App: Removing intermediate container 0e539fb509ea
+
+2015-10-26 13:07:36,494 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 13:07:36,563 INFO: - App:  ---> Running in 798558cfc4ed
+
+2015-10-26 13:07:37,182 INFO: - App:  ---> bd187f0c5697
+
+2015-10-26 13:07:37,200 INFO: - App: Removing intermediate container 798558cfc4ed
+
+2015-10-26 13:07:37,202 INFO: - App: Step 4 : USER main
+
+2015-10-26 13:07:37,295 INFO: - App:  ---> Running in 65ac513e06dc
+
+2015-10-26 13:07:37,348 INFO: - App:  ---> 01f8ce191cf8
+
+2015-10-26 13:07:37,351 INFO: - App: Removing intermediate container 65ac513e06dc
+
+2015-10-26 13:07:37,353 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 13:07:37,450 INFO: - App:  ---> Running in 196e904fc160
+
+2015-10-26 13:07:38,014 INFO: - App: Signing notebook: /home/main/notebooks/BattlesTrefethen.ipynb
+
+2015-10-26 13:07:38,314 INFO: - App:  ---> dbb9a371c52f
+
+2015-10-26 13:07:38,317 INFO: - App: Removing intermediate container 196e904fc160
+
+2015-10-26 13:07:38,319 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-26 13:07:38,395 INFO: - App:  ---> Running in 9fc7313fda09
+
+2015-10-26 13:07:38,467 INFO: - App:  ---> d4d4a55dca32
+
+2015-10-26 13:07:38,476 INFO: - App: Removing intermediate container 9fc7313fda09
+
+2015-10-26 13:07:38,498 INFO: - App: Successfully built d4d4a55dca32
+
+2015-10-26 13:07:38,519 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/pychebfun-pychebfun to private registry...
+2015-10-26 13:07:52,701 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 13:07:58,798 INFO: - App: Successfully built app pychebfun-pychebfun

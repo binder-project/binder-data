@@ -1,0 +1,68 @@
+2015-10-30 17:22:51,513 INFO: - App: Building service dependencies...
+2015-10-30 17:22:51,517 INFO: - App: Copying files and filling templates...
+2015-10-30 17:22:51,524 INFO: - App: Building app image without Dockerfile...
+2015-10-30 17:22:51,587 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.352 MBSending build context to Docker daemon 1.352 MB
+
+2015-10-30 17:22:51,590 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-30 17:22:51,604 INFO: - App:  ---> 77377240dc83
+
+2015-10-30 17:22:51,608 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-30 17:22:51,766 INFO: - App:  ---> c83214ab227f
+
+2015-10-30 17:22:51,776 INFO: - App: Removing intermediate container 4ea54a194f88
+
+2015-10-30 17:22:51,778 INFO: - App: Step 2 : USER root
+
+2015-10-30 17:22:51,859 INFO: - App:  ---> Running in 6733cfab872e
+
+2015-10-30 17:22:51,919 INFO: - App:  ---> 50cf94a74b84
+
+2015-10-30 17:22:51,928 INFO: - App: Removing intermediate container 6733cfab872e
+
+2015-10-30 17:22:51,930 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-30 17:22:52,012 INFO: - App:  ---> Running in 3210de332c92
+
+2015-10-30 17:22:52,435 INFO: - App:  ---> 76538cf89201
+
+2015-10-30 17:22:52,445 INFO: - App: Removing intermediate container 3210de332c92
+
+2015-10-30 17:22:52,448 INFO: - App: Step 4 : USER main
+
+2015-10-30 17:22:52,543 INFO: - App:  ---> Running in a9108d480ac4
+
+2015-10-30 17:22:52,591 INFO: - App:  ---> 2a2730147ea1
+
+2015-10-30 17:22:52,598 INFO: - App: Removing intermediate container a9108d480ac4
+
+2015-10-30 17:22:52,601 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-30 17:22:52,683 INFO: - App:  ---> Running in 0f905704f9ea
+
+2015-10-30 17:22:53,302 INFO: - App: Signing notebook: /home/main/notebooks/Week 4_exercise_notebook.ipynb
+
+2015-10-30 17:22:53,658 INFO: - App: Signing notebook: /home/main/notebooks/Week_2_exercise_notebook.ipynb
+
+2015-10-30 17:22:53,991 INFO: - App: Signing notebook: /home/main/notebooks/Week_3_exercise_notebook.ipynb
+
+2015-10-30 17:22:54,308 INFO: - App: Signing notebook: /home/main/notebooks/Week_1_exercise_notebook.ipynb
+
+2015-10-30 17:22:54,580 INFO: - App:  ---> 1b21e62e1eb8
+
+2015-10-30 17:22:54,589 INFO: - App: Removing intermediate container 0f905704f9ea
+
+2015-10-30 17:22:54,591 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-30 17:22:54,659 INFO: - App:  ---> Running in c05363da1575
+
+2015-10-30 17:22:54,708 INFO: - App:  ---> afa0f38c30da
+
+2015-10-30 17:22:54,715 INFO: - App: Removing intermediate container c05363da1575
+
+2015-10-30 17:22:54,728 INFO: - App: Successfully built afa0f38c30da
+
+2015-10-30 17:22:54,732 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/psychemedia-learntocode to private registry...
+2015-10-30 17:23:01,037 INFO: - App: Preloading app image onto all nodes...
+2015-10-30 17:23:04,269 INFO: - App: Successfully built app psychemedia-learntocode

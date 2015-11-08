@@ -1,0 +1,204 @@
+2015-11-03 13:50:38,828 INFO: - App: Building service dependencies...
+2015-11-03 13:50:38,830 INFO: - App: Copying files and filling templates...
+2015-11-03 13:50:38,846 INFO: - App: Building app image without Dockerfile...
+2015-11-03 13:50:38,898 INFO: - App: Sending build context to Docker daemon 443.4 kBSending build context to Docker daemon 443.4 kB
+
+2015-11-03 13:50:38,905 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-03 13:50:38,915 INFO: - App:  ---> 77377240dc83
+
+2015-11-03 13:50:38,920 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-03 13:50:39,073 INFO: - App:  ---> c6c6342605c6
+
+2015-11-03 13:50:39,084 INFO: - App: Removing intermediate container c8a6f0a34bee
+
+2015-11-03 13:50:39,086 INFO: - App: Step 2 : USER root
+
+2015-11-03 13:50:39,167 INFO: - App:  ---> Running in 140886cdfb8a
+
+2015-11-03 13:50:39,223 INFO: - App:  ---> 41b51cb3226d
+
+2015-11-03 13:50:39,231 INFO: - App: Removing intermediate container 140886cdfb8a
+
+2015-11-03 13:50:39,233 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-03 13:50:39,323 INFO: - App:  ---> Running in 7c06c06c1e92
+
+2015-11-03 13:50:39,709 INFO: - App:  ---> 42b78fdf82a7
+
+2015-11-03 13:50:39,727 INFO: - App: Removing intermediate container 7c06c06c1e92
+
+2015-11-03 13:50:39,736 INFO: - App: Step 4 : USER main
+
+2015-11-03 13:50:39,806 INFO: - App:  ---> Running in 0356089f15b8
+
+2015-11-03 13:50:39,851 INFO: - App:  ---> 645e91e82332
+
+2015-11-03 13:50:39,864 INFO: - App: Removing intermediate container 0356089f15b8
+
+2015-11-03 13:50:39,883 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-03 13:50:39,931 INFO: - App:  ---> Running in 0f5963400fd7
+
+2015-11-03 13:50:40,500 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Error handling in Python.ipynb
+
+2015-11-03 13:50:40,730 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Assignment 4 - Speed challenge.ipynb
+
+2015-11-03 13:50:41,045 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/A deeper look into classes in Python.ipynb
+
+2015-11-03 13:50:41,336 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/A deeper look into functions in Python.ipynb
+
+2015-11-03 13:50:41,610 INFO: - App:  ---> debbfb34056b
+
+2015-11-03 13:50:41,618 INFO: - App: Removing intermediate container 0f5963400fd7
+
+2015-11-03 13:50:41,622 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-03 13:50:41,700 INFO: - App:  ---> Running in 79a942d290d2
+
+2015-11-03 13:50:41,747 INFO: - App:  ---> fc4ff7335955
+
+2015-11-03 13:50:41,755 INFO: - App: Removing intermediate container 79a942d290d2
+
+2015-11-03 13:50:41,759 INFO: - App: Successfully built fc4ff7335955
+
+2015-11-03 13:50:41,764 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/uio-inf3331-code_snippets to private registry...
+2015-11-03 13:50:47,824 INFO: - App: Preloading app image onto all nodes...
+2015-11-03 13:50:50,418 INFO: - App: Successfully built app uio-inf3331-code_snippets
+2015-11-04 13:31:26,423 INFO: - App: Building service dependencies...
+2015-11-04 13:31:26,429 INFO: - App: Copying files and filling templates...
+2015-11-04 13:31:26,439 INFO: - App: Building app image without Dockerfile...
+2015-11-04 13:31:26,491 INFO: - App: Sending build context to Docker daemon 443.4 kBSending build context to Docker daemon 443.4 kB
+
+2015-11-04 13:31:26,495 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 13:31:26,497 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 13:31:26,499 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-04 13:31:26,683 INFO: - App:  ---> 9161bd352496
+
+2015-11-04 13:31:26,709 INFO: - App: Removing intermediate container 18affc326fb4
+
+2015-11-04 13:31:26,743 INFO: - App: Step 2 : USER root
+
+2015-11-04 13:31:26,791 INFO: - App:  ---> Running in 66951ab0ffc2
+
+2015-11-04 13:31:26,845 INFO: - App:  ---> 4e76ebf25324
+
+2015-11-04 13:31:26,861 INFO: - App: Removing intermediate container 66951ab0ffc2
+
+2015-11-04 13:31:26,873 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 13:31:26,940 INFO: - App:  ---> Running in bbe87fac28bc
+
+2015-11-04 13:31:27,346 INFO: - App:  ---> 2951c04cd940
+
+2015-11-04 13:31:27,380 INFO: - App: Removing intermediate container bbe87fac28bc
+
+2015-11-04 13:31:27,397 INFO: - App: Step 4 : USER main
+
+2015-11-04 13:31:27,441 INFO: - App:  ---> Running in 3b7ceb0afc88
+
+2015-11-04 13:31:27,493 INFO: - App:  ---> 9ec84a7fe8ed
+
+2015-11-04 13:31:27,539 INFO: - App: Removing intermediate container 3b7ceb0afc88
+
+2015-11-04 13:31:27,556 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 13:31:27,572 INFO: - App:  ---> Running in 7aa1d6ce5c86
+
+2015-11-04 13:31:28,131 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Error handling in Python.ipynb
+
+2015-11-04 13:31:28,347 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Assignment 4 - Speed challenge.ipynb
+
+2015-11-04 13:31:28,661 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/A deeper look into classes in Python.ipynb
+
+2015-11-04 13:31:28,938 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/A deeper look into functions in Python.ipynb
+
+2015-11-04 13:31:29,222 INFO: - App:  ---> 83eb1eab5138
+
+2015-11-04 13:31:29,232 INFO: - App: Removing intermediate container 7aa1d6ce5c86
+
+2015-11-04 13:31:29,234 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-04 13:31:29,315 INFO: - App:  ---> Running in e5e1451c9650
+
+2015-11-04 13:31:29,363 INFO: - App:  ---> f5d6239f82fa
+
+2015-11-04 13:31:29,371 INFO: - App: Removing intermediate container e5e1451c9650
+
+2015-11-04 13:31:29,372 INFO: - App: Successfully built f5d6239f82fa
+
+2015-11-04 13:31:29,380 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/uio-inf3331-code_snippets to private registry...
+2015-11-04 13:31:39,848 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 13:31:45,345 INFO: - App: Successfully built app uio-inf3331-code_snippets
+2015-11-04 13:32:51,576 INFO: - App: Building service dependencies...
+2015-11-04 13:32:51,579 INFO: - App: Copying files and filling templates...
+2015-11-04 13:32:51,592 INFO: - App: Building app image without Dockerfile...
+2015-11-04 13:32:51,643 INFO: - App: Sending build context to Docker daemon 443.4 kBSending build context to Docker daemon 443.4 kB
+
+2015-11-04 13:32:51,646 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 13:32:51,648 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 13:32:51,650 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-04 13:32:51,862 INFO: - App:  ---> fe972e381ea7
+
+2015-11-04 13:32:51,872 INFO: - App: Removing intermediate container dca71b92b024
+
+2015-11-04 13:32:51,875 INFO: - App: Step 2 : USER root
+
+2015-11-04 13:32:51,959 INFO: - App:  ---> Running in 91334caff34d
+
+2015-11-04 13:32:52,015 INFO: - App:  ---> a35ede613341
+
+2015-11-04 13:32:52,023 INFO: - App: Removing intermediate container 91334caff34d
+
+2015-11-04 13:32:52,025 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 13:32:52,119 INFO: - App:  ---> Running in 923c8a9f9399
+
+2015-11-04 13:32:52,537 INFO: - App:  ---> 0e474a8326d7
+
+2015-11-04 13:32:52,546 INFO: - App: Removing intermediate container 923c8a9f9399
+
+2015-11-04 13:32:52,547 INFO: - App: Step 4 : USER main
+
+2015-11-04 13:32:52,632 INFO: - App:  ---> Running in 5aa81b113038
+
+2015-11-04 13:32:52,684 INFO: - App:  ---> 07b64af64192
+
+2015-11-04 13:32:52,691 INFO: - App: Removing intermediate container 5aa81b113038
+
+2015-11-04 13:32:52,695 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 13:32:52,765 INFO: - App:  ---> Running in 90c161635049
+
+2015-11-04 13:32:53,316 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Error handling in Python.ipynb
+
+2015-11-04 13:32:53,541 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/Assignment 4 - Speed challenge.ipynb
+
+2015-11-04 13:32:53,856 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/A deeper look into classes in Python.ipynb
+
+2015-11-04 13:32:54,138 INFO: - App: Signing notebook: /home/main/notebooks/notebooks/A deeper look into functions in Python.ipynb
+
+2015-11-04 13:32:54,425 INFO: - App:  ---> b5a07242e938
+
+2015-11-04 13:32:54,434 INFO: - App: Removing intermediate container 90c161635049
+
+2015-11-04 13:32:54,436 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-04 13:32:54,508 INFO: - App:  ---> Running in cb9809783cb3
+
+2015-11-04 13:32:54,562 INFO: - App:  ---> 8a4c63f2cabb
+
+2015-11-04 13:32:54,570 INFO: - App: Removing intermediate container cb9809783cb3
+
+2015-11-04 13:32:54,571 INFO: - App: Successfully built 8a4c63f2cabb
+
+2015-11-04 13:32:54,577 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/uio-inf3331-code_snippets to private registry...
+2015-11-04 13:33:00,664 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 13:33:06,798 INFO: - App: Successfully built app uio-inf3331-code_snippets

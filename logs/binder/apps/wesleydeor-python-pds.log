@@ -1,0 +1,160 @@
+2015-10-26 20:16:48,943 INFO: - App: Building service dependencies...
+2015-10-26 20:16:48,953 INFO: - App: Copying files and filling templates...
+2015-10-26 20:16:48,977 INFO: - App: Building app image without Dockerfile...
+2015-10-26 20:16:49,103 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.885 MBSending build context to Docker daemon 9.437 MBSending build context to Docker daemon 9.994 MBSending build context to Docker daemon 10.24 MBSending build context to Docker daemon 10.24 MB
+
+2015-10-26 20:16:49,117 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-10-26 20:16:49,119 INFO: - App:  ---> 77377240dc83
+
+2015-10-26 20:16:49,121 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-10-26 20:16:49,375 INFO: - App:  ---> b93d6f7c5fb0
+
+2015-10-26 20:16:49,391 INFO: - App: Removing intermediate container 0fb09be1ab6a
+
+2015-10-26 20:16:49,393 INFO: - App: Step 2 : USER root
+
+2015-10-26 20:16:49,479 INFO: - App:  ---> Running in b50b1d1327b1
+
+2015-10-26 20:16:49,531 INFO: - App:  ---> ea64c73a70dd
+
+2015-10-26 20:16:49,539 INFO: - App: Removing intermediate container b50b1d1327b1
+
+2015-10-26 20:16:49,542 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-10-26 20:16:49,611 INFO: - App:  ---> Running in 03305700da6d
+
+2015-10-26 20:16:50,086 INFO: - App:  ---> af2203991fba
+
+2015-10-26 20:16:50,113 INFO: - App: Removing intermediate container 03305700da6d
+
+2015-10-26 20:16:50,137 INFO: - App: Step 4 : USER main
+
+2015-10-26 20:16:50,220 INFO: - App:  ---> Running in f92642b0ef84
+
+2015-10-26 20:16:50,270 INFO: - App:  ---> a6946a1220eb
+
+2015-10-26 20:16:50,284 INFO: - App: Removing intermediate container f92642b0ef84
+
+2015-10-26 20:16:50,297 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-10-26 20:16:50,348 INFO: - App:  ---> Running in a9fbbcd65f51
+
+2015-10-26 20:16:50,839 INFO: - App: Signing notebook: /home/main/notebooks/01-Python.ipynb
+
+2015-10-26 20:16:51,095 INFO: - App: Signing notebook: /home/main/notebooks/04-Scipy-Scikit-Image.ipynb
+
+2015-10-26 20:16:51,326 INFO: - App: Signing notebook: /home/main/notebooks/03-Matplotlib.ipynb
+
+2015-10-26 20:16:51,543 INFO: - App: Signing notebook: /home/main/notebooks/00-Introducao.ipynb
+
+2015-10-26 20:16:51,861 INFO: - App: Signing notebook: /home/main/notebooks/02-Numpy.ipynb
+
+2015-10-26 20:16:52,175 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/01-Python.ipynb
+
+2015-10-26 20:16:52,430 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/04-Scipy-Scikit-Image.ipynb
+
+2015-10-26 20:16:52,651 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/03-Matplotlib.ipynb
+
+2015-10-26 20:16:52,859 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/00-Introducao.ipynb
+
+2015-10-26 20:16:53,179 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/02-Numpy.ipynb
+
+2015-10-26 20:16:53,447 INFO: - App:  ---> f34ff6798aea
+
+2015-10-26 20:16:53,449 INFO: - App: Removing intermediate container a9fbbcd65f51
+
+2015-10-26 20:16:53,451 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-10-26 20:16:53,534 INFO: - App:  ---> Running in 7302f66dc8c2
+
+2015-10-26 20:16:53,583 INFO: - App:  ---> 9aa52eb61f87
+
+2015-10-26 20:16:53,591 INFO: - App: Removing intermediate container 7302f66dc8c2
+
+2015-10-26 20:16:53,593 INFO: - App: Successfully built 9aa52eb61f87
+
+2015-10-26 20:16:53,604 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/wesleydeor-python-pds to private registry...
+2015-10-26 20:17:02,612 INFO: - App: Preloading app image onto all nodes...
+2015-10-26 20:17:07,908 INFO: - App: Successfully built app wesleydeor-python-pds
+2015-11-04 13:27:48,324 INFO: - App: Building service dependencies...
+2015-11-04 13:27:48,337 INFO: - App: Copying files and filling templates...
+2015-11-04 13:27:48,359 INFO: - App: Building app image without Dockerfile...
+2015-11-04 13:27:48,490 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.867 MBSending build context to Docker daemon 4.424 MBSending build context to Docker daemon 4.981 MBSending build context to Docker daemon 5.538 MBSending build context to Docker daemon 6.095 MBSending build context to Docker daemon 6.652 MBSending build context to Docker daemon 7.209 MBSending build context to Docker daemon 7.766 MBSending build context to Docker daemon 8.323 MBSending build context to Docker daemon 8.859 MBSending build context to Docker daemon 9.404 MBSending build context to Docker daemon 9.961 MBSending build context to Docker daemon 10.25 MBSending build context to Docker daemon 10.25 MB
+
+2015-11-04 13:27:48,496 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 13:27:48,498 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 13:27:48,500 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-04 13:27:48,758 INFO: - App:  ---> 3efd8c0d1d98
+
+2015-11-04 13:27:48,772 INFO: - App: Removing intermediate container 5a37ae5f362d
+
+2015-11-04 13:27:48,774 INFO: - App: Step 2 : USER root
+
+2015-11-04 13:27:48,851 INFO: - App:  ---> Running in 4ae2c85c078d
+
+2015-11-04 13:27:48,895 INFO: - App:  ---> b23faa2899e1
+
+2015-11-04 13:27:48,902 INFO: - App: Removing intermediate container 4ae2c85c078d
+
+2015-11-04 13:27:48,908 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 13:27:48,975 INFO: - App:  ---> Running in 362e4baac248
+
+2015-11-04 13:27:49,460 INFO: - App:  ---> 836b9167e057
+
+2015-11-04 13:27:49,473 INFO: - App: Removing intermediate container 362e4baac248
+
+2015-11-04 13:27:49,475 INFO: - App: Step 4 : USER main
+
+2015-11-04 13:27:49,557 INFO: - App:  ---> Running in 2f099045f65c
+
+2015-11-04 13:27:49,614 INFO: - App:  ---> 2cb2d895ddb4
+
+2015-11-04 13:27:49,618 INFO: - App: Removing intermediate container 2f099045f65c
+
+2015-11-04 13:27:49,623 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 13:27:49,702 INFO: - App:  ---> Running in 01c8fe5b7d1d
+
+2015-11-04 13:27:50,166 INFO: - App: Signing notebook: /home/main/notebooks/01-Python.ipynb
+
+2015-11-04 13:27:50,443 INFO: - App: Signing notebook: /home/main/notebooks/04-Scipy-Scikit-Image.ipynb
+
+2015-11-04 13:27:50,672 INFO: - App: Signing notebook: /home/main/notebooks/03-Matplotlib.ipynb
+
+2015-11-04 13:27:50,897 INFO: - App: Signing notebook: /home/main/notebooks/00-Introducao.ipynb
+
+2015-11-04 13:27:51,241 INFO: - App: Signing notebook: /home/main/notebooks/02-Numpy.ipynb
+
+2015-11-04 13:27:51,554 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/01-Python.ipynb
+
+2015-11-04 13:27:51,814 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/04-Scipy-Scikit-Image.ipynb
+
+2015-11-04 13:27:52,055 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/03-Matplotlib.ipynb
+
+2015-11-04 13:27:52,285 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/00-Introducao.ipynb
+
+2015-11-04 13:27:52,614 INFO: - App: Notebook already signed: /home/main/notebooks/notebooks/02-Numpy.ipynb
+
+2015-11-04 13:27:52,887 INFO: - App:  ---> f5b75806eb5f
+
+2015-11-04 13:27:52,895 INFO: - App: Removing intermediate container 01c8fe5b7d1d
+
+2015-11-04 13:27:52,897 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-04 13:27:52,967 INFO: - App:  ---> Running in 0c5d10f5de0d
+
+2015-11-04 13:27:53,011 INFO: - App:  ---> e199bead6c26
+
+2015-11-04 13:27:53,020 INFO: - App: Removing intermediate container 0c5d10f5de0d
+
+2015-11-04 13:27:53,026 INFO: - App: Successfully built e199bead6c26
+
+2015-11-04 13:27:53,069 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/wesleydeor-python-pds to private registry...
+2015-11-04 13:28:03,593 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 13:28:13,312 INFO: - App: Successfully built app wesleydeor-python-pds

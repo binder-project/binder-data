@@ -1,0 +1,60 @@
+2015-11-04 19:51:15,710 INFO: - App: Building service dependencies...
+2015-11-04 19:51:15,717 INFO: - App: Copying files and filling templates...
+2015-11-04 19:51:15,731 INFO: - App: Building app image without Dockerfile...
+2015-11-04 19:51:15,795 INFO: - App: Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon  2.06 MBSending build context to Docker daemon  2.06 MB
+
+2015-11-04 19:51:15,801 INFO: - App: Step 0 : FROM gcr.io/generic-notebooks/binder-base
+
+2015-11-04 19:51:15,807 INFO: - App:  ---> 77377240dc83
+
+2015-11-04 19:51:15,824 INFO: - App: Step 1 : ADD repo $HOME/notebooks
+
+2015-11-04 19:51:16,047 INFO: - App:  ---> ed3683debda0
+
+2015-11-04 19:51:16,059 INFO: - App: Removing intermediate container 58164443dcc5
+
+2015-11-04 19:51:16,061 INFO: - App: Step 2 : USER root
+
+2015-11-04 19:51:16,144 INFO: - App:  ---> Running in b4d3762b0aff
+
+2015-11-04 19:51:16,183 INFO: - App:  ---> 75a1bdd7f890
+
+2015-11-04 19:51:16,191 INFO: - App: Removing intermediate container b4d3762b0aff
+
+2015-11-04 19:51:16,194 INFO: - App: Step 3 : RUN chown -R main:main $HOME/notebooks
+
+2015-11-04 19:51:16,280 INFO: - App:  ---> Running in e24b294fe1ea
+
+2015-11-04 19:51:16,725 INFO: - App:  ---> 654bf90aea6b
+
+2015-11-04 19:51:16,741 INFO: - App: Removing intermediate container e24b294fe1ea
+
+2015-11-04 19:51:16,743 INFO: - App: Step 4 : USER main
+
+2015-11-04 19:51:16,821 INFO: - App:  ---> Running in dad9ba1c9379
+
+2015-11-04 19:51:16,863 INFO: - App:  ---> 4f61d110f82b
+
+2015-11-04 19:51:16,871 INFO: - App: Removing intermediate container dad9ba1c9379
+
+2015-11-04 19:51:16,876 INFO: - App: Step 5 : RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+2015-11-04 19:51:16,959 INFO: - App:  ---> Running in 759bfa7554ae
+
+2015-11-04 19:51:17,382 INFO: - App:  ---> fb04617cdb0a
+
+2015-11-04 19:51:17,391 INFO: - App: Removing intermediate container 759bfa7554ae
+
+2015-11-04 19:51:17,416 INFO: - App: Step 6 : WORKDIR $HOME/notebooks
+
+2015-11-04 19:51:17,464 INFO: - App:  ---> Running in 51122ddc95ea
+
+2015-11-04 19:51:17,515 INFO: - App:  ---> 794798528a5a
+
+2015-11-04 19:51:17,522 INFO: - App: Removing intermediate container 51122ddc95ea
+
+2015-11-04 19:51:17,536 INFO: - App: Successfully built 794798528a5a
+
+2015-11-04 19:51:17,572 INFO: - App: Squashing and pushing gcr.io/generic-notebooks/jaimeivancervantes-ilastikdiagnostictools to private registry...
+2015-11-04 19:51:26,101 INFO: - App: Preloading app image onto all nodes...
+2015-11-04 19:51:29,071 INFO: - App: Successfully built app jaimeivancervantes-ilastikdiagnostictools
