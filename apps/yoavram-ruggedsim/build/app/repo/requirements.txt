@@ -33,7 +33,7 @@ ggplot==0.4.3
 gmpy==1.16
 httplib2==0.8
 husl==2.0.2
-ipython==1.1.0
+ipython==7.16.3
 ipywidgets==0.0.1
 itsdangerous==0.23
 lxml==3.2.3
