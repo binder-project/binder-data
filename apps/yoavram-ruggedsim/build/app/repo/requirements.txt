@@ -47,7 +47,7 @@ oauth2==1.5.211
 openopt==0.5108
 openpyxl==1.6.1
 pandas==0.10.1
-paramiko==1.11.0
+paramiko==2.10.1
 pathtools==0.1.2
 patsy==0.2.1
 pdfrw==0.1
