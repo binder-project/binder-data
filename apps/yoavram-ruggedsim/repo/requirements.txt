@@ -68,7 +68,7 @@ python-oauth2==0.3.2
 pytz==2013.7
 pywin32==218
 pyzmq==13.0.2
-requests==1.2.3
+requests==2.20.0
 rpy2==2.3.6
 scikit-learn==0.14.1
 scikits.bootstrap==0.3.1
